@@ -1,0 +1,390 @@
+{
+  "statements": [
+    {
+      "Local": [
+        [
+          {
+            "name": "a",
+            "expression": {
+              "IntegerLiteral": [
+                1,
+                {
+                  "line": 0,
+                  "linechar": 9
+                },
+                {
+                  "line": 0,
+                  "linechar": 11
+                }
+              ]
+            }
+          }
+        ],
+        {
+          "line": 0,
+          "linechar": 0
+        },
+        {
+          "line": 0,
+          "linechar": 11
+        }
+      ]
+    },
+    {
+      "Switch": [
+        {
+          "Identifier": [
+            {
+              "Identifier": "a"
+            },
+            {
+              "line": 2,
+              "linechar": 8
+            },
+            {
+              "line": 2,
+              "linechar": 9
+            }
+          ]
+        },
+        [
+          {
+            "expression": {
+              "IntegerLiteral": [
+                1,
+                {
+                  "line": 3,
+                  "linechar": 6
+                },
+                {
+                  "line": 3,
+                  "linechar": 8
+                }
+              ]
+            },
+            "statements": {
+              "statements": [
+                {
+                  "Expression": [
+                    {
+                      "ScopeResolution": [
+                        null,
+                        {
+                          "FunctionCall": [
+                            {
+                              "Identifier": [
+                                {
+                                  "Identifier": "print"
+                                },
+                                {
+                                  "line": 4,
+                                  "linechar": 6
+                                },
+                                {
+                                  "line": 4,
+                                  "linechar": 11
+                                }
+                              ]
+                            },
+                            [
+                              {
+                                "StringLiteral": [
+                                  "a is 1",
+                                  {
+                                    "line": 4,
+                                    "linechar": 12
+                                  },
+                                  {
+                                    "line": 4,
+                                    "linechar": 20
+                                  }
+                                ]
+                              }
+                            ],
+                            {
+                              "line": 4,
+                              "linechar": 6
+                            },
+                            {
+                              "line": 4,
+                              "linechar": 21
+                            }
+                          ]
+                        },
+                        {
+                          "line": 4,
+                          "linechar": 0
+                        },
+                        {
+                          "line": 4,
+                          "linechar": 21
+                        }
+                      ]
+                    },
+                    {
+                      "line": 4,
+                      "linechar": 0
+                    },
+                    {
+                      "line": 4,
+                      "linechar": 21
+                    }
+                  ]
+                },
+                {
+                  "Break": [
+                    {
+                      "line": 5,
+                      "linechar": 0
+                    },
+                    {
+                      "line": 5,
+                      "linechar": 9
+                    }
+                  ]
+                }
+              ],
+              "from": {
+                "line": 3,
+                "linechar": 9
+              },
+              "to": {
+                "line": 6,
+                "linechar": 0
+              }
+            },
+            "from": {
+              "line": 3,
+              "linechar": 0
+            },
+            "to": {
+              "line": 6,
+              "linechar": 0
+            }
+          },
+          {
+            "expression": {
+              "IntegerLiteral": [
+                2,
+                {
+                  "line": 6,
+                  "linechar": 6
+                },
+                {
+                  "line": 6,
+                  "linechar": 8
+                }
+              ]
+            },
+            "statements": {
+              "statements": [
+                {
+                  "Expression": [
+                    {
+                      "ScopeResolution": [
+                        null,
+                        {
+                          "FunctionCall": [
+                            {
+                              "Identifier": [
+                                {
+                                  "Identifier": "print"
+                                },
+                                {
+                                  "line": 7,
+                                  "linechar": 6
+                                },
+                                {
+                                  "line": 7,
+                                  "linechar": 11
+                                }
+                              ]
+                            },
+                            [
+                              {
+                                "StringLiteral": [
+                                  "a is 2",
+                                  {
+                                    "line": 7,
+                                    "linechar": 12
+                                  },
+                                  {
+                                    "line": 7,
+                                    "linechar": 20
+                                  }
+                                ]
+                              }
+                            ],
+                            {
+                              "line": 7,
+                              "linechar": 6
+                            },
+                            {
+                              "line": 7,
+                              "linechar": 21
+                            }
+                          ]
+                        },
+                        {
+                          "line": 7,
+                          "linechar": 0
+                        },
+                        {
+                          "line": 7,
+                          "linechar": 21
+                        }
+                      ]
+                    },
+                    {
+                      "line": 7,
+                      "linechar": 0
+                    },
+                    {
+                      "line": 7,
+                      "linechar": 21
+                    }
+                  ]
+                },
+                {
+                  "Break": [
+                    {
+                      "line": 8,
+                      "linechar": 0
+                    },
+                    {
+                      "line": 8,
+                      "linechar": 9
+                    }
+                  ]
+                }
+              ],
+              "from": {
+                "line": 6,
+                "linechar": 9
+              },
+              "to": {
+                "line": 9,
+                "linechar": 0
+              }
+            },
+            "from": {
+              "line": 6,
+              "linechar": 0
+            },
+            "to": {
+              "line": 9,
+              "linechar": 0
+            }
+          }
+        ],
+        {
+          "statements": [
+            {
+              "Expression": [
+                {
+                  "ScopeResolution": [
+                    null,
+                    {
+                      "FunctionCall": [
+                        {
+                          "Identifier": [
+                            {
+                              "Identifier": "print"
+                            },
+                            {
+                              "line": 10,
+                              "linechar": 6
+                            },
+                            {
+                              "line": 10,
+                              "linechar": 11
+                            }
+                          ]
+                        },
+                        [
+                          {
+                            "StringLiteral": [
+                              "a is not 1 or 2",
+                              {
+                                "line": 10,
+                                "linechar": 12
+                              },
+                              {
+                                "line": 10,
+                                "linechar": 29
+                              }
+                            ]
+                          }
+                        ],
+                        {
+                          "line": 10,
+                          "linechar": 6
+                        },
+                        {
+                          "line": 10,
+                          "linechar": 30
+                        }
+                      ]
+                    },
+                    {
+                      "line": 10,
+                      "linechar": 0
+                    },
+                    {
+                      "line": 10,
+                      "linechar": 30
+                    }
+                  ]
+                },
+                {
+                  "line": 10,
+                  "linechar": 0
+                },
+                {
+                  "line": 10,
+                  "linechar": 30
+                }
+              ]
+            },
+            {
+              "Break": [
+                {
+                  "line": 11,
+                  "linechar": 0
+                },
+                {
+                  "line": 11,
+                  "linechar": 9
+                }
+              ]
+            }
+          ],
+          "from": {
+            "line": 9,
+            "linechar": 10
+          },
+          "to": {
+            "line": 12,
+            "linechar": 0
+          }
+        },
+        {
+          "line": 2,
+          "linechar": 0
+        },
+        {
+          "line": 12,
+          "linechar": 1
+        }
+      ]
+    }
+  ],
+  "from": {
+    "line": 0,
+    "linechar": 0
+  },
+  "to": {
+    "line": 13,
+    "linechar": 0
+  }
+}

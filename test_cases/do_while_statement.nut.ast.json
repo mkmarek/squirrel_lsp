@@ -1,0 +1,254 @@
+{
+  "statements": [
+    {
+      "Local": [
+        [
+          {
+            "name": "a",
+            "expression": {
+              "IntegerLiteral": [
+                0,
+                {
+                  "line": 0,
+                  "linechar": 8
+                },
+                {
+                  "line": 0,
+                  "linechar": 9
+                }
+              ]
+            }
+          }
+        ],
+        {
+          "line": 0,
+          "linechar": 0
+        },
+        {
+          "line": 0,
+          "linechar": 9
+        }
+      ]
+    },
+    {
+      "DoWhile": [
+        {
+          "BinaryOperator": [
+            {
+              "Identifier": [
+                {
+                  "Identifier": "a"
+                },
+                {
+                  "line": 5,
+                  "linechar": 8
+                },
+                {
+                  "line": 5,
+                  "linechar": 9
+                }
+              ]
+            },
+            "Greater",
+            {
+              "IntegerLiteral": [
+                100,
+                {
+                  "line": 5,
+                  "linechar": 10
+                },
+                {
+                  "line": 5,
+                  "linechar": 13
+                }
+              ]
+            },
+            {
+              "line": 5,
+              "linechar": 8
+            },
+            {
+              "line": 5,
+              "linechar": 13
+            }
+          ]
+        },
+        {
+          "Block": [
+            {
+              "statements": [
+                {
+                  "Expression": [
+                    {
+                      "FunctionCall": [
+                        {
+                          "Identifier": [
+                            {
+                              "Identifier": "print"
+                            },
+                            {
+                              "line": 3,
+                              "linechar": 4
+                            },
+                            {
+                              "line": 3,
+                              "linechar": 9
+                            }
+                          ]
+                        },
+                        [
+                          {
+                            "BinaryOperator": [
+                              {
+                                "Identifier": [
+                                  {
+                                    "Identifier": "a"
+                                  },
+                                  {
+                                    "line": 3,
+                                    "linechar": 10
+                                  },
+                                  {
+                                    "line": 3,
+                                    "linechar": 11
+                                  }
+                                ]
+                              },
+                              "Plus",
+                              {
+                                "StringLiteral": [
+                                  "\\n",
+                                  {
+                                    "line": 3,
+                                    "linechar": 12
+                                  },
+                                  {
+                                    "line": 3,
+                                    "linechar": 16
+                                  }
+                                ]
+                              },
+                              {
+                                "line": 3,
+                                "linechar": 10
+                              },
+                              {
+                                "line": 3,
+                                "linechar": 16
+                              }
+                            ]
+                          }
+                        ],
+                        {
+                          "line": 3,
+                          "linechar": 0
+                        },
+                        {
+                          "line": 3,
+                          "linechar": 17
+                        }
+                      ]
+                    },
+                    {
+                      "line": 3,
+                      "linechar": 0
+                    },
+                    {
+                      "line": 3,
+                      "linechar": 17
+                    }
+                  ]
+                },
+                {
+                  "Expression": [
+                    {
+                      "BinaryOperator": [
+                        {
+                          "Identifier": [
+                            {
+                              "Identifier": "a"
+                            },
+                            {
+                              "line": 4,
+                              "linechar": 4
+                            },
+                            {
+                              "line": 4,
+                              "linechar": 5
+                            }
+                          ]
+                        },
+                        "PlusEqual",
+                        {
+                          "IntegerLiteral": [
+                            1,
+                            {
+                              "line": 4,
+                              "linechar": 7
+                            },
+                            {
+                              "line": 4,
+                              "linechar": 8
+                            }
+                          ]
+                        },
+                        {
+                          "line": 4,
+                          "linechar": 0
+                        },
+                        {
+                          "line": 4,
+                          "linechar": 8
+                        }
+                      ]
+                    },
+                    {
+                      "line": 4,
+                      "linechar": 0
+                    },
+                    {
+                      "line": 4,
+                      "linechar": 8
+                    }
+                  ]
+                }
+              ],
+              "from": {
+                "line": 2,
+                "linechar": 1
+              },
+              "to": {
+                "line": 5,
+                "linechar": 0
+              }
+            },
+            {
+              "line": 2,
+              "linechar": 0
+            },
+            {
+              "line": 5,
+              "linechar": 1
+            }
+          ]
+        },
+        {
+          "line": 1,
+          "linechar": 0
+        },
+        {
+          "line": 5,
+          "linechar": 14
+        }
+      ]
+    }
+  ],
+  "from": {
+    "line": 0,
+    "linechar": 0
+  },
+  "to": {
+    "line": 6,
+    "linechar": 0
+  }
+}

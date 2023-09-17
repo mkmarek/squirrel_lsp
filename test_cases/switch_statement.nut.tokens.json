@@ -1,0 +1,658 @@
+[
+  {
+    "token": {
+      "Keyword": "Local"
+    },
+    "from": {
+      "line": 0,
+      "linechar": 0
+    },
+    "to": {
+      "line": 0,
+      "linechar": 5
+    }
+  },
+  {
+    "token": {
+      "Identifier": "a"
+    },
+    "from": {
+      "line": 0,
+      "linechar": 6
+    },
+    "to": {
+      "line": 0,
+      "linechar": 7
+    }
+  },
+  {
+    "token": {
+      "Operator": "Assign"
+    },
+    "from": {
+      "line": 0,
+      "linechar": 8
+    },
+    "to": {
+      "line": 0,
+      "linechar": 9
+    }
+  },
+  {
+    "token": {
+      "Integer": 1
+    },
+    "from": {
+      "line": 0,
+      "linechar": 10
+    },
+    "to": {
+      "line": 0,
+      "linechar": 11
+    }
+  },
+  {
+    "token": "Semicolon",
+    "from": {
+      "line": 0,
+      "linechar": 11
+    },
+    "to": {
+      "line": 0,
+      "linechar": 12
+    }
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 0,
+      "linechar": 12
+    },
+    "to": {
+      "line": 1,
+      "linechar": 0
+    }
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 1,
+      "linechar": 0
+    },
+    "to": {
+      "line": 2,
+      "linechar": 0
+    }
+  },
+  {
+    "token": {
+      "Keyword": "Switch"
+    },
+    "from": {
+      "line": 2,
+      "linechar": 0
+    },
+    "to": {
+      "line": 2,
+      "linechar": 6
+    }
+  },
+  {
+    "token": "LeftParenthesis",
+    "from": {
+      "line": 2,
+      "linechar": 7
+    },
+    "to": {
+      "line": 2,
+      "linechar": 8
+    }
+  },
+  {
+    "token": {
+      "Identifier": "a"
+    },
+    "from": {
+      "line": 2,
+      "linechar": 8
+    },
+    "to": {
+      "line": 2,
+      "linechar": 9
+    }
+  },
+  {
+    "token": "RightParenthesis",
+    "from": {
+      "line": 2,
+      "linechar": 9
+    },
+    "to": {
+      "line": 2,
+      "linechar": 10
+    }
+  },
+  {
+    "token": "LeftBrace",
+    "from": {
+      "line": 2,
+      "linechar": 11
+    },
+    "to": {
+      "line": 2,
+      "linechar": 12
+    }
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 2,
+      "linechar": 12
+    },
+    "to": {
+      "line": 3,
+      "linechar": 0
+    }
+  },
+  {
+    "token": {
+      "Keyword": "Case"
+    },
+    "from": {
+      "line": 3,
+      "linechar": 2
+    },
+    "to": {
+      "line": 3,
+      "linechar": 6
+    }
+  },
+  {
+    "token": {
+      "Integer": 1
+    },
+    "from": {
+      "line": 3,
+      "linechar": 7
+    },
+    "to": {
+      "line": 3,
+      "linechar": 8
+    }
+  },
+  {
+    "token": "Colon",
+    "from": {
+      "line": 3,
+      "linechar": 8
+    },
+    "to": {
+      "line": 3,
+      "linechar": 9
+    }
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 3,
+      "linechar": 9
+    },
+    "to": {
+      "line": 4,
+      "linechar": 0
+    }
+  },
+  {
+    "token": "DoubleColon",
+    "from": {
+      "line": 4,
+      "linechar": 4
+    },
+    "to": {
+      "line": 4,
+      "linechar": 6
+    }
+  },
+  {
+    "token": {
+      "Identifier": "print"
+    },
+    "from": {
+      "line": 4,
+      "linechar": 6
+    },
+    "to": {
+      "line": 4,
+      "linechar": 11
+    }
+  },
+  {
+    "token": "LeftParenthesis",
+    "from": {
+      "line": 4,
+      "linechar": 11
+    },
+    "to": {
+      "line": 4,
+      "linechar": 12
+    }
+  },
+  {
+    "token": {
+      "String": "a is 1"
+    },
+    "from": {
+      "line": 4,
+      "linechar": 12
+    },
+    "to": {
+      "line": 4,
+      "linechar": 20
+    }
+  },
+  {
+    "token": "RightParenthesis",
+    "from": {
+      "line": 4,
+      "linechar": 20
+    },
+    "to": {
+      "line": 4,
+      "linechar": 21
+    }
+  },
+  {
+    "token": "Semicolon",
+    "from": {
+      "line": 4,
+      "linechar": 21
+    },
+    "to": {
+      "line": 4,
+      "linechar": 22
+    }
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 4,
+      "linechar": 22
+    },
+    "to": {
+      "line": 5,
+      "linechar": 0
+    }
+  },
+  {
+    "token": {
+      "Keyword": "Break"
+    },
+    "from": {
+      "line": 5,
+      "linechar": 4
+    },
+    "to": {
+      "line": 5,
+      "linechar": 9
+    }
+  },
+  {
+    "token": "Semicolon",
+    "from": {
+      "line": 5,
+      "linechar": 9
+    },
+    "to": {
+      "line": 5,
+      "linechar": 10
+    }
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 5,
+      "linechar": 10
+    },
+    "to": {
+      "line": 6,
+      "linechar": 0
+    }
+  },
+  {
+    "token": {
+      "Keyword": "Case"
+    },
+    "from": {
+      "line": 6,
+      "linechar": 2
+    },
+    "to": {
+      "line": 6,
+      "linechar": 6
+    }
+  },
+  {
+    "token": {
+      "Integer": 2
+    },
+    "from": {
+      "line": 6,
+      "linechar": 7
+    },
+    "to": {
+      "line": 6,
+      "linechar": 8
+    }
+  },
+  {
+    "token": "Colon",
+    "from": {
+      "line": 6,
+      "linechar": 8
+    },
+    "to": {
+      "line": 6,
+      "linechar": 9
+    }
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 6,
+      "linechar": 9
+    },
+    "to": {
+      "line": 7,
+      "linechar": 0
+    }
+  },
+  {
+    "token": "DoubleColon",
+    "from": {
+      "line": 7,
+      "linechar": 4
+    },
+    "to": {
+      "line": 7,
+      "linechar": 6
+    }
+  },
+  {
+    "token": {
+      "Identifier": "print"
+    },
+    "from": {
+      "line": 7,
+      "linechar": 6
+    },
+    "to": {
+      "line": 7,
+      "linechar": 11
+    }
+  },
+  {
+    "token": "LeftParenthesis",
+    "from": {
+      "line": 7,
+      "linechar": 11
+    },
+    "to": {
+      "line": 7,
+      "linechar": 12
+    }
+  },
+  {
+    "token": {
+      "String": "a is 2"
+    },
+    "from": {
+      "line": 7,
+      "linechar": 12
+    },
+    "to": {
+      "line": 7,
+      "linechar": 20
+    }
+  },
+  {
+    "token": "RightParenthesis",
+    "from": {
+      "line": 7,
+      "linechar": 20
+    },
+    "to": {
+      "line": 7,
+      "linechar": 21
+    }
+  },
+  {
+    "token": "Semicolon",
+    "from": {
+      "line": 7,
+      "linechar": 21
+    },
+    "to": {
+      "line": 7,
+      "linechar": 22
+    }
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 7,
+      "linechar": 22
+    },
+    "to": {
+      "line": 8,
+      "linechar": 0
+    }
+  },
+  {
+    "token": {
+      "Keyword": "Break"
+    },
+    "from": {
+      "line": 8,
+      "linechar": 4
+    },
+    "to": {
+      "line": 8,
+      "linechar": 9
+    }
+  },
+  {
+    "token": "Semicolon",
+    "from": {
+      "line": 8,
+      "linechar": 9
+    },
+    "to": {
+      "line": 8,
+      "linechar": 10
+    }
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 8,
+      "linechar": 10
+    },
+    "to": {
+      "line": 9,
+      "linechar": 0
+    }
+  },
+  {
+    "token": {
+      "Keyword": "Default"
+    },
+    "from": {
+      "line": 9,
+      "linechar": 2
+    },
+    "to": {
+      "line": 9,
+      "linechar": 9
+    }
+  },
+  {
+    "token": "Colon",
+    "from": {
+      "line": 9,
+      "linechar": 9
+    },
+    "to": {
+      "line": 9,
+      "linechar": 10
+    }
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 9,
+      "linechar": 10
+    },
+    "to": {
+      "line": 10,
+      "linechar": 0
+    }
+  },
+  {
+    "token": "DoubleColon",
+    "from": {
+      "line": 10,
+      "linechar": 4
+    },
+    "to": {
+      "line": 10,
+      "linechar": 6
+    }
+  },
+  {
+    "token": {
+      "Identifier": "print"
+    },
+    "from": {
+      "line": 10,
+      "linechar": 6
+    },
+    "to": {
+      "line": 10,
+      "linechar": 11
+    }
+  },
+  {
+    "token": "LeftParenthesis",
+    "from": {
+      "line": 10,
+      "linechar": 11
+    },
+    "to": {
+      "line": 10,
+      "linechar": 12
+    }
+  },
+  {
+    "token": {
+      "String": "a is not 1 or 2"
+    },
+    "from": {
+      "line": 10,
+      "linechar": 12
+    },
+    "to": {
+      "line": 10,
+      "linechar": 29
+    }
+  },
+  {
+    "token": "RightParenthesis",
+    "from": {
+      "line": 10,
+      "linechar": 29
+    },
+    "to": {
+      "line": 10,
+      "linechar": 30
+    }
+  },
+  {
+    "token": "Semicolon",
+    "from": {
+      "line": 10,
+      "linechar": 30
+    },
+    "to": {
+      "line": 10,
+      "linechar": 31
+    }
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 10,
+      "linechar": 31
+    },
+    "to": {
+      "line": 11,
+      "linechar": 0
+    }
+  },
+  {
+    "token": {
+      "Keyword": "Break"
+    },
+    "from": {
+      "line": 11,
+      "linechar": 4
+    },
+    "to": {
+      "line": 11,
+      "linechar": 9
+    }
+  },
+  {
+    "token": "Semicolon",
+    "from": {
+      "line": 11,
+      "linechar": 9
+    },
+    "to": {
+      "line": 11,
+      "linechar": 10
+    }
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 11,
+      "linechar": 10
+    },
+    "to": {
+      "line": 12,
+      "linechar": 0
+    }
+  },
+  {
+    "token": "RightBrace",
+    "from": {
+      "line": 12,
+      "linechar": 0
+    },
+    "to": {
+      "line": 12,
+      "linechar": 1
+    }
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 12,
+      "linechar": 1
+    },
+    "to": {
+      "line": 13,
+      "linechar": 0
+    }
+  }
+]

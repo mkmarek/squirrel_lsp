@@ -1,0 +1,106 @@
+{
+  "statements": [
+    {
+      "Local": [
+        [
+          {
+            "name": "b",
+            "expression": {
+              "TernaryOperator": [
+                {
+                  "BinaryOperator": [
+                    {
+                      "IntegerLiteral": [
+                        1,
+                        {
+                          "line": 0,
+                          "linechar": 9
+                        },
+                        {
+                          "line": 0,
+                          "linechar": 11
+                        }
+                      ]
+                    },
+                    "Less",
+                    {
+                      "IntegerLiteral": [
+                        2,
+                        {
+                          "line": 0,
+                          "linechar": 13
+                        },
+                        {
+                          "line": 0,
+                          "linechar": 15
+                        }
+                      ]
+                    },
+                    {
+                      "line": 0,
+                      "linechar": 9
+                    },
+                    {
+                      "line": 0,
+                      "linechar": 15
+                    }
+                  ]
+                },
+                {
+                  "IntegerLiteral": [
+                    3,
+                    {
+                      "line": 0,
+                      "linechar": 17
+                    },
+                    {
+                      "line": 0,
+                      "linechar": 19
+                    }
+                  ]
+                },
+                {
+                  "IntegerLiteral": [
+                    4,
+                    {
+                      "line": 0,
+                      "linechar": 21
+                    },
+                    {
+                      "line": 0,
+                      "linechar": 23
+                    }
+                  ]
+                },
+                {
+                  "line": 0,
+                  "linechar": 9
+                },
+                {
+                  "line": 0,
+                  "linechar": 23
+                }
+              ]
+            }
+          }
+        ],
+        {
+          "line": 0,
+          "linechar": 0
+        },
+        {
+          "line": 0,
+          "linechar": 23
+        }
+      ]
+    }
+  ],
+  "from": {
+    "line": 0,
+    "linechar": 0
+  },
+  "to": {
+    "line": 1,
+    "linechar": 0
+  }
+}

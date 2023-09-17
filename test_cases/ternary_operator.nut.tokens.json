@@ -1,0 +1,139 @@
+[
+  {
+    "token": {
+      "Keyword": "Local"
+    },
+    "from": {
+      "line": 0,
+      "linechar": 0
+    },
+    "to": {
+      "line": 0,
+      "linechar": 5
+    }
+  },
+  {
+    "token": {
+      "Identifier": "b"
+    },
+    "from": {
+      "line": 0,
+      "linechar": 6
+    },
+    "to": {
+      "line": 0,
+      "linechar": 7
+    }
+  },
+  {
+    "token": {
+      "Operator": "Assign"
+    },
+    "from": {
+      "line": 0,
+      "linechar": 8
+    },
+    "to": {
+      "line": 0,
+      "linechar": 9
+    }
+  },
+  {
+    "token": {
+      "Integer": 1
+    },
+    "from": {
+      "line": 0,
+      "linechar": 10
+    },
+    "to": {
+      "line": 0,
+      "linechar": 11
+    }
+  },
+  {
+    "token": {
+      "Operator": "Less"
+    },
+    "from": {
+      "line": 0,
+      "linechar": 12
+    },
+    "to": {
+      "line": 0,
+      "linechar": 13
+    }
+  },
+  {
+    "token": {
+      "Integer": 2
+    },
+    "from": {
+      "line": 0,
+      "linechar": 14
+    },
+    "to": {
+      "line": 0,
+      "linechar": 15
+    }
+  },
+  {
+    "token": "QuestionMark",
+    "from": {
+      "line": 0,
+      "linechar": 16
+    },
+    "to": {
+      "line": 0,
+      "linechar": 17
+    }
+  },
+  {
+    "token": {
+      "Integer": 3
+    },
+    "from": {
+      "line": 0,
+      "linechar": 18
+    },
+    "to": {
+      "line": 0,
+      "linechar": 19
+    }
+  },
+  {
+    "token": "Colon",
+    "from": {
+      "line": 0,
+      "linechar": 20
+    },
+    "to": {
+      "line": 0,
+      "linechar": 21
+    }
+  },
+  {
+    "token": {
+      "Integer": 4
+    },
+    "from": {
+      "line": 0,
+      "linechar": 22
+    },
+    "to": {
+      "line": 0,
+      "linechar": 23
+    }
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 0,
+      "linechar": 23
+    },
+    "to": {
+      "line": 1,
+      "linechar": 0
+    }
+  }
+]

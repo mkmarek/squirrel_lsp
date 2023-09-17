@@ -1,0 +1,479 @@
+{
+  "statements": [
+    {
+      "Local": [
+        [
+          {
+            "name": "a",
+            "expression": {
+              "IntegerLiteral": [
+                0,
+                {
+                  "line": 0,
+                  "linechar": 8
+                },
+                {
+                  "line": 0,
+                  "linechar": 9
+                }
+              ]
+            }
+          }
+        ],
+        {
+          "line": 0,
+          "linechar": 0
+        },
+        {
+          "line": 0,
+          "linechar": 9
+        }
+      ]
+    },
+    {
+      "While": [
+        {
+          "BinaryOperator": [
+            {
+              "Identifier": [
+                {
+                  "Identifier": "a"
+                },
+                {
+                  "line": 1,
+                  "linechar": 6
+                },
+                {
+                  "line": 1,
+                  "linechar": 7
+                }
+              ]
+            },
+            "Less",
+            {
+              "Identifier": [
+                {
+                  "Identifier": "n"
+                },
+                {
+                  "line": 1,
+                  "linechar": 8
+                },
+                {
+                  "line": 1,
+                  "linechar": 9
+                }
+              ]
+            },
+            {
+              "line": 1,
+              "linechar": 6
+            },
+            {
+              "line": 1,
+              "linechar": 9
+            }
+          ]
+        },
+        {
+          "Expression": [
+            {
+              "BinaryOperator": [
+                {
+                  "Identifier": [
+                    {
+                      "Identifier": "a"
+                    },
+                    {
+                      "line": 1,
+                      "linechar": 11
+                    },
+                    {
+                      "line": 1,
+                      "linechar": 12
+                    }
+                  ]
+                },
+                "PlusEqual",
+                {
+                  "IntegerLiteral": [
+                    1,
+                    {
+                      "line": 1,
+                      "linechar": 14
+                    },
+                    {
+                      "line": 1,
+                      "linechar": 15
+                    }
+                  ]
+                },
+                {
+                  "line": 1,
+                  "linechar": 10
+                },
+                {
+                  "line": 1,
+                  "linechar": 15
+                }
+              ]
+            },
+            {
+              "line": 1,
+              "linechar": 10
+            },
+            {
+              "line": 1,
+              "linechar": 15
+            }
+          ]
+        },
+        {
+          "line": 1,
+          "linechar": 0
+        },
+        {
+          "line": 1,
+          "linechar": 15
+        }
+      ]
+    },
+    {
+      "While": [
+        {
+          "BooleanLiteral": [
+            true,
+            {
+              "line": 3,
+              "linechar": 6
+            },
+            {
+              "line": 3,
+              "linechar": 10
+            }
+          ]
+        },
+        {
+          "Block": [
+            {
+              "statements": [
+                {
+                  "If": [
+                    {
+                      "BinaryOperator": [
+                        {
+                          "Identifier": [
+                            {
+                              "Identifier": "a"
+                            },
+                            {
+                              "line": 5,
+                              "linechar": 5
+                            },
+                            {
+                              "line": 5,
+                              "linechar": 6
+                            }
+                          ]
+                        },
+                        "Less",
+                        {
+                          "IntegerLiteral": [
+                            0,
+                            {
+                              "line": 5,
+                              "linechar": 7
+                            },
+                            {
+                              "line": 5,
+                              "linechar": 8
+                            }
+                          ]
+                        },
+                        {
+                          "line": 5,
+                          "linechar": 5
+                        },
+                        {
+                          "line": 5,
+                          "linechar": 8
+                        }
+                      ]
+                    },
+                    {
+                      "Break": [
+                        {
+                          "line": 5,
+                          "linechar": 9
+                        },
+                        {
+                          "line": 5,
+                          "linechar": 15
+                        }
+                      ]
+                    },
+                    null,
+                    {
+                      "line": 5,
+                      "linechar": 0
+                    },
+                    {
+                      "line": 5,
+                      "linechar": 15
+                    }
+                  ]
+                },
+                {
+                  "Expression": [
+                    {
+                      "BinaryOperator": [
+                        {
+                          "Identifier": [
+                            {
+                              "Identifier": "a"
+                            },
+                            {
+                              "line": 6,
+                              "linechar": 2
+                            },
+                            {
+                              "line": 6,
+                              "linechar": 3
+                            }
+                          ]
+                        },
+                        "MinusEqual",
+                        {
+                          "IntegerLiteral": [
+                            1,
+                            {
+                              "line": 6,
+                              "linechar": 5
+                            },
+                            {
+                              "line": 6,
+                              "linechar": 6
+                            }
+                          ]
+                        },
+                        {
+                          "line": 6,
+                          "linechar": 0
+                        },
+                        {
+                          "line": 6,
+                          "linechar": 6
+                        }
+                      ]
+                    },
+                    {
+                      "line": 6,
+                      "linechar": 0
+                    },
+                    {
+                      "line": 6,
+                      "linechar": 6
+                    }
+                  ]
+                }
+              ],
+              "from": {
+                "line": 4,
+                "linechar": 1
+              },
+              "to": {
+                "line": 7,
+                "linechar": 0
+              }
+            },
+            {
+              "line": 4,
+              "linechar": 0
+            },
+            {
+              "line": 7,
+              "linechar": 1
+            }
+          ]
+        },
+        {
+          "line": 3,
+          "linechar": 0
+        },
+        {
+          "line": 7,
+          "linechar": 1
+        }
+      ]
+    },
+    {
+      "While": [
+        {
+          "BinaryOperator": [
+            {
+              "PostfixUnaryOperator": [
+                "Increment",
+                {
+                  "Identifier": [
+                    {
+                      "Identifier": "d"
+                    },
+                    {
+                      "line": 9,
+                      "linechar": 7
+                    },
+                    {
+                      "line": 9,
+                      "linechar": 8
+                    }
+                  ]
+                },
+                {
+                  "line": 9,
+                  "linechar": 8
+                },
+                {
+                  "line": 9,
+                  "linechar": 10
+                }
+              ]
+            },
+            "Less",
+            {
+              "Identifier": [
+                {
+                  "Identifier": "len"
+                },
+                {
+                  "line": 9,
+                  "linechar": 13
+                },
+                {
+                  "line": 9,
+                  "linechar": 16
+                }
+              ]
+            },
+            {
+              "line": 9,
+              "linechar": 7
+            },
+            {
+              "line": 9,
+              "linechar": 16
+            }
+          ]
+        },
+        {
+          "Block": [
+            {
+              "statements": [
+                {
+                  "Expression": [
+                    {
+                      "ScopeResolution": [
+                        null,
+                        {
+                          "FunctionCall": [
+                            {
+                              "Identifier": [
+                                {
+                                  "Identifier": "print"
+                                },
+                                {
+                                  "line": 10,
+                                  "linechar": 4
+                                },
+                                {
+                                  "line": 10,
+                                  "linechar": 9
+                                }
+                              ]
+                            },
+                            [
+                              {
+                                "Identifier": [
+                                  {
+                                    "Identifier": "d"
+                                  },
+                                  {
+                                    "line": 10,
+                                    "linechar": 10
+                                  },
+                                  {
+                                    "line": 10,
+                                    "linechar": 11
+                                  }
+                                ]
+                              }
+                            ],
+                            {
+                              "line": 10,
+                              "linechar": 4
+                            },
+                            {
+                              "line": 10,
+                              "linechar": 12
+                            }
+                          ]
+                        },
+                        {
+                          "line": 10,
+                          "linechar": 0
+                        },
+                        {
+                          "line": 10,
+                          "linechar": 12
+                        }
+                      ]
+                    },
+                    {
+                      "line": 10,
+                      "linechar": 0
+                    },
+                    {
+                      "line": 10,
+                      "linechar": 12
+                    }
+                  ]
+                }
+              ],
+              "from": {
+                "line": 9,
+                "linechar": 19
+              },
+              "to": {
+                "line": 11,
+                "linechar": 0
+              }
+            },
+            {
+              "line": 9,
+              "linechar": 17
+            },
+            {
+              "line": 11,
+              "linechar": 1
+            }
+          ]
+        },
+        {
+          "line": 9,
+          "linechar": 0
+        },
+        {
+          "line": 11,
+          "linechar": 1
+        }
+      ]
+    }
+  ],
+  "from": {
+    "line": 0,
+    "linechar": 0
+  },
+  "to": {
+    "line": 13,
+    "linechar": 0
+  }
+}

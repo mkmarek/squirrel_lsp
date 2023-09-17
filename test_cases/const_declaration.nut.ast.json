@@ -1,0 +1,146 @@
+{
+  "statements": [
+    {
+      "Const": [
+        "foo",
+        {
+          "StringLiteral": [
+            "bar",
+            {
+              "line": 0,
+              "linechar": 11
+            },
+            {
+              "line": 0,
+              "linechar": 17
+            }
+          ]
+        },
+        {
+          "line": 0,
+          "linechar": 0
+        },
+        {
+          "line": 0,
+          "linechar": 17
+        }
+      ]
+    },
+    {
+      "Local": [
+        [
+          {
+            "name": "a",
+            "expression": {
+              "BinaryOperator": [
+                {
+                  "IntegerLiteral": [
+                    1,
+                    {
+                      "line": 3,
+                      "linechar": 9
+                    },
+                    {
+                      "line": 3,
+                      "linechar": 11
+                    }
+                  ]
+                },
+                "Plus",
+                {
+                  "BinaryOperator": [
+                    {
+                      "IntegerLiteral": [
+                        2,
+                        {
+                          "line": 3,
+                          "linechar": 13
+                        },
+                        {
+                          "line": 3,
+                          "linechar": 15
+                        }
+                      ]
+                    },
+                    "Plus",
+                    {
+                      "BinaryOperator": [
+                        {
+                          "IntegerLiteral": [
+                            3,
+                            {
+                              "line": 3,
+                              "linechar": 17
+                            },
+                            {
+                              "line": 3,
+                              "linechar": 19
+                            }
+                          ]
+                        },
+                        "Plus",
+                        {
+                          "IntegerLiteral": [
+                            4,
+                            {
+                              "line": 3,
+                              "linechar": 21
+                            },
+                            {
+                              "line": 3,
+                              "linechar": 23
+                            }
+                          ]
+                        },
+                        {
+                          "line": 3,
+                          "linechar": 17
+                        },
+                        {
+                          "line": 3,
+                          "linechar": 23
+                        }
+                      ]
+                    },
+                    {
+                      "line": 3,
+                      "linechar": 13
+                    },
+                    {
+                      "line": 3,
+                      "linechar": 23
+                    }
+                  ]
+                },
+                {
+                  "line": 3,
+                  "linechar": 9
+                },
+                {
+                  "line": 3,
+                  "linechar": 23
+                }
+              ]
+            }
+          }
+        ],
+        {
+          "line": 3,
+          "linechar": 0
+        },
+        {
+          "line": 3,
+          "linechar": 23
+        }
+      ]
+    }
+  ],
+  "from": {
+    "line": 0,
+    "linechar": 0
+  },
+  "to": {
+    "line": 4,
+    "linechar": 0
+  }
+}

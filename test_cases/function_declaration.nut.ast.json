@@ -1,0 +1,578 @@
+{
+  "statements": [
+    {
+      "FunctionDeclaration": {
+        "name": {
+          "Identifier": [
+            {
+              "Identifier": "foo"
+            },
+            {
+              "line": 0,
+              "linechar": 9
+            },
+            {
+              "line": 0,
+              "linechar": 12
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "Identifier": [
+              {
+                "Identifier": "arg1"
+              },
+              {
+                "line": 0,
+                "linechar": 13
+              },
+              {
+                "line": 0,
+                "linechar": 17
+              }
+            ]
+          },
+          {
+            "Identifier": [
+              {
+                "Identifier": "arg2"
+              },
+              {
+                "line": 0,
+                "linechar": 18
+              },
+              {
+                "line": 0,
+                "linechar": 22
+              }
+            ]
+          },
+          {
+            "Identifier": [
+              {
+                "Identifier": "arg3"
+              },
+              {
+                "line": 0,
+                "linechar": 23
+              },
+              {
+                "line": 0,
+                "linechar": 27
+              }
+            ]
+          }
+        ],
+        "statement": {
+          "Block": [
+            {
+              "statements": [
+                {
+                  "Expression": [
+                    {
+                      "ScopeResolution": [
+                        null,
+                        {
+                          "FunctionCall": [
+                            {
+                              "Identifier": [
+                                {
+                                  "Identifier": "print"
+                                },
+                                {
+                                  "line": 2,
+                                  "linechar": 4
+                                },
+                                {
+                                  "line": 2,
+                                  "linechar": 9
+                                }
+                              ]
+                            },
+                            [
+                              {
+                                "BinaryOperator": [
+                                  {
+                                    "Identifier": [
+                                      {
+                                        "Identifier": "arg1"
+                                      },
+                                      {
+                                        "line": 2,
+                                        "linechar": 10
+                                      },
+                                      {
+                                        "line": 2,
+                                        "linechar": 14
+                                      }
+                                    ]
+                                  },
+                                  "Plus",
+                                  {
+                                    "BinaryOperator": [
+                                      {
+                                        "Identifier": [
+                                          {
+                                            "Identifier": "arg2"
+                                          },
+                                          {
+                                            "line": 2,
+                                            "linechar": 17
+                                          },
+                                          {
+                                            "line": 2,
+                                            "linechar": 21
+                                          }
+                                        ]
+                                      },
+                                      "Plus",
+                                      {
+                                        "Identifier": [
+                                          {
+                                            "Identifier": "arg3"
+                                          },
+                                          {
+                                            "line": 2,
+                                            "linechar": 24
+                                          },
+                                          {
+                                            "line": 2,
+                                            "linechar": 28
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "line": 2,
+                                        "linechar": 16
+                                      },
+                                      {
+                                        "line": 2,
+                                        "linechar": 28
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "line": 2,
+                                    "linechar": 10
+                                  },
+                                  {
+                                    "line": 2,
+                                    "linechar": 28
+                                  }
+                                ]
+                              }
+                            ],
+                            {
+                              "line": 2,
+                              "linechar": 4
+                            },
+                            {
+                              "line": 2,
+                              "linechar": 29
+                            }
+                          ]
+                        },
+                        {
+                          "line": 2,
+                          "linechar": 0
+                        },
+                        {
+                          "line": 2,
+                          "linechar": 29
+                        }
+                      ]
+                    },
+                    {
+                      "line": 2,
+                      "linechar": 0
+                    },
+                    {
+                      "line": 2,
+                      "linechar": 29
+                    }
+                  ]
+                },
+                {
+                  "Return": [
+                    {
+                      "BinaryOperator": [
+                        {
+                          "Identifier": [
+                            {
+                              "Identifier": "arg1"
+                            },
+                            {
+                              "line": 4,
+                              "linechar": 9
+                            },
+                            {
+                              "line": 4,
+                              "linechar": 13
+                            }
+                          ]
+                        },
+                        "Plus",
+                        {
+                          "BinaryOperator": [
+                            {
+                              "Identifier": [
+                                {
+                                  "Identifier": "arg2"
+                                },
+                                {
+                                  "line": 4,
+                                  "linechar": 16
+                                },
+                                {
+                                  "line": 4,
+                                  "linechar": 20
+                                }
+                              ]
+                            },
+                            "Plus",
+                            {
+                              "Identifier": [
+                                {
+                                  "Identifier": "arg3"
+                                },
+                                {
+                                  "line": 4,
+                                  "linechar": 23
+                                },
+                                {
+                                  "line": 4,
+                                  "linechar": 27
+                                }
+                              ]
+                            },
+                            {
+                              "line": 4,
+                              "linechar": 15
+                            },
+                            {
+                              "line": 4,
+                              "linechar": 27
+                            }
+                          ]
+                        },
+                        {
+                          "line": 4,
+                          "linechar": 8
+                        },
+                        {
+                          "line": 4,
+                          "linechar": 27
+                        }
+                      ]
+                    },
+                    {
+                      "line": 4,
+                      "linechar": 0
+                    },
+                    {
+                      "line": 4,
+                      "linechar": 27
+                    }
+                  ]
+                }
+              ],
+              "from": {
+                "line": 1,
+                "linechar": 1
+              },
+              "to": {
+                "line": 5,
+                "linechar": 0
+              }
+            },
+            {
+              "line": 1,
+              "linechar": 0
+            },
+            {
+              "line": 5,
+              "linechar": 1
+            }
+          ]
+        },
+        "from": {
+          "line": 0,
+          "linechar": 0
+        },
+        "to": {
+          "line": 5,
+          "linechar": 1
+        }
+      }
+    },
+    {
+      "Expression": [
+        {
+          "FunctionCall": [
+            {
+              "Identifier": [
+                {
+                  "Identifier": "invoke"
+                },
+                {
+                  "line": 8,
+                  "linechar": 0
+                },
+                {
+                  "line": 8,
+                  "linechar": 6
+                }
+              ]
+            },
+            [
+              {
+                "Function": [
+                  {
+                    "name": null,
+                    "parameters": [
+                      {
+                        "Identifier": [
+                          {
+                            "Identifier": "arg1"
+                          },
+                          {
+                            "line": 8,
+                            "linechar": 17
+                          },
+                          {
+                            "line": 8,
+                            "linechar": 21
+                          }
+                        ]
+                      },
+                      {
+                        "Identifier": [
+                          {
+                            "Identifier": "arg2"
+                          },
+                          {
+                            "line": 8,
+                            "linechar": 22
+                          },
+                          {
+                            "line": 8,
+                            "linechar": 26
+                          }
+                        ]
+                      },
+                      {
+                        "Identifier": [
+                          {
+                            "Identifier": "arg3"
+                          },
+                          {
+                            "line": 8,
+                            "linechar": 27
+                          },
+                          {
+                            "line": 8,
+                            "linechar": 31
+                          }
+                        ]
+                      }
+                    ],
+                    "statement": {
+                      "Block": [
+                        {
+                          "statements": [
+                            {
+                              "Expression": [
+                                {
+                                  "ScopeResolution": [
+                                    null,
+                                    {
+                                      "FunctionCall": [
+                                        {
+                                          "Identifier": [
+                                            {
+                                              "Identifier": "print"
+                                            },
+                                            {
+                                              "line": 10,
+                                              "linechar": 4
+                                            },
+                                            {
+                                              "line": 10,
+                                              "linechar": 9
+                                            }
+                                          ]
+                                        },
+                                        [
+                                          {
+                                            "BinaryOperator": [
+                                              {
+                                                "Identifier": [
+                                                  {
+                                                    "Identifier": "arg1"
+                                                  },
+                                                  {
+                                                    "line": 10,
+                                                    "linechar": 10
+                                                  },
+                                                  {
+                                                    "line": 10,
+                                                    "linechar": 14
+                                                  }
+                                                ]
+                                              },
+                                              "Plus",
+                                              {
+                                                "BinaryOperator": [
+                                                  {
+                                                    "Identifier": [
+                                                      {
+                                                        "Identifier": "arg2"
+                                                      },
+                                                      {
+                                                        "line": 10,
+                                                        "linechar": 17
+                                                      },
+                                                      {
+                                                        "line": 10,
+                                                        "linechar": 21
+                                                      }
+                                                    ]
+                                                  },
+                                                  "Plus",
+                                                  {
+                                                    "Identifier": [
+                                                      {
+                                                        "Identifier": "arg3"
+                                                      },
+                                                      {
+                                                        "line": 10,
+                                                        "linechar": 24
+                                                      },
+                                                      {
+                                                        "line": 10,
+                                                        "linechar": 28
+                                                      }
+                                                    ]
+                                                  },
+                                                  {
+                                                    "line": 10,
+                                                    "linechar": 16
+                                                  },
+                                                  {
+                                                    "line": 10,
+                                                    "linechar": 28
+                                                  }
+                                                ]
+                                              },
+                                              {
+                                                "line": 10,
+                                                "linechar": 10
+                                              },
+                                              {
+                                                "line": 10,
+                                                "linechar": 28
+                                              }
+                                            ]
+                                          }
+                                        ],
+                                        {
+                                          "line": 10,
+                                          "linechar": 4
+                                        },
+                                        {
+                                          "line": 10,
+                                          "linechar": 29
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "line": 10,
+                                      "linechar": 0
+                                    },
+                                    {
+                                      "line": 10,
+                                      "linechar": 29
+                                    }
+                                  ]
+                                },
+                                {
+                                  "line": 10,
+                                  "linechar": 0
+                                },
+                                {
+                                  "line": 10,
+                                  "linechar": 29
+                                }
+                              ]
+                            }
+                          ],
+                          "from": {
+                            "line": 9,
+                            "linechar": 1
+                          },
+                          "to": {
+                            "line": 11,
+                            "linechar": 0
+                          }
+                        },
+                        {
+                          "line": 9,
+                          "linechar": 0
+                        },
+                        {
+                          "line": 11,
+                          "linechar": 1
+                        }
+                      ]
+                    },
+                    "from": {
+                      "line": 8,
+                      "linechar": 7
+                    },
+                    "to": {
+                      "line": 11,
+                      "linechar": 1
+                    }
+                  },
+                  {
+                    "line": 8,
+                    "linechar": 7
+                  },
+                  {
+                    "line": 11,
+                    "linechar": 1
+                  }
+                ]
+              }
+            ],
+            {
+              "line": 8,
+              "linechar": 0
+            },
+            {
+              "line": 11,
+              "linechar": 2
+            }
+          ]
+        },
+        {
+          "line": 8,
+          "linechar": 0
+        },
+        {
+          "line": 11,
+          "linechar": 2
+        }
+      ]
+    }
+  ],
+  "from": {
+    "line": 0,
+    "linechar": 0
+  },
+  "to": {
+    "line": 12,
+    "linechar": 0
+  }
+}

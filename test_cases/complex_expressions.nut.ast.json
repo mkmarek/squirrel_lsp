@@ -1,0 +1,318 @@
+{
+  "statements": [
+    {
+      "Local": [
+        [
+          {
+            "name": "test",
+            "expression": {
+              "BinaryOperator": [
+                {
+                  "FunctionCall": [
+                    {
+                      "MemberAccess": [
+                        {
+                          "Identifier": [
+                            {
+                              "Identifier": "a"
+                            },
+                            {
+                              "line": 0,
+                              "linechar": 13
+                            },
+                            {
+                              "line": 0,
+                              "linechar": 14
+                            }
+                          ]
+                        },
+                        "foo",
+                        {
+                          "line": 0,
+                          "linechar": 12
+                        },
+                        {
+                          "line": 0,
+                          "linechar": 18
+                        }
+                      ]
+                    },
+                    [],
+                    {
+                      "line": 0,
+                      "linechar": 12
+                    },
+                    {
+                      "line": 0,
+                      "linechar": 20
+                    }
+                  ]
+                },
+                "Or",
+                {
+                  "BinaryOperator": [
+                    {
+                      "FunctionCall": [
+                        {
+                          "MemberAccess": [
+                            {
+                              "Identifier": [
+                                {
+                                  "Identifier": "b"
+                                },
+                                {
+                                  "line": 0,
+                                  "linechar": 24
+                                },
+                                {
+                                  "line": 0,
+                                  "linechar": 25
+                                }
+                              ]
+                            },
+                            "test",
+                            {
+                              "line": 0,
+                              "linechar": 23
+                            },
+                            {
+                              "line": 0,
+                              "linechar": 30
+                            }
+                          ]
+                        },
+                        [],
+                        {
+                          "line": 0,
+                          "linechar": 23
+                        },
+                        {
+                          "line": 0,
+                          "linechar": 32
+                        }
+                      ]
+                    },
+                    "And",
+                    {
+                      "MemberAccess": [
+                        {
+                          "MemberAccess": [
+                            {
+                              "Identifier": [
+                                {
+                                  "Identifier": "x"
+                                },
+                                {
+                                  "line": 0,
+                                  "linechar": 36
+                                },
+                                {
+                                  "line": 0,
+                                  "linechar": 37
+                                }
+                              ]
+                            },
+                            "y",
+                            {
+                              "line": 0,
+                              "linechar": 35
+                            },
+                            {
+                              "line": 0,
+                              "linechar": 39
+                            }
+                          ]
+                        },
+                        "z",
+                        {
+                          "line": 0,
+                          "linechar": 35
+                        },
+                        {
+                          "line": 0,
+                          "linechar": 41
+                        }
+                      ]
+                    },
+                    {
+                      "line": 0,
+                      "linechar": 23
+                    },
+                    {
+                      "line": 0,
+                      "linechar": 41
+                    }
+                  ]
+                },
+                {
+                  "line": 0,
+                  "linechar": 12
+                },
+                {
+                  "line": 0,
+                  "linechar": 41
+                }
+              ]
+            }
+          }
+        ],
+        {
+          "line": 0,
+          "linechar": 0
+        },
+        {
+          "line": 0,
+          "linechar": 41
+        }
+      ]
+    },
+    {
+      "Local": [
+        [
+          {
+            "name": "test2",
+            "expression": {
+              "BinaryOperator": [
+                {
+                  "UnaryOperator": [
+                    "Increment",
+                    {
+                      "PostfixUnaryOperator": [
+                        "Increment",
+                        {
+                          "Identifier": [
+                            {
+                              "Identifier": "a"
+                            },
+                            {
+                              "line": 2,
+                              "linechar": 16
+                            },
+                            {
+                              "line": 2,
+                              "linechar": 17
+                            }
+                          ]
+                        },
+                        {
+                          "line": 2,
+                          "linechar": 17
+                        },
+                        {
+                          "line": 2,
+                          "linechar": 19
+                        }
+                      ]
+                    },
+                    {
+                      "line": 2,
+                      "linechar": 13
+                    },
+                    {
+                      "line": 2,
+                      "linechar": 19
+                    }
+                  ]
+                },
+                "Minus",
+                {
+                  "BinaryOperator": [
+                    {
+                      "UnaryOperator": [
+                        "Decrement",
+                        {
+                          "PostfixUnaryOperator": [
+                            "Decrement",
+                            {
+                              "Identifier": [
+                                {
+                                  "Identifier": "b"
+                                },
+                                {
+                                  "line": 2,
+                                  "linechar": 24
+                                },
+                                {
+                                  "line": 2,
+                                  "linechar": 25
+                                }
+                              ]
+                            },
+                            {
+                              "line": 2,
+                              "linechar": 25
+                            },
+                            {
+                              "line": 2,
+                              "linechar": 27
+                            }
+                          ]
+                        },
+                        {
+                          "line": 2,
+                          "linechar": 21
+                        },
+                        {
+                          "line": 2,
+                          "linechar": 27
+                        }
+                      ]
+                    },
+                    "Multiply",
+                    {
+                      "Identifier": [
+                        {
+                          "Identifier": "c"
+                        },
+                        {
+                          "line": 2,
+                          "linechar": 30
+                        },
+                        {
+                          "line": 2,
+                          "linechar": 31
+                        }
+                      ]
+                    },
+                    {
+                      "line": 2,
+                      "linechar": 21
+                    },
+                    {
+                      "line": 2,
+                      "linechar": 31
+                    }
+                  ]
+                },
+                {
+                  "line": 2,
+                  "linechar": 13
+                },
+                {
+                  "line": 2,
+                  "linechar": 31
+                }
+              ]
+            }
+          }
+        ],
+        {
+          "line": 2,
+          "linechar": 0
+        },
+        {
+          "line": 2,
+          "linechar": 31
+        }
+      ]
+    }
+  ],
+  "from": {
+    "line": 0,
+    "linechar": 0
+  },
+  "to": {
+    "line": 3,
+    "linechar": 0
+  }
+}

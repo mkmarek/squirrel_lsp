@@ -1,0 +1,52 @@
+{
+  "statements": [
+    {
+      "Local": [
+        [
+          {
+            "name": "foo",
+            "expression": {
+              "Identifier": [
+                {
+                  "Identifier": "bar"
+                },
+                {
+                  "line": 0,
+                  "linechar": 12
+                },
+                {
+                  "line": 0,
+                  "linechar": 15
+                }
+              ]
+            }
+          },
+          {
+            "name": "baz",
+            "expression": null
+          },
+          {
+            "name": "foo",
+            "expression": null
+          }
+        ],
+        {
+          "line": 0,
+          "linechar": 0
+        },
+        {
+          "line": 0,
+          "linechar": 25
+        }
+      ]
+    }
+  ],
+  "from": {
+    "line": 0,
+    "linechar": 0
+  },
+  "to": {
+    "line": 1,
+    "linechar": 0
+  }
+}

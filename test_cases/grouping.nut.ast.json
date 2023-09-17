@@ -1,0 +1,112 @@
+{
+  "statements": [
+    {
+      "Local": [
+        [
+          {
+            "name": "stuff",
+            "expression": {
+              "BinaryOperator": [
+                {
+                  "Grouping": [
+                    {
+                      "BinaryOperator": [
+                        {
+                          "Identifier": [
+                            {
+                              "Identifier": "a"
+                            },
+                            {
+                              "line": 0,
+                              "linechar": 15
+                            },
+                            {
+                              "line": 0,
+                              "linechar": 16
+                            }
+                          ]
+                        },
+                        "Plus",
+                        {
+                          "Identifier": [
+                            {
+                              "Identifier": "b"
+                            },
+                            {
+                              "line": 0,
+                              "linechar": 19
+                            },
+                            {
+                              "line": 0,
+                              "linechar": 20
+                            }
+                          ]
+                        },
+                        {
+                          "line": 0,
+                          "linechar": 15
+                        },
+                        {
+                          "line": 0,
+                          "linechar": 20
+                        }
+                      ]
+                    },
+                    {
+                      "line": 0,
+                      "linechar": 13
+                    },
+                    {
+                      "line": 0,
+                      "linechar": 21
+                    }
+                  ]
+                },
+                "Multiply",
+                {
+                  "Identifier": [
+                    {
+                      "Identifier": "c"
+                    },
+                    {
+                      "line": 0,
+                      "linechar": 24
+                    },
+                    {
+                      "line": 0,
+                      "linechar": 25
+                    }
+                  ]
+                },
+                {
+                  "line": 0,
+                  "linechar": 13
+                },
+                {
+                  "line": 0,
+                  "linechar": 25
+                }
+              ]
+            }
+          }
+        ],
+        {
+          "line": 0,
+          "linechar": 0
+        },
+        {
+          "line": 0,
+          "linechar": 25
+        }
+      ]
+    }
+  ],
+  "from": {
+    "line": 0,
+    "linechar": 0
+  },
+  "to": {
+    "line": 1,
+    "linechar": 0
+  }
+}

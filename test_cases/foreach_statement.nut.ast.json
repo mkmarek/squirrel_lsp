@@ -1,0 +1,499 @@
+{
+  "statements": [
+    {
+      "Local": [
+        [
+          {
+            "name": "a",
+            "expression": {
+              "Array": [
+                [
+                  {
+                    "IntegerLiteral": [
+                      10,
+                      {
+                        "line": 0,
+                        "linechar": 9
+                      },
+                      {
+                        "line": 0,
+                        "linechar": 11
+                      }
+                    ]
+                  },
+                  {
+                    "IntegerLiteral": [
+                      23,
+                      {
+                        "line": 0,
+                        "linechar": 12
+                      },
+                      {
+                        "line": 0,
+                        "linechar": 14
+                      }
+                    ]
+                  },
+                  {
+                    "IntegerLiteral": [
+                      33,
+                      {
+                        "line": 0,
+                        "linechar": 15
+                      },
+                      {
+                        "line": 0,
+                        "linechar": 17
+                      }
+                    ]
+                  },
+                  {
+                    "IntegerLiteral": [
+                      41,
+                      {
+                        "line": 0,
+                        "linechar": 18
+                      },
+                      {
+                        "line": 0,
+                        "linechar": 20
+                      }
+                    ]
+                  },
+                  {
+                    "IntegerLiteral": [
+                      589,
+                      {
+                        "line": 0,
+                        "linechar": 21
+                      },
+                      {
+                        "line": 0,
+                        "linechar": 24
+                      }
+                    ]
+                  },
+                  {
+                    "IntegerLiteral": [
+                      56,
+                      {
+                        "line": 0,
+                        "linechar": 25
+                      },
+                      {
+                        "line": 0,
+                        "linechar": 27
+                      }
+                    ]
+                  }
+                ],
+                {
+                  "line": 0,
+                  "linechar": 8
+                },
+                {
+                  "line": 0,
+                  "linechar": 28
+                }
+              ]
+            }
+          }
+        ],
+        {
+          "line": 0,
+          "linechar": 0
+        },
+        {
+          "line": 0,
+          "linechar": 28
+        }
+      ]
+    },
+    {
+      "ForEach": [
+        "idx",
+        "val",
+        {
+          "Identifier": [
+            {
+              "Identifier": "a"
+            },
+            {
+              "line": 1,
+              "linechar": 19
+            },
+            {
+              "line": 1,
+              "linechar": 20
+            }
+          ]
+        },
+        {
+          "Expression": [
+            {
+              "ScopeResolution": [
+                null,
+                {
+                  "FunctionCall": [
+                    {
+                      "Identifier": [
+                        {
+                          "Identifier": "print"
+                        },
+                        {
+                          "line": 2,
+                          "linechar": 4
+                        },
+                        {
+                          "line": 2,
+                          "linechar": 9
+                        }
+                      ]
+                    },
+                    [
+                      {
+                        "BinaryOperator": [
+                          {
+                            "StringLiteral": [
+                              "index=",
+                              {
+                                "line": 2,
+                                "linechar": 10
+                              },
+                              {
+                                "line": 2,
+                                "linechar": 18
+                              }
+                            ]
+                          },
+                          "Plus",
+                          {
+                            "BinaryOperator": [
+                              {
+                                "Identifier": [
+                                  {
+                                    "Identifier": "idx"
+                                  },
+                                  {
+                                    "line": 2,
+                                    "linechar": 19
+                                  },
+                                  {
+                                    "line": 2,
+                                    "linechar": 22
+                                  }
+                                ]
+                              },
+                              "Plus",
+                              {
+                                "BinaryOperator": [
+                                  {
+                                    "StringLiteral": [
+                                      " value=",
+                                      {
+                                        "line": 2,
+                                        "linechar": 23
+                                      },
+                                      {
+                                        "line": 2,
+                                        "linechar": 32
+                                      }
+                                    ]
+                                  },
+                                  "Plus",
+                                  {
+                                    "BinaryOperator": [
+                                      {
+                                        "Identifier": [
+                                          {
+                                            "Identifier": "val"
+                                          },
+                                          {
+                                            "line": 2,
+                                            "linechar": 33
+                                          },
+                                          {
+                                            "line": 2,
+                                            "linechar": 36
+                                          }
+                                        ]
+                                      },
+                                      "Plus",
+                                      {
+                                        "StringLiteral": [
+                                          "\\n",
+                                          {
+                                            "line": 2,
+                                            "linechar": 37
+                                          },
+                                          {
+                                            "line": 2,
+                                            "linechar": 41
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "line": 2,
+                                        "linechar": 33
+                                      },
+                                      {
+                                        "line": 2,
+                                        "linechar": 41
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "line": 2,
+                                    "linechar": 23
+                                  },
+                                  {
+                                    "line": 2,
+                                    "linechar": 41
+                                  }
+                                ]
+                              },
+                              {
+                                "line": 2,
+                                "linechar": 19
+                              },
+                              {
+                                "line": 2,
+                                "linechar": 41
+                              }
+                            ]
+                          },
+                          {
+                            "line": 2,
+                            "linechar": 10
+                          },
+                          {
+                            "line": 2,
+                            "linechar": 41
+                          }
+                        ]
+                      }
+                    ],
+                    {
+                      "line": 2,
+                      "linechar": 4
+                    },
+                    {
+                      "line": 2,
+                      "linechar": 42
+                    }
+                  ]
+                },
+                {
+                  "line": 2,
+                  "linechar": 0
+                },
+                {
+                  "line": 2,
+                  "linechar": 42
+                }
+              ]
+            },
+            {
+              "line": 2,
+              "linechar": 0
+            },
+            {
+              "line": 2,
+              "linechar": 42
+            }
+          ]
+        },
+        {
+          "line": 1,
+          "linechar": 0
+        },
+        {
+          "line": 2,
+          "linechar": 42
+        }
+      ]
+    },
+    {
+      "ForEach": [
+        null,
+        "val",
+        {
+          "Identifier": [
+            {
+              "Identifier": "a"
+            },
+            {
+              "line": 4,
+              "linechar": 15
+            },
+            {
+              "line": 4,
+              "linechar": 16
+            }
+          ]
+        },
+        {
+          "Block": [
+            {
+              "statements": [
+                {
+                  "Expression": [
+                    {
+                      "ScopeResolution": [
+                        null,
+                        {
+                          "FunctionCall": [
+                            {
+                              "Identifier": [
+                                {
+                                  "Identifier": "print"
+                                },
+                                {
+                                  "line": 5,
+                                  "linechar": 4
+                                },
+                                {
+                                  "line": 5,
+                                  "linechar": 9
+                                }
+                              ]
+                            },
+                            [
+                              {
+                                "BinaryOperator": [
+                                  {
+                                    "StringLiteral": [
+                                      "value=",
+                                      {
+                                        "line": 5,
+                                        "linechar": 10
+                                      },
+                                      {
+                                        "line": 5,
+                                        "linechar": 18
+                                      }
+                                    ]
+                                  },
+                                  "Plus",
+                                  {
+                                    "BinaryOperator": [
+                                      {
+                                        "Identifier": [
+                                          {
+                                            "Identifier": "val"
+                                          },
+                                          {
+                                            "line": 5,
+                                            "linechar": 19
+                                          },
+                                          {
+                                            "line": 5,
+                                            "linechar": 22
+                                          }
+                                        ]
+                                      },
+                                      "Plus",
+                                      {
+                                        "StringLiteral": [
+                                          "\\n",
+                                          {
+                                            "line": 5,
+                                            "linechar": 23
+                                          },
+                                          {
+                                            "line": 5,
+                                            "linechar": 27
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "line": 5,
+                                        "linechar": 19
+                                      },
+                                      {
+                                        "line": 5,
+                                        "linechar": 27
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "line": 5,
+                                    "linechar": 10
+                                  },
+                                  {
+                                    "line": 5,
+                                    "linechar": 27
+                                  }
+                                ]
+                              }
+                            ],
+                            {
+                              "line": 5,
+                              "linechar": 4
+                            },
+                            {
+                              "line": 5,
+                              "linechar": 28
+                            }
+                          ]
+                        },
+                        {
+                          "line": 5,
+                          "linechar": 0
+                        },
+                        {
+                          "line": 5,
+                          "linechar": 28
+                        }
+                      ]
+                    },
+                    {
+                      "line": 5,
+                      "linechar": 0
+                    },
+                    {
+                      "line": 5,
+                      "linechar": 28
+                    }
+                  ]
+                }
+              ],
+              "from": {
+                "line": 4,
+                "linechar": 19
+              },
+              "to": {
+                "line": 6,
+                "linechar": 0
+              }
+            },
+            {
+              "line": 4,
+              "linechar": 17
+            },
+            {
+              "line": 6,
+              "linechar": 1
+            }
+          ]
+        },
+        {
+          "line": 4,
+          "linechar": 0
+        },
+        {
+          "line": 6,
+          "linechar": 1
+        }
+      ]
+    }
+  ],
+  "from": {
+    "line": 0,
+    "linechar": 0
+  },
+  "to": {
+    "line": 7,
+    "linechar": 0
+  }
+}

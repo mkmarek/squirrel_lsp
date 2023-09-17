@@ -1,0 +1,658 @@
+{
+  "statements": [
+    {
+      "Block": [
+        {
+          "statements": [],
+          "from": {
+            "line": 0,
+            "linechar": 1
+          },
+          "to": {
+            "line": 1,
+            "linechar": 0
+          }
+        },
+        {
+          "line": 0,
+          "linechar": 0
+        },
+        {
+          "line": 2,
+          "linechar": 1
+        }
+      ]
+    },
+    {
+      "Class": {
+        "name": {
+          "Identifier": [
+            {
+              "Identifier": "Foo"
+            },
+            {
+              "line": 5,
+              "linechar": 6
+            },
+            {
+              "line": 5,
+              "linechar": 9
+            }
+          ]
+        },
+        "extends": null,
+        "members": [
+          {
+            "ConstructorDeclaration": [
+              {
+                "name": {
+                  "Identifier": [
+                    {
+                      "Keyword": "Constructor"
+                    },
+                    {
+                      "line": 6,
+                      "linechar": 2
+                    },
+                    {
+                      "line": 6,
+                      "linechar": 13
+                    }
+                  ]
+                },
+                "parameters": [
+                  {
+                    "Identifier": [
+                      {
+                        "Identifier": "a1"
+                      },
+                      {
+                        "line": 6,
+                        "linechar": 14
+                      },
+                      {
+                        "line": 6,
+                        "linechar": 16
+                      }
+                    ]
+                  },
+                  {
+                    "Identifier": [
+                      {
+                        "Identifier": "a2"
+                      },
+                      {
+                        "line": 6,
+                        "linechar": 18
+                      },
+                      {
+                        "line": 6,
+                        "linechar": 20
+                      }
+                    ]
+                  }
+                ],
+                "statement": {
+                  "Block": [
+                    {
+                      "statements": [
+                        {
+                          "Expression": [
+                            {
+                              "BinaryOperator": [
+                                {
+                                  "MemberAccess": [
+                                    {
+                                      "Identifier": [
+                                        {
+                                          "Keyword": "This"
+                                        },
+                                        {
+                                          "line": 7,
+                                          "linechar": 4
+                                        },
+                                        {
+                                          "line": 7,
+                                          "linechar": 8
+                                        }
+                                      ]
+                                    },
+                                    "a1",
+                                    {
+                                      "line": 7,
+                                      "linechar": 0
+                                    },
+                                    {
+                                      "line": 7,
+                                      "linechar": 11
+                                    }
+                                  ]
+                                },
+                                "Assign",
+                                {
+                                  "Identifier": [
+                                    {
+                                      "Identifier": "a1"
+                                    },
+                                    {
+                                      "line": 7,
+                                      "linechar": 14
+                                    },
+                                    {
+                                      "line": 7,
+                                      "linechar": 16
+                                    }
+                                  ]
+                                },
+                                {
+                                  "line": 7,
+                                  "linechar": 0
+                                },
+                                {
+                                  "line": 7,
+                                  "linechar": 16
+                                }
+                              ]
+                            },
+                            {
+                              "line": 7,
+                              "linechar": 0
+                            },
+                            {
+                              "line": 7,
+                              "linechar": 16
+                            }
+                          ]
+                        },
+                        {
+                          "Expression": [
+                            {
+                              "BinaryOperator": [
+                                {
+                                  "MemberAccess": [
+                                    {
+                                      "Identifier": [
+                                        {
+                                          "Keyword": "This"
+                                        },
+                                        {
+                                          "line": 8,
+                                          "linechar": 4
+                                        },
+                                        {
+                                          "line": 8,
+                                          "linechar": 8
+                                        }
+                                      ]
+                                    },
+                                    "a2",
+                                    {
+                                      "line": 8,
+                                      "linechar": 0
+                                    },
+                                    {
+                                      "line": 8,
+                                      "linechar": 11
+                                    }
+                                  ]
+                                },
+                                "Assign",
+                                {
+                                  "Identifier": [
+                                    {
+                                      "Identifier": "a2"
+                                    },
+                                    {
+                                      "line": 8,
+                                      "linechar": 14
+                                    },
+                                    {
+                                      "line": 8,
+                                      "linechar": 16
+                                    }
+                                  ]
+                                },
+                                {
+                                  "line": 8,
+                                  "linechar": 0
+                                },
+                                {
+                                  "line": 8,
+                                  "linechar": 16
+                                }
+                              ]
+                            },
+                            {
+                              "line": 8,
+                              "linechar": 0
+                            },
+                            {
+                              "line": 8,
+                              "linechar": 16
+                            }
+                          ]
+                        }
+                      ],
+                      "from": {
+                        "line": 6,
+                        "linechar": 23
+                      },
+                      "to": {
+                        "line": 9,
+                        "linechar": 0
+                      }
+                    },
+                    {
+                      "line": 6,
+                      "linechar": 21
+                    },
+                    {
+                      "line": 9,
+                      "linechar": 3
+                    }
+                  ]
+                },
+                "from": {
+                  "line": 6,
+                  "linechar": 0
+                },
+                "to": {
+                  "line": 9,
+                  "linechar": 3
+                }
+              },
+              false
+            ]
+          },
+          {
+            "FieldDeclaration": [
+              "a1",
+              null,
+              {
+                "IntegerLiteral": [
+                  0,
+                  {
+                    "line": 11,
+                    "linechar": 6
+                  },
+                  {
+                    "line": 11,
+                    "linechar": 8
+                  }
+                ]
+              },
+              false,
+              {
+                "line": 11,
+                "linechar": 0
+              },
+              {
+                "line": 11,
+                "linechar": 8
+              }
+            ]
+          },
+          {
+            "FieldDeclaration": [
+              "a2",
+              null,
+              {
+                "IntegerLiteral": [
+                  0,
+                  {
+                    "line": 12,
+                    "linechar": 6
+                  },
+                  {
+                    "line": 12,
+                    "linechar": 8
+                  }
+                ]
+              },
+              false,
+              {
+                "line": 12,
+                "linechar": 0
+              },
+              {
+                "line": 12,
+                "linechar": 8
+              }
+            ]
+          }
+        ],
+        "from": {
+          "line": 5,
+          "linechar": 0
+        },
+        "to": {
+          "line": 13,
+          "linechar": 1
+        }
+      }
+    },
+    {
+      "Class": {
+        "name": {
+          "Identifier": [
+            {
+              "Identifier": "Bar"
+            },
+            {
+              "line": 16,
+              "linechar": 6
+            },
+            {
+              "line": 16,
+              "linechar": 9
+            }
+          ]
+        },
+        "extends": {
+          "Identifier": [
+            {
+              "Identifier": "Foo"
+            },
+            {
+              "line": 16,
+              "linechar": 18
+            },
+            {
+              "line": 16,
+              "linechar": 21
+            }
+          ]
+        },
+        "members": [
+          {
+            "ConstructorDeclaration": [
+              {
+                "name": {
+                  "Identifier": [
+                    {
+                      "Keyword": "Constructor"
+                    },
+                    {
+                      "line": 17,
+                      "linechar": 2
+                    },
+                    {
+                      "line": 17,
+                      "linechar": 13
+                    }
+                  ]
+                },
+                "parameters": [],
+                "statement": {
+                  "Block": [
+                    {
+                      "statements": [
+                        {
+                          "Expression": [
+                            {
+                              "FunctionCall": [
+                                {
+                                  "MemberAccess": [
+                                    {
+                                      "Identifier": [
+                                        {
+                                          "Keyword": "Base"
+                                        },
+                                        {
+                                          "line": 18,
+                                          "linechar": 4
+                                        },
+                                        {
+                                          "line": 18,
+                                          "linechar": 8
+                                        }
+                                      ]
+                                    },
+                                    "constructor",
+                                    {
+                                      "line": 18,
+                                      "linechar": 0
+                                    },
+                                    {
+                                      "line": 18,
+                                      "linechar": 20
+                                    }
+                                  ]
+                                },
+                                [
+                                  {
+                                    "IntegerLiteral": [
+                                      0,
+                                      {
+                                        "line": 18,
+                                        "linechar": 21
+                                      },
+                                      {
+                                        "line": 18,
+                                        "linechar": 22
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "IntegerLiteral": [
+                                      0,
+                                      {
+                                        "line": 18,
+                                        "linechar": 23
+                                      },
+                                      {
+                                        "line": 18,
+                                        "linechar": 25
+                                      }
+                                    ]
+                                  }
+                                ],
+                                {
+                                  "line": 18,
+                                  "linechar": 0
+                                },
+                                {
+                                  "line": 18,
+                                  "linechar": 26
+                                }
+                              ]
+                            },
+                            {
+                              "line": 18,
+                              "linechar": 0
+                            },
+                            {
+                              "line": 18,
+                              "linechar": 26
+                            }
+                          ]
+                        }
+                      ],
+                      "from": {
+                        "line": 17,
+                        "linechar": 17
+                      },
+                      "to": {
+                        "line": 19,
+                        "linechar": 0
+                      }
+                    },
+                    {
+                      "line": 17,
+                      "linechar": 15
+                    },
+                    {
+                      "line": 19,
+                      "linechar": 3
+                    }
+                  ]
+                },
+                "from": {
+                  "line": 17,
+                  "linechar": 0
+                },
+                "to": {
+                  "line": 19,
+                  "linechar": 3
+                }
+              },
+              false
+            ]
+          },
+          {
+            "MethodDeclaration": [
+              {
+                "name": {
+                  "Identifier": [
+                    {
+                      "Identifier": "foo"
+                    },
+                    {
+                      "line": 21,
+                      "linechar": 11
+                    },
+                    {
+                      "line": 21,
+                      "linechar": 14
+                    }
+                  ]
+                },
+                "parameters": [],
+                "statement": {
+                  "Block": [
+                    {
+                      "statements": [
+                        {
+                          "Return": [
+                            {
+                              "BinaryOperator": [
+                                {
+                                  "MemberAccess": [
+                                    {
+                                      "Identifier": [
+                                        {
+                                          "Keyword": "This"
+                                        },
+                                        {
+                                          "line": 22,
+                                          "linechar": 11
+                                        },
+                                        {
+                                          "line": 22,
+                                          "linechar": 15
+                                        }
+                                      ]
+                                    },
+                                    "a1",
+                                    {
+                                      "line": 22,
+                                      "linechar": 10
+                                    },
+                                    {
+                                      "line": 22,
+                                      "linechar": 18
+                                    }
+                                  ]
+                                },
+                                "Plus",
+                                {
+                                  "MemberAccess": [
+                                    {
+                                      "Identifier": [
+                                        {
+                                          "Keyword": "This"
+                                        },
+                                        {
+                                          "line": 22,
+                                          "linechar": 21
+                                        },
+                                        {
+                                          "line": 22,
+                                          "linechar": 25
+                                        }
+                                      ]
+                                    },
+                                    "a2",
+                                    {
+                                      "line": 22,
+                                      "linechar": 20
+                                    },
+                                    {
+                                      "line": 22,
+                                      "linechar": 28
+                                    }
+                                  ]
+                                },
+                                {
+                                  "line": 22,
+                                  "linechar": 10
+                                },
+                                {
+                                  "line": 22,
+                                  "linechar": 28
+                                }
+                              ]
+                            },
+                            {
+                              "line": 22,
+                              "linechar": 0
+                            },
+                            {
+                              "line": 22,
+                              "linechar": 28
+                            }
+                          ]
+                        }
+                      ],
+                      "from": {
+                        "line": 21,
+                        "linechar": 18
+                      },
+                      "to": {
+                        "line": 23,
+                        "linechar": 0
+                      }
+                    },
+                    {
+                      "line": 21,
+                      "linechar": 16
+                    },
+                    {
+                      "line": 23,
+                      "linechar": 3
+                    }
+                  ]
+                },
+                "from": {
+                  "line": 21,
+                  "linechar": 0
+                },
+                "to": {
+                  "line": 23,
+                  "linechar": 3
+                }
+              },
+              false
+            ]
+          }
+        ],
+        "from": {
+          "line": 16,
+          "linechar": 0
+        },
+        "to": {
+          "line": 24,
+          "linechar": 1
+        }
+      }
+    }
+  ],
+  "from": {
+    "line": 0,
+    "linechar": 0
+  },
+  "to": {
+    "line": 25,
+    "linechar": 0
+  }
+}

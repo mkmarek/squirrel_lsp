@@ -1,0 +1,101 @@
+{
+  "statements": [
+    {
+      "Local": [
+        [
+          {
+            "name": "foo",
+            "expression": {
+              "StringLiteral": [
+                "bar",
+                {
+                  "line": 0,
+                  "linechar": 11
+                },
+                {
+                  "line": 0,
+                  "linechar": 17
+                }
+              ]
+            }
+          }
+        ],
+        {
+          "line": 0,
+          "linechar": 0
+        },
+        {
+          "line": 0,
+          "linechar": 17
+        }
+      ]
+    },
+    {
+      "Local": [
+        [
+          {
+            "name": "bar",
+            "expression": {
+              "FunctionCall": [
+                {
+                  "Identifier": [
+                    {
+                      "Identifier": "regexp"
+                    },
+                    {
+                      "line": 2,
+                      "linechar": 12
+                    },
+                    {
+                      "line": 2,
+                      "linechar": 18
+                    }
+                  ]
+                },
+                [
+                  {
+                    "MutliLineStringLiteral": [
+                      "m()",
+                      {
+                        "line": 2,
+                        "linechar": 19
+                      },
+                      {
+                        "line": 2,
+                        "linechar": 25
+                      }
+                    ]
+                  }
+                ],
+                {
+                  "line": 2,
+                  "linechar": 11
+                },
+                {
+                  "line": 2,
+                  "linechar": 26
+                }
+              ]
+            }
+          }
+        ],
+        {
+          "line": 2,
+          "linechar": 0
+        },
+        {
+          "line": 2,
+          "linechar": 26
+        }
+      ]
+    }
+  ],
+  "from": {
+    "line": 0,
+    "linechar": 0
+  },
+  "to": {
+    "line": 3,
+    "linechar": 0
+  }
+}

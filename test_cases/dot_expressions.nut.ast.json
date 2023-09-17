@@ -1,0 +1,926 @@
+{
+  "statements": [
+    {
+      "Local": [
+        [
+          {
+            "name": "c",
+            "expression": {
+              "ScopeResolution": [
+                null,
+                {
+                  "MemberAccess": [
+                    {
+                      "MemberAccess": [
+                        {
+                          "Identifier": [
+                            {
+                              "Identifier": "foo"
+                            },
+                            {
+                              "line": 0,
+                              "linechar": 12
+                            },
+                            {
+                              "line": 0,
+                              "linechar": 15
+                            }
+                          ]
+                        },
+                        "bar",
+                        {
+                          "line": 0,
+                          "linechar": 12
+                        },
+                        {
+                          "line": 0,
+                          "linechar": 19
+                        }
+                      ]
+                    },
+                    "baz",
+                    {
+                      "line": 0,
+                      "linechar": 12
+                    },
+                    {
+                      "line": 0,
+                      "linechar": 23
+                    }
+                  ]
+                },
+                {
+                  "line": 0,
+                  "linechar": 9
+                },
+                {
+                  "line": 0,
+                  "linechar": 23
+                }
+              ]
+            }
+          }
+        ],
+        {
+          "line": 0,
+          "linechar": 0
+        },
+        {
+          "line": 0,
+          "linechar": 23
+        }
+      ]
+    },
+    {
+      "Local": [
+        [
+          {
+            "name": "d",
+            "expression": {
+              "ScopeResolution": [
+                {
+                  "Identifier": [
+                    {
+                      "Identifier": "foo"
+                    },
+                    {
+                      "line": 2,
+                      "linechar": 10
+                    },
+                    {
+                      "line": 2,
+                      "linechar": 13
+                    }
+                  ]
+                },
+                {
+                  "MemberAccess": [
+                    {
+                      "Identifier": [
+                        {
+                          "Identifier": "bar"
+                        },
+                        {
+                          "line": 2,
+                          "linechar": 15
+                        },
+                        {
+                          "line": 2,
+                          "linechar": 18
+                        }
+                      ]
+                    },
+                    "baz",
+                    {
+                      "line": 2,
+                      "linechar": 15
+                    },
+                    {
+                      "line": 2,
+                      "linechar": 22
+                    }
+                  ]
+                },
+                {
+                  "line": 2,
+                  "linechar": 9
+                },
+                {
+                  "line": 2,
+                  "linechar": 22
+                }
+              ]
+            }
+          }
+        ],
+        {
+          "line": 2,
+          "linechar": 0
+        },
+        {
+          "line": 2,
+          "linechar": 22
+        }
+      ]
+    },
+    {
+      "Local": [
+        [
+          {
+            "name": "g",
+            "expression": {
+              "MemberAccess": [
+                {
+                  "FunctionCall": [
+                    {
+                      "MemberAccess": [
+                        {
+                          "Identifier": [
+                            {
+                              "Identifier": "foo"
+                            },
+                            {
+                              "line": 4,
+                              "linechar": 10
+                            },
+                            {
+                              "line": 4,
+                              "linechar": 13
+                            }
+                          ]
+                        },
+                        "bar",
+                        {
+                          "line": 4,
+                          "linechar": 9
+                        },
+                        {
+                          "line": 4,
+                          "linechar": 17
+                        }
+                      ]
+                    },
+                    [],
+                    {
+                      "line": 4,
+                      "linechar": 9
+                    },
+                    {
+                      "line": 4,
+                      "linechar": 19
+                    }
+                  ]
+                },
+                "baz",
+                {
+                  "line": 4,
+                  "linechar": 9
+                },
+                {
+                  "line": 4,
+                  "linechar": 23
+                }
+              ]
+            }
+          }
+        ],
+        {
+          "line": 4,
+          "linechar": 0
+        },
+        {
+          "line": 4,
+          "linechar": 23
+        }
+      ]
+    },
+    {
+      "Local": [
+        [
+          {
+            "name": "l",
+            "expression": {
+              "FunctionCall": [
+                {
+                  "MemberAccess": [
+                    {
+                      "MemberAccess": [
+                        {
+                          "FunctionCall": [
+                            {
+                              "MemberAccess": [
+                                {
+                                  "MemberAccess": [
+                                    {
+                                      "FunctionCall": [
+                                        {
+                                          "MemberAccess": [
+                                            {
+                                              "Identifier": [
+                                                {
+                                                  "Identifier": "foo"
+                                                },
+                                                {
+                                                  "line": 6,
+                                                  "linechar": 10
+                                                },
+                                                {
+                                                  "line": 6,
+                                                  "linechar": 13
+                                                }
+                                              ]
+                                            },
+                                            "bar",
+                                            {
+                                              "line": 6,
+                                              "linechar": 9
+                                            },
+                                            {
+                                              "line": 6,
+                                              "linechar": 17
+                                            }
+                                          ]
+                                        },
+                                        [],
+                                        {
+                                          "line": 6,
+                                          "linechar": 9
+                                        },
+                                        {
+                                          "line": 6,
+                                          "linechar": 19
+                                        }
+                                      ]
+                                    },
+                                    "baz",
+                                    {
+                                      "line": 6,
+                                      "linechar": 9
+                                    },
+                                    {
+                                      "line": 6,
+                                      "linechar": 23
+                                    }
+                                  ]
+                                },
+                                "qux",
+                                {
+                                  "line": 6,
+                                  "linechar": 9
+                                },
+                                {
+                                  "line": 6,
+                                  "linechar": 27
+                                }
+                              ]
+                            },
+                            [],
+                            {
+                              "line": 6,
+                              "linechar": 9
+                            },
+                            {
+                              "line": 6,
+                              "linechar": 29
+                            }
+                          ]
+                        },
+                        "quux",
+                        {
+                          "line": 6,
+                          "linechar": 9
+                        },
+                        {
+                          "line": 6,
+                          "linechar": 34
+                        }
+                      ]
+                    },
+                    "corge",
+                    {
+                      "line": 6,
+                      "linechar": 9
+                    },
+                    {
+                      "line": 6,
+                      "linechar": 40
+                    }
+                  ]
+                },
+                [],
+                {
+                  "line": 6,
+                  "linechar": 9
+                },
+                {
+                  "line": 6,
+                  "linechar": 42
+                }
+              ]
+            }
+          }
+        ],
+        {
+          "line": 6,
+          "linechar": 0
+        },
+        {
+          "line": 6,
+          "linechar": 42
+        }
+      ]
+    },
+    {
+      "Local": [
+        [
+          {
+            "name": "m",
+            "expression": {
+              "FunctionCall": [
+                {
+                  "MemberAccess": [
+                    {
+                      "FunctionCall": [
+                        {
+                          "MemberAccess": [
+                            {
+                              "Identifier": [
+                                {
+                                  "Keyword": "This"
+                                },
+                                {
+                                  "line": 8,
+                                  "linechar": 10
+                                },
+                                {
+                                  "line": 8,
+                                  "linechar": 14
+                                }
+                              ]
+                            },
+                            "getStuff",
+                            {
+                              "line": 8,
+                              "linechar": 9
+                            },
+                            {
+                              "line": 8,
+                              "linechar": 23
+                            }
+                          ]
+                        },
+                        [
+                          {
+                            "IntegerLiteral": [
+                              1,
+                              {
+                                "line": 8,
+                                "linechar": 24
+                              },
+                              {
+                                "line": 8,
+                                "linechar": 25
+                              }
+                            ]
+                          }
+                        ],
+                        {
+                          "line": 8,
+                          "linechar": 9
+                        },
+                        {
+                          "line": 8,
+                          "linechar": 26
+                        }
+                      ]
+                    },
+                    "getMoreStuff",
+                    {
+                      "line": 8,
+                      "linechar": 9
+                    },
+                    {
+                      "line": 8,
+                      "linechar": 39
+                    }
+                  ]
+                },
+                [
+                  {
+                    "IntegerLiteral": [
+                      2,
+                      {
+                        "line": 8,
+                        "linechar": 40
+                      },
+                      {
+                        "line": 8,
+                        "linechar": 41
+                      }
+                    ]
+                  }
+                ],
+                {
+                  "line": 8,
+                  "linechar": 9
+                },
+                {
+                  "line": 8,
+                  "linechar": 42
+                }
+              ]
+            }
+          }
+        ],
+        {
+          "line": 8,
+          "linechar": 0
+        },
+        {
+          "line": 8,
+          "linechar": 42
+        }
+      ]
+    },
+    {
+      "Local": [
+        [
+          {
+            "name": "n",
+            "expression": {
+              "MemberAccess": [
+                {
+                  "MemberAccess": [
+                    {
+                      "MemberAccess": [
+                        {
+                          "MemberAccess": [
+                            {
+                              "Identifier": [
+                                {
+                                  "Identifier": "blabla"
+                                },
+                                {
+                                  "line": 10,
+                                  "linechar": 10
+                                },
+                                {
+                                  "line": 10,
+                                  "linechar": 16
+                                }
+                              ]
+                            },
+                            "stuff",
+                            {
+                              "line": 10,
+                              "linechar": 9
+                            },
+                            {
+                              "line": 10,
+                              "linechar": 22
+                            }
+                          ]
+                        },
+                        "xx",
+                        {
+                          "line": 10,
+                          "linechar": 9
+                        },
+                        {
+                          "line": 10,
+                          "linechar": 25
+                        }
+                      ]
+                    },
+                    "here",
+                    {
+                      "line": 10,
+                      "linechar": 9
+                    },
+                    {
+                      "line": 10,
+                      "linechar": 30
+                    }
+                  ]
+                },
+                "xx",
+                {
+                  "line": 10,
+                  "linechar": 9
+                },
+                {
+                  "line": 10,
+                  "linechar": 33
+                }
+              ]
+            }
+          }
+        ],
+        {
+          "line": 10,
+          "linechar": 0
+        },
+        {
+          "line": 10,
+          "linechar": 33
+        }
+      ]
+    },
+    {
+      "Local": [
+        [
+          {
+            "name": "o",
+            "expression": {
+              "BinaryOperator": [
+                {
+                  "BinaryOperator": [
+                    {
+                      "Grouping": [
+                        {
+                          "BinaryOperator": [
+                            {
+                              "FunctionCall": [
+                                {
+                                  "Identifier": [
+                                    {
+                                      "Identifier": "a"
+                                    },
+                                    {
+                                      "line": 12,
+                                      "linechar": 11
+                                    },
+                                    {
+                                      "line": 12,
+                                      "linechar": 12
+                                    }
+                                  ]
+                                },
+                                [],
+                                {
+                                  "line": 12,
+                                  "linechar": 11
+                                },
+                                {
+                                  "line": 12,
+                                  "linechar": 14
+                                }
+                              ]
+                            },
+                            "Plus",
+                            {
+                              "IntegerLiteral": [
+                                5,
+                                {
+                                  "line": 12,
+                                  "linechar": 16
+                                },
+                                {
+                                  "line": 12,
+                                  "linechar": 18
+                                }
+                              ]
+                            },
+                            {
+                              "line": 12,
+                              "linechar": 11
+                            },
+                            {
+                              "line": 12,
+                              "linechar": 18
+                            }
+                          ]
+                        },
+                        {
+                          "line": 12,
+                          "linechar": 9
+                        },
+                        {
+                          "line": 12,
+                          "linechar": 19
+                        }
+                      ]
+                    },
+                    "Multiply",
+                    {
+                      "BinaryOperator": [
+                        {
+                          "IntegerLiteral": [
+                            2,
+                            {
+                              "line": 12,
+                              "linechar": 21
+                            },
+                            {
+                              "line": 12,
+                              "linechar": 23
+                            }
+                          ]
+                        },
+                        "Divide",
+                        {
+                          "FunctionCall": [
+                            {
+                              "MemberAccess": [
+                                {
+                                  "Identifier": [
+                                    {
+                                      "Identifier": "foo"
+                                    },
+                                    {
+                                      "line": 12,
+                                      "linechar": 26
+                                    },
+                                    {
+                                      "line": 12,
+                                      "linechar": 29
+                                    }
+                                  ]
+                                },
+                                "bar",
+                                {
+                                  "line": 12,
+                                  "linechar": 25
+                                },
+                                {
+                                  "line": 12,
+                                  "linechar": 33
+                                }
+                              ]
+                            },
+                            [],
+                            {
+                              "line": 12,
+                              "linechar": 25
+                            },
+                            {
+                              "line": 12,
+                              "linechar": 35
+                            }
+                          ]
+                        },
+                        {
+                          "line": 12,
+                          "linechar": 21
+                        },
+                        {
+                          "line": 12,
+                          "linechar": 35
+                        }
+                      ]
+                    },
+                    {
+                      "line": 12,
+                      "linechar": 9
+                    },
+                    {
+                      "line": 12,
+                      "linechar": 35
+                    }
+                  ]
+                },
+                "Minus",
+                {
+                  "MemberAccess": [
+                    {
+                      "MemberAccess": [
+                        {
+                          "MemberAccess": [
+                            {
+                              "Identifier": [
+                                {
+                                  "Identifier": "c"
+                                },
+                                {
+                                  "line": 12,
+                                  "linechar": 38
+                                },
+                                {
+                                  "line": 12,
+                                  "linechar": 39
+                                }
+                              ]
+                            },
+                            "b",
+                            {
+                              "line": 12,
+                              "linechar": 37
+                            },
+                            {
+                              "line": 12,
+                              "linechar": 41
+                            }
+                          ]
+                        },
+                        "d",
+                        {
+                          "line": 12,
+                          "linechar": 37
+                        },
+                        {
+                          "line": 12,
+                          "linechar": 43
+                        }
+                      ]
+                    },
+                    "e",
+                    {
+                      "line": 12,
+                      "linechar": 37
+                    },
+                    {
+                      "line": 12,
+                      "linechar": 45
+                    }
+                  ]
+                },
+                {
+                  "line": 12,
+                  "linechar": 9
+                },
+                {
+                  "line": 12,
+                  "linechar": 45
+                }
+              ]
+            }
+          }
+        ],
+        {
+          "line": 12,
+          "linechar": 0
+        },
+        {
+          "line": 12,
+          "linechar": 45
+        }
+      ]
+    },
+    {
+      "Local": [
+        [
+          {
+            "name": "p",
+            "expression": {
+              "BinaryOperator": [
+                {
+                  "PostfixUnaryOperator": [
+                    "Increment",
+                    {
+                      "FunctionCall": [
+                        {
+                          "MemberAccess": [
+                            {
+                              "Identifier": [
+                                {
+                                  "Identifier": "foo"
+                                },
+                                {
+                                  "line": 14,
+                                  "linechar": 10
+                                },
+                                {
+                                  "line": 14,
+                                  "linechar": 13
+                                }
+                              ]
+                            },
+                            "bar",
+                            {
+                              "line": 14,
+                              "linechar": 9
+                            },
+                            {
+                              "line": 14,
+                              "linechar": 17
+                            }
+                          ]
+                        },
+                        [],
+                        {
+                          "line": 14,
+                          "linechar": 9
+                        },
+                        {
+                          "line": 14,
+                          "linechar": 19
+                        }
+                      ]
+                    },
+                    {
+                      "line": 14,
+                      "linechar": 19
+                    },
+                    {
+                      "line": 14,
+                      "linechar": 21
+                    }
+                  ]
+                },
+                "GreaterEqual",
+                {
+                  "MemberAccess": [
+                    {
+                      "MemberAccess": [
+                        {
+                          "MemberAccess": [
+                            {
+                              "Identifier": [
+                                {
+                                  "Identifier": "c"
+                                },
+                                {
+                                  "line": 14,
+                                  "linechar": 25
+                                },
+                                {
+                                  "line": 14,
+                                  "linechar": 26
+                                }
+                              ]
+                            },
+                            "b",
+                            {
+                              "line": 14,
+                              "linechar": 24
+                            },
+                            {
+                              "line": 14,
+                              "linechar": 28
+                            }
+                          ]
+                        },
+                        "d",
+                        {
+                          "line": 14,
+                          "linechar": 24
+                        },
+                        {
+                          "line": 14,
+                          "linechar": 30
+                        }
+                      ]
+                    },
+                    "e",
+                    {
+                      "line": 14,
+                      "linechar": 24
+                    },
+                    {
+                      "line": 14,
+                      "linechar": 32
+                    }
+                  ]
+                },
+                {
+                  "line": 14,
+                  "linechar": 9
+                },
+                {
+                  "line": 14,
+                  "linechar": 32
+                }
+              ]
+            }
+          }
+        ],
+        {
+          "line": 14,
+          "linechar": 0
+        },
+        {
+          "line": 14,
+          "linechar": 32
+        }
+      ]
+    }
+  ],
+  "from": {
+    "line": 0,
+    "linechar": 0
+  },
+  "to": {
+    "line": 15,
+    "linechar": 0
+  }
+}

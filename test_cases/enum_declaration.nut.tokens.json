@@ -1,0 +1,407 @@
+[
+  {
+    "token": {
+      "Keyword": "Enum"
+    },
+    "from": {
+      "line": 0,
+      "linechar": 0
+    },
+    "to": {
+      "line": 0,
+      "linechar": 4
+    }
+  },
+  {
+    "token": {
+      "Identifier": "Stuff"
+    },
+    "from": {
+      "line": 0,
+      "linechar": 5
+    },
+    "to": {
+      "line": 0,
+      "linechar": 10
+    }
+  },
+  {
+    "token": "LeftBrace",
+    "from": {
+      "line": 0,
+      "linechar": 11
+    },
+    "to": {
+      "line": 0,
+      "linechar": 12
+    }
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 0,
+      "linechar": 12
+    },
+    "to": {
+      "line": 1,
+      "linechar": 0
+    }
+  },
+  {
+    "token": {
+      "Identifier": "first"
+    },
+    "from": {
+      "line": 1,
+      "linechar": 2
+    },
+    "to": {
+      "line": 1,
+      "linechar": 7
+    }
+  },
+  {
+    "token": {
+      "Operator": "Comma"
+    },
+    "from": {
+      "line": 1,
+      "linechar": 7
+    },
+    "to": {
+      "line": 1,
+      "linechar": 8
+    }
+  },
+  {
+    "token": {
+      "Comment": "this will be 0\r"
+    },
+    "from": {
+      "line": 1,
+      "linechar": 9
+    },
+    "to": {
+      "line": 2,
+      "linechar": 0
+    }
+  },
+  {
+    "token": {
+      "Identifier": "second"
+    },
+    "from": {
+      "line": 2,
+      "linechar": 2
+    },
+    "to": {
+      "line": 2,
+      "linechar": 8
+    }
+  },
+  {
+    "token": {
+      "Operator": "Comma"
+    },
+    "from": {
+      "line": 2,
+      "linechar": 8
+    },
+    "to": {
+      "line": 2,
+      "linechar": 9
+    }
+  },
+  {
+    "token": {
+      "Comment": "this will be 1\r"
+    },
+    "from": {
+      "line": 2,
+      "linechar": 10
+    },
+    "to": {
+      "line": 3,
+      "linechar": 0
+    }
+  },
+  {
+    "token": {
+      "Identifier": "third"
+    },
+    "from": {
+      "line": 3,
+      "linechar": 2
+    },
+    "to": {
+      "line": 3,
+      "linechar": 7
+    }
+  },
+  {
+    "token": {
+      "Comment": "this will be 2\r"
+    },
+    "from": {
+      "line": 3,
+      "linechar": 8
+    },
+    "to": {
+      "line": 4,
+      "linechar": 0
+    }
+  },
+  {
+    "token": "RightBrace",
+    "from": {
+      "line": 4,
+      "linechar": 0
+    },
+    "to": {
+      "line": 4,
+      "linechar": 1
+    }
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 4,
+      "linechar": 1
+    },
+    "to": {
+      "line": 5,
+      "linechar": 0
+    }
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 5,
+      "linechar": 0
+    },
+    "to": {
+      "line": 6,
+      "linechar": 0
+    }
+  },
+  {
+    "token": {
+      "Keyword": "Enum"
+    },
+    "from": {
+      "line": 6,
+      "linechar": 0
+    },
+    "to": {
+      "line": 6,
+      "linechar": 4
+    }
+  },
+  {
+    "token": {
+      "Identifier": "Stuff"
+    },
+    "from": {
+      "line": 6,
+      "linechar": 5
+    },
+    "to": {
+      "line": 6,
+      "linechar": 10
+    }
+  },
+  {
+    "token": "LeftBrace",
+    "from": {
+      "line": 6,
+      "linechar": 11
+    },
+    "to": {
+      "line": 6,
+      "linechar": 12
+    }
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 6,
+      "linechar": 12
+    },
+    "to": {
+      "line": 7,
+      "linechar": 0
+    }
+  },
+  {
+    "token": {
+      "Identifier": "first"
+    },
+    "from": {
+      "line": 7,
+      "linechar": 2
+    },
+    "to": {
+      "line": 7,
+      "linechar": 7
+    }
+  },
+  {
+    "token": {
+      "Operator": "Assign"
+    },
+    "from": {
+      "line": 7,
+      "linechar": 8
+    },
+    "to": {
+      "line": 7,
+      "linechar": 9
+    }
+  },
+  {
+    "token": {
+      "Integer": 10
+    },
+    "from": {
+      "line": 7,
+      "linechar": 10
+    },
+    "to": {
+      "line": 7,
+      "linechar": 12
+    }
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 7,
+      "linechar": 12
+    },
+    "to": {
+      "line": 8,
+      "linechar": 0
+    }
+  },
+  {
+    "token": {
+      "Identifier": "second"
+    },
+    "from": {
+      "line": 8,
+      "linechar": 2
+    },
+    "to": {
+      "line": 8,
+      "linechar": 8
+    }
+  },
+  {
+    "token": {
+      "Operator": "Assign"
+    },
+    "from": {
+      "line": 8,
+      "linechar": 9
+    },
+    "to": {
+      "line": 8,
+      "linechar": 10
+    }
+  },
+  {
+    "token": {
+      "String": "string"
+    },
+    "from": {
+      "line": 8,
+      "linechar": 11
+    },
+    "to": {
+      "line": 8,
+      "linechar": 19
+    }
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 8,
+      "linechar": 19
+    },
+    "to": {
+      "line": 9,
+      "linechar": 0
+    }
+  },
+  {
+    "token": {
+      "Identifier": "third"
+    },
+    "from": {
+      "line": 9,
+      "linechar": 2
+    },
+    "to": {
+      "line": 9,
+      "linechar": 7
+    }
+  },
+  {
+    "token": {
+      "Operator": "Assign"
+    },
+    "from": {
+      "line": 9,
+      "linechar": 8
+    },
+    "to": {
+      "line": 9,
+      "linechar": 9
+    }
+  },
+  {
+    "token": {
+      "Float": 1.2
+    },
+    "from": {
+      "line": 9,
+      "linechar": 10
+    },
+    "to": {
+      "line": 9,
+      "linechar": 13
+    }
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 9,
+      "linechar": 13
+    },
+    "to": {
+      "line": 10,
+      "linechar": 0
+    }
+  },
+  {
+    "token": "RightBrace",
+    "from": {
+      "line": 10,
+      "linechar": 0
+    },
+    "to": {
+      "line": 10,
+      "linechar": 1
+    }
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 10,
+      "linechar": 1
+    },
+    "to": {
+      "line": 11,
+      "linechar": 0
+    }
+  }
+]

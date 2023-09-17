@@ -1,0 +1,457 @@
+[
+  {
+    "token": {
+      "Keyword": "Local"
+    },
+    "from": {
+      "line": 0,
+      "linechar": 0
+    },
+    "to": {
+      "line": 0,
+      "linechar": 5
+    }
+  },
+  {
+    "token": {
+      "Identifier": "test"
+    },
+    "from": {
+      "line": 0,
+      "linechar": 6
+    },
+    "to": {
+      "line": 0,
+      "linechar": 10
+    }
+  },
+  {
+    "token": {
+      "Operator": "Assign"
+    },
+    "from": {
+      "line": 0,
+      "linechar": 11
+    },
+    "to": {
+      "line": 0,
+      "linechar": 12
+    }
+  },
+  {
+    "token": {
+      "Identifier": "a"
+    },
+    "from": {
+      "line": 0,
+      "linechar": 13
+    },
+    "to": {
+      "line": 0,
+      "linechar": 14
+    }
+  },
+  {
+    "token": "Dot",
+    "from": {
+      "line": 0,
+      "linechar": 14
+    },
+    "to": {
+      "line": 0,
+      "linechar": 15
+    }
+  },
+  {
+    "token": {
+      "Identifier": "foo"
+    },
+    "from": {
+      "line": 0,
+      "linechar": 15
+    },
+    "to": {
+      "line": 0,
+      "linechar": 18
+    }
+  },
+  {
+    "token": "LeftParenthesis",
+    "from": {
+      "line": 0,
+      "linechar": 18
+    },
+    "to": {
+      "line": 0,
+      "linechar": 19
+    }
+  },
+  {
+    "token": "RightParenthesis",
+    "from": {
+      "line": 0,
+      "linechar": 19
+    },
+    "to": {
+      "line": 0,
+      "linechar": 20
+    }
+  },
+  {
+    "token": {
+      "Operator": "Or"
+    },
+    "from": {
+      "line": 0,
+      "linechar": 21
+    },
+    "to": {
+      "line": 0,
+      "linechar": 23
+    }
+  },
+  {
+    "token": {
+      "Identifier": "b"
+    },
+    "from": {
+      "line": 0,
+      "linechar": 24
+    },
+    "to": {
+      "line": 0,
+      "linechar": 25
+    }
+  },
+  {
+    "token": "Dot",
+    "from": {
+      "line": 0,
+      "linechar": 25
+    },
+    "to": {
+      "line": 0,
+      "linechar": 26
+    }
+  },
+  {
+    "token": {
+      "Identifier": "test"
+    },
+    "from": {
+      "line": 0,
+      "linechar": 26
+    },
+    "to": {
+      "line": 0,
+      "linechar": 30
+    }
+  },
+  {
+    "token": "LeftParenthesis",
+    "from": {
+      "line": 0,
+      "linechar": 30
+    },
+    "to": {
+      "line": 0,
+      "linechar": 31
+    }
+  },
+  {
+    "token": "RightParenthesis",
+    "from": {
+      "line": 0,
+      "linechar": 31
+    },
+    "to": {
+      "line": 0,
+      "linechar": 32
+    }
+  },
+  {
+    "token": {
+      "Operator": "And"
+    },
+    "from": {
+      "line": 0,
+      "linechar": 33
+    },
+    "to": {
+      "line": 0,
+      "linechar": 35
+    }
+  },
+  {
+    "token": {
+      "Identifier": "x"
+    },
+    "from": {
+      "line": 0,
+      "linechar": 36
+    },
+    "to": {
+      "line": 0,
+      "linechar": 37
+    }
+  },
+  {
+    "token": "Dot",
+    "from": {
+      "line": 0,
+      "linechar": 37
+    },
+    "to": {
+      "line": 0,
+      "linechar": 38
+    }
+  },
+  {
+    "token": {
+      "Identifier": "y"
+    },
+    "from": {
+      "line": 0,
+      "linechar": 38
+    },
+    "to": {
+      "line": 0,
+      "linechar": 39
+    }
+  },
+  {
+    "token": "Dot",
+    "from": {
+      "line": 0,
+      "linechar": 39
+    },
+    "to": {
+      "line": 0,
+      "linechar": 40
+    }
+  },
+  {
+    "token": {
+      "Identifier": "z"
+    },
+    "from": {
+      "line": 0,
+      "linechar": 40
+    },
+    "to": {
+      "line": 0,
+      "linechar": 41
+    }
+  },
+  {
+    "token": "Semicolon",
+    "from": {
+      "line": 0,
+      "linechar": 41
+    },
+    "to": {
+      "line": 0,
+      "linechar": 42
+    }
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 0,
+      "linechar": 42
+    },
+    "to": {
+      "line": 1,
+      "linechar": 0
+    }
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 1,
+      "linechar": 0
+    },
+    "to": {
+      "line": 2,
+      "linechar": 0
+    }
+  },
+  {
+    "token": {
+      "Keyword": "Local"
+    },
+    "from": {
+      "line": 2,
+      "linechar": 0
+    },
+    "to": {
+      "line": 2,
+      "linechar": 5
+    }
+  },
+  {
+    "token": {
+      "Identifier": "test2"
+    },
+    "from": {
+      "line": 2,
+      "linechar": 6
+    },
+    "to": {
+      "line": 2,
+      "linechar": 11
+    }
+  },
+  {
+    "token": {
+      "Operator": "Assign"
+    },
+    "from": {
+      "line": 2,
+      "linechar": 12
+    },
+    "to": {
+      "line": 2,
+      "linechar": 13
+    }
+  },
+  {
+    "token": {
+      "Operator": "Increment"
+    },
+    "from": {
+      "line": 2,
+      "linechar": 14
+    },
+    "to": {
+      "line": 2,
+      "linechar": 16
+    }
+  },
+  {
+    "token": {
+      "Identifier": "a"
+    },
+    "from": {
+      "line": 2,
+      "linechar": 16
+    },
+    "to": {
+      "line": 2,
+      "linechar": 17
+    }
+  },
+  {
+    "token": {
+      "Operator": "Increment"
+    },
+    "from": {
+      "line": 2,
+      "linechar": 17
+    },
+    "to": {
+      "line": 2,
+      "linechar": 19
+    }
+  },
+  {
+    "token": {
+      "Operator": "Minus"
+    },
+    "from": {
+      "line": 2,
+      "linechar": 20
+    },
+    "to": {
+      "line": 2,
+      "linechar": 21
+    }
+  },
+  {
+    "token": {
+      "Operator": "Decrement"
+    },
+    "from": {
+      "line": 2,
+      "linechar": 22
+    },
+    "to": {
+      "line": 2,
+      "linechar": 24
+    }
+  },
+  {
+    "token": {
+      "Identifier": "b"
+    },
+    "from": {
+      "line": 2,
+      "linechar": 24
+    },
+    "to": {
+      "line": 2,
+      "linechar": 25
+    }
+  },
+  {
+    "token": {
+      "Operator": "Decrement"
+    },
+    "from": {
+      "line": 2,
+      "linechar": 25
+    },
+    "to": {
+      "line": 2,
+      "linechar": 27
+    }
+  },
+  {
+    "token": {
+      "Operator": "Multiply"
+    },
+    "from": {
+      "line": 2,
+      "linechar": 28
+    },
+    "to": {
+      "line": 2,
+      "linechar": 29
+    }
+  },
+  {
+    "token": {
+      "Identifier": "c"
+    },
+    "from": {
+      "line": 2,
+      "linechar": 30
+    },
+    "to": {
+      "line": 2,
+      "linechar": 31
+    }
+  },
+  {
+    "token": "Semicolon",
+    "from": {
+      "line": 2,
+      "linechar": 31
+    },
+    "to": {
+      "line": 2,
+      "linechar": 32
+    }
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 2,
+      "linechar": 32
+    },
+    "to": {
+      "line": 3,
+      "linechar": 0
+    }
+  }
+]

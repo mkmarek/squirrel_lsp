@@ -1,0 +1,775 @@
+[
+  {
+    "token": {
+      "Keyword": "Local"
+    },
+    "from": {
+      "line": 0,
+      "linechar": 0
+    },
+    "to": {
+      "line": 0,
+      "linechar": 5
+    }
+  },
+  {
+    "token": {
+      "Identifier": "a"
+    },
+    "from": {
+      "line": 0,
+      "linechar": 6
+    },
+    "to": {
+      "line": 0,
+      "linechar": 7
+    }
+  },
+  {
+    "token": {
+      "Operator": "Assign"
+    },
+    "from": {
+      "line": 0,
+      "linechar": 7
+    },
+    "to": {
+      "line": 0,
+      "linechar": 8
+    }
+  },
+  {
+    "token": "LeftBracket",
+    "from": {
+      "line": 0,
+      "linechar": 8
+    },
+    "to": {
+      "line": 0,
+      "linechar": 9
+    }
+  },
+  {
+    "token": {
+      "Integer": 10
+    },
+    "from": {
+      "line": 0,
+      "linechar": 9
+    },
+    "to": {
+      "line": 0,
+      "linechar": 11
+    }
+  },
+  {
+    "token": {
+      "Operator": "Comma"
+    },
+    "from": {
+      "line": 0,
+      "linechar": 11
+    },
+    "to": {
+      "line": 0,
+      "linechar": 12
+    }
+  },
+  {
+    "token": {
+      "Integer": 23
+    },
+    "from": {
+      "line": 0,
+      "linechar": 12
+    },
+    "to": {
+      "line": 0,
+      "linechar": 14
+    }
+  },
+  {
+    "token": {
+      "Operator": "Comma"
+    },
+    "from": {
+      "line": 0,
+      "linechar": 14
+    },
+    "to": {
+      "line": 0,
+      "linechar": 15
+    }
+  },
+  {
+    "token": {
+      "Integer": 33
+    },
+    "from": {
+      "line": 0,
+      "linechar": 15
+    },
+    "to": {
+      "line": 0,
+      "linechar": 17
+    }
+  },
+  {
+    "token": {
+      "Operator": "Comma"
+    },
+    "from": {
+      "line": 0,
+      "linechar": 17
+    },
+    "to": {
+      "line": 0,
+      "linechar": 18
+    }
+  },
+  {
+    "token": {
+      "Integer": 41
+    },
+    "from": {
+      "line": 0,
+      "linechar": 18
+    },
+    "to": {
+      "line": 0,
+      "linechar": 20
+    }
+  },
+  {
+    "token": {
+      "Operator": "Comma"
+    },
+    "from": {
+      "line": 0,
+      "linechar": 20
+    },
+    "to": {
+      "line": 0,
+      "linechar": 21
+    }
+  },
+  {
+    "token": {
+      "Integer": 589
+    },
+    "from": {
+      "line": 0,
+      "linechar": 21
+    },
+    "to": {
+      "line": 0,
+      "linechar": 24
+    }
+  },
+  {
+    "token": {
+      "Operator": "Comma"
+    },
+    "from": {
+      "line": 0,
+      "linechar": 24
+    },
+    "to": {
+      "line": 0,
+      "linechar": 25
+    }
+  },
+  {
+    "token": {
+      "Integer": 56
+    },
+    "from": {
+      "line": 0,
+      "linechar": 25
+    },
+    "to": {
+      "line": 0,
+      "linechar": 27
+    }
+  },
+  {
+    "token": "RightBracket",
+    "from": {
+      "line": 0,
+      "linechar": 27
+    },
+    "to": {
+      "line": 0,
+      "linechar": 28
+    }
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 0,
+      "linechar": 28
+    },
+    "to": {
+      "line": 1,
+      "linechar": 0
+    }
+  },
+  {
+    "token": {
+      "Keyword": "Foreach"
+    },
+    "from": {
+      "line": 1,
+      "linechar": 0
+    },
+    "to": {
+      "line": 1,
+      "linechar": 7
+    }
+  },
+  {
+    "token": "LeftParenthesis",
+    "from": {
+      "line": 1,
+      "linechar": 7
+    },
+    "to": {
+      "line": 1,
+      "linechar": 8
+    }
+  },
+  {
+    "token": {
+      "Identifier": "idx"
+    },
+    "from": {
+      "line": 1,
+      "linechar": 8
+    },
+    "to": {
+      "line": 1,
+      "linechar": 11
+    }
+  },
+  {
+    "token": {
+      "Operator": "Comma"
+    },
+    "from": {
+      "line": 1,
+      "linechar": 11
+    },
+    "to": {
+      "line": 1,
+      "linechar": 12
+    }
+  },
+  {
+    "token": {
+      "Identifier": "val"
+    },
+    "from": {
+      "line": 1,
+      "linechar": 12
+    },
+    "to": {
+      "line": 1,
+      "linechar": 15
+    }
+  },
+  {
+    "token": {
+      "Operator": "In"
+    },
+    "from": {
+      "line": 1,
+      "linechar": 16
+    },
+    "to": {
+      "line": 1,
+      "linechar": 18
+    }
+  },
+  {
+    "token": {
+      "Identifier": "a"
+    },
+    "from": {
+      "line": 1,
+      "linechar": 19
+    },
+    "to": {
+      "line": 1,
+      "linechar": 20
+    }
+  },
+  {
+    "token": "RightParenthesis",
+    "from": {
+      "line": 1,
+      "linechar": 20
+    },
+    "to": {
+      "line": 1,
+      "linechar": 21
+    }
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 1,
+      "linechar": 21
+    },
+    "to": {
+      "line": 2,
+      "linechar": 0
+    }
+  },
+  {
+    "token": "DoubleColon",
+    "from": {
+      "line": 2,
+      "linechar": 2
+    },
+    "to": {
+      "line": 2,
+      "linechar": 4
+    }
+  },
+  {
+    "token": {
+      "Identifier": "print"
+    },
+    "from": {
+      "line": 2,
+      "linechar": 4
+    },
+    "to": {
+      "line": 2,
+      "linechar": 9
+    }
+  },
+  {
+    "token": "LeftParenthesis",
+    "from": {
+      "line": 2,
+      "linechar": 9
+    },
+    "to": {
+      "line": 2,
+      "linechar": 10
+    }
+  },
+  {
+    "token": {
+      "String": "index="
+    },
+    "from": {
+      "line": 2,
+      "linechar": 10
+    },
+    "to": {
+      "line": 2,
+      "linechar": 18
+    }
+  },
+  {
+    "token": {
+      "Operator": "Plus"
+    },
+    "from": {
+      "line": 2,
+      "linechar": 18
+    },
+    "to": {
+      "line": 2,
+      "linechar": 19
+    }
+  },
+  {
+    "token": {
+      "Identifier": "idx"
+    },
+    "from": {
+      "line": 2,
+      "linechar": 19
+    },
+    "to": {
+      "line": 2,
+      "linechar": 22
+    }
+  },
+  {
+    "token": {
+      "Operator": "Plus"
+    },
+    "from": {
+      "line": 2,
+      "linechar": 22
+    },
+    "to": {
+      "line": 2,
+      "linechar": 23
+    }
+  },
+  {
+    "token": {
+      "String": " value="
+    },
+    "from": {
+      "line": 2,
+      "linechar": 23
+    },
+    "to": {
+      "line": 2,
+      "linechar": 32
+    }
+  },
+  {
+    "token": {
+      "Operator": "Plus"
+    },
+    "from": {
+      "line": 2,
+      "linechar": 32
+    },
+    "to": {
+      "line": 2,
+      "linechar": 33
+    }
+  },
+  {
+    "token": {
+      "Identifier": "val"
+    },
+    "from": {
+      "line": 2,
+      "linechar": 33
+    },
+    "to": {
+      "line": 2,
+      "linechar": 36
+    }
+  },
+  {
+    "token": {
+      "Operator": "Plus"
+    },
+    "from": {
+      "line": 2,
+      "linechar": 36
+    },
+    "to": {
+      "line": 2,
+      "linechar": 37
+    }
+  },
+  {
+    "token": {
+      "String": "\\n"
+    },
+    "from": {
+      "line": 2,
+      "linechar": 37
+    },
+    "to": {
+      "line": 2,
+      "linechar": 41
+    }
+  },
+  {
+    "token": "RightParenthesis",
+    "from": {
+      "line": 2,
+      "linechar": 41
+    },
+    "to": {
+      "line": 2,
+      "linechar": 42
+    }
+  },
+  {
+    "token": "Semicolon",
+    "from": {
+      "line": 2,
+      "linechar": 42
+    },
+    "to": {
+      "line": 2,
+      "linechar": 43
+    }
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 2,
+      "linechar": 43
+    },
+    "to": {
+      "line": 3,
+      "linechar": 0
+    }
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 3,
+      "linechar": 0
+    },
+    "to": {
+      "line": 4,
+      "linechar": 0
+    }
+  },
+  {
+    "token": {
+      "Keyword": "Foreach"
+    },
+    "from": {
+      "line": 4,
+      "linechar": 0
+    },
+    "to": {
+      "line": 4,
+      "linechar": 7
+    }
+  },
+  {
+    "token": "LeftParenthesis",
+    "from": {
+      "line": 4,
+      "linechar": 7
+    },
+    "to": {
+      "line": 4,
+      "linechar": 8
+    }
+  },
+  {
+    "token": {
+      "Identifier": "val"
+    },
+    "from": {
+      "line": 4,
+      "linechar": 8
+    },
+    "to": {
+      "line": 4,
+      "linechar": 11
+    }
+  },
+  {
+    "token": {
+      "Operator": "In"
+    },
+    "from": {
+      "line": 4,
+      "linechar": 12
+    },
+    "to": {
+      "line": 4,
+      "linechar": 14
+    }
+  },
+  {
+    "token": {
+      "Identifier": "a"
+    },
+    "from": {
+      "line": 4,
+      "linechar": 15
+    },
+    "to": {
+      "line": 4,
+      "linechar": 16
+    }
+  },
+  {
+    "token": "RightParenthesis",
+    "from": {
+      "line": 4,
+      "linechar": 16
+    },
+    "to": {
+      "line": 4,
+      "linechar": 17
+    }
+  },
+  {
+    "token": "LeftBrace",
+    "from": {
+      "line": 4,
+      "linechar": 18
+    },
+    "to": {
+      "line": 4,
+      "linechar": 19
+    }
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 4,
+      "linechar": 19
+    },
+    "to": {
+      "line": 5,
+      "linechar": 0
+    }
+  },
+  {
+    "token": "DoubleColon",
+    "from": {
+      "line": 5,
+      "linechar": 2
+    },
+    "to": {
+      "line": 5,
+      "linechar": 4
+    }
+  },
+  {
+    "token": {
+      "Identifier": "print"
+    },
+    "from": {
+      "line": 5,
+      "linechar": 4
+    },
+    "to": {
+      "line": 5,
+      "linechar": 9
+    }
+  },
+  {
+    "token": "LeftParenthesis",
+    "from": {
+      "line": 5,
+      "linechar": 9
+    },
+    "to": {
+      "line": 5,
+      "linechar": 10
+    }
+  },
+  {
+    "token": {
+      "String": "value="
+    },
+    "from": {
+      "line": 5,
+      "linechar": 10
+    },
+    "to": {
+      "line": 5,
+      "linechar": 18
+    }
+  },
+  {
+    "token": {
+      "Operator": "Plus"
+    },
+    "from": {
+      "line": 5,
+      "linechar": 18
+    },
+    "to": {
+      "line": 5,
+      "linechar": 19
+    }
+  },
+  {
+    "token": {
+      "Identifier": "val"
+    },
+    "from": {
+      "line": 5,
+      "linechar": 19
+    },
+    "to": {
+      "line": 5,
+      "linechar": 22
+    }
+  },
+  {
+    "token": {
+      "Operator": "Plus"
+    },
+    "from": {
+      "line": 5,
+      "linechar": 22
+    },
+    "to": {
+      "line": 5,
+      "linechar": 23
+    }
+  },
+  {
+    "token": {
+      "String": "\\n"
+    },
+    "from": {
+      "line": 5,
+      "linechar": 23
+    },
+    "to": {
+      "line": 5,
+      "linechar": 27
+    }
+  },
+  {
+    "token": "RightParenthesis",
+    "from": {
+      "line": 5,
+      "linechar": 27
+    },
+    "to": {
+      "line": 5,
+      "linechar": 28
+    }
+  },
+  {
+    "token": "Semicolon",
+    "from": {
+      "line": 5,
+      "linechar": 28
+    },
+    "to": {
+      "line": 5,
+      "linechar": 29
+    }
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 5,
+      "linechar": 29
+    },
+    "to": {
+      "line": 6,
+      "linechar": 0
+    }
+  },
+  {
+    "token": "RightBrace",
+    "from": {
+      "line": 6,
+      "linechar": 0
+    },
+    "to": {
+      "line": 6,
+      "linechar": 1
+    }
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 6,
+      "linechar": 1
+    },
+    "to": {
+      "line": 7,
+      "linechar": 0
+    }
+  }
+]
