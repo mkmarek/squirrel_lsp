@@ -1,93 +1,109 @@
 {
   "statements": [
     {
-      "Local": [
-        [
+      "Local": {
+        "initializations": [
           {
             "name": "foo",
             "expression": {
-              "StringLiteral": [
-                "bar",
-                {
+              "StringLiteral": {
+                "value": "bar",
+                "from": {
                   "line": 0,
                   "linechar": 11
                 },
-                {
+                "to": {
                   "line": 0,
                   "linechar": 17
                 }
-              ]
+              }
+            },
+            "from": {
+              "line": 0,
+              "linechar": 5
+            },
+            "to": {
+              "line": 0,
+              "linechar": 17
             }
           }
         ],
-        {
+        "from": {
           "line": 0,
           "linechar": 0
         },
-        {
+        "to": {
           "line": 0,
           "linechar": 17
         }
-      ]
+      }
     },
     {
-      "Local": [
-        [
+      "Local": {
+        "initializations": [
           {
             "name": "bar",
             "expression": {
-              "FunctionCall": [
-                {
-                  "Identifier": [
-                    {
+              "FunctionCall": {
+                "function": {
+                  "Identifier": {
+                    "token": {
                       "Identifier": "regexp"
                     },
-                    {
+                    "from": {
                       "line": 2,
                       "linechar": 12
                     },
-                    {
+                    "to": {
                       "line": 2,
                       "linechar": 18
                     }
-                  ]
+                  }
                 },
-                [
+                "arguments": [
                   {
-                    "MutliLineStringLiteral": [
-                      "m()",
-                      {
+                    "MutliLineStringLiteral": {
+                      "value": "m()",
+                      "from": {
                         "line": 2,
                         "linechar": 19
                       },
-                      {
+                      "to": {
                         "line": 2,
                         "linechar": 25
                       }
-                    ]
+                    }
                   }
                 ],
-                {
+                "from": {
                   "line": 2,
                   "linechar": 11
                 },
-                {
+                "to": {
                   "line": 2,
                   "linechar": 26
                 }
-              ]
+              }
+            },
+            "from": {
+              "line": 2,
+              "linechar": 5
+            },
+            "to": {
+              "line": 2,
+              "linechar": 26
             }
           }
         ],
-        {
+        "from": {
           "line": 2,
           "linechar": 0
         },
-        {
+        "to": {
           "line": 2,
           "linechar": 26
         }
-      ]
+      }
     }
   ],
   "from": {

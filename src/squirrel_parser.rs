@@ -2,7 +2,18 @@ use std::fmt::Display;
 
 use crate::{
     squirrel_ast::{
-        Case, ClassDefinition, ClassMemberDeclaration, Enumeration, Expression,
+        array_access_expression, array_expression, binary_operator_expression, block_statement,
+        boolean_literal_expression, break_statement, class_constructor_declaration,
+        class_field_declaration, clone_expression, const_statement, continue_statement,
+        delete_expression, do_while_statement, enum_statement, expression_statement,
+        float_literal_expression, for_statement, foreach_statement, function_call_expression,
+        grouping_expression, identifier_expression, if_statement, integer_literal_expression,
+        local_statement, member_access_expression, mutliline_string_literal_expression,
+        null_literal_expression, postfix_unary_operator_expression, resume_expression,
+        return_statement, scope_resolution_expression, spread_expression,
+        string_literal_expression, switch_statement, table_expression, ternary_operator_expression,
+        throw_statement, try_catch_statement, unary_operator_expression, while_statement,
+        yield_statement, Case, ClassDefinition, ClassMemberDeclaration, Enumeration, Expression,
         FunctionDeclaration, Initialization, Statement, Statements, TableEntry,
     },
     squirrel_lexer::{
@@ -149,49 +160,49 @@ impl<'a> Parser<'a> {
         let next_token = scoped.peek_token()?;
         let statement = match next_token.token {
             Token::LeftBrace => {
-                let block = scoped.parse_block_statement(from)?;
+                let block = scoped.parse_block_statement()?;
                 self.lexer = scoped.lexer;
 
                 Ok(Some(block))
             }
             Token::Keyword(Keyword::Do) => {
-                let do_while_statement = scoped.parse_do_while_statement(from)?;
+                let do_while_statement = scoped.parse_do_while_statement()?;
                 self.lexer = scoped.lexer;
 
                 Ok(Some(do_while_statement))
             }
             Token::Keyword(Keyword::While) => {
-                let while_statement = scoped.parse_while_statement(from)?;
+                let while_statement = scoped.parse_while_statement()?;
                 self.lexer = scoped.lexer;
 
                 Ok(Some(while_statement))
             }
             Token::Keyword(Keyword::If) => {
-                let if_statement = scoped.parse_if_statement(from)?;
+                let if_statement = scoped.parse_if_statement()?;
                 self.lexer = scoped.lexer;
 
                 Ok(Some(if_statement))
             }
             Token::Keyword(Keyword::Local) => {
-                let local_statement = scoped.parse_local_statement(from)?;
+                let local_statement = scoped.parse_local_statement()?;
                 self.lexer = scoped.lexer;
 
                 Ok(Some(local_statement))
             }
             Token::Keyword(Keyword::Foreach) => {
-                let foreach_statement = scoped.parse_foreach_statement(from)?;
+                let foreach_statement = scoped.parse_foreach_statement()?;
                 self.lexer = scoped.lexer;
 
                 Ok(Some(foreach_statement))
             }
             Token::Keyword(Keyword::Switch) => {
-                let switch_statement = scoped.parse_switch_statement(from)?;
+                let switch_statement = scoped.parse_switch_statement()?;
                 self.lexer = scoped.lexer;
 
                 Ok(Some(switch_statement))
             }
             Token::Keyword(Keyword::For) => {
-                let for_statement = scoped.parse_for_statement(from)?;
+                let for_statement = scoped.parse_for_statement()?;
                 self.lexer = scoped.lexer;
 
                 Ok(Some(for_statement))
@@ -202,7 +213,7 @@ impl<'a> Parser<'a> {
 
                 self.lexer = scoped.lexer;
 
-                Ok(Some(Statement::Break(from, to)))
+                Ok(Some(break_statement(from, to)))
             }
             Token::Keyword(Keyword::Continue) => {
                 scoped.next_token()?;
@@ -210,7 +221,7 @@ impl<'a> Parser<'a> {
 
                 self.lexer = scoped.lexer;
 
-                Ok(Some(Statement::Continue(from, to)))
+                Ok(Some(continue_statement(from, to)))
             }
             Token::Keyword(Keyword::Return) => {
                 scoped.next_token()?;
@@ -226,7 +237,7 @@ impl<'a> Parser<'a> {
 
                 self.lexer = scoped.lexer;
 
-                Ok(Some(Statement::Return(expression, from, to)))
+                Ok(Some(return_statement(expression, from, to)))
             }
             Token::Keyword(Keyword::Yield) => {
                 scoped.next_token()?;
@@ -242,40 +253,40 @@ impl<'a> Parser<'a> {
 
                 self.lexer = scoped.lexer;
 
-                Ok(Some(Statement::Yield(expression, from, to)))
+                Ok(Some(yield_statement(expression, from, to)))
             }
             Token::Keyword(Keyword::Function) => {
-                let function_statement = scoped.parse_function_statement(from)?;
+                let function_statement = scoped.parse_function_statement()?;
                 self.lexer = scoped.lexer;
 
                 Ok(Some(function_statement))
             }
             Token::Keyword(Keyword::Class) => {
-                let class_statement = scoped.parse_class_statement(from)?;
+                let class_statement = scoped.parse_class_statement()?;
                 self.lexer = scoped.lexer;
 
                 Ok(Some(class_statement))
             }
             Token::Keyword(Keyword::Try) => {
-                let try_statement = scoped.parse_try_statement(from)?;
+                let try_statement = scoped.parse_try_statement()?;
                 self.lexer = scoped.lexer;
 
                 Ok(Some(try_statement))
             }
             Token::Keyword(Keyword::Throw) => {
-                let throw_statement = scoped.parse_throw_statement(from)?;
+                let throw_statement = scoped.parse_throw_statement()?;
                 self.lexer = scoped.lexer;
 
                 Ok(Some(throw_statement))
             }
             Token::Keyword(Keyword::Const) => {
-                let const_statement = scoped.parse_const_statement(from)?;
+                let const_statement = scoped.parse_const_statement()?;
                 self.lexer = scoped.lexer;
 
                 Ok(Some(const_statement))
             }
             Token::Keyword(Keyword::Enum) => {
-                let enum_statement = scoped.parse_enum_statement(from)?;
+                let enum_statement = scoped.parse_enum_statement()?;
                 self.lexer = scoped.lexer;
 
                 Ok(Some(enum_statement))
@@ -288,7 +299,7 @@ impl<'a> Parser<'a> {
                 } else {
                     self.lexer = scoped.lexer;
 
-                    Ok(Some(Statement::Expression(
+                    Ok(Some(expression_statement(
                         expression.unwrap(),
                         from,
                         self.lexer.current_location(),
@@ -300,10 +311,7 @@ impl<'a> Parser<'a> {
         Ok(statement)
     }
 
-    fn parse_switch_statement(
-        &mut self,
-        _from: Location,
-    ) -> Result<Statement, ParserErrorWithLocation> {
+    fn parse_switch_statement(&mut self) -> Result<Statement, ParserErrorWithLocation> {
         let from = self.lexer.current_location();
         self.expect_token(Token::Keyword(Keyword::Switch))?;
 
@@ -373,7 +381,7 @@ impl<'a> Parser<'a> {
             }
         }
 
-        Ok(Statement::Switch(
+        Ok(switch_statement(
             expression,
             cases,
             default_case,
@@ -382,10 +390,7 @@ impl<'a> Parser<'a> {
         ))
     }
 
-    fn parse_try_statement(
-        &mut self,
-        _from: Location,
-    ) -> Result<Statement, ParserErrorWithLocation> {
+    fn parse_try_statement(&mut self) -> Result<Statement, ParserErrorWithLocation> {
         let from = self.lexer.current_location();
         self.expect_token(Token::Keyword(Keyword::Try))?;
 
@@ -420,19 +425,16 @@ impl<'a> Parser<'a> {
 
         let catch_statement = catch_statement.unwrap();
 
-        Ok(Statement::TryCatch(
-            Box::new(try_statement),
-            exception_name,
-            Box::new(catch_statement),
+        Ok(try_catch_statement(
+            try_statement,
+            identifier_expression(exception_name.token, exception_name.from, exception_name.to),
+            catch_statement,
             from,
             self.lexer.current_location(),
         ))
     }
 
-    fn parse_throw_statement(
-        &mut self,
-        _from: Location,
-    ) -> Result<Statement, ParserErrorWithLocation> {
+    fn parse_throw_statement(&mut self) -> Result<Statement, ParserErrorWithLocation> {
         let from = self.lexer.current_location();
         self.expect_token(Token::Keyword(Keyword::Throw))?;
 
@@ -449,17 +451,14 @@ impl<'a> Parser<'a> {
 
         let expression = expression.unwrap();
 
-        Ok(Statement::Throw(
+        Ok(throw_statement(
             expression,
             from,
             self.lexer.current_location(),
         ))
     }
 
-    fn parse_const_statement(
-        &mut self,
-        _from: Location,
-    ) -> Result<Statement, ParserErrorWithLocation> {
+    fn parse_const_statement(&mut self) -> Result<Statement, ParserErrorWithLocation> {
         let from = self.lexer.current_location();
         self.expect_token(Token::Keyword(Keyword::Const))?;
 
@@ -480,21 +479,21 @@ impl<'a> Parser<'a> {
 
         let expression = expression.unwrap();
 
-        Ok(Statement::Const(
-            identifier,
+        Ok(const_statement(
+            identifier_expression(identifier.token, identifier.from, identifier.to),
             expression,
             from,
             self.lexer.current_location(),
         ))
     }
 
-    fn parse_enum_statement(
-        &mut self,
-        from: Location,
-    ) -> Result<Statement, ParserErrorWithLocation> {
+    fn parse_enum_statement(&mut self) -> Result<Statement, ParserErrorWithLocation> {
+        self.skip_newlines()?;
+        let _from = self.lexer.current_location();
         self.expect_token(Token::Keyword(Keyword::Enum))?;
 
         let enum_name = self.expect_identifier()?;
+        let from = self.lexer.current_location();
 
         self.skip_newlines()?;
         self.expect_token(Token::LeftBrace)?;
@@ -521,7 +520,11 @@ impl<'a> Parser<'a> {
                 || next_token.token == Token::RightBrace
             {
                 let enumeration = Enumeration {
-                    name: enumeration_name,
+                    name: identifier_expression(
+                        enumeration_name.token,
+                        enumeration_name.from,
+                        enumeration_name.to,
+                    ),
                     value: None,
                     from,
                     to: self.lexer.current_location(),
@@ -551,7 +554,11 @@ impl<'a> Parser<'a> {
                 let enumeration_value = enumeration_value.unwrap();
 
                 let enumeration = Enumeration {
-                    name: enumeration_name,
+                    name: identifier_expression(
+                        enumeration_name.token,
+                        enumeration_name.from,
+                        enumeration_name.to,
+                    ),
                     value: Some(enumeration_value),
                     from,
                     to: self.lexer.current_location(),
@@ -563,28 +570,27 @@ impl<'a> Parser<'a> {
 
         self.expect_token(Token::RightBrace)?;
 
-        Ok(Statement::Enum(
-            enum_name,
+        Ok(enum_statement(
+            identifier_expression(enum_name.token, enum_name.from, enum_name.to),
             enumerations,
             from,
             self.lexer.current_location(),
         ))
     }
 
-    fn parse_class_statement(
-        &mut self,
-        from: Location,
-    ) -> Result<Statement, ParserErrorWithLocation> {
-        let defintion = self.parse_class_definition(false, from)?;
+    fn parse_class_statement(&mut self) -> Result<Statement, ParserErrorWithLocation> {
+        let defintion = self.parse_class_definition(false)?;
 
-        Ok(Statement::Class(defintion))
+        Ok(Statement::Class(Box::new(defintion)))
     }
 
     fn parse_class_definition(
         &mut self,
         skip_name: bool,
-        from: Location,
     ) -> Result<ClassDefinition, ParserErrorWithLocation> {
+        self.skip_newlines()?;
+
+        let from = self.lexer.current_location();
         self.expect_token(Token::Keyword(Keyword::Class))?;
 
         let (class_name, extends) = if skip_name {
@@ -683,7 +689,7 @@ impl<'a> Parser<'a> {
             let next_token = self.peek_token()?;
 
             match &next_token.token {
-                Token::Identifier(ident) => {
+                Token::Identifier(_ident) => {
                     let from = self.lexer.current_location();
                     self.next_token()?;
 
@@ -706,9 +712,8 @@ impl<'a> Parser<'a> {
 
                     require_separator?;
 
-                    declarations.push(ClassMemberDeclaration::FieldDeclaration(
-                        Some(ident.to_string()),
-                        None,
+                    declarations.push(class_field_declaration(
+                        identifier_expression(next_token.token, next_token.from, next_token.to),
                         value,
                         is_static,
                         from,
@@ -716,14 +721,12 @@ impl<'a> Parser<'a> {
                     ));
                 }
                 Token::Keyword(Keyword::Function) => {
-                    let declaration = self.parse_function_declaration(false)?;
+                    let mut declaration = self.parse_function_declaration(false)?;
+                    declaration.is_static = is_static;
 
                     require_separator?;
 
-                    declarations.push(ClassMemberDeclaration::MethodDeclaration(
-                        declaration,
-                        is_static,
-                    ));
+                    declarations.push(ClassMemberDeclaration::MethodDeclaration(declaration));
                 }
                 Token::Keyword(Keyword::Constructor) => {
                     let from = self.lexer.current_location();
@@ -782,19 +785,12 @@ impl<'a> Parser<'a> {
 
                     require_separator?;
 
-                    declarations.push(ClassMemberDeclaration::ConstructorDeclaration(
-                        FunctionDeclaration {
-                            name: Some(Expression::Identifier(
-                                next_token.token.clone(),
-                                next_token.from.clone(),
-                                next_token.to.clone(),
-                            )),
-                            parameters,
-                            statement: stat,
-                            from,
-                            to: self.lexer.current_location(),
-                        },
+                    declarations.push(class_constructor_declaration(
+                        parameters,
+                        stat,
                         is_static,
+                        from,
+                        self.lexer.current_location(),
                     ));
                 }
                 Token::LeftBracket => {
@@ -832,9 +828,8 @@ impl<'a> Parser<'a> {
 
                     require_separator?;
 
-                    declarations.push(ClassMemberDeclaration::FieldDeclaration(
-                        None,
-                        Some(expr),
+                    declarations.push(class_field_declaration(
+                        expr,
                         value,
                         is_static,
                         from,
@@ -856,46 +851,28 @@ impl<'a> Parser<'a> {
 
     fn parse_function_name(&mut self) -> Result<Expression, ParserErrorWithLocation> {
         let from = self.lexer.current_location();
-        let name = self.parse_identifier_expression()?;
-
-        if name.is_none() {
-            return Err(ParserErrorWithLocation {
-                error: ParserError::ExpectedExpression,
-                details: format!("Expected expression after 'function'"),
-                from: self.lexer.current_location(),
-                to: self.lexer.current_location(),
-            });
-        }
-
-        let name = name.unwrap();
+        let name = self.expect_identifier()?;
 
         let current_token = self.peek_token()?;
 
         if current_token.token == Token::DoubleColon {
             self.next_token()?;
 
-            let after_scope = self.parse_identifier_expression()?;
+            let after_scope = self.expect_identifier()?;
 
-            if after_scope.is_none() {
-                return Err(ParserErrorWithLocation {
-                    error: ParserError::ExpectedExpression,
-                    details: format!("Expected expression after '::'"),
-                    from: self.lexer.current_location(),
-                    to: self.lexer.current_location(),
-                });
-            }
-
-            let after_scope = after_scope.unwrap();
-
-            return Ok(Expression::ScopeResolution(
-                Some(Box::new(name)),
-                Box::new(after_scope),
+            return Ok(scope_resolution_expression(
+                Some(name.token.to_string()),
+                after_scope.token.to_string(),
                 from,
                 self.lexer.current_location(),
             ));
         }
 
-        Ok(name)
+        Ok(identifier_expression(
+            name.token,
+            from,
+            self.lexer.current_location(),
+        ))
     }
 
     fn parse_function_declaration(
@@ -970,24 +947,19 @@ impl<'a> Parser<'a> {
             name,
             parameters,
             statement,
+            is_static: false,
             from,
             to: self.lexer.current_location(),
         })
     }
 
-    fn parse_function_statement(
-        &mut self,
-        _from: Location,
-    ) -> Result<Statement, ParserErrorWithLocation> {
+    fn parse_function_statement(&mut self) -> Result<Statement, ParserErrorWithLocation> {
         let declaration = self.parse_function_declaration(false)?;
 
         Ok(Statement::FunctionDeclaration(Box::new(declaration)))
     }
 
-    fn parse_for_statement(
-        &mut self,
-        _from: Location,
-    ) -> Result<Statement, ParserErrorWithLocation> {
+    fn parse_for_statement(&mut self) -> Result<Statement, ParserErrorWithLocation> {
         let from = self.lexer.current_location();
 
         self.expect_token(Token::Keyword(Keyword::For))?;
@@ -1016,22 +988,20 @@ impl<'a> Parser<'a> {
         }
 
         let statement = statement.unwrap();
-        let init = init.map(|s| Box::new(s));
 
-        Ok(Statement::For(
+        Ok(for_statement(
             init,
             condition,
             increment,
-            Box::new(statement),
+            statement,
             from,
             self.lexer.current_location(),
         ))
     }
 
-    fn parse_foreach_statement(
-        &mut self,
-        from: Location,
-    ) -> Result<Statement, ParserErrorWithLocation> {
+    fn parse_foreach_statement(&mut self) -> Result<Statement, ParserErrorWithLocation> {
+        self.skip_newlines()?;
+        let from = self.lexer.current_location();
         self.expect_token(Token::Keyword(Keyword::Foreach))?;
 
         self.expect_token(Token::LeftParenthesis)?;
@@ -1084,25 +1054,26 @@ impl<'a> Parser<'a> {
 
         let statement = statement.unwrap();
 
-        Ok(Statement::ForEach(
-            index_id,
-            value_id,
+        Ok(foreach_statement(
+            index_id
+                .map(|index_id| identifier_expression(index_id.token, index_id.from, index_id.to)),
+            identifier_expression(value_id.token, value_id.from, value_id.to),
             expression,
-            Box::new(statement),
+            statement,
             from,
             self.lexer.current_location(),
         ))
     }
 
-    fn parse_local_statement(
-        &mut self,
-        from: Location,
-    ) -> Result<Statement, ParserErrorWithLocation> {
+    fn parse_local_statement(&mut self) -> Result<Statement, ParserErrorWithLocation> {
+        self.skip_newlines()?;
+        let from = self.lexer.current_location();
         self.expect_token(Token::Keyword(Keyword::Local))?;
 
         let mut initializations = Vec::new();
 
         loop {
+            let from = self.lexer.current_location();
             let name = self.expect_identifier()?;
 
             let mut expression = None;
@@ -1122,7 +1093,12 @@ impl<'a> Parser<'a> {
                 }
             }
 
-            initializations.push(Initialization { name, expression });
+            initializations.push(Initialization {
+                name: name.token.to_string(),
+                expression,
+                from,
+                to: self.lexer.current_location(),
+            });
 
             if self.peek_token()?.token != Token::Operator(Operator::Comma) {
                 break;
@@ -1140,17 +1116,16 @@ impl<'a> Parser<'a> {
             });
         }
 
-        Ok(Statement::Local(
+        Ok(local_statement(
             initializations,
             from,
             self.lexer.current_location(),
         ))
     }
 
-    fn parse_do_while_statement(
-        &mut self,
-        from: Location,
-    ) -> Result<Statement, ParserErrorWithLocation> {
+    fn parse_do_while_statement(&mut self) -> Result<Statement, ParserErrorWithLocation> {
+        self.skip_newlines()?;
+        let from = self.lexer.current_location();
         self.expect_token(Token::Keyword(Keyword::Do))?;
 
         let stat = self.parse_statement()?;
@@ -1164,7 +1139,7 @@ impl<'a> Parser<'a> {
             });
         }
 
-        let stat = Box::new(stat.unwrap());
+        let stat = stat.unwrap();
 
         self.skip_newlines()?;
         self.expect_token(Token::Keyword(Keyword::While))?;
@@ -1185,7 +1160,7 @@ impl<'a> Parser<'a> {
 
         self.expect_token(Token::RightParenthesis)?;
 
-        Ok(Statement::DoWhile(
+        Ok(do_while_statement(
             condition,
             stat,
             from,
@@ -1193,10 +1168,10 @@ impl<'a> Parser<'a> {
         ))
     }
 
-    fn parse_while_statement(
-        &mut self,
-        from: Location,
-    ) -> Result<Statement, ParserErrorWithLocation> {
+    fn parse_while_statement(&mut self) -> Result<Statement, ParserErrorWithLocation> {
+        self.skip_newlines()?;
+        let from = self.lexer.current_location();
+
         self.expect_token(Token::Keyword(Keyword::While))?;
         self.expect_token(Token::LeftParenthesis)?;
         let condition = self.parse_expression(false)?;
@@ -1225,9 +1200,9 @@ impl<'a> Parser<'a> {
             });
         }
 
-        let stat = Box::new(stat.unwrap());
+        let stat = stat.unwrap();
 
-        Ok(Statement::While(
+        Ok(while_statement(
             condition,
             stat,
             from,
@@ -1235,7 +1210,10 @@ impl<'a> Parser<'a> {
         ))
     }
 
-    fn parse_if_statement(&mut self, from: Location) -> Result<Statement, ParserErrorWithLocation> {
+    fn parse_if_statement(&mut self) -> Result<Statement, ParserErrorWithLocation> {
+        self.skip_newlines()?;
+        let from = self.lexer.current_location();
+
         self.expect_token(Token::Keyword(Keyword::If))?;
         self.expect_token(Token::LeftParenthesis)?;
         let condition = self.parse_expression(false)?;
@@ -1265,7 +1243,7 @@ impl<'a> Parser<'a> {
             });
         }
 
-        let body = Box::new(body.unwrap());
+        let body = body.unwrap();
 
         let else_body = self.try_parse(|parser| {
             if parser.peek_token()?.token == Token::Semicolon {
@@ -1287,13 +1265,13 @@ impl<'a> Parser<'a> {
                     });
                 }
 
-                Ok(Some(Box::new(else_body.unwrap())))
+                Ok(Some(else_body.unwrap()))
             } else {
                 Ok(None)
             }
         })?;
 
-        Ok(Statement::If(
+        Ok(if_statement(
             condition,
             body,
             else_body,
@@ -1344,10 +1322,7 @@ impl<'a> Parser<'a> {
             self.next_token()?;
             self.next_token()?;
 
-            Ok(Some(Expression::Spread(
-                from,
-                self.lexer.current_location(),
-            )))
+            Ok(Some(spread_expression(from, self.lexer.current_location())))
         } else {
             Ok(None)
         }
@@ -1401,10 +1376,10 @@ impl<'a> Parser<'a> {
 
         let false_expression = false_expression.unwrap();
 
-        Ok(Some(Expression::TernaryOperator(
-            Box::new(condition),
-            Box::new(true_expression),
-            Box::new(false_expression),
+        Ok(Some(ternary_operator_expression(
+            condition,
+            true_expression,
+            false_expression,
             from,
             self.lexer.current_location(),
         )))
@@ -1517,10 +1492,10 @@ impl<'a> Parser<'a> {
                         });
                     }
 
-                    left = Expression::BinaryOperator(
-                        Box::new(left),
+                    left = binary_operator_expression(
+                        left,
                         operator.clone(),
-                        Box::new(right.unwrap()),
+                        right.unwrap(),
                         from.clone(),
                         self.lexer.current_location(),
                     );
@@ -1562,9 +1537,9 @@ impl<'a> Parser<'a> {
                         });
                     }
 
-                    return Ok(Some(Expression::UnaryOperator(
+                    return Ok(Some(unary_operator_expression(
                         operator.clone(),
-                        Box::new(right.unwrap()),
+                        right.unwrap(),
                         from,
                         self.lexer.current_location(),
                     )));
@@ -1595,8 +1570,8 @@ impl<'a> Parser<'a> {
                     });
                 }
 
-                Ok(Some(Expression::Resume(
-                    Box::new(expression.unwrap()),
+                Ok(Some(resume_expression(
+                    expression.unwrap(),
                     from,
                     self.lexer.current_location(),
                 )))
@@ -1614,8 +1589,8 @@ impl<'a> Parser<'a> {
                     });
                 }
 
-                Ok(Some(Expression::Delete(
-                    Box::new(expression.unwrap()),
+                Ok(Some(delete_expression(
+                    expression.unwrap(),
                     from,
                     self.lexer.current_location(),
                 )))
@@ -1633,8 +1608,8 @@ impl<'a> Parser<'a> {
                     });
                 }
 
-                Ok(Some(Expression::Clone(
-                    Box::new(expression.unwrap()),
+                Ok(Some(clone_expression(
+                    expression.unwrap(),
                     from,
                     self.lexer.current_location(),
                 )))
@@ -1646,7 +1621,7 @@ impl<'a> Parser<'a> {
     fn parse_postfix_unary_expressions(
         &mut self,
     ) -> Result<Option<Expression>, ParserErrorWithLocation> {
-        let left = self.parse_scope_resolution()?;
+        let left = self.parse_member_access()?;
 
         if left.is_none() {
             return Ok(None);
@@ -1660,18 +1635,18 @@ impl<'a> Parser<'a> {
             left = match next_token.token {
                 Token::Operator(Operator::Increment) => {
                     self.next_token()?;
-                    Expression::PostfixUnaryOperator(
+                    postfix_unary_operator_expression(
                         Operator::Increment,
-                        Box::new(left),
+                        left,
                         from,
                         self.lexer.current_location(),
                     )
                 }
                 Token::Operator(Operator::Decrement) => {
                     self.next_token()?;
-                    Expression::PostfixUnaryOperator(
+                    postfix_unary_operator_expression(
                         Operator::Decrement,
-                        Box::new(left),
+                        left,
                         from,
                         self.lexer.current_location(),
                     )
@@ -1686,8 +1661,8 @@ impl<'a> Parser<'a> {
     fn parse_member_access(&mut self) -> Result<Option<Expression>, ParserErrorWithLocation> {
         self.skip_newlines()?;
         let from = self.lexer.current_location();
-
         let left = self.parse_literal_expressions()?;
+
         if left.is_none() {
             return Ok(None);
         }
@@ -1705,15 +1680,15 @@ impl<'a> Parser<'a> {
                         let next_token = parser.next_token()?;
 
                         match next_token.token {
-                            Token::Identifier(identifier) => Ok(Some(Expression::MemberAccess(
-                                Box::new(left.clone()),
+                            Token::Identifier(identifier) => Ok(Some(member_access_expression(
+                                left.clone(),
                                 identifier,
                                 from.clone(),
                                 parser.lexer.current_location(),
                             ))),
                             Token::Keyword(Keyword::Constructor) => {
-                                Ok(Some(Expression::MemberAccess(
-                                    Box::new(left.clone()),
+                                Ok(Some(member_access_expression(
+                                    left.clone(),
                                     "constructor".to_string(),
                                     from.clone(),
                                     parser.lexer.current_location(),
@@ -1726,27 +1701,6 @@ impl<'a> Parser<'a> {
                                 to: parser.lexer.current_location(),
                             }),
                         }
-                    }
-                    Token::DoubleColon => {
-                        parser.next_token()?;
-
-                        let rest = parser.parse_expression(true)?;
-
-                        if rest.is_none() {
-                            return Err(ParserErrorWithLocation {
-                                error: ParserError::ExpectedExpression,
-                                details: format!("Expected expression after '::'"),
-                                from: from.clone(),
-                                to: parser.lexer.current_location(),
-                            });
-                        }
-
-                        Ok(Some(Expression::ScopeResolution(
-                            Some(Box::new(left.clone())),
-                            Box::new(rest.unwrap()),
-                            from.clone(),
-                            parser.lexer.current_location(),
-                        )))
                     }
                     // function invocation
                     Token::LeftParenthesis => {
@@ -1787,8 +1741,8 @@ impl<'a> Parser<'a> {
 
                         parser.expect_token(Token::RightParenthesis)?;
 
-                        Ok(Some(Expression::FunctionCall(
-                            Box::new(left.clone()),
+                        Ok(Some(function_call_expression(
+                            left.clone(),
                             arguments,
                             from.clone(),
                             parser.lexer.current_location(),
@@ -1812,9 +1766,9 @@ impl<'a> Parser<'a> {
 
                         parser.expect_token(Token::RightBracket)?;
 
-                        Ok(Some(Expression::ArrayAccess(
-                            Box::new(left.clone()),
-                            Box::new(index.unwrap()),
+                        Ok(Some(array_access_expression(
+                            left.clone(),
+                            index.unwrap(),
                             from.clone(),
                             parser.lexer.current_location(),
                         )))
@@ -1835,31 +1789,47 @@ impl<'a> Parser<'a> {
     fn parse_scope_resolution(&mut self) -> Result<Option<Expression>, ParserErrorWithLocation> {
         self.skip_newlines()?;
         let from = self.lexer.current_location();
+        let mut left = self.parse_identifier_expression()?;
         let next_token = self.peek_token()?;
 
-        match next_token.token {
-            Token::DoubleColon => {
-                self.next_token()?;
-                let ident = self.parse_expression(true)?;
-
-                if ident.is_none() {
-                    return Err(ParserErrorWithLocation {
+        if next_token.token == Token::DoubleColon {
+            self.next_token()?;
+            if let Some(Expression::Identifier(ident)) = left {
+                let next_token = self.next_token()?;
+                left = match &next_token.token {
+                    Token::Identifier(val) => Ok(Some(scope_resolution_expression(
+                        Some(ident.token.to_string()),
+                        val.clone(),
+                        from,
+                        next_token.to.clone(),
+                    ))),
+                    _ => Err(ParserErrorWithLocation {
                         error: ParserError::ExpectedIdentifier,
                         details: format!("Expected identifier after '::'"),
+                        from: next_token.from.clone(),
+                        to: next_token.to.clone(),
+                    }),
+                }?
+            } else {
+                let next_token = self.next_token()?;
+                left = match &next_token.token {
+                    Token::Identifier(val) => Ok(Some(scope_resolution_expression(
+                        None,
+                        val.clone(),
                         from,
-                        to: self.lexer.current_location(),
-                    });
-                }
-
-                Ok(Some(Expression::ScopeResolution(
-                    None,
-                    Box::new(ident.unwrap()),
-                    from,
-                    self.lexer.current_location(),
-                )))
+                        next_token.to.clone(),
+                    ))),
+                    _ => Err(ParserErrorWithLocation {
+                        error: ParserError::ExpectedIdentifier,
+                        details: format!("Expected identifier after '::'"),
+                        from: next_token.from.clone(),
+                        to: next_token.to.clone(),
+                    }),
+                }?
             }
-            _ => self.parse_member_access(),
         }
+
+        Ok(left)
     }
 
     fn parse_literal_expressions(&mut self) -> Result<Option<Expression>, ParserErrorWithLocation> {
@@ -1870,7 +1840,7 @@ impl<'a> Parser<'a> {
         let literal = match next_token.token {
             Token::String(value) => {
                 self.next_token()?;
-                Ok(Some(Expression::StringLiteral(
+                Ok(Some(string_literal_expression(
                     value,
                     from.clone(),
                     next_token.to,
@@ -1878,7 +1848,7 @@ impl<'a> Parser<'a> {
             }
             Token::MultiLineString(value) => {
                 self.next_token()?;
-                Ok(Some(Expression::MutliLineStringLiteral(
+                Ok(Some(mutliline_string_literal_expression(
                     value,
                     from.clone(),
                     next_token.to,
@@ -1886,7 +1856,7 @@ impl<'a> Parser<'a> {
             }
             Token::Integer(value) => {
                 self.next_token()?;
-                Ok(Some(Expression::IntegerLiteral(
+                Ok(Some(integer_literal_expression(
                     value,
                     from.clone(),
                     next_token.to,
@@ -1894,7 +1864,7 @@ impl<'a> Parser<'a> {
             }
             Token::Float(value) => {
                 self.next_token()?;
-                Ok(Some(Expression::FloatLiteral(
+                Ok(Some(float_literal_expression(
                     value,
                     from.clone(),
                     next_token.to,
@@ -1902,11 +1872,11 @@ impl<'a> Parser<'a> {
             }
             Token::Keyword(Keyword::Null) => {
                 self.next_token()?;
-                Ok(Some(Expression::NullLiteral(from.clone(), next_token.to)))
+                Ok(Some(null_literal_expression(from.clone(), next_token.to)))
             }
             Token::Keyword(Keyword::True) => {
                 self.next_token()?;
-                Ok(Some(Expression::BooleanLiteral(
+                Ok(Some(boolean_literal_expression(
                     true,
                     from.clone(),
                     next_token.to,
@@ -1914,7 +1884,7 @@ impl<'a> Parser<'a> {
             }
             Token::Keyword(Keyword::False) => {
                 self.next_token()?;
-                Ok(Some(Expression::BooleanLiteral(
+                Ok(Some(boolean_literal_expression(
                     false,
                     from.clone(),
                     next_token.to,
@@ -1956,7 +1926,7 @@ impl<'a> Parser<'a> {
 
                 self.expect_token(Token::RightBracket)?;
 
-                Ok(Some(Expression::Array(
+                Ok(Some(array_expression(
                     elements,
                     from.clone(),
                     self.lexer.current_location(),
@@ -1970,8 +1940,8 @@ impl<'a> Parser<'a> {
 
                 self.expect_token(Token::RightParenthesis)?;
 
-                Ok(Some(Expression::Grouping(
-                    expression.map(Box::new),
+                Ok(Some(grouping_expression(
+                    expression,
                     from.clone(),
                     self.lexer.current_location(),
                 )))
@@ -1981,7 +1951,8 @@ impl<'a> Parser<'a> {
             Token::LeftBrace => self.parse_table_exression(),
             Token::Keyword(Keyword::Base) => self.parse_identifier_expression(),
             Token::Keyword(Keyword::This) => self.parse_identifier_expression(),
-            Token::Identifier(_) => self.parse_identifier_expression(),
+            Token::Identifier(_) => self.parse_scope_resolution(),
+            Token::DoubleColon => self.parse_scope_resolution(),
             _ => Ok(None),
         }?;
 
@@ -1989,23 +1960,16 @@ impl<'a> Parser<'a> {
     }
 
     fn parse_class_expression(&mut self) -> Result<Option<Expression>, ParserErrorWithLocation> {
-        self.skip_newlines()?;
-        let from = self.lexer.current_location();
-        let decl = self.parse_class_definition(true, from)?;
+        let decl = self.parse_class_definition(true)?;
 
         Ok(Some(Expression::Class(Box::new(decl))))
     }
 
     fn parse_function_expression(&mut self) -> Result<Option<Expression>, ParserErrorWithLocation> {
         self.skip_newlines()?;
-        let from = self.lexer.current_location();
         let decl = self.parse_function_declaration(true)?;
 
-        Ok(Some(Expression::Function(
-            Box::new(decl),
-            from,
-            self.lexer.current_location(),
-        )))
+        Ok(Some(Expression::Function(Box::new(decl))))
     }
 
     fn parse_identifier_expression(
@@ -2039,7 +2003,7 @@ impl<'a> Parser<'a> {
             return Ok(None);
         }
 
-        Ok(Some(Expression::Identifier(
+        Ok(Some(identifier_expression(
             name.unwrap().token,
             from,
             self.lexer.current_location(),
@@ -2062,7 +2026,6 @@ impl<'a> Parser<'a> {
 
                 properties.push(TableEntry {
                     id: None,
-                    id_exp: None,
                     value: None,
                     function: Some(function_decl),
                     from,
@@ -2082,8 +2045,12 @@ impl<'a> Parser<'a> {
                 break;
             }
 
-            let (id, id_exp) = if let Token::Identifier(ident) = next_token.token {
-                (Some(ident), None)
+            let id = if let Token::Identifier(_) = &next_token.token {
+                Some(identifier_expression(
+                    next_token.token.clone(),
+                    next_token.from.clone(),
+                    next_token.to.clone(),
+                ))
             } else if next_token.token == Token::LeftBracket {
                 let from = self.lexer.current_location();
                 let id_exp = self.parse_expression(false)?;
@@ -2099,7 +2066,7 @@ impl<'a> Parser<'a> {
 
                 self.expect_token(Token::RightBracket)?;
 
-                (None, Some(id_exp.unwrap()))
+                Some(id_exp.unwrap())
             } else {
                 return Err(ParserErrorWithLocation {
                     error: ParserError::ExpectedOneOfGot(
@@ -2127,7 +2094,6 @@ impl<'a> Parser<'a> {
 
             properties.push(TableEntry {
                 id,
-                id_exp,
                 value: Some(value),
                 function: None,
                 from,
@@ -2151,17 +2117,14 @@ impl<'a> Parser<'a> {
             }
         }
 
-        Ok(Some(Expression::Table(
+        Ok(Some(table_expression(
             properties,
             from,
             self.lexer.current_location(),
         )))
     }
 
-    fn parse_block_statement(
-        &mut self,
-        _from: Location,
-    ) -> Result<Statement, ParserErrorWithLocation> {
+    fn parse_block_statement(&mut self) -> Result<Statement, ParserErrorWithLocation> {
         self.skip_newlines()?;
         let from = self.lexer.current_location();
         self.expect_token(Token::LeftBrace)?;
@@ -2170,7 +2133,7 @@ impl<'a> Parser<'a> {
         self.skip_newlines()?;
         self.expect_token(Token::RightBrace)?;
 
-        Ok(Statement::Block(
+        Ok(block_statement(
             statements,
             from,
             self.lexer.current_location(),
@@ -2191,11 +2154,11 @@ impl<'a> Parser<'a> {
             .map_err(Self::map_lexer_error)
     }
 
-    fn expect_identifier(&mut self) -> Result<String, ParserErrorWithLocation> {
+    fn expect_identifier(&mut self) -> Result<TokenWithLocation, ParserErrorWithLocation> {
         let next_token = self.next_token()?;
 
-        match next_token.token {
-            Token::Identifier(identifier) => Ok(identifier),
+        match &next_token.token {
+            Token::Identifier(_) => Ok(next_token),
             _ => Err(ParserErrorWithLocation {
                 error: ParserError::ExpectedIdentifier,
                 details: format!("Expected identifier got {:?}", next_token.token),
@@ -2213,7 +2176,7 @@ impl<'a> Parser<'a> {
         } else {
             Err(ParserErrorWithLocation {
                 error: ParserError::ExpectedTokenGot(token.clone(), next_token.token.clone()),
-                details: format!("Expected {:?} got {:?}", token, next_token.token),
+                details: format!("Expected {} got {}", token, next_token.token),
                 from: next_token.from,
                 to: next_token.to,
             })
@@ -2267,40 +2230,14 @@ mod tests {
         let mut parser = Parser::new(input);
         let statements = parser.parse().unwrap();
 
-        assert_eq!(
-            statements,
-            Statements {
-                statements: vec![Statement::Block(
-                    Statements {
-                        statements: vec![],
-                        from: Location {
-                            line: 0,
-                            linechar: 1
-                        },
-                        to: Location {
-                            line: 0,
-                            linechar: 1
-                        },
-                    },
-                    Location {
-                        line: 0,
-                        linechar: 0
-                    },
-                    Location {
-                        line: 0,
-                        linechar: 2
-                    }
-                )],
-                from: Location {
-                    line: 0,
-                    linechar: 0
-                },
-                to: Location {
-                    line: 0,
-                    linechar: 2
-                },
-            }
-        );
+        assert_eq!(1, statements.statements.len());
+
+        let first_inner_block = match &statements.statements[0] {
+            Statement::Block(block) => &block.statements,
+            _ => panic!("Expected first statement to be a block"),
+        };
+
+        assert_eq!(0, first_inner_block.statements.len());
     }
 
     #[test]
@@ -2312,14 +2249,14 @@ mod tests {
         assert_eq!(1, statements.statements.len());
 
         let first_inner_block = match &statements.statements[0] {
-            Statement::Block(statements, _, _) => statements,
+            Statement::Block(block) => &block.statements,
             _ => panic!("Expected first statement to be a block"),
         };
 
         assert_eq!(3, first_inner_block.statements.len());
 
         let second_inner_block = match &first_inner_block.statements[1] {
-            Statement::Block(statements, _, _) => statements,
+            Statement::Block(block) => &block.statements,
             _ => panic!("Expected second statement to be a block"),
         };
 
@@ -2336,20 +2273,21 @@ mod tests {
         assert_eq!(statements.statements.len(), 1);
 
         match &statements.statements[0] {
-            Statement::Expression(
-                Expression::BinaryOperator(left, operator, right, _, _),
-                _,
-                _,
-            ) => {
-                assert_eq!(operator, &Operator::Plus);
+            Statement::Expression(expr) => {
+                let binary_operator = match &expr.expression {
+                    Expression::BinaryOperator(binary_operator) => binary_operator,
+                    _ => panic!("Expected expression to be a binary operator"),
+                };
 
-                match left.as_ref() {
-                    Expression::IntegerLiteral(value, _, _) => assert_eq!(value, &1),
+                assert_eq!(binary_operator.operator, Operator::Plus);
+
+                match &binary_operator.left {
+                    Expression::IntegerLiteral(literal) => assert_eq!(literal.value, 1),
                     _ => panic!("Expected left to be an integer literal"),
                 }
 
-                match right.as_ref() {
-                    Expression::IntegerLiteral(value, _, _) => assert_eq!(value, &2),
+                match &binary_operator.right {
+                    Expression::IntegerLiteral(literal) => assert_eq!(literal.value, 2),
                     _ => panic!("Expected right to be an integer literal"),
                 }
             }
@@ -2366,15 +2304,15 @@ mod tests {
         assert_eq!(statements.statements.len(), 1);
 
         match &statements.statements[0] {
-            Statement::Local(initializations, _, _) => {
-                assert_eq!(initializations.len(), 1);
+            Statement::Local(local) => {
+                assert_eq!(local.initializations.len(), 1);
 
-                let first_init = &initializations[0];
+                let first_init = &local.initializations[0];
 
                 assert_eq!(first_init.name, "a");
 
                 match first_init.expression.as_ref() {
-                    Some(Expression::IntegerLiteral(value, _, _)) => assert_eq!(value, &10),
+                    Some(Expression::IntegerLiteral(literal)) => assert_eq!(literal.value, 10),
                     _ => panic!("Expected initializer to be an integer literal"),
                 }
             }

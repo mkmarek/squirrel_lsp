@@ -1,918 +1,940 @@
 {
   "statements": [
     {
-      "Local": [
-        [
+      "Local": {
+        "initializations": [
           {
             "name": "c",
             "expression": {
-              "ScopeResolution": [
-                null,
-                {
-                  "MemberAccess": [
-                    {
-                      "MemberAccess": [
-                        {
-                          "Identifier": [
-                            {
-                              "Identifier": "foo"
-                            },
-                            {
-                              "line": 0,
-                              "linechar": 12
-                            },
-                            {
-                              "line": 0,
-                              "linechar": 15
-                            }
-                          ]
-                        },
-                        "bar",
-                        {
+              "MemberAccess": {
+                "expression": {
+                  "MemberAccess": {
+                    "expression": {
+                      "ScopeResolution": {
+                        "scope": null,
+                        "accessor": "foo",
+                        "from": {
                           "line": 0,
-                          "linechar": 12
+                          "linechar": 9
                         },
-                        {
+                        "to": {
                           "line": 0,
-                          "linechar": 19
+                          "linechar": 15
                         }
-                      ]
+                      }
                     },
-                    "baz",
-                    {
+                    "member": "bar",
+                    "from": {
                       "line": 0,
-                      "linechar": 12
+                      "linechar": 9
                     },
-                    {
+                    "to": {
                       "line": 0,
-                      "linechar": 23
+                      "linechar": 19
                     }
-                  ]
+                  }
                 },
-                {
+                "member": "baz",
+                "from": {
                   "line": 0,
                   "linechar": 9
                 },
-                {
+                "to": {
                   "line": 0,
                   "linechar": 23
                 }
-              ]
+              }
+            },
+            "from": {
+              "line": 0,
+              "linechar": 5
+            },
+            "to": {
+              "line": 0,
+              "linechar": 23
             }
           }
         ],
-        {
+        "from": {
           "line": 0,
           "linechar": 0
         },
-        {
+        "to": {
           "line": 0,
           "linechar": 23
         }
-      ]
+      }
     },
     {
-      "Local": [
-        [
+      "Local": {
+        "initializations": [
           {
             "name": "d",
             "expression": {
-              "ScopeResolution": [
-                {
-                  "Identifier": [
-                    {
-                      "Identifier": "foo"
-                    },
-                    {
+              "MemberAccess": {
+                "expression": {
+                  "ScopeResolution": {
+                    "scope": "foo",
+                    "accessor": "bar",
+                    "from": {
                       "line": 2,
-                      "linechar": 10
+                      "linechar": 9
                     },
-                    {
+                    "to": {
                       "line": 2,
-                      "linechar": 13
+                      "linechar": 18
                     }
-                  ]
+                  }
                 },
-                {
-                  "MemberAccess": [
-                    {
-                      "Identifier": [
-                        {
-                          "Identifier": "bar"
-                        },
-                        {
-                          "line": 2,
-                          "linechar": 15
-                        },
-                        {
-                          "line": 2,
-                          "linechar": 18
-                        }
-                      ]
-                    },
-                    "baz",
-                    {
-                      "line": 2,
-                      "linechar": 15
-                    },
-                    {
-                      "line": 2,
-                      "linechar": 22
-                    }
-                  ]
-                },
-                {
+                "member": "baz",
+                "from": {
                   "line": 2,
                   "linechar": 9
                 },
-                {
+                "to": {
                   "line": 2,
                   "linechar": 22
                 }
-              ]
+              }
+            },
+            "from": {
+              "line": 2,
+              "linechar": 5
+            },
+            "to": {
+              "line": 2,
+              "linechar": 22
             }
           }
         ],
-        {
+        "from": {
           "line": 2,
           "linechar": 0
         },
-        {
+        "to": {
           "line": 2,
           "linechar": 22
         }
-      ]
+      }
     },
     {
-      "Local": [
-        [
+      "Local": {
+        "initializations": [
           {
             "name": "g",
             "expression": {
-              "MemberAccess": [
-                {
-                  "FunctionCall": [
-                    {
-                      "MemberAccess": [
-                        {
-                          "Identifier": [
-                            {
+              "MemberAccess": {
+                "expression": {
+                  "FunctionCall": {
+                    "function": {
+                      "MemberAccess": {
+                        "expression": {
+                          "Identifier": {
+                            "token": {
                               "Identifier": "foo"
                             },
-                            {
+                            "from": {
                               "line": 4,
                               "linechar": 10
                             },
-                            {
+                            "to": {
                               "line": 4,
                               "linechar": 13
                             }
-                          ]
+                          }
                         },
-                        "bar",
-                        {
+                        "member": "bar",
+                        "from": {
                           "line": 4,
                           "linechar": 9
                         },
-                        {
+                        "to": {
                           "line": 4,
                           "linechar": 17
                         }
-                      ]
+                      }
                     },
-                    [],
-                    {
+                    "arguments": [],
+                    "from": {
                       "line": 4,
                       "linechar": 9
                     },
-                    {
+                    "to": {
                       "line": 4,
                       "linechar": 19
                     }
-                  ]
+                  }
                 },
-                "baz",
-                {
+                "member": "baz",
+                "from": {
                   "line": 4,
                   "linechar": 9
                 },
-                {
+                "to": {
                   "line": 4,
                   "linechar": 23
                 }
-              ]
+              }
+            },
+            "from": {
+              "line": 4,
+              "linechar": 5
+            },
+            "to": {
+              "line": 4,
+              "linechar": 23
             }
           }
         ],
-        {
+        "from": {
           "line": 4,
           "linechar": 0
         },
-        {
+        "to": {
           "line": 4,
           "linechar": 23
         }
-      ]
+      }
     },
     {
-      "Local": [
-        [
+      "Local": {
+        "initializations": [
           {
             "name": "l",
             "expression": {
-              "FunctionCall": [
-                {
-                  "MemberAccess": [
-                    {
-                      "MemberAccess": [
-                        {
-                          "FunctionCall": [
-                            {
-                              "MemberAccess": [
-                                {
-                                  "MemberAccess": [
-                                    {
-                                      "FunctionCall": [
-                                        {
-                                          "MemberAccess": [
-                                            {
-                                              "Identifier": [
-                                                {
+              "FunctionCall": {
+                "function": {
+                  "MemberAccess": {
+                    "expression": {
+                      "MemberAccess": {
+                        "expression": {
+                          "FunctionCall": {
+                            "function": {
+                              "MemberAccess": {
+                                "expression": {
+                                  "MemberAccess": {
+                                    "expression": {
+                                      "FunctionCall": {
+                                        "function": {
+                                          "MemberAccess": {
+                                            "expression": {
+                                              "Identifier": {
+                                                "token": {
                                                   "Identifier": "foo"
                                                 },
-                                                {
+                                                "from": {
                                                   "line": 6,
                                                   "linechar": 10
                                                 },
-                                                {
+                                                "to": {
                                                   "line": 6,
                                                   "linechar": 13
                                                 }
-                                              ]
+                                              }
                                             },
-                                            "bar",
-                                            {
+                                            "member": "bar",
+                                            "from": {
                                               "line": 6,
                                               "linechar": 9
                                             },
-                                            {
+                                            "to": {
                                               "line": 6,
                                               "linechar": 17
                                             }
-                                          ]
+                                          }
                                         },
-                                        [],
-                                        {
+                                        "arguments": [],
+                                        "from": {
                                           "line": 6,
                                           "linechar": 9
                                         },
-                                        {
+                                        "to": {
                                           "line": 6,
                                           "linechar": 19
                                         }
-                                      ]
+                                      }
                                     },
-                                    "baz",
-                                    {
+                                    "member": "baz",
+                                    "from": {
                                       "line": 6,
                                       "linechar": 9
                                     },
-                                    {
+                                    "to": {
                                       "line": 6,
                                       "linechar": 23
                                     }
-                                  ]
+                                  }
                                 },
-                                "qux",
-                                {
+                                "member": "qux",
+                                "from": {
                                   "line": 6,
                                   "linechar": 9
                                 },
-                                {
+                                "to": {
                                   "line": 6,
                                   "linechar": 27
                                 }
-                              ]
+                              }
                             },
-                            [],
-                            {
+                            "arguments": [],
+                            "from": {
                               "line": 6,
                               "linechar": 9
                             },
-                            {
+                            "to": {
                               "line": 6,
                               "linechar": 29
                             }
-                          ]
+                          }
                         },
-                        "quux",
-                        {
+                        "member": "quux",
+                        "from": {
                           "line": 6,
                           "linechar": 9
                         },
-                        {
+                        "to": {
                           "line": 6,
                           "linechar": 34
                         }
-                      ]
+                      }
                     },
-                    "corge",
-                    {
+                    "member": "corge",
+                    "from": {
                       "line": 6,
                       "linechar": 9
                     },
-                    {
+                    "to": {
                       "line": 6,
                       "linechar": 40
                     }
-                  ]
+                  }
                 },
-                [],
-                {
+                "arguments": [],
+                "from": {
                   "line": 6,
                   "linechar": 9
                 },
-                {
+                "to": {
                   "line": 6,
                   "linechar": 42
                 }
-              ]
+              }
+            },
+            "from": {
+              "line": 6,
+              "linechar": 5
+            },
+            "to": {
+              "line": 6,
+              "linechar": 42
             }
           }
         ],
-        {
+        "from": {
           "line": 6,
           "linechar": 0
         },
-        {
+        "to": {
           "line": 6,
           "linechar": 42
         }
-      ]
+      }
     },
     {
-      "Local": [
-        [
+      "Local": {
+        "initializations": [
           {
             "name": "m",
             "expression": {
-              "FunctionCall": [
-                {
-                  "MemberAccess": [
-                    {
-                      "FunctionCall": [
-                        {
-                          "MemberAccess": [
-                            {
-                              "Identifier": [
-                                {
+              "FunctionCall": {
+                "function": {
+                  "MemberAccess": {
+                    "expression": {
+                      "FunctionCall": {
+                        "function": {
+                          "MemberAccess": {
+                            "expression": {
+                              "Identifier": {
+                                "token": {
                                   "Keyword": "This"
                                 },
-                                {
+                                "from": {
                                   "line": 8,
                                   "linechar": 10
                                 },
-                                {
+                                "to": {
                                   "line": 8,
                                   "linechar": 14
                                 }
-                              ]
+                              }
                             },
-                            "getStuff",
-                            {
+                            "member": "getStuff",
+                            "from": {
                               "line": 8,
                               "linechar": 9
                             },
-                            {
+                            "to": {
                               "line": 8,
                               "linechar": 23
                             }
-                          ]
+                          }
                         },
-                        [
+                        "arguments": [
                           {
-                            "IntegerLiteral": [
-                              1,
-                              {
+                            "IntegerLiteral": {
+                              "value": 1,
+                              "from": {
                                 "line": 8,
                                 "linechar": 24
                               },
-                              {
+                              "to": {
                                 "line": 8,
                                 "linechar": 25
                               }
-                            ]
+                            }
                           }
                         ],
-                        {
+                        "from": {
                           "line": 8,
                           "linechar": 9
                         },
-                        {
+                        "to": {
                           "line": 8,
                           "linechar": 26
                         }
-                      ]
+                      }
                     },
-                    "getMoreStuff",
-                    {
+                    "member": "getMoreStuff",
+                    "from": {
                       "line": 8,
                       "linechar": 9
                     },
-                    {
+                    "to": {
                       "line": 8,
                       "linechar": 39
                     }
-                  ]
+                  }
                 },
-                [
+                "arguments": [
                   {
-                    "IntegerLiteral": [
-                      2,
-                      {
+                    "IntegerLiteral": {
+                      "value": 2,
+                      "from": {
                         "line": 8,
                         "linechar": 40
                       },
-                      {
+                      "to": {
                         "line": 8,
                         "linechar": 41
                       }
-                    ]
+                    }
                   }
                 ],
-                {
+                "from": {
                   "line": 8,
                   "linechar": 9
                 },
-                {
+                "to": {
                   "line": 8,
                   "linechar": 42
                 }
-              ]
+              }
+            },
+            "from": {
+              "line": 8,
+              "linechar": 5
+            },
+            "to": {
+              "line": 8,
+              "linechar": 42
             }
           }
         ],
-        {
+        "from": {
           "line": 8,
           "linechar": 0
         },
-        {
+        "to": {
           "line": 8,
           "linechar": 42
         }
-      ]
+      }
     },
     {
-      "Local": [
-        [
+      "Local": {
+        "initializations": [
           {
             "name": "n",
             "expression": {
-              "MemberAccess": [
-                {
-                  "MemberAccess": [
-                    {
-                      "MemberAccess": [
-                        {
-                          "MemberAccess": [
-                            {
-                              "Identifier": [
-                                {
+              "MemberAccess": {
+                "expression": {
+                  "MemberAccess": {
+                    "expression": {
+                      "MemberAccess": {
+                        "expression": {
+                          "MemberAccess": {
+                            "expression": {
+                              "Identifier": {
+                                "token": {
                                   "Identifier": "blabla"
                                 },
-                                {
+                                "from": {
                                   "line": 10,
                                   "linechar": 10
                                 },
-                                {
+                                "to": {
                                   "line": 10,
                                   "linechar": 16
                                 }
-                              ]
+                              }
                             },
-                            "stuff",
-                            {
+                            "member": "stuff",
+                            "from": {
                               "line": 10,
                               "linechar": 9
                             },
-                            {
+                            "to": {
                               "line": 10,
                               "linechar": 22
                             }
-                          ]
+                          }
                         },
-                        "xx",
-                        {
+                        "member": "xx",
+                        "from": {
                           "line": 10,
                           "linechar": 9
                         },
-                        {
+                        "to": {
                           "line": 10,
                           "linechar": 25
                         }
-                      ]
+                      }
                     },
-                    "here",
-                    {
+                    "member": "here",
+                    "from": {
                       "line": 10,
                       "linechar": 9
                     },
-                    {
+                    "to": {
                       "line": 10,
                       "linechar": 30
                     }
-                  ]
+                  }
                 },
-                "xx",
-                {
+                "member": "xx",
+                "from": {
                   "line": 10,
                   "linechar": 9
                 },
-                {
+                "to": {
                   "line": 10,
                   "linechar": 33
                 }
-              ]
+              }
+            },
+            "from": {
+              "line": 10,
+              "linechar": 5
+            },
+            "to": {
+              "line": 10,
+              "linechar": 33
             }
           }
         ],
-        {
+        "from": {
           "line": 10,
           "linechar": 0
         },
-        {
+        "to": {
           "line": 10,
           "linechar": 33
         }
-      ]
+      }
     },
     {
-      "Local": [
-        [
+      "Local": {
+        "initializations": [
           {
             "name": "o",
             "expression": {
-              "BinaryOperator": [
-                {
-                  "BinaryOperator": [
-                    {
-                      "Grouping": [
-                        {
-                          "BinaryOperator": [
-                            {
-                              "FunctionCall": [
-                                {
-                                  "Identifier": [
-                                    {
+              "BinaryOperator": {
+                "left": {
+                  "BinaryOperator": {
+                    "left": {
+                      "Grouping": {
+                        "expression": {
+                          "BinaryOperator": {
+                            "left": {
+                              "FunctionCall": {
+                                "function": {
+                                  "Identifier": {
+                                    "token": {
                                       "Identifier": "a"
                                     },
-                                    {
+                                    "from": {
                                       "line": 12,
                                       "linechar": 11
                                     },
-                                    {
+                                    "to": {
                                       "line": 12,
                                       "linechar": 12
                                     }
-                                  ]
+                                  }
                                 },
-                                [],
-                                {
+                                "arguments": [],
+                                "from": {
                                   "line": 12,
                                   "linechar": 11
                                 },
-                                {
+                                "to": {
                                   "line": 12,
                                   "linechar": 14
                                 }
-                              ]
+                              }
                             },
-                            "Plus",
-                            {
-                              "IntegerLiteral": [
-                                5,
-                                {
+                            "operator": "Plus",
+                            "right": {
+                              "IntegerLiteral": {
+                                "value": 5,
+                                "from": {
                                   "line": 12,
                                   "linechar": 16
                                 },
-                                {
+                                "to": {
                                   "line": 12,
                                   "linechar": 18
                                 }
-                              ]
+                              }
                             },
-                            {
+                            "from": {
                               "line": 12,
                               "linechar": 11
                             },
-                            {
+                            "to": {
                               "line": 12,
                               "linechar": 18
                             }
-                          ]
+                          }
                         },
-                        {
+                        "from": {
                           "line": 12,
                           "linechar": 9
                         },
-                        {
+                        "to": {
                           "line": 12,
                           "linechar": 19
                         }
-                      ]
+                      }
                     },
-                    "Multiply",
-                    {
-                      "BinaryOperator": [
-                        {
-                          "IntegerLiteral": [
-                            2,
-                            {
+                    "operator": "Multiply",
+                    "right": {
+                      "BinaryOperator": {
+                        "left": {
+                          "IntegerLiteral": {
+                            "value": 2,
+                            "from": {
                               "line": 12,
                               "linechar": 21
                             },
-                            {
+                            "to": {
                               "line": 12,
                               "linechar": 23
                             }
-                          ]
+                          }
                         },
-                        "Divide",
-                        {
-                          "FunctionCall": [
-                            {
-                              "MemberAccess": [
-                                {
-                                  "Identifier": [
-                                    {
+                        "operator": "Divide",
+                        "right": {
+                          "FunctionCall": {
+                            "function": {
+                              "MemberAccess": {
+                                "expression": {
+                                  "Identifier": {
+                                    "token": {
                                       "Identifier": "foo"
                                     },
-                                    {
+                                    "from": {
                                       "line": 12,
                                       "linechar": 26
                                     },
-                                    {
+                                    "to": {
                                       "line": 12,
                                       "linechar": 29
                                     }
-                                  ]
+                                  }
                                 },
-                                "bar",
-                                {
+                                "member": "bar",
+                                "from": {
                                   "line": 12,
                                   "linechar": 25
                                 },
-                                {
+                                "to": {
                                   "line": 12,
                                   "linechar": 33
                                 }
-                              ]
+                              }
                             },
-                            [],
-                            {
+                            "arguments": [],
+                            "from": {
                               "line": 12,
                               "linechar": 25
                             },
-                            {
+                            "to": {
                               "line": 12,
                               "linechar": 35
                             }
-                          ]
+                          }
                         },
-                        {
+                        "from": {
                           "line": 12,
                           "linechar": 21
                         },
-                        {
+                        "to": {
                           "line": 12,
                           "linechar": 35
                         }
-                      ]
+                      }
                     },
-                    {
+                    "from": {
                       "line": 12,
                       "linechar": 9
                     },
-                    {
+                    "to": {
                       "line": 12,
                       "linechar": 35
                     }
-                  ]
+                  }
                 },
-                "Minus",
-                {
-                  "MemberAccess": [
-                    {
-                      "MemberAccess": [
-                        {
-                          "MemberAccess": [
-                            {
-                              "Identifier": [
-                                {
+                "operator": "Minus",
+                "right": {
+                  "MemberAccess": {
+                    "expression": {
+                      "MemberAccess": {
+                        "expression": {
+                          "MemberAccess": {
+                            "expression": {
+                              "Identifier": {
+                                "token": {
                                   "Identifier": "c"
                                 },
-                                {
+                                "from": {
                                   "line": 12,
                                   "linechar": 38
                                 },
-                                {
+                                "to": {
                                   "line": 12,
                                   "linechar": 39
                                 }
-                              ]
+                              }
                             },
-                            "b",
-                            {
+                            "member": "b",
+                            "from": {
                               "line": 12,
                               "linechar": 37
                             },
-                            {
+                            "to": {
                               "line": 12,
                               "linechar": 41
                             }
-                          ]
+                          }
                         },
-                        "d",
-                        {
+                        "member": "d",
+                        "from": {
                           "line": 12,
                           "linechar": 37
                         },
-                        {
+                        "to": {
                           "line": 12,
                           "linechar": 43
                         }
-                      ]
+                      }
                     },
-                    "e",
-                    {
+                    "member": "e",
+                    "from": {
                       "line": 12,
                       "linechar": 37
                     },
-                    {
+                    "to": {
                       "line": 12,
                       "linechar": 45
                     }
-                  ]
+                  }
                 },
-                {
+                "from": {
                   "line": 12,
                   "linechar": 9
                 },
-                {
+                "to": {
                   "line": 12,
                   "linechar": 45
                 }
-              ]
+              }
+            },
+            "from": {
+              "line": 12,
+              "linechar": 5
+            },
+            "to": {
+              "line": 12,
+              "linechar": 45
             }
           }
         ],
-        {
+        "from": {
           "line": 12,
           "linechar": 0
         },
-        {
+        "to": {
           "line": 12,
           "linechar": 45
         }
-      ]
+      }
     },
     {
-      "Local": [
-        [
+      "Local": {
+        "initializations": [
           {
             "name": "p",
             "expression": {
-              "BinaryOperator": [
-                {
-                  "PostfixUnaryOperator": [
-                    "Increment",
-                    {
-                      "FunctionCall": [
-                        {
-                          "MemberAccess": [
-                            {
-                              "Identifier": [
-                                {
+              "BinaryOperator": {
+                "left": {
+                  "PostfixUnaryOperator": {
+                    "operator": "Increment",
+                    "expression": {
+                      "FunctionCall": {
+                        "function": {
+                          "MemberAccess": {
+                            "expression": {
+                              "Identifier": {
+                                "token": {
                                   "Identifier": "foo"
                                 },
-                                {
+                                "from": {
                                   "line": 14,
                                   "linechar": 10
                                 },
-                                {
+                                "to": {
                                   "line": 14,
                                   "linechar": 13
                                 }
-                              ]
+                              }
                             },
-                            "bar",
-                            {
+                            "member": "bar",
+                            "from": {
                               "line": 14,
                               "linechar": 9
                             },
-                            {
+                            "to": {
                               "line": 14,
                               "linechar": 17
                             }
-                          ]
+                          }
                         },
-                        [],
-                        {
+                        "arguments": [],
+                        "from": {
                           "line": 14,
                           "linechar": 9
                         },
-                        {
+                        "to": {
                           "line": 14,
                           "linechar": 19
                         }
-                      ]
+                      }
                     },
-                    {
+                    "from": {
                       "line": 14,
                       "linechar": 19
                     },
-                    {
+                    "to": {
                       "line": 14,
                       "linechar": 21
                     }
-                  ]
+                  }
                 },
-                "GreaterEqual",
-                {
-                  "MemberAccess": [
-                    {
-                      "MemberAccess": [
-                        {
-                          "MemberAccess": [
-                            {
-                              "Identifier": [
-                                {
+                "operator": "GreaterEqual",
+                "right": {
+                  "MemberAccess": {
+                    "expression": {
+                      "MemberAccess": {
+                        "expression": {
+                          "MemberAccess": {
+                            "expression": {
+                              "Identifier": {
+                                "token": {
                                   "Identifier": "c"
                                 },
-                                {
+                                "from": {
                                   "line": 14,
                                   "linechar": 25
                                 },
-                                {
+                                "to": {
                                   "line": 14,
                                   "linechar": 26
                                 }
-                              ]
+                              }
                             },
-                            "b",
-                            {
+                            "member": "b",
+                            "from": {
                               "line": 14,
                               "linechar": 24
                             },
-                            {
+                            "to": {
                               "line": 14,
                               "linechar": 28
                             }
-                          ]
+                          }
                         },
-                        "d",
-                        {
+                        "member": "d",
+                        "from": {
                           "line": 14,
                           "linechar": 24
                         },
-                        {
+                        "to": {
                           "line": 14,
                           "linechar": 30
                         }
-                      ]
+                      }
                     },
-                    "e",
-                    {
+                    "member": "e",
+                    "from": {
                       "line": 14,
                       "linechar": 24
                     },
-                    {
+                    "to": {
                       "line": 14,
                       "linechar": 32
                     }
-                  ]
+                  }
                 },
-                {
+                "from": {
                   "line": 14,
                   "linechar": 9
                 },
-                {
+                "to": {
                   "line": 14,
                   "linechar": 32
                 }
-              ]
+              }
+            },
+            "from": {
+              "line": 14,
+              "linechar": 5
+            },
+            "to": {
+              "line": 14,
+              "linechar": 32
             }
           }
         ],
-        {
+        "from": {
           "line": 14,
           "linechar": 0
         },
-        {
+        "to": {
           "line": 14,
           "linechar": 32
         }
-      ]
+      }
     }
   ],
   "from": {

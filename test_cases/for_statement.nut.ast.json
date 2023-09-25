@@ -1,299 +1,279 @@
 {
   "statements": [
     {
-      "For": [
-        {
-          "Local": [
-            [
+      "For": {
+        "initialization": {
+          "Local": {
+            "initializations": [
               {
                 "name": "a",
                 "expression": {
-                  "IntegerLiteral": [
-                    0,
-                    {
+                  "IntegerLiteral": {
+                    "value": 0,
+                    "from": {
                       "line": 0,
                       "linechar": 12
                     },
-                    {
+                    "to": {
                       "line": 0,
                       "linechar": 13
                     }
-                  ]
+                  }
+                },
+                "from": {
+                  "line": 0,
+                  "linechar": 9
+                },
+                "to": {
+                  "line": 0,
+                  "linechar": 13
                 }
               }
             ],
-            {
+            "from": {
               "line": 0,
               "linechar": 4
             },
-            {
+            "to": {
               "line": 0,
               "linechar": 13
             }
-          ]
+          }
         },
-        {
-          "BinaryOperator": [
-            {
-              "Identifier": [
-                {
+        "condition": {
+          "BinaryOperator": {
+            "left": {
+              "Identifier": {
+                "token": {
                   "Identifier": "a"
                 },
-                {
+                "from": {
                   "line": 0,
                   "linechar": 14
                 },
-                {
+                "to": {
                   "line": 0,
                   "linechar": 15
                 }
-              ]
+              }
             },
-            "Less",
-            {
-              "IntegerLiteral": [
-                10,
-                {
+            "operator": "Less",
+            "right": {
+              "IntegerLiteral": {
+                "value": 10,
+                "from": {
                   "line": 0,
                   "linechar": 16
                 },
-                {
+                "to": {
                   "line": 0,
                   "linechar": 18
                 }
-              ]
+              }
             },
-            {
+            "from": {
               "line": 0,
               "linechar": 14
             },
-            {
+            "to": {
               "line": 0,
               "linechar": 18
             }
-          ]
+          }
         },
-        {
-          "BinaryOperator": [
-            {
-              "Identifier": [
-                {
+        "increment": {
+          "BinaryOperator": {
+            "left": {
+              "Identifier": {
+                "token": {
                   "Identifier": "a"
                 },
-                {
+                "from": {
                   "line": 0,
                   "linechar": 19
                 },
-                {
+                "to": {
                   "line": 0,
                   "linechar": 20
                 }
-              ]
+              }
             },
-            "PlusEqual",
-            {
-              "IntegerLiteral": [
-                1,
-                {
+            "operator": "PlusEqual",
+            "right": {
+              "IntegerLiteral": {
+                "value": 1,
+                "from": {
                   "line": 0,
                   "linechar": 22
                 },
-                {
+                "to": {
                   "line": 0,
                   "linechar": 23
                 }
-              ]
+              }
             },
-            {
+            "from": {
               "line": 0,
               "linechar": 19
             },
-            {
+            "to": {
               "line": 0,
               "linechar": 23
             }
-          ]
+          }
         },
-        {
-          "Expression": [
-            {
-              "ScopeResolution": [
-                null,
-                {
-                  "FunctionCall": [
-                    {
-                      "Identifier": [
-                        {
-                          "Identifier": "print"
-                        },
-                        {
-                          "line": 1,
-                          "linechar": 4
-                        },
-                        {
-                          "line": 1,
-                          "linechar": 9
-                        }
-                      ]
+        "statement": {
+          "Expression": {
+            "expression": {
+              "FunctionCall": {
+                "function": {
+                  "ScopeResolution": {
+                    "scope": null,
+                    "accessor": "print",
+                    "from": {
+                      "line": 1,
+                      "linechar": 0
                     },
-                    [
-                      {
-                        "BinaryOperator": [
-                          {
-                            "Identifier": [
-                              {
-                                "Identifier": "a"
-                              },
-                              {
-                                "line": 1,
-                                "linechar": 10
-                              },
-                              {
-                                "line": 1,
-                                "linechar": 11
-                              }
-                            ]
+                    "to": {
+                      "line": 1,
+                      "linechar": 9
+                    }
+                  }
+                },
+                "arguments": [
+                  {
+                    "BinaryOperator": {
+                      "left": {
+                        "Identifier": {
+                          "token": {
+                            "Identifier": "a"
                           },
-                          "Plus",
-                          {
-                            "StringLiteral": [
-                              "\\n",
-                              {
-                                "line": 1,
-                                "linechar": 12
-                              },
-                              {
-                                "line": 1,
-                                "linechar": 16
-                              }
-                            ]
-                          },
-                          {
+                          "from": {
                             "line": 1,
                             "linechar": 10
                           },
-                          {
+                          "to": {
+                            "line": 1,
+                            "linechar": 11
+                          }
+                        }
+                      },
+                      "operator": "Plus",
+                      "right": {
+                        "StringLiteral": {
+                          "value": "\\n",
+                          "from": {
+                            "line": 1,
+                            "linechar": 12
+                          },
+                          "to": {
                             "line": 1,
                             "linechar": 16
                           }
-                        ]
+                        }
+                      },
+                      "from": {
+                        "line": 1,
+                        "linechar": 10
+                      },
+                      "to": {
+                        "line": 1,
+                        "linechar": 16
                       }
-                    ],
-                    {
-                      "line": 1,
-                      "linechar": 4
-                    },
-                    {
-                      "line": 1,
-                      "linechar": 17
                     }
-                  ]
-                },
-                {
+                  }
+                ],
+                "from": {
                   "line": 1,
                   "linechar": 0
                 },
-                {
+                "to": {
                   "line": 1,
                   "linechar": 17
                 }
-              ]
+              }
             },
-            {
+            "from": {
               "line": 1,
               "linechar": 0
             },
-            {
+            "to": {
               "line": 1,
               "linechar": 17
             }
-          ]
+          }
         },
-        {
+        "from": {
           "line": 0,
           "linechar": 0
         },
-        {
+        "to": {
           "line": 1,
           "linechar": 17
         }
-      ]
+      }
     },
     {
-      "For": [
-        null,
-        null,
-        null,
-        {
-          "Block": [
-            {
+      "For": {
+        "initialization": null,
+        "condition": null,
+        "increment": null,
+        "statement": {
+          "Block": {
+            "statements": {
               "statements": [
                 {
-                  "Expression": [
-                    {
-                      "ScopeResolution": [
-                        null,
-                        {
-                          "FunctionCall": [
-                            {
-                              "Identifier": [
-                                {
-                                  "Identifier": "print"
-                                },
-                                {
-                                  "line": 4,
-                                  "linechar": 4
-                                },
-                                {
-                                  "line": 4,
-                                  "linechar": 9
-                                }
-                              ]
-                            },
-                            [
-                              {
-                                "StringLiteral": [
-                                  "loops forever\\n",
-                                  {
-                                    "line": 4,
-                                    "linechar": 10
-                                  },
-                                  {
-                                    "line": 4,
-                                    "linechar": 27
-                                  }
-                                ]
-                              }
-                            ],
-                            {
+                  "Expression": {
+                    "expression": {
+                      "FunctionCall": {
+                        "function": {
+                          "ScopeResolution": {
+                            "scope": null,
+                            "accessor": "print",
+                            "from": {
                               "line": 4,
-                              "linechar": 4
+                              "linechar": 0
                             },
-                            {
+                            "to": {
                               "line": 4,
-                              "linechar": 28
+                              "linechar": 9
                             }
-                          ]
+                          }
                         },
-                        {
+                        "arguments": [
+                          {
+                            "StringLiteral": {
+                              "value": "loops forever\\n",
+                              "from": {
+                                "line": 4,
+                                "linechar": 10
+                              },
+                              "to": {
+                                "line": 4,
+                                "linechar": 27
+                              }
+                            }
+                          }
+                        ],
+                        "from": {
                           "line": 4,
                           "linechar": 0
                         },
-                        {
+                        "to": {
                           "line": 4,
                           "linechar": 28
                         }
-                      ]
+                      }
                     },
-                    {
+                    "from": {
                       "line": 4,
                       "linechar": 0
                     },
-                    {
+                    "to": {
                       "line": 4,
                       "linechar": 28
                     }
-                  ]
+                  }
                 }
               ],
               "from": {
@@ -305,25 +285,25 @@
                 "linechar": 0
               }
             },
-            {
+            "from": {
               "line": 3,
               "linechar": 7
             },
-            {
+            "to": {
               "line": 5,
               "linechar": 1
             }
-          ]
+          }
         },
-        {
+        "from": {
           "line": 3,
           "linechar": 0
         },
-        {
+        "to": {
           "line": 5,
           "linechar": 1
         }
-      ]
+      }
     }
   ],
   "from": {

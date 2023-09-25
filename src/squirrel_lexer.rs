@@ -1,3 +1,5 @@
+use std::fmt::Display;
+
 use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Clone)]
@@ -105,7 +107,7 @@ impl TryFrom<&str> for Keyword {
     }
 }
 
-impl Into<&str> for Keyword {
+impl Into<&str> for &Keyword {
     fn into(self) -> &'static str {
         match self {
             Keyword::Base => "base",
@@ -190,7 +192,7 @@ pub enum Operator {
     In,
 }
 
-impl Into<&str> for Operator {
+impl Into<&str> for &Operator {
     fn into(self) -> &'static str {
         match self {
             Operator::Not => "!",
@@ -256,6 +258,35 @@ pub enum Token {
     Semicolon,
     DoubleColon,
     EOF,
+}
+
+impl Display for Token {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match self {
+            Token::Identifier(value) => write!(f, "{}", value),
+            Token::Newline => write!(f, "newline"),
+            Token::Comment(value) => write!(f, "{}", value),
+            Token::MultiLineComment(value) => write!(f, "{}", value),
+            Token::String(value) => write!(f, "{}", value),
+            Token::MultiLineString(value) => write!(f, "{}", value),
+            Token::Integer(value) => write!(f, "{}", value),
+            Token::Float(value) => write!(f, "{}", value),
+            Token::Operator(value) => write!(f, "{}", Into::<&str>::into(value)),
+            Token::Keyword(value) => write!(f, "{}", Into::<&str>::into(value)),
+            Token::LeftBrace => write!(f, "{{"),
+            Token::RightBrace => write!(f, "}}"),
+            Token::LeftParenthesis => write!(f, "("),
+            Token::RightParenthesis => write!(f, ")"),
+            Token::LeftBracket => write!(f, "["),
+            Token::RightBracket => write!(f, "]"),
+            Token::Dot => write!(f, "."),
+            Token::Colon => write!(f, ":"),
+            Token::QuestionMark => write!(f, "?"),
+            Token::Semicolon => write!(f, ";"),
+            Token::DoubleColon => write!(f, "::"),
+            Token::EOF => write!(f, "EOF"),
+        }
+    }
 }
 
 #[derive(Debug, PartialEq, Clone, Serialize, Deserialize)]

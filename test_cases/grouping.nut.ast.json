@@ -1,104 +1,112 @@
 {
   "statements": [
     {
-      "Local": [
-        [
+      "Local": {
+        "initializations": [
           {
             "name": "stuff",
             "expression": {
-              "BinaryOperator": [
-                {
-                  "Grouping": [
-                    {
-                      "BinaryOperator": [
-                        {
-                          "Identifier": [
-                            {
+              "BinaryOperator": {
+                "left": {
+                  "Grouping": {
+                    "expression": {
+                      "BinaryOperator": {
+                        "left": {
+                          "Identifier": {
+                            "token": {
                               "Identifier": "a"
                             },
-                            {
+                            "from": {
                               "line": 0,
                               "linechar": 15
                             },
-                            {
+                            "to": {
                               "line": 0,
                               "linechar": 16
                             }
-                          ]
+                          }
                         },
-                        "Plus",
-                        {
-                          "Identifier": [
-                            {
+                        "operator": "Plus",
+                        "right": {
+                          "Identifier": {
+                            "token": {
                               "Identifier": "b"
                             },
-                            {
+                            "from": {
                               "line": 0,
                               "linechar": 19
                             },
-                            {
+                            "to": {
                               "line": 0,
                               "linechar": 20
                             }
-                          ]
+                          }
                         },
-                        {
+                        "from": {
                           "line": 0,
                           "linechar": 15
                         },
-                        {
+                        "to": {
                           "line": 0,
                           "linechar": 20
                         }
-                      ]
+                      }
                     },
-                    {
+                    "from": {
                       "line": 0,
                       "linechar": 13
                     },
-                    {
+                    "to": {
                       "line": 0,
                       "linechar": 21
                     }
-                  ]
+                  }
                 },
-                "Multiply",
-                {
-                  "Identifier": [
-                    {
+                "operator": "Multiply",
+                "right": {
+                  "Identifier": {
+                    "token": {
                       "Identifier": "c"
                     },
-                    {
+                    "from": {
                       "line": 0,
                       "linechar": 24
                     },
-                    {
+                    "to": {
                       "line": 0,
                       "linechar": 25
                     }
-                  ]
+                  }
                 },
-                {
+                "from": {
                   "line": 0,
                   "linechar": 13
                 },
-                {
+                "to": {
                   "line": 0,
                   "linechar": 25
                 }
-              ]
+              }
+            },
+            "from": {
+              "line": 0,
+              "linechar": 5
+            },
+            "to": {
+              "line": 0,
+              "linechar": 25
             }
           }
         ],
-        {
+        "from": {
           "line": 0,
           "linechar": 0
         },
-        {
+        "to": {
           "line": 0,
           "linechar": 25
         }
-      ]
+      }
     }
   ],
   "from": {

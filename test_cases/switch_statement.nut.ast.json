@@ -1,147 +1,141 @@
 {
   "statements": [
     {
-      "Local": [
-        [
+      "Local": {
+        "initializations": [
           {
             "name": "a",
             "expression": {
-              "IntegerLiteral": [
-                1,
-                {
+              "IntegerLiteral": {
+                "value": 1,
+                "from": {
                   "line": 0,
                   "linechar": 9
                 },
-                {
+                "to": {
                   "line": 0,
                   "linechar": 11
                 }
-              ]
+              }
+            },
+            "from": {
+              "line": 0,
+              "linechar": 5
+            },
+            "to": {
+              "line": 0,
+              "linechar": 11
             }
           }
         ],
-        {
+        "from": {
           "line": 0,
           "linechar": 0
         },
-        {
+        "to": {
           "line": 0,
           "linechar": 11
         }
-      ]
+      }
     },
     {
-      "Switch": [
-        {
-          "Identifier": [
-            {
+      "Switch": {
+        "expression": {
+          "Identifier": {
+            "token": {
               "Identifier": "a"
             },
-            {
+            "from": {
               "line": 2,
               "linechar": 8
             },
-            {
+            "to": {
               "line": 2,
               "linechar": 9
             }
-          ]
+          }
         },
-        [
+        "cases": [
           {
             "expression": {
-              "IntegerLiteral": [
-                1,
-                {
+              "IntegerLiteral": {
+                "value": 1,
+                "from": {
                   "line": 3,
                   "linechar": 6
                 },
-                {
+                "to": {
                   "line": 3,
                   "linechar": 8
                 }
-              ]
+              }
             },
             "statements": {
               "statements": [
                 {
-                  "Expression": [
-                    {
-                      "ScopeResolution": [
-                        null,
-                        {
-                          "FunctionCall": [
-                            {
-                              "Identifier": [
-                                {
-                                  "Identifier": "print"
-                                },
-                                {
-                                  "line": 4,
-                                  "linechar": 6
-                                },
-                                {
-                                  "line": 4,
-                                  "linechar": 11
-                                }
-                              ]
-                            },
-                            [
-                              {
-                                "StringLiteral": [
-                                  "a is 1",
-                                  {
-                                    "line": 4,
-                                    "linechar": 12
-                                  },
-                                  {
-                                    "line": 4,
-                                    "linechar": 20
-                                  }
-                                ]
-                              }
-                            ],
-                            {
+                  "Expression": {
+                    "expression": {
+                      "FunctionCall": {
+                        "function": {
+                          "ScopeResolution": {
+                            "scope": null,
+                            "accessor": "print",
+                            "from": {
                               "line": 4,
-                              "linechar": 6
+                              "linechar": 0
                             },
-                            {
+                            "to": {
                               "line": 4,
-                              "linechar": 21
+                              "linechar": 11
                             }
-                          ]
+                          }
                         },
-                        {
+                        "arguments": [
+                          {
+                            "StringLiteral": {
+                              "value": "a is 1",
+                              "from": {
+                                "line": 4,
+                                "linechar": 12
+                              },
+                              "to": {
+                                "line": 4,
+                                "linechar": 20
+                              }
+                            }
+                          }
+                        ],
+                        "from": {
                           "line": 4,
                           "linechar": 0
                         },
-                        {
+                        "to": {
                           "line": 4,
                           "linechar": 21
                         }
-                      ]
+                      }
                     },
-                    {
+                    "from": {
                       "line": 4,
                       "linechar": 0
                     },
-                    {
+                    "to": {
                       "line": 4,
                       "linechar": 21
                     }
-                  ]
+                  }
                 },
                 {
-                  "Break": [
-                    {
+                  "Break": {
+                    "from": {
                       "line": 5,
                       "linechar": 0
                     },
-                    {
+                    "to": {
                       "line": 5,
                       "linechar": 9
                     }
-                  ]
+                  }
                 }
               ],
               "from": {
@@ -164,98 +158,84 @@
           },
           {
             "expression": {
-              "IntegerLiteral": [
-                2,
-                {
+              "IntegerLiteral": {
+                "value": 2,
+                "from": {
                   "line": 6,
                   "linechar": 6
                 },
-                {
+                "to": {
                   "line": 6,
                   "linechar": 8
                 }
-              ]
+              }
             },
             "statements": {
               "statements": [
                 {
-                  "Expression": [
-                    {
-                      "ScopeResolution": [
-                        null,
-                        {
-                          "FunctionCall": [
-                            {
-                              "Identifier": [
-                                {
-                                  "Identifier": "print"
-                                },
-                                {
-                                  "line": 7,
-                                  "linechar": 6
-                                },
-                                {
-                                  "line": 7,
-                                  "linechar": 11
-                                }
-                              ]
-                            },
-                            [
-                              {
-                                "StringLiteral": [
-                                  "a is 2",
-                                  {
-                                    "line": 7,
-                                    "linechar": 12
-                                  },
-                                  {
-                                    "line": 7,
-                                    "linechar": 20
-                                  }
-                                ]
-                              }
-                            ],
-                            {
+                  "Expression": {
+                    "expression": {
+                      "FunctionCall": {
+                        "function": {
+                          "ScopeResolution": {
+                            "scope": null,
+                            "accessor": "print",
+                            "from": {
                               "line": 7,
-                              "linechar": 6
+                              "linechar": 0
                             },
-                            {
+                            "to": {
                               "line": 7,
-                              "linechar": 21
+                              "linechar": 11
                             }
-                          ]
+                          }
                         },
-                        {
+                        "arguments": [
+                          {
+                            "StringLiteral": {
+                              "value": "a is 2",
+                              "from": {
+                                "line": 7,
+                                "linechar": 12
+                              },
+                              "to": {
+                                "line": 7,
+                                "linechar": 20
+                              }
+                            }
+                          }
+                        ],
+                        "from": {
                           "line": 7,
                           "linechar": 0
                         },
-                        {
+                        "to": {
                           "line": 7,
                           "linechar": 21
                         }
-                      ]
+                      }
                     },
-                    {
+                    "from": {
                       "line": 7,
                       "linechar": 0
                     },
-                    {
+                    "to": {
                       "line": 7,
                       "linechar": 21
                     }
-                  ]
+                  }
                 },
                 {
-                  "Break": [
-                    {
+                  "Break": {
+                    "from": {
                       "line": 8,
                       "linechar": 0
                     },
-                    {
+                    "to": {
                       "line": 8,
                       "linechar": 9
                     }
-                  ]
+                  }
                 }
               ],
               "from": {
@@ -277,86 +257,72 @@
             }
           }
         ],
-        {
+        "default": {
           "statements": [
             {
-              "Expression": [
-                {
-                  "ScopeResolution": [
-                    null,
-                    {
-                      "FunctionCall": [
-                        {
-                          "Identifier": [
-                            {
-                              "Identifier": "print"
-                            },
-                            {
-                              "line": 10,
-                              "linechar": 6
-                            },
-                            {
-                              "line": 10,
-                              "linechar": 11
-                            }
-                          ]
-                        },
-                        [
-                          {
-                            "StringLiteral": [
-                              "a is not 1 or 2",
-                              {
-                                "line": 10,
-                                "linechar": 12
-                              },
-                              {
-                                "line": 10,
-                                "linechar": 29
-                              }
-                            ]
-                          }
-                        ],
-                        {
+              "Expression": {
+                "expression": {
+                  "FunctionCall": {
+                    "function": {
+                      "ScopeResolution": {
+                        "scope": null,
+                        "accessor": "print",
+                        "from": {
                           "line": 10,
-                          "linechar": 6
+                          "linechar": 0
                         },
-                        {
+                        "to": {
                           "line": 10,
-                          "linechar": 30
+                          "linechar": 11
                         }
-                      ]
+                      }
                     },
-                    {
+                    "arguments": [
+                      {
+                        "StringLiteral": {
+                          "value": "a is not 1 or 2",
+                          "from": {
+                            "line": 10,
+                            "linechar": 12
+                          },
+                          "to": {
+                            "line": 10,
+                            "linechar": 29
+                          }
+                        }
+                      }
+                    ],
+                    "from": {
                       "line": 10,
                       "linechar": 0
                     },
-                    {
+                    "to": {
                       "line": 10,
                       "linechar": 30
                     }
-                  ]
+                  }
                 },
-                {
+                "from": {
                   "line": 10,
                   "linechar": 0
                 },
-                {
+                "to": {
                   "line": 10,
                   "linechar": 30
                 }
-              ]
+              }
             },
             {
-              "Break": [
-                {
+              "Break": {
+                "from": {
                   "line": 11,
                   "linechar": 0
                 },
-                {
+                "to": {
                   "line": 11,
                   "linechar": 9
                 }
-              ]
+              }
             }
           ],
           "from": {
@@ -368,15 +334,15 @@
             "linechar": 0
           }
         },
-        {
+        "from": {
           "line": 2,
           "linechar": 0
         },
-        {
+        "to": {
           "line": 12,
           "linechar": 1
         }
-      ]
+      }
     }
   ],
   "from": {

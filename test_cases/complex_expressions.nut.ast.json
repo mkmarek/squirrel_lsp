@@ -1,310 +1,326 @@
 {
   "statements": [
     {
-      "Local": [
-        [
+      "Local": {
+        "initializations": [
           {
             "name": "test",
             "expression": {
-              "BinaryOperator": [
-                {
-                  "FunctionCall": [
-                    {
-                      "MemberAccess": [
-                        {
-                          "Identifier": [
-                            {
+              "BinaryOperator": {
+                "left": {
+                  "FunctionCall": {
+                    "function": {
+                      "MemberAccess": {
+                        "expression": {
+                          "Identifier": {
+                            "token": {
                               "Identifier": "a"
                             },
-                            {
+                            "from": {
                               "line": 0,
                               "linechar": 13
                             },
-                            {
+                            "to": {
                               "line": 0,
                               "linechar": 14
                             }
-                          ]
+                          }
                         },
-                        "foo",
-                        {
+                        "member": "foo",
+                        "from": {
                           "line": 0,
                           "linechar": 12
                         },
-                        {
+                        "to": {
                           "line": 0,
                           "linechar": 18
                         }
-                      ]
+                      }
                     },
-                    [],
-                    {
+                    "arguments": [],
+                    "from": {
                       "line": 0,
                       "linechar": 12
                     },
-                    {
+                    "to": {
                       "line": 0,
                       "linechar": 20
                     }
-                  ]
+                  }
                 },
-                "Or",
-                {
-                  "BinaryOperator": [
-                    {
-                      "FunctionCall": [
-                        {
-                          "MemberAccess": [
-                            {
-                              "Identifier": [
-                                {
+                "operator": "Or",
+                "right": {
+                  "BinaryOperator": {
+                    "left": {
+                      "FunctionCall": {
+                        "function": {
+                          "MemberAccess": {
+                            "expression": {
+                              "Identifier": {
+                                "token": {
                                   "Identifier": "b"
                                 },
-                                {
+                                "from": {
                                   "line": 0,
                                   "linechar": 24
                                 },
-                                {
+                                "to": {
                                   "line": 0,
                                   "linechar": 25
                                 }
-                              ]
+                              }
                             },
-                            "test",
-                            {
+                            "member": "test",
+                            "from": {
                               "line": 0,
                               "linechar": 23
                             },
-                            {
+                            "to": {
                               "line": 0,
                               "linechar": 30
                             }
-                          ]
+                          }
                         },
-                        [],
-                        {
+                        "arguments": [],
+                        "from": {
                           "line": 0,
                           "linechar": 23
                         },
-                        {
+                        "to": {
                           "line": 0,
                           "linechar": 32
                         }
-                      ]
+                      }
                     },
-                    "And",
-                    {
-                      "MemberAccess": [
-                        {
-                          "MemberAccess": [
-                            {
-                              "Identifier": [
-                                {
+                    "operator": "And",
+                    "right": {
+                      "MemberAccess": {
+                        "expression": {
+                          "MemberAccess": {
+                            "expression": {
+                              "Identifier": {
+                                "token": {
                                   "Identifier": "x"
                                 },
-                                {
+                                "from": {
                                   "line": 0,
                                   "linechar": 36
                                 },
-                                {
+                                "to": {
                                   "line": 0,
                                   "linechar": 37
                                 }
-                              ]
+                              }
                             },
-                            "y",
-                            {
+                            "member": "y",
+                            "from": {
                               "line": 0,
                               "linechar": 35
                             },
-                            {
+                            "to": {
                               "line": 0,
                               "linechar": 39
                             }
-                          ]
+                          }
                         },
-                        "z",
-                        {
+                        "member": "z",
+                        "from": {
                           "line": 0,
                           "linechar": 35
                         },
-                        {
+                        "to": {
                           "line": 0,
                           "linechar": 41
                         }
-                      ]
+                      }
                     },
-                    {
+                    "from": {
                       "line": 0,
                       "linechar": 23
                     },
-                    {
+                    "to": {
                       "line": 0,
                       "linechar": 41
                     }
-                  ]
+                  }
                 },
-                {
+                "from": {
                   "line": 0,
                   "linechar": 12
                 },
-                {
+                "to": {
                   "line": 0,
                   "linechar": 41
                 }
-              ]
+              }
+            },
+            "from": {
+              "line": 0,
+              "linechar": 5
+            },
+            "to": {
+              "line": 0,
+              "linechar": 41
             }
           }
         ],
-        {
+        "from": {
           "line": 0,
           "linechar": 0
         },
-        {
+        "to": {
           "line": 0,
           "linechar": 41
         }
-      ]
+      }
     },
     {
-      "Local": [
-        [
+      "Local": {
+        "initializations": [
           {
             "name": "test2",
             "expression": {
-              "BinaryOperator": [
-                {
-                  "UnaryOperator": [
-                    "Increment",
-                    {
-                      "PostfixUnaryOperator": [
-                        "Increment",
-                        {
-                          "Identifier": [
-                            {
+              "BinaryOperator": {
+                "left": {
+                  "UnaryOperator": {
+                    "operator": "Increment",
+                    "expression": {
+                      "PostfixUnaryOperator": {
+                        "operator": "Increment",
+                        "expression": {
+                          "Identifier": {
+                            "token": {
                               "Identifier": "a"
                             },
-                            {
+                            "from": {
                               "line": 2,
                               "linechar": 16
                             },
-                            {
+                            "to": {
                               "line": 2,
                               "linechar": 17
                             }
-                          ]
+                          }
                         },
-                        {
+                        "from": {
                           "line": 2,
                           "linechar": 17
                         },
-                        {
+                        "to": {
                           "line": 2,
                           "linechar": 19
                         }
-                      ]
+                      }
                     },
-                    {
+                    "from": {
                       "line": 2,
                       "linechar": 13
                     },
-                    {
+                    "to": {
                       "line": 2,
                       "linechar": 19
                     }
-                  ]
+                  }
                 },
-                "Minus",
-                {
-                  "BinaryOperator": [
-                    {
-                      "UnaryOperator": [
-                        "Decrement",
-                        {
-                          "PostfixUnaryOperator": [
-                            "Decrement",
-                            {
-                              "Identifier": [
-                                {
+                "operator": "Minus",
+                "right": {
+                  "BinaryOperator": {
+                    "left": {
+                      "UnaryOperator": {
+                        "operator": "Decrement",
+                        "expression": {
+                          "PostfixUnaryOperator": {
+                            "operator": "Decrement",
+                            "expression": {
+                              "Identifier": {
+                                "token": {
                                   "Identifier": "b"
                                 },
-                                {
+                                "from": {
                                   "line": 2,
                                   "linechar": 24
                                 },
-                                {
+                                "to": {
                                   "line": 2,
                                   "linechar": 25
                                 }
-                              ]
+                              }
                             },
-                            {
+                            "from": {
                               "line": 2,
                               "linechar": 25
                             },
-                            {
+                            "to": {
                               "line": 2,
                               "linechar": 27
                             }
-                          ]
+                          }
                         },
-                        {
+                        "from": {
                           "line": 2,
                           "linechar": 21
                         },
-                        {
+                        "to": {
                           "line": 2,
                           "linechar": 27
                         }
-                      ]
+                      }
                     },
-                    "Multiply",
-                    {
-                      "Identifier": [
-                        {
+                    "operator": "Multiply",
+                    "right": {
+                      "Identifier": {
+                        "token": {
                           "Identifier": "c"
                         },
-                        {
+                        "from": {
                           "line": 2,
                           "linechar": 30
                         },
-                        {
+                        "to": {
                           "line": 2,
                           "linechar": 31
                         }
-                      ]
+                      }
                     },
-                    {
+                    "from": {
                       "line": 2,
                       "linechar": 21
                     },
-                    {
+                    "to": {
                       "line": 2,
                       "linechar": 31
                     }
-                  ]
+                  }
                 },
-                {
+                "from": {
                   "line": 2,
                   "linechar": 13
                 },
-                {
+                "to": {
                   "line": 2,
                   "linechar": 31
                 }
-              ]
+              }
+            },
+            "from": {
+              "line": 2,
+              "linechar": 5
+            },
+            "to": {
+              "line": 2,
+              "linechar": 31
             }
           }
         ],
-        {
+        "from": {
           "line": 2,
           "linechar": 0
         },
-        {
+        "to": {
           "line": 2,
           "linechar": 31
         }
-      ]
+      }
     }
   ],
   "from": {

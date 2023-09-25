@@ -1,11 +1,39 @@
 {
   "statements": [
     {
-      "Enum": [
-        "Stuff",
-        [
+      "Enum": {
+        "name": {
+          "Identifier": {
+            "token": {
+              "Identifier": "Stuff"
+            },
+            "from": {
+              "line": 0,
+              "linechar": 5
+            },
+            "to": {
+              "line": 0,
+              "linechar": 10
+            }
+          }
+        },
+        "enumerations": [
           {
-            "name": "first",
+            "name": {
+              "Identifier": {
+                "token": {
+                  "Identifier": "first"
+                },
+                "from": {
+                  "line": 1,
+                  "linechar": 2
+                },
+                "to": {
+                  "line": 1,
+                  "linechar": 7
+                }
+              }
+            },
             "value": null,
             "from": {
               "line": 1,
@@ -17,7 +45,21 @@
             }
           },
           {
-            "name": "second",
+            "name": {
+              "Identifier": {
+                "token": {
+                  "Identifier": "second"
+                },
+                "from": {
+                  "line": 2,
+                  "linechar": 2
+                },
+                "to": {
+                  "line": 2,
+                  "linechar": 8
+                }
+              }
+            },
             "value": null,
             "from": {
               "line": 2,
@@ -29,7 +71,21 @@
             }
           },
           {
-            "name": "third",
+            "name": {
+              "Identifier": {
+                "token": {
+                  "Identifier": "third"
+                },
+                "from": {
+                  "line": 3,
+                  "linechar": 2
+                },
+                "to": {
+                  "line": 3,
+                  "linechar": 7
+                }
+              }
+            },
             "value": null,
             "from": {
               "line": 3,
@@ -41,34 +97,62 @@
             }
           }
         ],
-        {
+        "from": {
           "line": 0,
-          "linechar": 0
+          "linechar": 10
         },
-        {
+        "to": {
           "line": 4,
           "linechar": 1
         }
-      ]
+      }
     },
     {
-      "Enum": [
-        "Stuff",
-        [
+      "Enum": {
+        "name": {
+          "Identifier": {
+            "token": {
+              "Identifier": "Stuff"
+            },
+            "from": {
+              "line": 6,
+              "linechar": 5
+            },
+            "to": {
+              "line": 6,
+              "linechar": 10
+            }
+          }
+        },
+        "enumerations": [
           {
-            "name": "first",
+            "name": {
+              "Identifier": {
+                "token": {
+                  "Identifier": "first"
+                },
+                "from": {
+                  "line": 7,
+                  "linechar": 2
+                },
+                "to": {
+                  "line": 7,
+                  "linechar": 7
+                }
+              }
+            },
             "value": {
-              "IntegerLiteral": [
-                10,
-                {
+              "IntegerLiteral": {
+                "value": 10,
+                "from": {
                   "line": 7,
                   "linechar": 9
                 },
-                {
+                "to": {
                   "line": 7,
                   "linechar": 12
                 }
-              ]
+              }
             },
             "from": {
               "line": 7,
@@ -80,19 +164,33 @@
             }
           },
           {
-            "name": "second",
+            "name": {
+              "Identifier": {
+                "token": {
+                  "Identifier": "second"
+                },
+                "from": {
+                  "line": 8,
+                  "linechar": 2
+                },
+                "to": {
+                  "line": 8,
+                  "linechar": 8
+                }
+              }
+            },
             "value": {
-              "StringLiteral": [
-                "string",
-                {
+              "StringLiteral": {
+                "value": "string",
+                "from": {
                   "line": 8,
                   "linechar": 10
                 },
-                {
+                "to": {
                   "line": 8,
                   "linechar": 19
                 }
-              ]
+              }
             },
             "from": {
               "line": 8,
@@ -104,19 +202,33 @@
             }
           },
           {
-            "name": "third",
+            "name": {
+              "Identifier": {
+                "token": {
+                  "Identifier": "third"
+                },
+                "from": {
+                  "line": 9,
+                  "linechar": 2
+                },
+                "to": {
+                  "line": 9,
+                  "linechar": 7
+                }
+              }
+            },
             "value": {
-              "FloatLiteral": [
-                1.2,
-                {
+              "FloatLiteral": {
+                "value": 1.2,
+                "from": {
                   "line": 9,
                   "linechar": 9
                 },
-                {
+                "to": {
                   "line": 9,
                   "linechar": 13
                 }
-              ]
+              }
             },
             "from": {
               "line": 9,
@@ -128,15 +240,15 @@
             }
           }
         ],
-        {
+        "from": {
           "line": 6,
-          "linechar": 0
+          "linechar": 10
         },
-        {
+        "to": {
           "line": 10,
           "linechar": 1
         }
-      ]
+      }
     }
   ],
   "from": {

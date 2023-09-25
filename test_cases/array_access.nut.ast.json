@@ -1,340 +1,320 @@
 {
   "statements": [
     {
-      "Local": [
-        [
+      "Local": {
+        "initializations": [
           {
             "name": "arr",
             "expression": {
-              "Array": [
-                [
+              "Array": {
+                "elements": [
                   {
-                    "IntegerLiteral": [
-                      1,
-                      {
+                    "IntegerLiteral": {
+                      "value": 1,
+                      "from": {
                         "line": 0,
                         "linechar": 13
                       },
-                      {
+                      "to": {
                         "line": 0,
                         "linechar": 14
                       }
-                    ]
+                    }
                   },
                   {
-                    "IntegerLiteral": [
-                      2,
-                      {
+                    "IntegerLiteral": {
+                      "value": 2,
+                      "from": {
                         "line": 0,
                         "linechar": 15
                       },
-                      {
+                      "to": {
                         "line": 0,
                         "linechar": 17
                       }
-                    ]
+                    }
                   },
                   {
-                    "IntegerLiteral": [
-                      3,
-                      {
+                    "IntegerLiteral": {
+                      "value": 3,
+                      "from": {
                         "line": 0,
                         "linechar": 18
                       },
-                      {
+                      "to": {
                         "line": 0,
                         "linechar": 20
                       }
-                    ]
+                    }
                   },
                   {
-                    "IntegerLiteral": [
-                      4,
-                      {
+                    "IntegerLiteral": {
+                      "value": 4,
+                      "from": {
                         "line": 0,
                         "linechar": 21
                       },
-                      {
+                      "to": {
                         "line": 0,
                         "linechar": 23
                       }
-                    ]
+                    }
                   },
                   {
-                    "IntegerLiteral": [
-                      5,
-                      {
+                    "IntegerLiteral": {
+                      "value": 5,
+                      "from": {
                         "line": 0,
                         "linechar": 24
                       },
-                      {
+                      "to": {
                         "line": 0,
                         "linechar": 26
                       }
-                    ]
+                    }
                   }
                 ],
-                {
+                "from": {
                   "line": 0,
                   "linechar": 11
                 },
-                {
+                "to": {
                   "line": 0,
                   "linechar": 27
                 }
-              ]
+              }
+            },
+            "from": {
+              "line": 0,
+              "linechar": 5
+            },
+            "to": {
+              "line": 0,
+              "linechar": 27
             }
           }
         ],
-        {
+        "from": {
           "line": 0,
           "linechar": 0
         },
-        {
+        "to": {
           "line": 0,
           "linechar": 27
         }
-      ]
+      }
     },
     {
-      "Expression": [
-        {
-          "ScopeResolution": [
-            null,
-            {
-              "FunctionCall": [
-                {
-                  "Identifier": [
-                    {
-                      "Identifier": "print"
-                    },
-                    {
-                      "line": 2,
-                      "linechar": 2
-                    },
-                    {
-                      "line": 2,
-                      "linechar": 7
-                    }
-                  ]
+      "Expression": {
+        "expression": {
+          "FunctionCall": {
+            "function": {
+              "ScopeResolution": {
+                "scope": null,
+                "accessor": "print",
+                "from": {
+                  "line": 2,
+                  "linechar": 0
                 },
-                [
-                  {
-                    "ArrayAccess": [
-                      {
-                        "Identifier": [
-                          {
-                            "Identifier": "arr"
-                          },
-                          {
-                            "line": 2,
-                            "linechar": 8
-                          },
-                          {
-                            "line": 2,
-                            "linechar": 11
-                          }
-                        ]
+                "to": {
+                  "line": 2,
+                  "linechar": 7
+                }
+              }
+            },
+            "arguments": [
+              {
+                "ArrayAccess": {
+                  "array": {
+                    "Identifier": {
+                      "token": {
+                        "Identifier": "arr"
                       },
-                      {
-                        "IntegerLiteral": [
-                          0,
-                          {
-                            "line": 2,
-                            "linechar": 12
-                          },
-                          {
-                            "line": 2,
-                            "linechar": 13
-                          }
-                        ]
-                      },
-                      {
+                      "from": {
                         "line": 2,
                         "linechar": 8
                       },
-                      {
+                      "to": {
                         "line": 2,
-                        "linechar": 14
+                        "linechar": 11
                       }
-                    ]
+                    }
+                  },
+                  "index": {
+                    "IntegerLiteral": {
+                      "value": 0,
+                      "from": {
+                        "line": 2,
+                        "linechar": 12
+                      },
+                      "to": {
+                        "line": 2,
+                        "linechar": 13
+                      }
+                    }
+                  },
+                  "from": {
+                    "line": 2,
+                    "linechar": 8
+                  },
+                  "to": {
+                    "line": 2,
+                    "linechar": 14
                   }
-                ],
-                {
-                  "line": 2,
-                  "linechar": 2
-                },
-                {
-                  "line": 2,
-                  "linechar": 15
                 }
-              ]
-            },
-            {
+              }
+            ],
+            "from": {
               "line": 2,
               "linechar": 0
             },
-            {
+            "to": {
               "line": 2,
               "linechar": 15
             }
-          ]
+          }
         },
-        {
+        "from": {
           "line": 2,
           "linechar": 0
         },
-        {
+        "to": {
           "line": 2,
           "linechar": 15
         }
-      ]
+      }
     },
     {
-      "Expression": [
-        {
-          "ScopeResolution": [
-            null,
-            {
-              "FunctionCall": [
-                {
-                  "Identifier": [
-                    {
-                      "Identifier": "print"
-                    },
-                    {
-                      "line": 4,
-                      "linechar": 2
-                    },
-                    {
-                      "line": 4,
-                      "linechar": 7
-                    }
-                  ]
+      "Expression": {
+        "expression": {
+          "FunctionCall": {
+            "function": {
+              "ScopeResolution": {
+                "scope": null,
+                "accessor": "print",
+                "from": {
+                  "line": 4,
+                  "linechar": 0
                 },
-                [
-                  {
-                    "ArrayAccess": [
-                      {
-                        "Identifier": [
-                          {
-                            "Identifier": "arr"
-                          },
-                          {
-                            "line": 4,
-                            "linechar": 8
-                          },
-                          {
-                            "line": 4,
-                            "linechar": 11
-                          }
-                        ]
+                "to": {
+                  "line": 4,
+                  "linechar": 7
+                }
+              }
+            },
+            "arguments": [
+              {
+                "ArrayAccess": {
+                  "array": {
+                    "Identifier": {
+                      "token": {
+                        "Identifier": "arr"
                       },
-                      {
-                        "BinaryOperator": [
-                          {
-                            "IntegerLiteral": [
-                              1,
-                              {
-                                "line": 4,
-                                "linechar": 12
-                              },
-                              {
-                                "line": 4,
-                                "linechar": 13
-                              }
-                            ]
-                          },
-                          "Plus",
-                          {
-                            "BinaryOperator": [
-                              {
-                                "IntegerLiteral": [
-                                  2,
-                                  {
-                                    "line": 4,
-                                    "linechar": 15
-                                  },
-                                  {
-                                    "line": 4,
-                                    "linechar": 17
-                                  }
-                                ]
-                              },
-                              "Divide",
-                              {
-                                "IntegerLiteral": [
-                                  5,
-                                  {
-                                    "line": 4,
-                                    "linechar": 19
-                                  },
-                                  {
-                                    "line": 4,
-                                    "linechar": 21
-                                  }
-                                ]
-                              },
-                              {
-                                "line": 4,
-                                "linechar": 15
-                              },
-                              {
-                                "line": 4,
-                                "linechar": 21
-                              }
-                            ]
-                          },
-                          {
-                            "line": 4,
-                            "linechar": 12
-                          },
-                          {
-                            "line": 4,
-                            "linechar": 21
-                          }
-                        ]
-                      },
-                      {
+                      "from": {
                         "line": 4,
                         "linechar": 8
                       },
-                      {
+                      "to": {
                         "line": 4,
-                        "linechar": 22
+                        "linechar": 11
                       }
-                    ]
+                    }
+                  },
+                  "index": {
+                    "BinaryOperator": {
+                      "left": {
+                        "IntegerLiteral": {
+                          "value": 1,
+                          "from": {
+                            "line": 4,
+                            "linechar": 12
+                          },
+                          "to": {
+                            "line": 4,
+                            "linechar": 13
+                          }
+                        }
+                      },
+                      "operator": "Plus",
+                      "right": {
+                        "BinaryOperator": {
+                          "left": {
+                            "IntegerLiteral": {
+                              "value": 2,
+                              "from": {
+                                "line": 4,
+                                "linechar": 15
+                              },
+                              "to": {
+                                "line": 4,
+                                "linechar": 17
+                              }
+                            }
+                          },
+                          "operator": "Divide",
+                          "right": {
+                            "IntegerLiteral": {
+                              "value": 5,
+                              "from": {
+                                "line": 4,
+                                "linechar": 19
+                              },
+                              "to": {
+                                "line": 4,
+                                "linechar": 21
+                              }
+                            }
+                          },
+                          "from": {
+                            "line": 4,
+                            "linechar": 15
+                          },
+                          "to": {
+                            "line": 4,
+                            "linechar": 21
+                          }
+                        }
+                      },
+                      "from": {
+                        "line": 4,
+                        "linechar": 12
+                      },
+                      "to": {
+                        "line": 4,
+                        "linechar": 21
+                      }
+                    }
+                  },
+                  "from": {
+                    "line": 4,
+                    "linechar": 8
+                  },
+                  "to": {
+                    "line": 4,
+                    "linechar": 22
                   }
-                ],
-                {
-                  "line": 4,
-                  "linechar": 2
-                },
-                {
-                  "line": 4,
-                  "linechar": 23
                 }
-              ]
-            },
-            {
+              }
+            ],
+            "from": {
               "line": 4,
               "linechar": 0
             },
-            {
+            "to": {
               "line": 4,
               "linechar": 23
             }
-          ]
+          }
         },
-        {
+        "from": {
           "line": 4,
           "linechar": 0
         },
-        {
+        "to": {
           "line": 4,
           "linechar": 23
         }
-      ]
+      }
     }
   ],
   "from": {

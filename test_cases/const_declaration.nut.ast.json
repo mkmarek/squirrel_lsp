@@ -1,138 +1,160 @@
 {
   "statements": [
     {
-      "Const": [
-        "foo",
-        {
-          "StringLiteral": [
-            "bar",
-            {
+      "Const": {
+        "name": {
+          "Identifier": {
+            "token": {
+              "Identifier": "foo"
+            },
+            "from": {
+              "line": 0,
+              "linechar": 6
+            },
+            "to": {
+              "line": 0,
+              "linechar": 9
+            }
+          }
+        },
+        "expression": {
+          "StringLiteral": {
+            "value": "bar",
+            "from": {
               "line": 0,
               "linechar": 11
             },
-            {
+            "to": {
               "line": 0,
               "linechar": 17
             }
-          ]
+          }
         },
-        {
+        "from": {
           "line": 0,
           "linechar": 0
         },
-        {
+        "to": {
           "line": 0,
           "linechar": 17
         }
-      ]
+      }
     },
     {
-      "Local": [
-        [
+      "Local": {
+        "initializations": [
           {
             "name": "a",
             "expression": {
-              "BinaryOperator": [
-                {
-                  "IntegerLiteral": [
-                    1,
-                    {
+              "BinaryOperator": {
+                "left": {
+                  "IntegerLiteral": {
+                    "value": 1,
+                    "from": {
                       "line": 3,
                       "linechar": 9
                     },
-                    {
+                    "to": {
                       "line": 3,
                       "linechar": 11
                     }
-                  ]
+                  }
                 },
-                "Plus",
-                {
-                  "BinaryOperator": [
-                    {
-                      "IntegerLiteral": [
-                        2,
-                        {
+                "operator": "Plus",
+                "right": {
+                  "BinaryOperator": {
+                    "left": {
+                      "IntegerLiteral": {
+                        "value": 2,
+                        "from": {
                           "line": 3,
                           "linechar": 13
                         },
-                        {
+                        "to": {
                           "line": 3,
                           "linechar": 15
                         }
-                      ]
+                      }
                     },
-                    "Plus",
-                    {
-                      "BinaryOperator": [
-                        {
-                          "IntegerLiteral": [
-                            3,
-                            {
+                    "operator": "Plus",
+                    "right": {
+                      "BinaryOperator": {
+                        "left": {
+                          "IntegerLiteral": {
+                            "value": 3,
+                            "from": {
                               "line": 3,
                               "linechar": 17
                             },
-                            {
+                            "to": {
                               "line": 3,
                               "linechar": 19
                             }
-                          ]
+                          }
                         },
-                        "Plus",
-                        {
-                          "IntegerLiteral": [
-                            4,
-                            {
+                        "operator": "Plus",
+                        "right": {
+                          "IntegerLiteral": {
+                            "value": 4,
+                            "from": {
                               "line": 3,
                               "linechar": 21
                             },
-                            {
+                            "to": {
                               "line": 3,
                               "linechar": 23
                             }
-                          ]
+                          }
                         },
-                        {
+                        "from": {
                           "line": 3,
                           "linechar": 17
                         },
-                        {
+                        "to": {
                           "line": 3,
                           "linechar": 23
                         }
-                      ]
+                      }
                     },
-                    {
+                    "from": {
                       "line": 3,
                       "linechar": 13
                     },
-                    {
+                    "to": {
                       "line": 3,
                       "linechar": 23
                     }
-                  ]
+                  }
                 },
-                {
+                "from": {
                   "line": 3,
                   "linechar": 9
                 },
-                {
+                "to": {
                   "line": 3,
                   "linechar": 23
                 }
-              ]
+              }
+            },
+            "from": {
+              "line": 3,
+              "linechar": 5
+            },
+            "to": {
+              "line": 3,
+              "linechar": 23
             }
           }
         ],
-        {
+        "from": {
           "line": 3,
           "linechar": 0
         },
-        {
+        "to": {
           "line": 3,
           "linechar": 23
         }
-      ]
+      }
     }
   ],
   "from": {

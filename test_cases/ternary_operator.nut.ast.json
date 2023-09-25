@@ -1,98 +1,106 @@
 {
   "statements": [
     {
-      "Local": [
-        [
+      "Local": {
+        "initializations": [
           {
             "name": "b",
             "expression": {
-              "TernaryOperator": [
-                {
-                  "BinaryOperator": [
-                    {
-                      "IntegerLiteral": [
-                        1,
-                        {
+              "TernaryOperator": {
+                "condition": {
+                  "BinaryOperator": {
+                    "left": {
+                      "IntegerLiteral": {
+                        "value": 1,
+                        "from": {
                           "line": 0,
                           "linechar": 9
                         },
-                        {
+                        "to": {
                           "line": 0,
                           "linechar": 11
                         }
-                      ]
+                      }
                     },
-                    "Less",
-                    {
-                      "IntegerLiteral": [
-                        2,
-                        {
+                    "operator": "Less",
+                    "right": {
+                      "IntegerLiteral": {
+                        "value": 2,
+                        "from": {
                           "line": 0,
                           "linechar": 13
                         },
-                        {
+                        "to": {
                           "line": 0,
                           "linechar": 15
                         }
-                      ]
+                      }
                     },
-                    {
+                    "from": {
                       "line": 0,
                       "linechar": 9
                     },
-                    {
+                    "to": {
                       "line": 0,
                       "linechar": 15
                     }
-                  ]
+                  }
                 },
-                {
-                  "IntegerLiteral": [
-                    3,
-                    {
+                "if_true": {
+                  "IntegerLiteral": {
+                    "value": 3,
+                    "from": {
                       "line": 0,
                       "linechar": 17
                     },
-                    {
+                    "to": {
                       "line": 0,
                       "linechar": 19
                     }
-                  ]
+                  }
                 },
-                {
-                  "IntegerLiteral": [
-                    4,
-                    {
+                "if_false": {
+                  "IntegerLiteral": {
+                    "value": 4,
+                    "from": {
                       "line": 0,
                       "linechar": 21
                     },
-                    {
+                    "to": {
                       "line": 0,
                       "linechar": 23
                     }
-                  ]
+                  }
                 },
-                {
+                "from": {
                   "line": 0,
                   "linechar": 9
                 },
-                {
+                "to": {
                   "line": 0,
                   "linechar": 23
                 }
-              ]
+              }
+            },
+            "from": {
+              "line": 0,
+              "linechar": 5
+            },
+            "to": {
+              "line": 0,
+              "linechar": 23
             }
           }
         ],
-        {
+        "from": {
           "line": 0,
           "linechar": 0
         },
-        {
+        "to": {
           "line": 0,
           "linechar": 23
         }
-      ]
+      }
     }
   ],
   "from": {

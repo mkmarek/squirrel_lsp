@@ -3,278 +3,264 @@
     {
       "FunctionDeclaration": {
         "name": {
-          "Identifier": [
-            {
+          "Identifier": {
+            "token": {
               "Identifier": "foo"
             },
-            {
+            "from": {
               "line": 0,
-              "linechar": 9
+              "linechar": 8
             },
-            {
+            "to": {
               "line": 0,
               "linechar": 12
             }
-          ]
+          }
         },
         "parameters": [
           {
-            "Identifier": [
-              {
+            "Identifier": {
+              "token": {
                 "Identifier": "arg1"
               },
-              {
+              "from": {
                 "line": 0,
                 "linechar": 13
               },
-              {
+              "to": {
                 "line": 0,
                 "linechar": 17
               }
-            ]
+            }
           },
           {
-            "Identifier": [
-              {
+            "Identifier": {
+              "token": {
                 "Identifier": "arg2"
               },
-              {
+              "from": {
                 "line": 0,
                 "linechar": 18
               },
-              {
+              "to": {
                 "line": 0,
                 "linechar": 22
               }
-            ]
+            }
           },
           {
-            "Identifier": [
-              {
+            "Identifier": {
+              "token": {
                 "Identifier": "arg3"
               },
-              {
+              "from": {
                 "line": 0,
                 "linechar": 23
               },
-              {
+              "to": {
                 "line": 0,
                 "linechar": 27
               }
-            ]
+            }
           }
         ],
         "statement": {
-          "Block": [
-            {
+          "Block": {
+            "statements": {
               "statements": [
                 {
-                  "Expression": [
-                    {
-                      "ScopeResolution": [
-                        null,
-                        {
-                          "FunctionCall": [
-                            {
-                              "Identifier": [
-                                {
-                                  "Identifier": "print"
-                                },
-                                {
-                                  "line": 2,
-                                  "linechar": 4
-                                },
-                                {
-                                  "line": 2,
-                                  "linechar": 9
-                                }
-                              ]
+                  "Expression": {
+                    "expression": {
+                      "FunctionCall": {
+                        "function": {
+                          "ScopeResolution": {
+                            "scope": null,
+                            "accessor": "print",
+                            "from": {
+                              "line": 2,
+                              "linechar": 0
                             },
-                            [
-                              {
-                                "BinaryOperator": [
-                                  {
-                                    "Identifier": [
-                                      {
-                                        "Identifier": "arg1"
-                                      },
-                                      {
-                                        "line": 2,
-                                        "linechar": 10
-                                      },
-                                      {
-                                        "line": 2,
-                                        "linechar": 14
-                                      }
-                                    ]
+                            "to": {
+                              "line": 2,
+                              "linechar": 9
+                            }
+                          }
+                        },
+                        "arguments": [
+                          {
+                            "BinaryOperator": {
+                              "left": {
+                                "Identifier": {
+                                  "token": {
+                                    "Identifier": "arg1"
                                   },
-                                  "Plus",
-                                  {
-                                    "BinaryOperator": [
-                                      {
-                                        "Identifier": [
-                                          {
-                                            "Identifier": "arg2"
-                                          },
-                                          {
-                                            "line": 2,
-                                            "linechar": 17
-                                          },
-                                          {
-                                            "line": 2,
-                                            "linechar": 21
-                                          }
-                                        ]
-                                      },
-                                      "Plus",
-                                      {
-                                        "Identifier": [
-                                          {
-                                            "Identifier": "arg3"
-                                          },
-                                          {
-                                            "line": 2,
-                                            "linechar": 24
-                                          },
-                                          {
-                                            "line": 2,
-                                            "linechar": 28
-                                          }
-                                        ]
-                                      },
-                                      {
-                                        "line": 2,
-                                        "linechar": 16
-                                      },
-                                      {
-                                        "line": 2,
-                                        "linechar": 28
-                                      }
-                                    ]
-                                  },
-                                  {
+                                  "from": {
                                     "line": 2,
                                     "linechar": 10
                                   },
-                                  {
+                                  "to": {
+                                    "line": 2,
+                                    "linechar": 14
+                                  }
+                                }
+                              },
+                              "operator": "Plus",
+                              "right": {
+                                "BinaryOperator": {
+                                  "left": {
+                                    "Identifier": {
+                                      "token": {
+                                        "Identifier": "arg2"
+                                      },
+                                      "from": {
+                                        "line": 2,
+                                        "linechar": 17
+                                      },
+                                      "to": {
+                                        "line": 2,
+                                        "linechar": 21
+                                      }
+                                    }
+                                  },
+                                  "operator": "Plus",
+                                  "right": {
+                                    "Identifier": {
+                                      "token": {
+                                        "Identifier": "arg3"
+                                      },
+                                      "from": {
+                                        "line": 2,
+                                        "linechar": 24
+                                      },
+                                      "to": {
+                                        "line": 2,
+                                        "linechar": 28
+                                      }
+                                    }
+                                  },
+                                  "from": {
+                                    "line": 2,
+                                    "linechar": 16
+                                  },
+                                  "to": {
                                     "line": 2,
                                     "linechar": 28
                                   }
-                                ]
+                                }
+                              },
+                              "from": {
+                                "line": 2,
+                                "linechar": 10
+                              },
+                              "to": {
+                                "line": 2,
+                                "linechar": 28
                               }
-                            ],
-                            {
-                              "line": 2,
-                              "linechar": 4
-                            },
-                            {
-                              "line": 2,
-                              "linechar": 29
                             }
-                          ]
-                        },
-                        {
+                          }
+                        ],
+                        "from": {
                           "line": 2,
                           "linechar": 0
                         },
-                        {
+                        "to": {
                           "line": 2,
                           "linechar": 29
                         }
-                      ]
+                      }
                     },
-                    {
+                    "from": {
                       "line": 2,
                       "linechar": 0
                     },
-                    {
+                    "to": {
                       "line": 2,
                       "linechar": 29
                     }
-                  ]
+                  }
                 },
                 {
-                  "Return": [
-                    {
-                      "BinaryOperator": [
-                        {
-                          "Identifier": [
-                            {
+                  "Return": {
+                    "expression": {
+                      "BinaryOperator": {
+                        "left": {
+                          "Identifier": {
+                            "token": {
                               "Identifier": "arg1"
                             },
-                            {
+                            "from": {
                               "line": 4,
                               "linechar": 9
                             },
-                            {
+                            "to": {
                               "line": 4,
                               "linechar": 13
                             }
-                          ]
+                          }
                         },
-                        "Plus",
-                        {
-                          "BinaryOperator": [
-                            {
-                              "Identifier": [
-                                {
+                        "operator": "Plus",
+                        "right": {
+                          "BinaryOperator": {
+                            "left": {
+                              "Identifier": {
+                                "token": {
                                   "Identifier": "arg2"
                                 },
-                                {
+                                "from": {
                                   "line": 4,
                                   "linechar": 16
                                 },
-                                {
+                                "to": {
                                   "line": 4,
                                   "linechar": 20
                                 }
-                              ]
+                              }
                             },
-                            "Plus",
-                            {
-                              "Identifier": [
-                                {
+                            "operator": "Plus",
+                            "right": {
+                              "Identifier": {
+                                "token": {
                                   "Identifier": "arg3"
                                 },
-                                {
+                                "from": {
                                   "line": 4,
                                   "linechar": 23
                                 },
-                                {
+                                "to": {
                                   "line": 4,
                                   "linechar": 27
                                 }
-                              ]
+                              }
                             },
-                            {
+                            "from": {
                               "line": 4,
                               "linechar": 15
                             },
-                            {
+                            "to": {
                               "line": 4,
                               "linechar": 27
                             }
-                          ]
+                          }
                         },
-                        {
+                        "from": {
                           "line": 4,
                           "linechar": 8
                         },
-                        {
+                        "to": {
                           "line": 4,
                           "linechar": 27
                         }
-                      ]
+                      }
                     },
-                    {
+                    "from": {
                       "line": 4,
                       "linechar": 0
                     },
-                    {
+                    "to": {
                       "line": 4,
                       "linechar": 27
                     }
-                  ]
+                  }
                 }
               ],
               "from": {
@@ -286,16 +272,17 @@
                 "linechar": 0
               }
             },
-            {
+            "from": {
               "line": 1,
               "linechar": 0
             },
-            {
+            "to": {
               "line": 5,
               "linechar": 1
             }
-          ]
+          }
         },
+        "is_static": false,
         "from": {
           "line": 0,
           "linechar": 0
@@ -307,264 +294,241 @@
       }
     },
     {
-      "Expression": [
-        {
-          "FunctionCall": [
-            {
-              "Identifier": [
-                {
+      "Expression": {
+        "expression": {
+          "FunctionCall": {
+            "function": {
+              "Identifier": {
+                "token": {
                   "Identifier": "invoke"
                 },
-                {
+                "from": {
                   "line": 8,
                   "linechar": 0
                 },
-                {
+                "to": {
                   "line": 8,
                   "linechar": 6
                 }
-              ]
+              }
             },
-            [
+            "arguments": [
               {
-                "Function": [
-                  {
-                    "name": null,
-                    "parameters": [
-                      {
-                        "Identifier": [
-                          {
-                            "Identifier": "arg1"
-                          },
-                          {
-                            "line": 8,
-                            "linechar": 17
-                          },
-                          {
-                            "line": 8,
-                            "linechar": 21
-                          }
-                        ]
-                      },
-                      {
-                        "Identifier": [
-                          {
-                            "Identifier": "arg2"
-                          },
-                          {
-                            "line": 8,
-                            "linechar": 22
-                          },
-                          {
-                            "line": 8,
-                            "linechar": 26
-                          }
-                        ]
-                      },
-                      {
-                        "Identifier": [
-                          {
-                            "Identifier": "arg3"
-                          },
-                          {
-                            "line": 8,
-                            "linechar": 27
-                          },
-                          {
-                            "line": 8,
-                            "linechar": 31
-                          }
-                        ]
-                      }
-                    ],
-                    "statement": {
-                      "Block": [
-                        {
-                          "statements": [
-                            {
-                              "Expression": [
-                                {
-                                  "ScopeResolution": [
-                                    null,
-                                    {
-                                      "FunctionCall": [
-                                        {
-                                          "Identifier": [
-                                            {
-                                              "Identifier": "print"
-                                            },
-                                            {
-                                              "line": 10,
-                                              "linechar": 4
-                                            },
-                                            {
-                                              "line": 10,
-                                              "linechar": 9
-                                            }
-                                          ]
-                                        },
-                                        [
-                                          {
-                                            "BinaryOperator": [
-                                              {
-                                                "Identifier": [
-                                                  {
-                                                    "Identifier": "arg1"
-                                                  },
-                                                  {
-                                                    "line": 10,
-                                                    "linechar": 10
-                                                  },
-                                                  {
-                                                    "line": 10,
-                                                    "linechar": 14
-                                                  }
-                                                ]
-                                              },
-                                              "Plus",
-                                              {
-                                                "BinaryOperator": [
-                                                  {
-                                                    "Identifier": [
-                                                      {
-                                                        "Identifier": "arg2"
-                                                      },
-                                                      {
-                                                        "line": 10,
-                                                        "linechar": 17
-                                                      },
-                                                      {
-                                                        "line": 10,
-                                                        "linechar": 21
-                                                      }
-                                                    ]
-                                                  },
-                                                  "Plus",
-                                                  {
-                                                    "Identifier": [
-                                                      {
-                                                        "Identifier": "arg3"
-                                                      },
-                                                      {
-                                                        "line": 10,
-                                                        "linechar": 24
-                                                      },
-                                                      {
-                                                        "line": 10,
-                                                        "linechar": 28
-                                                      }
-                                                    ]
-                                                  },
-                                                  {
-                                                    "line": 10,
-                                                    "linechar": 16
-                                                  },
-                                                  {
-                                                    "line": 10,
-                                                    "linechar": 28
-                                                  }
-                                                ]
-                                              },
-                                              {
-                                                "line": 10,
-                                                "linechar": 10
-                                              },
-                                              {
-                                                "line": 10,
-                                                "linechar": 28
-                                              }
-                                            ]
-                                          }
-                                        ],
-                                        {
-                                          "line": 10,
-                                          "linechar": 4
-                                        },
-                                        {
-                                          "line": 10,
-                                          "linechar": 29
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "line": 10,
-                                      "linechar": 0
-                                    },
-                                    {
-                                      "line": 10,
-                                      "linechar": 29
-                                    }
-                                  ]
-                                },
-                                {
-                                  "line": 10,
-                                  "linechar": 0
-                                },
-                                {
-                                  "line": 10,
-                                  "linechar": 29
-                                }
-                              ]
-                            }
-                          ],
-                          "from": {
-                            "line": 9,
-                            "linechar": 1
-                          },
-                          "to": {
-                            "line": 11,
-                            "linechar": 0
-                          }
+                "Function": {
+                  "name": null,
+                  "parameters": [
+                    {
+                      "Identifier": {
+                        "token": {
+                          "Identifier": "arg1"
                         },
-                        {
-                          "line": 9,
-                          "linechar": 0
+                        "from": {
+                          "line": 8,
+                          "linechar": 17
                         },
-                        {
-                          "line": 11,
-                          "linechar": 1
+                        "to": {
+                          "line": 8,
+                          "linechar": 21
                         }
-                      ]
+                      }
                     },
-                    "from": {
-                      "line": 8,
-                      "linechar": 7
+                    {
+                      "Identifier": {
+                        "token": {
+                          "Identifier": "arg2"
+                        },
+                        "from": {
+                          "line": 8,
+                          "linechar": 22
+                        },
+                        "to": {
+                          "line": 8,
+                          "linechar": 26
+                        }
+                      }
                     },
-                    "to": {
-                      "line": 11,
-                      "linechar": 1
+                    {
+                      "Identifier": {
+                        "token": {
+                          "Identifier": "arg3"
+                        },
+                        "from": {
+                          "line": 8,
+                          "linechar": 27
+                        },
+                        "to": {
+                          "line": 8,
+                          "linechar": 31
+                        }
+                      }
+                    }
+                  ],
+                  "statement": {
+                    "Block": {
+                      "statements": {
+                        "statements": [
+                          {
+                            "Expression": {
+                              "expression": {
+                                "FunctionCall": {
+                                  "function": {
+                                    "ScopeResolution": {
+                                      "scope": null,
+                                      "accessor": "print",
+                                      "from": {
+                                        "line": 10,
+                                        "linechar": 0
+                                      },
+                                      "to": {
+                                        "line": 10,
+                                        "linechar": 9
+                                      }
+                                    }
+                                  },
+                                  "arguments": [
+                                    {
+                                      "BinaryOperator": {
+                                        "left": {
+                                          "Identifier": {
+                                            "token": {
+                                              "Identifier": "arg1"
+                                            },
+                                            "from": {
+                                              "line": 10,
+                                              "linechar": 10
+                                            },
+                                            "to": {
+                                              "line": 10,
+                                              "linechar": 14
+                                            }
+                                          }
+                                        },
+                                        "operator": "Plus",
+                                        "right": {
+                                          "BinaryOperator": {
+                                            "left": {
+                                              "Identifier": {
+                                                "token": {
+                                                  "Identifier": "arg2"
+                                                },
+                                                "from": {
+                                                  "line": 10,
+                                                  "linechar": 17
+                                                },
+                                                "to": {
+                                                  "line": 10,
+                                                  "linechar": 21
+                                                }
+                                              }
+                                            },
+                                            "operator": "Plus",
+                                            "right": {
+                                              "Identifier": {
+                                                "token": {
+                                                  "Identifier": "arg3"
+                                                },
+                                                "from": {
+                                                  "line": 10,
+                                                  "linechar": 24
+                                                },
+                                                "to": {
+                                                  "line": 10,
+                                                  "linechar": 28
+                                                }
+                                              }
+                                            },
+                                            "from": {
+                                              "line": 10,
+                                              "linechar": 16
+                                            },
+                                            "to": {
+                                              "line": 10,
+                                              "linechar": 28
+                                            }
+                                          }
+                                        },
+                                        "from": {
+                                          "line": 10,
+                                          "linechar": 10
+                                        },
+                                        "to": {
+                                          "line": 10,
+                                          "linechar": 28
+                                        }
+                                      }
+                                    }
+                                  ],
+                                  "from": {
+                                    "line": 10,
+                                    "linechar": 0
+                                  },
+                                  "to": {
+                                    "line": 10,
+                                    "linechar": 29
+                                  }
+                                }
+                              },
+                              "from": {
+                                "line": 10,
+                                "linechar": 0
+                              },
+                              "to": {
+                                "line": 10,
+                                "linechar": 29
+                              }
+                            }
+                          }
+                        ],
+                        "from": {
+                          "line": 9,
+                          "linechar": 1
+                        },
+                        "to": {
+                          "line": 11,
+                          "linechar": 0
+                        }
+                      },
+                      "from": {
+                        "line": 9,
+                        "linechar": 0
+                      },
+                      "to": {
+                        "line": 11,
+                        "linechar": 1
+                      }
                     }
                   },
-                  {
+                  "is_static": false,
+                  "from": {
                     "line": 8,
                     "linechar": 7
                   },
-                  {
+                  "to": {
                     "line": 11,
                     "linechar": 1
                   }
-                ]
+                }
               }
             ],
-            {
+            "from": {
               "line": 8,
               "linechar": 0
             },
-            {
+            "to": {
               "line": 11,
               "linechar": 2
             }
-          ]
+          }
         },
-        {
+        "from": {
           "line": 8,
           "linechar": 0
         },
-        {
+        "to": {
           "line": 11,
           "linechar": 2
         }
-      ]
+      }
     }
   ],
   "from": {

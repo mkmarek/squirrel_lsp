@@ -1,44 +1,68 @@
 {
   "statements": [
     {
-      "Local": [
-        [
+      "Local": {
+        "initializations": [
           {
             "name": "foo",
             "expression": {
-              "Identifier": [
-                {
+              "Identifier": {
+                "token": {
                   "Identifier": "bar"
                 },
-                {
+                "from": {
                   "line": 0,
                   "linechar": 12
                 },
-                {
+                "to": {
                   "line": 0,
                   "linechar": 15
                 }
-              ]
+              }
+            },
+            "from": {
+              "line": 0,
+              "linechar": 5
+            },
+            "to": {
+              "line": 0,
+              "linechar": 15
             }
           },
           {
             "name": "baz",
-            "expression": null
+            "expression": null,
+            "from": {
+              "line": 0,
+              "linechar": 16
+            },
+            "to": {
+              "line": 0,
+              "linechar": 20
+            }
           },
           {
             "name": "foo",
-            "expression": null
+            "expression": null,
+            "from": {
+              "line": 0,
+              "linechar": 21
+            },
+            "to": {
+              "line": 0,
+              "linechar": 25
+            }
           }
         ],
-        {
+        "from": {
           "line": 0,
           "linechar": 0
         },
-        {
+        "to": {
           "line": 0,
           "linechar": 25
         }
-      ]
+      }
     }
   ],
   "from": {
