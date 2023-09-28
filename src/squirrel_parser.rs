@@ -14,7 +14,8 @@ use crate::{
         string_literal_expression, switch_statement, table_expression, ternary_operator_expression,
         throw_statement, try_catch_statement, unary_operator_expression, while_statement,
         yield_statement, Case, ClassDefinition, ClassMemberDeclaration, Enumeration, Expression,
-        FunctionDeclaration, Initialization, Statement, Statements, TableEntry,
+        FunctionDeclaration, Initialization, Statement, Statements, TableEntry, TableEntryField,
+        TableEntryFieldWithExpressionKey, TableEntryFunction,
     },
     squirrel_lexer::{
         Keyword, Lexer, LexerError, LexerErrorWithLocation, Location, Operator, Token,
@@ -73,7 +74,7 @@ impl Display for ParserErrorWithLocation {
 impl<'a> Parser<'a> {
     pub fn new(input: &'a str) -> Self {
         Self {
-            lexer: Lexer::new(input),
+            lexer: Lexer::new(input, true),
         }
     }
 
@@ -2024,13 +2025,11 @@ impl<'a> Parser<'a> {
             if next_token.token == Token::Keyword(Keyword::Function) {
                 let function_decl = self.parse_function_declaration(false)?;
 
-                properties.push(TableEntry {
-                    id: None,
-                    value: None,
-                    function: Some(function_decl),
+                properties.push(TableEntry::Function(TableEntryFunction {
+                    function: function_decl,
                     from,
                     to: self.lexer.current_location(),
-                });
+                }));
 
                 if self.peek_token()?.token == Token::Operator(Operator::Comma) {
                     self.next_token()?;
@@ -2045,12 +2044,15 @@ impl<'a> Parser<'a> {
                 break;
             }
 
-            let id = if let Token::Identifier(_) = &next_token.token {
-                Some(identifier_expression(
-                    next_token.token.clone(),
-                    next_token.from.clone(),
-                    next_token.to.clone(),
-                ))
+            let (id, id_expr) = if let Token::Identifier(_) = &next_token.token {
+                (
+                    Some(identifier_expression(
+                        next_token.token.clone(),
+                        next_token.from.clone(),
+                        next_token.to.clone(),
+                    )),
+                    None,
+                )
             } else if next_token.token == Token::LeftBracket {
                 let from = self.lexer.current_location();
                 let id_exp = self.parse_expression(false)?;
@@ -2066,7 +2068,7 @@ impl<'a> Parser<'a> {
 
                 self.expect_token(Token::RightBracket)?;
 
-                Some(id_exp.unwrap())
+                (None, Some(id_exp.unwrap()))
             } else {
                 return Err(ParserErrorWithLocation {
                     error: ParserError::ExpectedOneOfGot(
@@ -2092,13 +2094,23 @@ impl<'a> Parser<'a> {
             }
             let value = value.unwrap();
 
-            properties.push(TableEntry {
-                id,
-                value: Some(value),
-                function: None,
-                from,
-                to: self.lexer.current_location(),
-            });
+            if id_expr.is_some() {
+                properties.push(TableEntry::FieldWithExpressionKey(
+                    TableEntryFieldWithExpressionKey {
+                        key: id_expr.unwrap(),
+                        expression: value,
+                        from,
+                        to: self.lexer.current_location(),
+                    },
+                ));
+            } else {
+                properties.push(TableEntry::Field(TableEntryField {
+                    name: id.unwrap(),
+                    expression: value,
+                    from,
+                    to: self.lexer.current_location(),
+                }))
+            }
 
             let next_token = self.peek_token()?;
 
@@ -2144,14 +2156,12 @@ impl<'a> Parser<'a> {
         &mut self,
     ) -> Result<TokenWithLocation, ParserErrorWithLocation> {
         self.lexer
-            .peek_skip_comments_and_whitespaces()
+            .peek_no_whitespace()
             .map_err(Self::map_lexer_error)
     }
 
     fn peek_token(&mut self) -> Result<TokenWithLocation, ParserErrorWithLocation> {
-        self.lexer
-            .peek_skip_comments()
-            .map_err(Self::map_lexer_error)
+        self.lexer.peek().map_err(Self::map_lexer_error)
     }
 
     fn expect_identifier(&mut self) -> Result<TokenWithLocation, ParserErrorWithLocation> {
@@ -2184,7 +2194,6 @@ impl<'a> Parser<'a> {
     }
 
     fn next_token(&mut self) -> Result<TokenWithLocation, ParserErrorWithLocation> {
-        self.lexer.skip_comments();
         self.lexer.next().map_err(Self::map_lexer_error)
     }
 
@@ -2334,7 +2343,7 @@ mod tests {
 
                 let contents = fs::read_to_string(path.unwrap().path()).unwrap();
 
-                let mut lexer = Lexer::new(&contents);
+                let mut lexer = Lexer::new(&contents, true);
                 let mut tokens = Vec::new();
 
                 loop {

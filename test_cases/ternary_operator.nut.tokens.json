@@ -10,7 +10,8 @@
     "to": {
       "line": 0,
       "linechar": 5
-    }
+    },
+    "index": 0
   },
   {
     "token": {
@@ -23,7 +24,8 @@
     "to": {
       "line": 0,
       "linechar": 7
-    }
+    },
+    "index": 1
   },
   {
     "token": {
@@ -36,7 +38,8 @@
     "to": {
       "line": 0,
       "linechar": 9
-    }
+    },
+    "index": 2
   },
   {
     "token": {
@@ -49,7 +52,8 @@
     "to": {
       "line": 0,
       "linechar": 11
-    }
+    },
+    "index": 3
   },
   {
     "token": {
@@ -62,7 +66,8 @@
     "to": {
       "line": 0,
       "linechar": 13
-    }
+    },
+    "index": 4
   },
   {
     "token": {
@@ -75,7 +80,8 @@
     "to": {
       "line": 0,
       "linechar": 15
-    }
+    },
+    "index": 5
   },
   {
     "token": "QuestionMark",
@@ -86,7 +92,8 @@
     "to": {
       "line": 0,
       "linechar": 17
-    }
+    },
+    "index": 6
   },
   {
     "token": {
@@ -99,7 +106,8 @@
     "to": {
       "line": 0,
       "linechar": 19
-    }
+    },
+    "index": 7
   },
   {
     "token": "Colon",
@@ -110,7 +118,8 @@
     "to": {
       "line": 0,
       "linechar": 21
-    }
+    },
+    "index": 8
   },
   {
     "token": {
@@ -123,7 +132,8 @@
     "to": {
       "line": 0,
       "linechar": 23
-    }
+    },
+    "index": 9
   },
   {
     "token": "Newline",
@@ -134,6 +144,7 @@
     "to": {
       "line": 1,
       "linechar": 0
-    }
+    },
+    "index": 10
   }
 ]

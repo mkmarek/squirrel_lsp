@@ -22,4 +22,7 @@ class Bar extends Foo {
   function foo() {
     return this.a1 + this.a2;
   }
+  function bar() {
+    return this.a1 + this.a2;
+  }
 }

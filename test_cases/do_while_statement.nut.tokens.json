@@ -10,7 +10,8 @@
     "to": {
       "line": 0,
       "linechar": 5
-    }
+    },
+    "index": 0
   },
   {
     "token": {
@@ -23,7 +24,8 @@
     "to": {
       "line": 0,
       "linechar": 7
-    }
+    },
+    "index": 1
   },
   {
     "token": {
@@ -36,7 +38,8 @@
     "to": {
       "line": 0,
       "linechar": 8
-    }
+    },
+    "index": 2
   },
   {
     "token": {
@@ -49,7 +52,8 @@
     "to": {
       "line": 0,
       "linechar": 9
-    }
+    },
+    "index": 3
   },
   {
     "token": "Semicolon",
@@ -60,7 +64,8 @@
     "to": {
       "line": 0,
       "linechar": 10
-    }
+    },
+    "index": 4
   },
   {
     "token": "Newline",
@@ -71,7 +76,8 @@
     "to": {
       "line": 1,
       "linechar": 0
-    }
+    },
+    "index": 5
   },
   {
     "token": {
@@ -84,7 +90,8 @@
     "to": {
       "line": 1,
       "linechar": 2
-    }
+    },
+    "index": 5
   },
   {
     "token": "Newline",
@@ -95,7 +102,8 @@
     "to": {
       "line": 2,
       "linechar": 0
-    }
+    },
+    "index": 6
   },
   {
     "token": "LeftBrace",
@@ -106,7 +114,8 @@
     "to": {
       "line": 2,
       "linechar": 1
-    }
+    },
+    "index": 6
   },
   {
     "token": "Newline",
@@ -117,7 +126,8 @@
     "to": {
       "line": 3,
       "linechar": 0
-    }
+    },
+    "index": 7
   },
   {
     "token": {
@@ -130,7 +140,8 @@
     "to": {
       "line": 3,
       "linechar": 9
-    }
+    },
+    "index": 7
   },
   {
     "token": "LeftParenthesis",
@@ -141,7 +152,8 @@
     "to": {
       "line": 3,
       "linechar": 10
-    }
+    },
+    "index": 8
   },
   {
     "token": {
@@ -154,7 +166,8 @@
     "to": {
       "line": 3,
       "linechar": 11
-    }
+    },
+    "index": 9
   },
   {
     "token": {
@@ -167,7 +180,8 @@
     "to": {
       "line": 3,
       "linechar": 12
-    }
+    },
+    "index": 10
   },
   {
     "token": {
@@ -180,7 +194,8 @@
     "to": {
       "line": 3,
       "linechar": 16
-    }
+    },
+    "index": 11
   },
   {
     "token": "RightParenthesis",
@@ -191,7 +206,8 @@
     "to": {
       "line": 3,
       "linechar": 17
-    }
+    },
+    "index": 12
   },
   {
     "token": "Semicolon",
@@ -202,7 +218,8 @@
     "to": {
       "line": 3,
       "linechar": 18
-    }
+    },
+    "index": 13
   },
   {
     "token": "Newline",
@@ -213,7 +230,8 @@
     "to": {
       "line": 4,
       "linechar": 0
-    }
+    },
+    "index": 14
   },
   {
     "token": {
@@ -226,7 +244,8 @@
     "to": {
       "line": 4,
       "linechar": 5
-    }
+    },
+    "index": 14
   },
   {
     "token": {
@@ -239,7 +258,8 @@
     "to": {
       "line": 4,
       "linechar": 7
-    }
+    },
+    "index": 15
   },
   {
     "token": {
@@ -252,7 +272,8 @@
     "to": {
       "line": 4,
       "linechar": 8
-    }
+    },
+    "index": 16
   },
   {
     "token": "Semicolon",
@@ -263,7 +284,8 @@
     "to": {
       "line": 4,
       "linechar": 9
-    }
+    },
+    "index": 17
   },
   {
     "token": "Newline",
@@ -274,7 +296,8 @@
     "to": {
       "line": 5,
       "linechar": 0
-    }
+    },
+    "index": 18
   },
   {
     "token": "RightBrace",
@@ -285,7 +308,8 @@
     "to": {
       "line": 5,
       "linechar": 1
-    }
+    },
+    "index": 18
   },
   {
     "token": {
@@ -298,7 +322,8 @@
     "to": {
       "line": 5,
       "linechar": 7
-    }
+    },
+    "index": 19
   },
   {
     "token": "LeftParenthesis",
@@ -309,7 +334,8 @@
     "to": {
       "line": 5,
       "linechar": 8
-    }
+    },
+    "index": 20
   },
   {
     "token": {
@@ -322,7 +348,8 @@
     "to": {
       "line": 5,
       "linechar": 9
-    }
+    },
+    "index": 21
   },
   {
     "token": {
@@ -335,7 +362,8 @@
     "to": {
       "line": 5,
       "linechar": 10
-    }
+    },
+    "index": 22
   },
   {
     "token": {
@@ -348,7 +376,8 @@
     "to": {
       "line": 5,
       "linechar": 13
-    }
+    },
+    "index": 23
   },
   {
     "token": "RightParenthesis",
@@ -359,7 +388,8 @@
     "to": {
       "line": 5,
       "linechar": 14
-    }
+    },
+    "index": 24
   },
   {
     "token": "Newline",
@@ -370,6 +400,7 @@
     "to": {
       "line": 6,
       "linechar": 0
-    }
+    },
+    "index": 25
   }
 ]

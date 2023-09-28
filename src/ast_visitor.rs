@@ -7,7 +7,7 @@ use crate::squirrel_ast::{
     IdentifierExpression, IfStatement, IntegerLiteralExpression, LocalStatement,
     MemberAccessExpression, MutliLineStringLiteralExpression, NullLiteralExpression,
     PostfixUnaryOperatorExpression, ResumeExpression, ReturnStatement, ScopeResolutionExpression,
-    SpreadExpression, Statement, Statements, StringLiteralExpression, SwitchStatement,
+    SpreadExpression, Statement, Statements, StringLiteralExpression, SwitchStatement, TableEntry,
     TableExpression, TernaryOperatorExpression, ThrowStatement, TryCatchStatement,
     UnaryOperatorExpression, WhileStatement, YieldStatement,
 };
@@ -1217,21 +1217,29 @@ fn visit_table_expression<'a>(
     }
 
     for entry in &expression.entries {
-        if let Some(id) = &entry.id {
-            if visit_expression(id, visitor) == AstVisitorResult::Break {
-                return AstVisitorResult::Break;
-            }
-        }
+        match entry {
+            TableEntry::Field(f) => {
+                if visit_expression(&f.name, visitor) == AstVisitorResult::Break {
+                    return AstVisitorResult::Break;
+                }
 
-        if let Some(value) = &entry.value {
-            if visit_expression(value, visitor) == AstVisitorResult::Break {
-                return AstVisitorResult::Break;
+                if visit_expression(&f.expression, visitor) == AstVisitorResult::Break {
+                    return AstVisitorResult::Break;
+                }
             }
-        }
+            TableEntry::Function(f) => {
+                if visit_function_declaration(&f.function, visitor) == AstVisitorResult::Break {
+                    return AstVisitorResult::Break;
+                }
+            }
+            TableEntry::FieldWithExpressionKey(f) => {
+                if visit_expression(&f.key, visitor) == AstVisitorResult::Break {
+                    return AstVisitorResult::Break;
+                }
 
-        if let Some(func) = &entry.function {
-            if visit_function_declaration(func, visitor) == AstVisitorResult::Break {
-                return AstVisitorResult::Break;
+                if visit_expression(&f.expression, visitor) == AstVisitorResult::Break {
+                    return AstVisitorResult::Break;
+                }
             }
         }
     }

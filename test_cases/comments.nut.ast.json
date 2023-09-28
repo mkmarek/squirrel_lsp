@@ -1,0 +1,315 @@
+{
+  "statements": [
+    {
+      "FunctionDeclaration": {
+        "name": {
+          "Identifier": {
+            "token": {
+              "Identifier": "foo"
+            },
+            "from": {
+              "line": 1,
+              "linechar": 8
+            },
+            "to": {
+              "line": 1,
+              "linechar": 12
+            }
+          }
+        },
+        "parameters": [],
+        "statement": {
+          "Block": {
+            "statements": {
+              "statements": [
+                {
+                  "Return": {
+                    "expression": {
+                      "BinaryOperator": {
+                        "left": {
+                          "IntegerLiteral": {
+                            "value": 1,
+                            "from": {
+                              "line": 3,
+                              "linechar": 8
+                            },
+                            "to": {
+                              "line": 3,
+                              "linechar": 29
+                            }
+                          }
+                        },
+                        "operator": "Plus",
+                        "right": {
+                          "BinaryOperator": {
+                            "left": {
+                              "IntegerLiteral": {
+                                "value": 2,
+                                "from": {
+                                  "line": 3,
+                                  "linechar": 46
+                                },
+                                "to": {
+                                  "line": 3,
+                                  "linechar": 48
+                                }
+                              }
+                            },
+                            "operator": "Plus",
+                            "right": {
+                              "IntegerLiteral": {
+                                "value": 3,
+                                "from": {
+                                  "line": 3,
+                                  "linechar": 65
+                                },
+                                "to": {
+                                  "line": 3,
+                                  "linechar": 67
+                                }
+                              }
+                            },
+                            "from": {
+                              "line": 3,
+                              "linechar": 46
+                            },
+                            "to": {
+                              "line": 3,
+                              "linechar": 67
+                            }
+                          }
+                        },
+                        "from": {
+                          "line": 3,
+                          "linechar": 8
+                        },
+                        "to": {
+                          "line": 3,
+                          "linechar": 67
+                        }
+                      }
+                    },
+                    "from": {
+                      "line": 2,
+                      "linechar": 0
+                    },
+                    "to": {
+                      "line": 3,
+                      "linechar": 67
+                    }
+                  }
+                }
+              ],
+              "from": {
+                "line": 1,
+                "linechar": 16
+              },
+              "to": {
+                "line": 4,
+                "linechar": 0
+              }
+            },
+            "from": {
+              "line": 1,
+              "linechar": 14
+            },
+            "to": {
+              "line": 4,
+              "linechar": 1
+            }
+          }
+        },
+        "is_static": false,
+        "from": {
+          "line": 0,
+          "linechar": 0
+        },
+        "to": {
+          "line": 4,
+          "linechar": 1
+        }
+      }
+    },
+    {
+      "Class": {
+        "name": {
+          "Identifier": {
+            "token": {
+              "Identifier": "Foo"
+            },
+            "from": {
+              "line": 7,
+              "linechar": 6
+            },
+            "to": {
+              "line": 7,
+              "linechar": 9
+            }
+          }
+        },
+        "extends": null,
+        "members": [
+          {
+            "ConstructorDeclaration": {
+              "name": null,
+              "parameters": [],
+              "statement": {
+                "Block": {
+                  "statements": {
+                    "statements": [
+                      {
+                        "Expression": {
+                          "expression": {
+                            "BinaryOperator": {
+                              "left": {
+                                "MemberAccess": {
+                                  "expression": {
+                                    "Identifier": {
+                                      "token": {
+                                        "Keyword": "This"
+                                      },
+                                      "from": {
+                                        "line": 10,
+                                        "linechar": 4
+                                      },
+                                      "to": {
+                                        "line": 11,
+                                        "linechar": 8
+                                      }
+                                    }
+                                  },
+                                  "member": "foo",
+                                  "from": {
+                                    "line": 10,
+                                    "linechar": 0
+                                  },
+                                  "to": {
+                                    "line": 11,
+                                    "linechar": 26
+                                  }
+                                }
+                              },
+                              "operator": "Assign",
+                              "right": {
+                                "IntegerLiteral": {
+                                  "value": 1,
+                                  "from": {
+                                    "line": 11,
+                                    "linechar": 43
+                                  },
+                                  "to": {
+                                    "line": 11,
+                                    "linechar": 45
+                                  }
+                                }
+                              },
+                              "from": {
+                                "line": 10,
+                                "linechar": 0
+                              },
+                              "to": {
+                                "line": 11,
+                                "linechar": 45
+                              }
+                            }
+                          },
+                          "from": {
+                            "line": 10,
+                            "linechar": 0
+                          },
+                          "to": {
+                            "line": 11,
+                            "linechar": 45
+                          }
+                        }
+                      }
+                    ],
+                    "from": {
+                      "line": 9,
+                      "linechar": 17
+                    },
+                    "to": {
+                      "line": 11,
+                      "linechar": 46
+                    }
+                  },
+                  "from": {
+                    "line": 9,
+                    "linechar": 15
+                  },
+                  "to": {
+                    "line": 12,
+                    "linechar": 3
+                  }
+                }
+              },
+              "is_static": false,
+              "from": {
+                "line": 8,
+                "linechar": 0
+              },
+              "to": {
+                "line": 12,
+                "linechar": 3
+              }
+            }
+          }
+        ],
+        "from": {
+          "line": 6,
+          "linechar": 0
+        },
+        "to": {
+          "line": 13,
+          "linechar": 1
+        }
+      }
+    },
+    {
+      "Local": {
+        "initializations": [
+          {
+            "name": "foo",
+            "expression": {
+              "IntegerLiteral": {
+                "value": 1,
+                "from": {
+                  "line": 16,
+                  "linechar": 11
+                },
+                "to": {
+                  "line": 16,
+                  "linechar": 13
+                }
+              }
+            },
+            "from": {
+              "line": 16,
+              "linechar": 5
+            },
+            "to": {
+              "line": 16,
+              "linechar": 13
+            }
+          }
+        ],
+        "from": {
+          "line": 15,
+          "linechar": 0
+        },
+        "to": {
+          "line": 16,
+          "linechar": 13
+        }
+      }
+    }
+  ],
+  "from": {
+    "line": 0,
+    "linechar": 0
+  },
+  "to": {
+    "line": 18,
+    "linechar": 0
+  }
+}

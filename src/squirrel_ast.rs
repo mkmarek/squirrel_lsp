@@ -32,6 +32,58 @@ pub enum Statement {
     Enum(Box<EnumStatement>),
 }
 
+impl Statement {
+    pub fn get_from(&self) -> Location {
+        match self {
+            Statement::Block(block) => block.from.clone(),
+            Statement::If(if_statement) => if_statement.from.clone(),
+            Statement::While(while_statement) => while_statement.from.clone(),
+            Statement::DoWhile(do_while_statement) => do_while_statement.from.clone(),
+            Statement::Switch(switch_statement) => switch_statement.from.clone(),
+            Statement::For(for_statement) => for_statement.from.clone(),
+            Statement::ForEach(for_each_statement) => for_each_statement.from.clone(),
+            Statement::TryCatch(try_catch_statement) => try_catch_statement.from.clone(),
+            Statement::Break(break_statement) => break_statement.from.clone(),
+            Statement::Continue(continue_statement) => continue_statement.from.clone(),
+            Statement::Return(return_statement) => return_statement.from.clone(),
+            Statement::Yield(yield_statement) => yield_statement.from.clone(),
+            Statement::Throw(throw_statement) => throw_statement.from.clone(),
+            Statement::Expression(expression_statement) => expression_statement.from.clone(),
+            Statement::Const(const_statement) => const_statement.from.clone(),
+            Statement::Local(local_statement) => local_statement.from.clone(),
+            Statement::FunctionDeclaration(function_declaration) => {
+                function_declaration.from.clone()
+            }
+            Statement::Class(class_definition) => class_definition.from.clone(),
+            Statement::Enum(enum_statement) => enum_statement.from.clone(),
+        }
+    }
+
+    fn get_to(&self) -> Location {
+        match self {
+            Statement::Block(block) => block.to.clone(),
+            Statement::If(if_statement) => if_statement.to.clone(),
+            Statement::While(while_statement) => while_statement.to.clone(),
+            Statement::DoWhile(do_while_statement) => do_while_statement.to.clone(),
+            Statement::Switch(switch_statement) => switch_statement.to.clone(),
+            Statement::For(for_statement) => for_statement.to.clone(),
+            Statement::ForEach(for_each_statement) => for_each_statement.to.clone(),
+            Statement::TryCatch(try_catch_statement) => try_catch_statement.to.clone(),
+            Statement::Break(break_statement) => break_statement.to.clone(),
+            Statement::Continue(continue_statement) => continue_statement.to.clone(),
+            Statement::Return(return_statement) => return_statement.to.clone(),
+            Statement::Yield(yield_statement) => yield_statement.to.clone(),
+            Statement::Throw(throw_statement) => throw_statement.to.clone(),
+            Statement::Expression(expression_statement) => expression_statement.to.clone(),
+            Statement::Const(const_statement) => const_statement.to.clone(),
+            Statement::Local(local_statement) => local_statement.to.clone(),
+            Statement::FunctionDeclaration(function_declaration) => function_declaration.to.clone(),
+            Statement::Class(class_definition) => class_definition.to.clone(),
+            Statement::Enum(enum_statement) => enum_statement.to.clone(),
+        }
+    }
+}
+
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct BlockStatement {
     pub statements: Statements,
@@ -466,10 +518,31 @@ pub struct TernaryOperatorExpression {
 }
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
-pub struct TableEntry {
-    pub id: Option<Expression>,
-    pub value: Option<Expression>,
-    pub function: Option<FunctionDeclaration>,
+pub enum TableEntry {
+    Field(TableEntryField),
+    Function(TableEntryFunction),
+    FieldWithExpressionKey(TableEntryFieldWithExpressionKey),
+}
+
+#[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
+pub struct TableEntryField {
+    pub name: Expression,
+    pub expression: Expression,
+    pub from: Location,
+    pub to: Location,
+}
+
+#[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
+pub struct TableEntryFunction {
+    pub function: FunctionDeclaration,
+    pub from: Location,
+    pub to: Location,
+}
+
+#[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
+pub struct TableEntryFieldWithExpressionKey {
+    pub key: Expression,
+    pub expression: Expression,
     pub from: Location,
     pub to: Location,
 }

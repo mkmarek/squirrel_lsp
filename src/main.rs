@@ -9,6 +9,7 @@ mod scope_table;
 mod squirrel_ast;
 mod squirrel_lexer;
 mod squirrel_parser;
+mod squirrel_printer;
 
 #[derive(Debug)]
 struct Backend {

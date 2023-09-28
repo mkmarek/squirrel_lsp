@@ -1,0 +1,580 @@
+[
+  {
+    "token": {
+      "Keyword": "Function"
+    },
+    "from": {
+      "line": 0,
+      "linechar": 0
+    },
+    "to": {
+      "line": 1,
+      "linechar": 8
+    },
+    "index": 1
+  },
+  {
+    "token": {
+      "Identifier": "foo"
+    },
+    "from": {
+      "line": 1,
+      "linechar": 9
+    },
+    "to": {
+      "line": 1,
+      "linechar": 12
+    },
+    "index": 2
+  },
+  {
+    "token": "LeftParenthesis",
+    "from": {
+      "line": 1,
+      "linechar": 12
+    },
+    "to": {
+      "line": 1,
+      "linechar": 13
+    },
+    "index": 3
+  },
+  {
+    "token": "RightParenthesis",
+    "from": {
+      "line": 1,
+      "linechar": 13
+    },
+    "to": {
+      "line": 1,
+      "linechar": 14
+    },
+    "index": 4
+  },
+  {
+    "token": "LeftBrace",
+    "from": {
+      "line": 1,
+      "linechar": 15
+    },
+    "to": {
+      "line": 1,
+      "linechar": 16
+    },
+    "index": 5
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 1,
+      "linechar": 16
+    },
+    "to": {
+      "line": 2,
+      "linechar": 0
+    },
+    "index": 6
+  },
+  {
+    "token": {
+      "Keyword": "Return"
+    },
+    "from": {
+      "line": 2,
+      "linechar": 2
+    },
+    "to": {
+      "line": 3,
+      "linechar": 8
+    },
+    "index": 7
+  },
+  {
+    "token": {
+      "Integer": 1
+    },
+    "from": {
+      "line": 3,
+      "linechar": 9
+    },
+    "to": {
+      "line": 3,
+      "linechar": 29
+    },
+    "index": 9
+  },
+  {
+    "token": {
+      "Operator": "Plus"
+    },
+    "from": {
+      "line": 3,
+      "linechar": 30
+    },
+    "to": {
+      "line": 3,
+      "linechar": 46
+    },
+    "index": 11
+  },
+  {
+    "token": {
+      "Integer": 2
+    },
+    "from": {
+      "line": 3,
+      "linechar": 47
+    },
+    "to": {
+      "line": 3,
+      "linechar": 48
+    },
+    "index": 12
+  },
+  {
+    "token": {
+      "Operator": "Plus"
+    },
+    "from": {
+      "line": 3,
+      "linechar": 49
+    },
+    "to": {
+      "line": 3,
+      "linechar": 65
+    },
+    "index": 14
+  },
+  {
+    "token": {
+      "Integer": 3
+    },
+    "from": {
+      "line": 3,
+      "linechar": 66
+    },
+    "to": {
+      "line": 3,
+      "linechar": 67
+    },
+    "index": 15
+  },
+  {
+    "token": "Semicolon",
+    "from": {
+      "line": 3,
+      "linechar": 68
+    },
+    "to": {
+      "line": 3,
+      "linechar": 83
+    },
+    "index": 17
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 3,
+      "linechar": 83
+    },
+    "to": {
+      "line": 4,
+      "linechar": 0
+    },
+    "index": 18
+  },
+  {
+    "token": "RightBrace",
+    "from": {
+      "line": 4,
+      "linechar": 0
+    },
+    "to": {
+      "line": 4,
+      "linechar": 1
+    },
+    "index": 18
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 4,
+      "linechar": 1
+    },
+    "to": {
+      "line": 5,
+      "linechar": 0
+    },
+    "index": 19
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 5,
+      "linechar": 0
+    },
+    "to": {
+      "line": 6,
+      "linechar": 0
+    },
+    "index": 19
+  },
+  {
+    "token": {
+      "Keyword": "Class"
+    },
+    "from": {
+      "line": 6,
+      "linechar": 0
+    },
+    "to": {
+      "line": 7,
+      "linechar": 5
+    },
+    "index": 20
+  },
+  {
+    "token": {
+      "Identifier": "Foo"
+    },
+    "from": {
+      "line": 7,
+      "linechar": 6
+    },
+    "to": {
+      "line": 7,
+      "linechar": 9
+    },
+    "index": 21
+  },
+  {
+    "token": "LeftBrace",
+    "from": {
+      "line": 7,
+      "linechar": 10
+    },
+    "to": {
+      "line": 7,
+      "linechar": 11
+    },
+    "index": 22
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 7,
+      "linechar": 11
+    },
+    "to": {
+      "line": 8,
+      "linechar": 0
+    },
+    "index": 23
+  },
+  {
+    "token": {
+      "Keyword": "Constructor"
+    },
+    "from": {
+      "line": 8,
+      "linechar": 2
+    },
+    "to": {
+      "line": 9,
+      "linechar": 13
+    },
+    "index": 24
+  },
+  {
+    "token": "LeftParenthesis",
+    "from": {
+      "line": 9,
+      "linechar": 13
+    },
+    "to": {
+      "line": 9,
+      "linechar": 14
+    },
+    "index": 25
+  },
+  {
+    "token": "RightParenthesis",
+    "from": {
+      "line": 9,
+      "linechar": 14
+    },
+    "to": {
+      "line": 9,
+      "linechar": 15
+    },
+    "index": 26
+  },
+  {
+    "token": "LeftBrace",
+    "from": {
+      "line": 9,
+      "linechar": 16
+    },
+    "to": {
+      "line": 9,
+      "linechar": 17
+    },
+    "index": 27
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 9,
+      "linechar": 17
+    },
+    "to": {
+      "line": 10,
+      "linechar": 0
+    },
+    "index": 28
+  },
+  {
+    "token": {
+      "Keyword": "This"
+    },
+    "from": {
+      "line": 10,
+      "linechar": 4
+    },
+    "to": {
+      "line": 11,
+      "linechar": 8
+    },
+    "index": 29
+  },
+  {
+    "token": "Dot",
+    "from": {
+      "line": 11,
+      "linechar": 8
+    },
+    "to": {
+      "line": 11,
+      "linechar": 23
+    },
+    "index": 31
+  },
+  {
+    "token": {
+      "Identifier": "foo"
+    },
+    "from": {
+      "line": 11,
+      "linechar": 23
+    },
+    "to": {
+      "line": 11,
+      "linechar": 26
+    },
+    "index": 32
+  },
+  {
+    "token": {
+      "Operator": "Assign"
+    },
+    "from": {
+      "line": 11,
+      "linechar": 27
+    },
+    "to": {
+      "line": 11,
+      "linechar": 43
+    },
+    "index": 34
+  },
+  {
+    "token": {
+      "Integer": 1
+    },
+    "from": {
+      "line": 11,
+      "linechar": 44
+    },
+    "to": {
+      "line": 11,
+      "linechar": 45
+    },
+    "index": 35
+  },
+  {
+    "token": "Semicolon",
+    "from": {
+      "line": 11,
+      "linechar": 45
+    },
+    "to": {
+      "line": 11,
+      "linechar": 46
+    },
+    "index": 36
+  },
+  {
+    "token": "RightBrace",
+    "from": {
+      "line": 11,
+      "linechar": 47
+    },
+    "to": {
+      "line": 12,
+      "linechar": 3
+    },
+    "index": 38
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 12,
+      "linechar": 3
+    },
+    "to": {
+      "line": 13,
+      "linechar": 0
+    },
+    "index": 39
+  },
+  {
+    "token": "RightBrace",
+    "from": {
+      "line": 13,
+      "linechar": 0
+    },
+    "to": {
+      "line": 13,
+      "linechar": 1
+    },
+    "index": 39
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 13,
+      "linechar": 1
+    },
+    "to": {
+      "line": 14,
+      "linechar": 0
+    },
+    "index": 40
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 14,
+      "linechar": 0
+    },
+    "to": {
+      "line": 15,
+      "linechar": 0
+    },
+    "index": 40
+  },
+  {
+    "token": {
+      "Keyword": "Local"
+    },
+    "from": {
+      "line": 15,
+      "linechar": 0
+    },
+    "to": {
+      "line": 16,
+      "linechar": 5
+    },
+    "index": 41
+  },
+  {
+    "token": {
+      "Identifier": "foo"
+    },
+    "from": {
+      "line": 16,
+      "linechar": 6
+    },
+    "to": {
+      "line": 16,
+      "linechar": 9
+    },
+    "index": 42
+  },
+  {
+    "token": {
+      "Operator": "Assign"
+    },
+    "from": {
+      "line": 16,
+      "linechar": 10
+    },
+    "to": {
+      "line": 16,
+      "linechar": 11
+    },
+    "index": 43
+  },
+  {
+    "token": {
+      "Integer": 1
+    },
+    "from": {
+      "line": 16,
+      "linechar": 12
+    },
+    "to": {
+      "line": 16,
+      "linechar": 13
+    },
+    "index": 44
+  },
+  {
+    "token": "Semicolon",
+    "from": {
+      "line": 16,
+      "linechar": 13
+    },
+    "to": {
+      "line": 16,
+      "linechar": 14
+    },
+    "index": 45
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 16,
+      "linechar": 15
+    },
+    "to": {
+      "line": 18,
+      "linechar": 0
+    },
+    "index": 47
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 18,
+      "linechar": 0
+    },
+    "to": {
+      "line": 24,
+      "linechar": 0
+    },
+    "index": 48
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 24,
+      "linechar": 0
+    },
+    "to": {
+      "line": 25,
+      "linechar": 0
+    },
+    "index": 48
+  }
+]

@@ -4,7 +4,7 @@ use crate::{
     ast_visitor::{visit, AstVisitor, AstVisitorResult},
     squirrel_ast::{
         ClassDefinition, ClassMemberDeclaration, Expression, IdentifierExpression, Statement,
-        Statements, TableExpression,
+        Statements, TableEntry, TableExpression,
     },
     squirrel_lexer::{Location, Operator},
 };
@@ -90,20 +90,42 @@ impl AstVisitor for ScopeTableVisitor<'_> {
         self.spawn_child_scope();
 
         for entry in &table.entries {
-            if let Some(Expression::Identifier(ident)) = &entry.id {
-                let scope = self.scope_stack.last().unwrap();
-                let sequence_number = self.scope_table.scopes[*scope].variables.len();
-                self.scope_table.scopes[*scope]
-                    .variables
-                    .push(VariableDeclaration {
-                        kind: VariableDeclarationKind::ClassMember,
-                        sequence_number,
-                        name: ident.token.to_string(),
-                        value: entry.value.clone(),
-                        scope: *scope,
-                        from: ident.from.clone(),
-                        to: ident.to.clone(),
-                    });
+            match entry {
+                TableEntry::Field(f) => {
+                    if let Expression::Identifier(ident) = &f.name {
+                        let scope = self.scope_stack.last().unwrap();
+                        let sequence_number = self.scope_table.scopes[*scope].variables.len();
+                        self.scope_table.scopes[*scope]
+                            .variables
+                            .push(VariableDeclaration {
+                                kind: VariableDeclarationKind::ClassMember,
+                                sequence_number,
+                                name: ident.token.to_string(),
+                                value: Some(f.expression.clone()),
+                                scope: *scope,
+                                from: ident.from.clone(),
+                                to: ident.to.clone(),
+                            });
+                    }
+                }
+                TableEntry::Function(f) => {
+                    if let Some(Expression::Identifier(ident)) = &f.function.name {
+                        let scope = self.scope_stack.last().unwrap();
+                        let sequence_number = self.scope_table.scopes[*scope].variables.len();
+                        self.scope_table.scopes[*scope]
+                            .variables
+                            .push(VariableDeclaration {
+                                kind: VariableDeclarationKind::ClassMember,
+                                sequence_number,
+                                name: ident.token.to_string(),
+                                value: None,
+                                scope: *scope,
+                                from: ident.from.clone(),
+                                to: ident.to.clone(),
+                            });
+                    }
+                }
+                TableEntry::FieldWithExpressionKey(_) => {}
             }
         }
 

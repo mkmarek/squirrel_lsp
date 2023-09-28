@@ -4,9 +4,11 @@ use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Clone)]
 pub struct Lexer<'a> {
+    pub skip_comments: bool,
     pub input: &'a [u8],
     pub position: usize,
     pub location: Location,
+    pub token_counter: usize,
 }
 
 #[derive(Debug, PartialEq, Clone, Serialize, Deserialize)]
@@ -294,11 +296,17 @@ pub struct TokenWithLocation {
     pub token: Token,
     pub from: Location,
     pub to: Location,
+    pub index: usize,
 }
 
 impl TokenWithLocation {
-    pub fn new(token: Token, from: Location, to: Location) -> Self {
-        Self { token, from, to }
+    pub fn new(token: Token, from: Location, to: Location, index: usize) -> Self {
+        Self {
+            token,
+            from,
+            to,
+            index,
+        }
     }
 }
 
@@ -310,29 +318,29 @@ pub struct LexerErrorWithLocation {
 }
 
 impl<'a> Lexer<'a> {
-    pub fn new(input: &'a str) -> Self {
+    pub fn new(input: &'a str, skip_comments: bool) -> Self {
         Self {
+            skip_comments,
             input: input.as_bytes(),
             position: 0,
             location: Location {
                 line: 0,
                 linechar: 0,
             },
+            token_counter: 0,
         }
     }
 
-    pub fn peek_skip_comments_and_whitespaces(
-        &self,
-    ) -> Result<TokenWithLocation, LexerErrorWithLocation> {
+    pub fn peek(&self) -> Result<TokenWithLocation, LexerErrorWithLocation> {
         let mut lexer = self.clone();
 
-        lexer.skip_comments_and_whitespaces();
         lexer.next()
     }
 
-    pub fn peek_skip_comments(&self) -> Result<TokenWithLocation, LexerErrorWithLocation> {
+    pub fn peek_no_whitespace(&self) -> Result<TokenWithLocation, LexerErrorWithLocation> {
         let mut lexer = self.clone();
-        lexer.skip_comments();
+
+        lexer.skip_whitespace();
         lexer.next()
     }
 
@@ -340,7 +348,6 @@ impl<'a> Lexer<'a> {
         let mut lexer = self.clone();
 
         for t in tokens {
-            lexer.skip_comments();
             if t == lexer.next()?.token {
                 return Ok(true);
             } else {
@@ -351,7 +358,7 @@ impl<'a> Lexer<'a> {
         Ok(false)
     }
 
-    pub fn skip_comments_and_whitespaces(&mut self) {
+    pub fn skip_whitespace(&mut self) {
         loop {
             if self.position >= self.input.len() {
                 return;
@@ -360,78 +367,90 @@ impl<'a> Lexer<'a> {
             if let Some(_) = self.whitespace() {
                 continue;
             }
-            if let Some(_) = self.comment() {
-                continue;
-            }
-
-            break;
-        }
-    }
-    pub fn skip_comments(&mut self) {
-        loop {
-            if self.position >= self.input.len() {
-                return;
-            }
-
-            if let Some(_) = self.comment() {
-                continue;
-            }
-
             break;
         }
     }
 
     pub fn next(&mut self) -> Result<TokenWithLocation, LexerErrorWithLocation> {
         if self.position >= self.input.len() {
+            let index = self.token_counter;
             return Ok(TokenWithLocation::new(
                 Token::EOF,
                 self.location.clone(),
                 self.location.clone(),
+                index,
             ));
         }
 
         let start_location = self.location.clone();
 
         if let Some(token) = self.whitespace() {
+            let index = self.token_counter;
             return Ok(TokenWithLocation::new(
                 token,
                 start_location,
                 self.location.clone(),
+                index,
             ));
         }
 
         let start_location = self.location.clone();
 
-        if let Some(token) = self.comment() {
+        if self.skip_comments {
+            while let Some(_) = self.comment() {
+                self.token_counter += 1;
+                if let Some(token) = self.whitespace() {
+                    let index = self.token_counter;
+                    return Ok(TokenWithLocation::new(
+                        token,
+                        start_location,
+                        self.location.clone(),
+                        index,
+                    ));
+                }
+            }
+        } else if let Some(token) = self.comment() {
+            let index = self.token_counter;
+            self.token_counter += 1;
             return Ok(TokenWithLocation::new(
                 token,
                 start_location,
                 self.location.clone(),
+                index,
             ));
         }
 
         if let Some(token) = self.operator() {
+            let index = self.token_counter;
+            self.token_counter += 1;
             return Ok(TokenWithLocation::new(
                 token,
                 start_location,
                 self.location.clone(),
+                index,
             ));
         }
 
         if let Some(token) = self.identifier_or_keyword() {
+            let index = self.token_counter;
+            self.token_counter += 1;
             return Ok(TokenWithLocation::new(
                 token,
                 start_location,
                 self.location.clone(),
+                index,
             ));
         }
 
         let string_result = self.string();
         if let Ok(Some(token)) = string_result {
+            let index = self.token_counter;
+            self.token_counter += 1;
             return Ok(TokenWithLocation::new(
                 token,
                 start_location,
                 self.location.clone(),
+                index,
             ));
         } else if let Err(error) = string_result {
             return Err(LexerErrorWithLocation {
@@ -443,10 +462,13 @@ impl<'a> Lexer<'a> {
 
         let number_result = self.number();
         if let Ok(Some(token)) = number_result {
+            let index = self.token_counter;
+            self.token_counter += 1;
             return Ok(TokenWithLocation::new(
                 token,
                 start_location,
                 self.location.clone(),
+                index,
             ));
         } else if let Err(error) = number_result {
             return Err(LexerErrorWithLocation {
@@ -457,10 +479,13 @@ impl<'a> Lexer<'a> {
         }
 
         if let Some(token) = self.punctuation() {
+            let index = self.token_counter;
+            self.token_counter += 1;
             return Ok(TokenWithLocation::new(
                 token,
                 start_location,
                 self.location.clone(),
+                index,
             ));
         }
 
@@ -736,7 +761,13 @@ impl<'a> Lexer<'a> {
     }
 
     fn operator(&mut self) -> Option<Token> {
-        let current_char = self.current_char().unwrap();
+        let current_char = self.current_char();
+
+        if current_char.is_none() {
+            return Some(Token::EOF);
+        }
+
+        let current_char = current_char.unwrap();
 
         match current_char {
             ',' => {
@@ -996,7 +1027,7 @@ mod tests {
     #[test]
     fn test_identifiers_and_whitespaces() {
         let input = "Hello world";
-        let mut lexer = Lexer::new(input);
+        let mut lexer = Lexer::new(input, false);
         assert_eq!(
             lexer.next().unwrap().token,
             Token::Identifier("Hello".to_string())
@@ -1011,7 +1042,7 @@ mod tests {
     #[test]
     fn test_keywords() {
         let input = "Hello catch world try typeof instanceof in const __LIN __LINE__";
-        let mut lexer = Lexer::new(input);
+        let mut lexer = Lexer::new(input, false);
         assert_eq!(
             lexer.next().unwrap().token,
             Token::Identifier("Hello".to_string())
@@ -1043,7 +1074,7 @@ mod tests {
     #[test]
     fn test_operators() {
         let input = "!	!=	||	==	&&	>=	<=	> < <=>	+	+=	-	-=	/	/=	* *=	%	%=	++	--	<-	= & ^	|	~	>>	<<	>>>";
-        let mut lexer = Lexer::new(input);
+        let mut lexer = Lexer::new(input, false);
         assert_eq!(lexer.next().unwrap().token, Token::Operator(Operator::Not));
         assert_eq!(
             lexer.next().unwrap().token,
@@ -1159,7 +1190,7 @@ mod tests {
     #[test]
     fn test_string() {
         let input = "\"Hello world\"";
-        let mut lexer = Lexer::new(input);
+        let mut lexer = Lexer::new(input, false);
         assert_eq!(
             lexer.next().unwrap().token,
             Token::String("Hello world".to_string())
@@ -1170,7 +1201,7 @@ mod tests {
     #[test]
     fn test_string_error() {
         let input = "\"Hello\nworld\"";
-        let mut lexer = Lexer::new(input);
+        let mut lexer = Lexer::new(input, false);
         assert_eq!(
             lexer.next().err().unwrap(),
             LexerErrorWithLocation {
@@ -1190,7 +1221,7 @@ mod tests {
     #[test]
     fn test_string_multiline() {
         let input = "@\"Hello\n\nworld\"";
-        let mut lexer = Lexer::new(input);
+        let mut lexer = Lexer::new(input, false);
         assert_eq!(
             lexer.next().unwrap().token,
             Token::MultiLineString("Hello\n\nworld".to_string())
@@ -1201,7 +1232,7 @@ mod tests {
     #[test]
     fn test_string_multiline_empty() {
         let input = "\"\"";
-        let mut lexer = Lexer::new(input);
+        let mut lexer = Lexer::new(input, false);
         assert_eq!(lexer.next().unwrap().token, Token::String("".to_string()));
         assert_eq!(lexer.next().unwrap().token, Token::EOF);
     }
@@ -1209,7 +1240,7 @@ mod tests {
     #[test]
     fn test_string_empty() {
         let input = "\"\"";
-        let mut lexer = Lexer::new(input);
+        let mut lexer = Lexer::new(input, false);
         assert_eq!(lexer.next().unwrap().token, Token::String("".to_string()));
         assert_eq!(lexer.next().unwrap().token, Token::EOF);
     }
@@ -1217,7 +1248,7 @@ mod tests {
     #[test]
     fn test_multiline_string_with_escapes() {
         let input = "@\"Hello\\\"world\"";
-        let mut lexer = Lexer::new(input);
+        let mut lexer = Lexer::new(input, false);
         assert_eq!(
             lexer.next().unwrap().token,
             Token::MultiLineString("Hello\\\"world".to_string())
@@ -1228,7 +1259,7 @@ mod tests {
     #[test]
     fn test_string_with_escapes() {
         let input = "\"Hello\\\"world\"";
-        let mut lexer = Lexer::new(input);
+        let mut lexer = Lexer::new(input, false);
         assert_eq!(
             lexer.next().unwrap().token,
             Token::String("Hello\\\"world".to_string())
@@ -1239,7 +1270,7 @@ mod tests {
     #[test]
     fn test_comments() {
         let input = "// Hello world\n# Hello world\n// Hello world\n# Hello world";
-        let mut lexer = Lexer::new(input);
+        let mut lexer = Lexer::new(input, false);
 
         assert_eq!(
             lexer.next().unwrap().token,
@@ -1266,7 +1297,7 @@ mod tests {
     fn test_multiline_comments() {
         let input =
             "/* Hello world\nHello world */ some identifier /* another comment */ identifier";
-        let mut lexer = Lexer::new(input);
+        let mut lexer = Lexer::new(input, false);
 
         assert_eq!(
             lexer.next().unwrap().token,
@@ -1299,7 +1330,7 @@ mod tests {
     #[test]
     fn test_numbers() {
         let input = "0 0.0 123 123.123 123.0 123.e123 123.e+123 123.E-12 0x123 0123 'a' 'b'";
-        let mut lexer = Lexer::new(input);
+        let mut lexer = Lexer::new(input, false);
 
         assert_eq!(lexer.next().unwrap().token, Token::Integer(0));
         assert_eq!(lexer.next().unwrap().token, Token::Float(0.0));
@@ -1343,7 +1374,7 @@ function Entity::Print()
 }
 ";
 
-        let mut lexer = Lexer::new(input);
+        let mut lexer = Lexer::new(input, false);
         let mut tokens = Vec::new();
 
         let mut token = lexer.next().unwrap();
@@ -1357,7 +1388,7 @@ function Entity::Print()
     fn test_string_concat() {
         let input = "\"Hello \\\"\" + a + \"\\\"world\"";
 
-        let mut lexer = Lexer::new(input);
+        let mut lexer = Lexer::new(input, false);
         let mut tokens = Vec::new();
 
         let mut token = lexer.next().unwrap();
