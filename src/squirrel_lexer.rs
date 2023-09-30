@@ -662,15 +662,24 @@ impl<'a> Lexer<'a> {
         string
     }
 
+    fn is_not_newline_and_eof(&mut self) -> bool {
+        let current_char = self.current_char();
+
+        if current_char.is_none() {
+            return false;
+        }
+
+        current_char.unwrap() != '\n'
+    }
+
     fn comment(&mut self) -> Option<Token> {
         if self.is_current_char('#') {
             self.increment_position(false);
             let mut string = String::new();
-            while self.is_not_char_and_eof('\n') {
+            while self.is_not_newline_and_eof() {
                 string.push(self.current_char().unwrap());
                 self.increment_position(false);
             }
-            self.increment_position(true);
             return Some(Token::Comment(string));
         }
 
@@ -678,11 +687,10 @@ impl<'a> Lexer<'a> {
             self.increment_position(false);
             self.increment_position(false);
             let mut string = String::new();
-            while self.is_not_char_and_eof('\n') {
+            while self.is_not_newline_and_eof() {
                 string.push(self.current_char().unwrap());
                 self.increment_position(false);
             }
-            self.increment_position(true);
             return Some(Token::Comment(string));
         }
         if self.matches("/*") {
@@ -977,16 +985,6 @@ impl<'a> Lexer<'a> {
         true
     }
 
-    fn is_not_char_and_eof(&self, c: char) -> bool {
-        let current_char = self.current_char();
-
-        if current_char.is_none() {
-            return false;
-        }
-
-        current_char.unwrap() != c
-    }
-
     fn is_not_eof(&self) -> bool {
         self.position < self.input.len()
     }
@@ -994,6 +992,14 @@ impl<'a> Lexer<'a> {
     fn current_char(&self) -> Option<char> {
         if self.position >= self.input.len() {
             return None;
+        }
+
+        if self.position < self.input.len() + 1 {
+            if self.input[self.position] as char == '\r'
+                && self.input[self.position + 1] as char == '\n'
+            {
+                return Some('\n');
+            }
         }
 
         Some(self.input[self.position] as char)
@@ -1010,7 +1016,15 @@ impl<'a> Lexer<'a> {
     }
 
     fn increment_position(&mut self, line_break: bool) {
-        self.position += 1;
+        if self.position < self.input.len() + 1
+            && self.input[self.position] as char == '\r'
+            && self.input[self.position + 1] as char == '\n'
+        {
+            self.position += 2;
+        } else {
+            self.position += 1;
+        }
+
         if line_break {
             self.location.line += 1;
             self.location.linechar = 0;
@@ -1276,15 +1290,20 @@ mod tests {
             lexer.next().unwrap().token,
             Token::Comment(" Hello world".to_string())
         );
+
+        assert_eq!(lexer.next().unwrap().token, Token::Newline);
+
         assert_eq!(
             lexer.next().unwrap().token,
             Token::Comment(" Hello world".to_string())
         );
+        assert_eq!(lexer.next().unwrap().token, Token::Newline);
         assert_eq!(
             lexer.next().unwrap().token,
             Token::Comment(" Hello world".to_string())
         );
 
+        assert_eq!(lexer.next().unwrap().token, Token::Newline);
         assert_eq!(
             lexer.next().unwrap().token,
             Token::Comment(" Hello world".to_string())

@@ -1,11 +1,68 @@
-function foo() {
-  return 1 + 2 + 3
+// Some comment here
+
+// Some other comment here
+/* and here */
+
+/* a multiline comment here
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+
+dolor metus, ultrices ut pretium eu, ultricies ut nisi. Nulla
+*/
+
+{
+  // comment inside block
 }
 
-class Foo {
-  constructor() {
-    this.foo = 1
-  }
+// comment between
+
+if (true) {
+  ::print("true")
 }
 
-local foo = 1
+// comment between
+
+do {
+  ::print("true")
+} while (true)
+
+// comment between
+
+while (true) {
+  ::print("true")
+}
+
+// comment between
+
+local x = 1, y = 2, z
+/* m */
+
+// comment between
+
+foreach (x, z in y) {
+  ::print("true")
+}
+
+// comment between
+
+switch (x) {
+  case 1:
+    ::print("true")
+    break
+    // comment inside switch statement
+  case 2:
+    ::print("false")
+    break
+    // comment inside switch statement
+  default:
+    ::print("default")
+    break
+}
+
+// comment between
+
+// series
+// of
+// single
+// line
+// comments

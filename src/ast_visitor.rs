@@ -503,6 +503,7 @@ fn visit_statement<'a>(
         Statement::FunctionDeclaration(stat) => visit_function_declaration(stat, visitor),
         Statement::Class(stat) => visit_class_definition(stat, visitor),
         Statement::Enum(stat) => visit_enum_statement(stat, visitor),
+        Statement::Comment(_) => return AstVisitorResult::Continue,
     }
 }
 

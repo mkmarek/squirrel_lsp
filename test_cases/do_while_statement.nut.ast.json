@@ -18,6 +18,13 @@
                 }
               }
             },
+            "comments": {
+              "before_1": [],
+              "before_unit": [],
+              "before_3": [],
+              "before_2": [],
+              "after_unit": []
+            },
             "from": {
               "line": 0,
               "linechar": 5
@@ -28,6 +35,10 @@
             }
           }
         ],
+        "comments": {
+          "before_unit": [],
+          "after_unit": []
+        },
         "from": {
           "line": 0,
           "linechar": 0
@@ -83,6 +94,10 @@
         },
         "statement": {
           "Block": {
+            "comments": {
+              "before_unit": [],
+              "after_unit": []
+            },
             "statements": {
               "statements": [
                 {
@@ -239,6 +254,15 @@
               "linechar": 1
             }
           }
+        },
+        "comments": {
+          "before_4": [],
+          "after_unit": [],
+          "before_2": [],
+          "before_3": [],
+          "before_unit": [],
+          "before_0": [],
+          "before_1": []
         },
         "from": {
           "line": 1,

@@ -13,9 +13,11 @@ use crate::{
         return_statement, scope_resolution_expression, spread_expression,
         string_literal_expression, switch_statement, table_expression, ternary_operator_expression,
         throw_statement, try_catch_statement, unary_operator_expression, while_statement,
-        yield_statement, Case, ClassDefinition, ClassMemberDeclaration, Enumeration, Expression,
-        FunctionDeclaration, Initialization, Statement, Statements, TableEntry, TableEntryField,
-        TableEntryFieldWithExpressionKey, TableEntryFunction,
+        yield_statement, Case, ClassDefinition, ClassMemberDeclaration, CommentLocation,
+        CommentStatement, Comments, DoWhileStatement, Enumeration, Expression, ForEachStatement,
+        FunctionDeclaration, IfStatement, Initialization, LocalStatement, Statement, Statements,
+        SwitchStatement, TableEntry, TableEntryField, TableEntryFieldWithExpressionKey,
+        TableEntryFunction, WhileStatement,
     },
     squirrel_lexer::{
         Keyword, Lexer, LexerError, LexerErrorWithLocation, Location, Operator, Token,
@@ -74,7 +76,7 @@ impl Display for ParserErrorWithLocation {
 impl<'a> Parser<'a> {
     pub fn new(input: &'a str) -> Self {
         Self {
-            lexer: Lexer::new(input, true),
+            lexer: Lexer::new(input, false),
         }
     }
 
@@ -94,10 +96,6 @@ impl<'a> Parser<'a> {
             let next_token = self.peek_token()?;
             if next_token.token == Token::Newline {
                 self.next_token()?;
-            } else if let Token::Comment(_) = next_token.token {
-                self.next_token()?;
-            } else if let Token::MultiLineComment(_) = next_token.token {
-                self.next_token()?;
             } else {
                 break;
             }
@@ -113,17 +111,22 @@ impl<'a> Parser<'a> {
 
         loop {
             let require_separator = if statements.len() > 0 {
-                let next_token = self.peek_token()?;
-                if next_token.token == Token::Semicolon || next_token.token == Token::Newline {
-                    self.next_token()?;
+                let last_statement = statements.last().unwrap();
+                if let Statement::Comment(_) = last_statement {
                     Ok(())
                 } else {
-                    Err(ParserErrorWithLocation {
-                        error: ParserError::ExpectedStatement,
-                        details: "Expected ; or newline after a statement".to_string(),
-                        from: next_token.from,
-                        to: next_token.to,
-                    })
+                    let next_token = self.peek_token()?;
+                    if next_token.token == Token::Semicolon || next_token.token == Token::Newline {
+                        self.next_token()?;
+                        Ok(())
+                    } else {
+                        Err(ParserErrorWithLocation {
+                            error: ParserError::ExpectedStatement,
+                            details: "Expected ; or newline after a statement".to_string(),
+                            from: next_token.from,
+                            to: next_token.to,
+                        })
+                    }
                 }
             } else {
                 Ok(())
@@ -133,6 +136,10 @@ impl<'a> Parser<'a> {
 
             match statement {
                 Some(statement) => {
+                    if let Statement::Comment(_) = statement {
+                        statements.push(statement);
+                        continue;
+                    }
                     require_separator?;
                     statements.push(statement);
                 }
@@ -152,52 +159,143 @@ impl<'a> Parser<'a> {
         })
     }
 
+    fn collect_comments(&mut self) -> Result<Vec<CommentStatement>, ParserErrorWithLocation> {
+        let mut comments = Vec::new();
+        loop {
+            let from = self.lexer.current_location();
+            let next_token = self.peek_token()?;
+
+            if let Token::Comment(comment) = next_token.token {
+                self.next_token()?;
+                comments.push(CommentStatement {
+                    comment,
+                    is_multi_line: false,
+                    from,
+                    to: self.lexer.current_location(),
+                });
+            } else if let Token::MultiLineComment(comment) = next_token.token {
+                self.next_token()?;
+                comments.push(CommentStatement {
+                    comment,
+                    is_multi_line: true,
+                    from,
+                    to: self.lexer.current_location(),
+                });
+            } else {
+                break;
+            }
+
+            if self
+                .try_parse(|parser| {
+                    let next_token = parser.peek_token()?;
+                    if next_token.token == Token::Newline {
+                        parser.next_token()?;
+                    }
+
+                    if let Token::Comment(_) = parser.peek_token()?.token {
+                        Ok(Some(()))
+                    } else if let Token::MultiLineComment(_) = parser.peek_token()?.token {
+                        Ok(Some(()))
+                    } else {
+                        Err(ParserErrorWithLocation {
+                            error: ParserError::ExpectedStatement,
+                            details: "Expected statement".to_string(),
+                            from: parser.lexer.current_location(),
+                            to: parser.lexer.current_location(),
+                        })
+                    }
+                })
+                .is_err()
+            {
+                break;
+            }
+        }
+
+        if comments.len() == 0 {
+            return Ok(comments);
+        }
+
+        let next_token = self.peek_token()?;
+        if next_token.token == Token::Newline {
+            self.next_token()?;
+        }
+
+        Ok(comments)
+    }
+
+    fn parse_comment_statement(&mut self) -> Result<Option<Statement>, ParserErrorWithLocation> {
+        let comment = self.try_parse(|parser| {
+            let comments = parser.collect_comments()?;
+            if comments.len() == 0 {
+                return Ok(None);
+            }
+
+            Ok(Some(Statement::Comment(comments)))
+        });
+
+        if comment.is_err() {
+            return Ok(None);
+        }
+
+        return Ok(comment.unwrap());
+    }
+
     fn parse_statement(&mut self) -> Result<Option<Statement>, ParserErrorWithLocation> {
         let mut scoped = self.clone();
 
         scoped.skip_newlines()?;
 
+        let comments = scoped.collect_comments()?;
+
         let from = scoped.lexer.current_location();
         let next_token = scoped.peek_token()?;
+
+        if (next_token.token == Token::Newline || next_token.token == Token::EOF)
+            && comments.len() > 0
+        {
+            self.lexer = scoped.lexer;
+            return Ok(Some(Statement::Comment(comments)));
+        }
+
         let statement = match next_token.token {
             Token::LeftBrace => {
-                let block = scoped.parse_block_statement()?;
+                let block = scoped.parse_block_statement(comments)?;
                 self.lexer = scoped.lexer;
 
                 Ok(Some(block))
             }
             Token::Keyword(Keyword::Do) => {
-                let do_while_statement = scoped.parse_do_while_statement()?;
+                let do_while_statement = scoped.parse_do_while_statement(comments)?;
                 self.lexer = scoped.lexer;
 
                 Ok(Some(do_while_statement))
             }
             Token::Keyword(Keyword::While) => {
-                let while_statement = scoped.parse_while_statement()?;
+                let while_statement = scoped.parse_while_statement(comments)?;
                 self.lexer = scoped.lexer;
 
                 Ok(Some(while_statement))
             }
             Token::Keyword(Keyword::If) => {
-                let if_statement = scoped.parse_if_statement()?;
+                let if_statement = scoped.parse_if_statement(comments)?;
                 self.lexer = scoped.lexer;
 
                 Ok(Some(if_statement))
             }
             Token::Keyword(Keyword::Local) => {
-                let local_statement = scoped.parse_local_statement()?;
+                let local_statement = scoped.parse_local_statement(comments)?;
                 self.lexer = scoped.lexer;
 
                 Ok(Some(local_statement))
             }
             Token::Keyword(Keyword::Foreach) => {
-                let foreach_statement = scoped.parse_foreach_statement()?;
+                let foreach_statement = scoped.parse_foreach_statement(comments)?;
                 self.lexer = scoped.lexer;
 
                 Ok(Some(foreach_statement))
             }
             Token::Keyword(Keyword::Switch) => {
-                let switch_statement = scoped.parse_switch_statement()?;
+                let switch_statement = scoped.parse_switch_statement(comments)?;
                 self.lexer = scoped.lexer;
 
                 Ok(Some(switch_statement))
@@ -295,6 +393,10 @@ impl<'a> Parser<'a> {
             _ => {
                 let expression = scoped.parse_expression(false)?;
 
+                if expression.is_none() && comments.len() > 0 {
+                    self.lexer = scoped.lexer;
+                    return Ok(Some(Statement::Comment(comments)));
+                }
                 if expression.is_none() {
                     Ok(None)
                 } else {
@@ -312,11 +414,26 @@ impl<'a> Parser<'a> {
         Ok(statement)
     }
 
-    fn parse_switch_statement(&mut self) -> Result<Statement, ParserErrorWithLocation> {
+    fn parse_switch_statement(
+        &mut self,
+        before_comments: Vec<CommentStatement>,
+    ) -> Result<Statement, ParserErrorWithLocation> {
+        let mut comments = Comments::new();
+        comments.add_comments(CommentLocation::BeforeUnit, before_comments);
+
         let from = self.lexer.current_location();
         self.expect_token(Token::Keyword(Keyword::Switch))?;
 
+        comments.add_comments(
+            CommentLocation::At(SwitchStatement::AFTER_SWITCH),
+            self.collect_comments()?,
+        );
+
         self.expect_token(Token::LeftParenthesis)?;
+        comments.add_comments(
+            CommentLocation::At(SwitchStatement::BEFORE_EXPRESSION),
+            self.collect_comments()?,
+        );
         let expression = self.parse_expression(false)?;
 
         if expression.is_none() {
@@ -330,20 +447,47 @@ impl<'a> Parser<'a> {
 
         let expression = expression.unwrap();
 
+        comments.add_comments(
+            CommentLocation::At(SwitchStatement::AFTER_EXPRESSION),
+            self.collect_comments()?,
+        );
+
         self.expect_token(Token::RightParenthesis)?;
 
+        comments.add_comments(
+            CommentLocation::At(SwitchStatement::AFTER_RIGHT_PARENTHESIS),
+            self.collect_comments()?,
+        );
+
         self.skip_newlines()?;
+        comments.add_comments(
+            CommentLocation::At(SwitchStatement::BEFORE_BODY),
+            self.collect_comments()?,
+        );
         self.expect_token(Token::LeftBrace)?;
+
+        comments.add_comments(
+            CommentLocation::At(SwitchStatement::BEFORE_CASES),
+            self.collect_comments()?,
+        );
 
         let mut cases = Vec::new();
         let mut default_case = None;
 
         loop {
             self.skip_newlines()?;
+            let mut case_comments = Comments::new();
+            case_comments.add_comments(CommentLocation::BeforeUnit, self.collect_comments()?);
+
             let from = self.lexer.current_location();
             let next_token = self.next_token()?;
 
             if next_token.token == Token::Keyword(Keyword::Case) {
+                case_comments.add_comments(
+                    CommentLocation::At(Case::BEFORE_CASE_EXPRESSION),
+                    self.collect_comments()?,
+                );
+
                 let case_expr = self.parse_expression(false)?;
 
                 if case_expr.is_none() {
@@ -357,17 +501,29 @@ impl<'a> Parser<'a> {
 
                 let case_expr = case_expr.unwrap();
 
+                case_comments.add_comments(
+                    CommentLocation::At(Case::AFTER_CASE_EXPRESSION),
+                    self.collect_comments()?,
+                );
+
                 self.expect_token(Token::Colon)?;
                 let statements = self.parse_statements()?;
 
                 cases.push(Case {
                     expression: case_expr,
                     statements,
+                    comments: case_comments,
                     from,
                     to: self.lexer.current_location(),
                 });
             } else if next_token.token == Token::Keyword(Keyword::Default) {
+                comments.add_comments(
+                    CommentLocation::At(SwitchStatement::BEFORE_DEFAULT),
+                    self.collect_comments()?,
+                );
+
                 self.expect_token(Token::Colon)?;
+
                 let statements = self.parse_statements()?;
                 default_case = Some(statements);
             } else if next_token.token == Token::RightBrace {
@@ -381,6 +537,8 @@ impl<'a> Parser<'a> {
                 });
             }
         }
+
+        comments.add_comments(CommentLocation::AfterUnit, self.collect_comments()?);
 
         Ok(switch_statement(
             expression,
@@ -1000,15 +1158,42 @@ impl<'a> Parser<'a> {
         ))
     }
 
-    fn parse_foreach_statement(&mut self) -> Result<Statement, ParserErrorWithLocation> {
+    fn parse_foreach_statement(
+        &mut self,
+        before_comments: Vec<CommentStatement>,
+    ) -> Result<Statement, ParserErrorWithLocation> {
+        let mut comments = Comments::new();
+        comments.add_comments(CommentLocation::BeforeUnit, before_comments);
+
         self.skip_newlines()?;
         let from = self.lexer.current_location();
+
+        comments.add_comments(
+            CommentLocation::At(ForEachStatement::BEFORE_FOREACH),
+            self.collect_comments()?,
+        );
+
         self.expect_token(Token::Keyword(Keyword::Foreach))?;
+
+        comments.add_comments(
+            CommentLocation::At(ForEachStatement::BEFORE_LEFT_PARENTHESIS),
+            self.collect_comments()?,
+        );
 
         self.expect_token(Token::LeftParenthesis)?;
 
         let (index_id, value_id) = {
+            comments.add_comments(
+                CommentLocation::At(ForEachStatement::BEFORE_FIRST_IDENTIFIER),
+                self.collect_comments()?,
+            );
+
             let first_ident = self.expect_identifier()?;
+
+            comments.add_comments(
+                CommentLocation::At(ForEachStatement::AFTER_FIRST_IDENTIFIER),
+                self.collect_comments()?,
+            );
 
             let next_token = self.peek_token()?;
 
@@ -1017,13 +1202,28 @@ impl<'a> Parser<'a> {
             } else {
                 self.expect_token(Token::Operator(Operator::Comma))?;
 
+                comments.add_comments(
+                    CommentLocation::At(ForEachStatement::BEFORE_SECOND_IDENTIFIER),
+                    self.collect_comments()?,
+                );
+
                 let second_ident = self.expect_identifier()?;
+
+                comments.add_comments(
+                    CommentLocation::At(ForEachStatement::AFTER_SECOND_IDENTIFIER),
+                    self.collect_comments()?,
+                );
 
                 (Some(first_ident), second_ident)
             }
         };
 
         self.expect_token(Token::Operator(Operator::In))?;
+
+        comments.add_comments(
+            CommentLocation::At(ForEachStatement::BEFORE_EXPRESSION),
+            self.collect_comments()?,
+        );
 
         let expression = self.parse_expression(true)?;
 
@@ -1037,6 +1237,11 @@ impl<'a> Parser<'a> {
         }
 
         let expression = expression.unwrap();
+
+        comments.add_comments(
+            CommentLocation::At(ForEachStatement::AFTER_EXPRESSION),
+            self.collect_comments()?,
+        );
 
         self.expect_token(Token::RightParenthesis)?;
 
@@ -1055,6 +1260,8 @@ impl<'a> Parser<'a> {
 
         let statement = statement.unwrap();
 
+        comments.add_comments(CommentLocation::AfterUnit, self.collect_comments()?);
+
         Ok(foreach_statement(
             index_id
                 .map(|index_id| identifier_expression(index_id.token, index_id.from, index_id.to)),
@@ -1066,22 +1273,44 @@ impl<'a> Parser<'a> {
         ))
     }
 
-    fn parse_local_statement(&mut self) -> Result<Statement, ParserErrorWithLocation> {
+    fn parse_local_statement(
+        &mut self,
+        before_comments: Vec<CommentStatement>,
+    ) -> Result<Statement, ParserErrorWithLocation> {
+        let mut comments = Comments::new();
+        comments.add_comments(CommentLocation::BeforeUnit, before_comments);
+
         self.skip_newlines()?;
         let from = self.lexer.current_location();
+
         self.expect_token(Token::Keyword(Keyword::Local))?;
 
         let mut initializations = Vec::new();
 
         loop {
+            let mut comments = Comments::new();
             let from = self.lexer.current_location();
+
+            comments.add_comments(CommentLocation::BeforeUnit, self.collect_comments()?);
+
             let name = self.expect_identifier()?;
+
+            comments.add_comments(
+                CommentLocation::At(Initialization::AFTER_NAME),
+                self.collect_comments()?,
+            );
 
             let mut expression = None;
 
             let next_token = self.peek_token()?;
             if next_token.token == Token::Operator(Operator::Assign) {
                 self.next_token()?;
+
+                comments.add_comments(
+                    CommentLocation::At(Initialization::BEFORE_EXPRESSION),
+                    self.collect_comments()?,
+                );
+
                 expression = self.parse_expression(true)?;
 
                 if expression.is_none() {
@@ -1092,11 +1321,18 @@ impl<'a> Parser<'a> {
                         to: self.lexer.current_location(),
                     });
                 }
+                comments.add_comments(
+                    CommentLocation::At(Initialization::AFTER_EXPRESSION),
+                    self.collect_comments()?,
+                );
             }
+
+            comments.add_comments(CommentLocation::AfterUnit, self.collect_comments()?);
 
             initializations.push(Initialization {
                 name: name.token.to_string(),
                 expression,
+                comments,
                 from,
                 to: self.lexer.current_location(),
             });
@@ -1117,17 +1353,33 @@ impl<'a> Parser<'a> {
             });
         }
 
+        comments.add_comments(CommentLocation::AfterUnit, self.collect_comments()?);
+
         Ok(local_statement(
             initializations,
+            comments,
             from,
             self.lexer.current_location(),
         ))
     }
 
-    fn parse_do_while_statement(&mut self) -> Result<Statement, ParserErrorWithLocation> {
-        self.skip_newlines()?;
+    fn parse_do_while_statement(
+        &mut self,
+        before_comments: Vec<CommentStatement>,
+    ) -> Result<Statement, ParserErrorWithLocation> {
+        let mut comments = Comments::new();
+        comments.add_comments(CommentLocation::BeforeUnit, before_comments);
+
         let from = self.lexer.current_location();
+
         self.expect_token(Token::Keyword(Keyword::Do))?;
+
+        self.skip_newlines()?;
+        comments.add_comments(
+            CommentLocation::At(DoWhileStatement::BEFORE_BODY),
+            self.collect_comments()?,
+        );
+        self.skip_newlines()?;
 
         let stat = self.parse_statement()?;
 
@@ -1143,9 +1395,29 @@ impl<'a> Parser<'a> {
         let stat = stat.unwrap();
 
         self.skip_newlines()?;
+        comments.add_comments(
+            CommentLocation::At(DoWhileStatement::BEFORE_WHILE),
+            self.collect_comments()?,
+        );
+        self.skip_newlines()?;
+
         self.expect_token(Token::Keyword(Keyword::While))?;
 
+        self.skip_newlines()?;
+        comments.add_comments(
+            CommentLocation::At(DoWhileStatement::BEFORE_CONDITION),
+            self.collect_comments()?,
+        );
+        self.skip_newlines()?;
+
         self.expect_token(Token::LeftParenthesis)?;
+        self.skip_newlines()?;
+        comments.add_comments(
+            CommentLocation::At(DoWhileStatement::BEFORE_INSIDE_CONDITION),
+            self.collect_comments()?,
+        );
+        self.skip_newlines()?;
+
         let condition = self.parse_expression(false)?;
 
         if condition.is_none() {
@@ -1159,22 +1431,62 @@ impl<'a> Parser<'a> {
 
         let condition = condition.unwrap();
 
+        self.skip_newlines()?;
+        comments.add_comments(
+            CommentLocation::At(DoWhileStatement::AFTER_INSIDE_CONDITION),
+            self.collect_comments()?,
+        );
+        self.skip_newlines()?;
+
         self.expect_token(Token::RightParenthesis)?;
+
+        comments.add_comments(CommentLocation::AfterUnit, self.collect_comments()?);
 
         Ok(do_while_statement(
             condition,
             stat,
+            comments,
             from,
             self.lexer.current_location(),
         ))
     }
 
-    fn parse_while_statement(&mut self) -> Result<Statement, ParserErrorWithLocation> {
+    fn parse_while_statement(
+        &mut self,
+        before_comments: Vec<CommentStatement>,
+    ) -> Result<Statement, ParserErrorWithLocation> {
+        let mut comments = Comments::new();
+
+        comments.add_comments(CommentLocation::BeforeUnit, before_comments);
+
         self.skip_newlines()?;
         let from = self.lexer.current_location();
 
+        self.skip_newlines()?;
+        comments.add_comments(
+            CommentLocation::At(WhileStatement::BEFORE_WHILE),
+            self.collect_comments()?,
+        );
+        self.skip_newlines()?;
+
         self.expect_token(Token::Keyword(Keyword::While))?;
+
+        self.skip_newlines()?;
+        comments.add_comments(
+            CommentLocation::At(WhileStatement::BEFORE_CONDITION),
+            self.collect_comments()?,
+        );
+        self.skip_newlines()?;
+
         self.expect_token(Token::LeftParenthesis)?;
+
+        self.skip_newlines()?;
+        comments.add_comments(
+            CommentLocation::At(WhileStatement::BEFORE_INSIDE_CONDITION),
+            self.collect_comments()?,
+        );
+        self.skip_newlines()?;
+
         let condition = self.parse_expression(false)?;
 
         if condition.is_none() {
@@ -1187,6 +1499,13 @@ impl<'a> Parser<'a> {
         }
 
         let condition = condition.unwrap();
+
+        self.skip_newlines()?;
+        comments.add_comments(
+            CommentLocation::At(WhileStatement::AFTER_INSIDE_CONDITION),
+            self.collect_comments()?,
+        );
+        self.skip_newlines()?;
 
         self.expect_token(Token::RightParenthesis)?;
 
@@ -1203,6 +1522,8 @@ impl<'a> Parser<'a> {
 
         let stat = stat.unwrap();
 
+        comments.add_comments(CommentLocation::AfterUnit, self.collect_comments()?);
+
         Ok(while_statement(
             condition,
             stat,
@@ -1211,11 +1532,25 @@ impl<'a> Parser<'a> {
         ))
     }
 
-    fn parse_if_statement(&mut self) -> Result<Statement, ParserErrorWithLocation> {
+    fn parse_if_statement(
+        &mut self,
+        before_comments: Vec<CommentStatement>,
+    ) -> Result<Statement, ParserErrorWithLocation> {
         self.skip_newlines()?;
+        let mut comments = Comments::new();
+
         let from = self.lexer.current_location();
 
+        comments.add_comments(CommentLocation::BeforeUnit, before_comments);
+
+        self.skip_newlines()?;
         self.expect_token(Token::Keyword(Keyword::If))?;
+
+        comments.add_comments(
+            CommentLocation::At(IfStatement::BEFORE_CONDITION),
+            self.collect_comments()?,
+        );
+
         self.expect_token(Token::LeftParenthesis)?;
         let condition = self.parse_expression(false)?;
 
@@ -1233,6 +1568,12 @@ impl<'a> Parser<'a> {
         self.expect_token(Token::RightParenthesis)?;
 
         self.skip_newlines()?;
+        comments.add_comments(
+            CommentLocation::At(IfStatement::BEFORE_BODY),
+            self.collect_comments()?,
+        );
+        self.skip_newlines()?;
+
         let body = self.parse_statement()?;
 
         if body.is_none() {
@@ -1253,8 +1594,19 @@ impl<'a> Parser<'a> {
             let from = parser.lexer.current_location();
             if parser.peek_token_skip_whitespaces()?.token == Token::Keyword(Keyword::Else) {
                 parser.skip_newlines()?;
+                comments.add_comments(
+                    CommentLocation::At(IfStatement::BEFORE_ELSE),
+                    parser.collect_comments()?,
+                );
+                parser.skip_newlines()?;
                 parser.next_token()?;
 
+                parser.skip_newlines()?;
+                comments.add_comments(
+                    CommentLocation::At(IfStatement::BEFORE_ELSE_BODY),
+                    parser.collect_comments()?,
+                );
+                parser.skip_newlines()?;
                 let else_body = parser.parse_statement()?;
 
                 if else_body.is_none() {
@@ -1272,10 +1624,13 @@ impl<'a> Parser<'a> {
             }
         })?;
 
+        comments.add_comments(CommentLocation::AfterUnit, self.collect_comments()?);
+
         Ok(if_statement(
             condition,
             body,
             else_body,
+            comments,
             from,
             self.lexer.current_location(),
         ))
@@ -2136,17 +2491,25 @@ impl<'a> Parser<'a> {
         )))
     }
 
-    fn parse_block_statement(&mut self) -> Result<Statement, ParserErrorWithLocation> {
-        self.skip_newlines()?;
+    fn parse_block_statement(
+        &mut self,
+        before_comments: Vec<CommentStatement>,
+    ) -> Result<Statement, ParserErrorWithLocation> {
         let from = self.lexer.current_location();
+        let mut comments = Comments::new();
+        comments.add_comments(CommentLocation::BeforeUnit, before_comments);
+
         self.expect_token(Token::LeftBrace)?;
         let statements = self.parse_statements()?;
 
         self.skip_newlines()?;
         self.expect_token(Token::RightBrace)?;
 
+        comments.add_comments(CommentLocation::AfterUnit, self.collect_comments()?);
+
         Ok(block_statement(
             statements,
+            comments,
             from,
             self.lexer.current_location(),
         ))
@@ -2343,7 +2706,7 @@ mod tests {
 
                 let contents = fs::read_to_string(path.unwrap().path()).unwrap();
 
-                let mut lexer = Lexer::new(&contents, true);
+                let mut lexer = Lexer::new(&contents, false);
                 let mut tokens = Vec::new();
 
                 loop {

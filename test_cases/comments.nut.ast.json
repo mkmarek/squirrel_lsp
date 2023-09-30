@@ -1,307 +1,1751 @@
 {
   "statements": [
     {
-      "FunctionDeclaration": {
-        "name": {
-          "Identifier": {
-            "token": {
-              "Identifier": "foo"
+      "Comment": [
+        {
+          "comment": " Some comment here",
+          "is_multi_line": false,
+          "from": {
+            "line": 0,
+            "linechar": 0
+          },
+          "to": {
+            "line": 0,
+            "linechar": 20
+          }
+        }
+      ]
+    },
+    {
+      "Comment": [
+        {
+          "comment": " Some other comment here",
+          "is_multi_line": false,
+          "from": {
+            "line": 2,
+            "linechar": 0
+          },
+          "to": {
+            "line": 2,
+            "linechar": 26
+          }
+        },
+        {
+          "comment": " and here ",
+          "is_multi_line": true,
+          "from": {
+            "line": 3,
+            "linechar": 0
+          },
+          "to": {
+            "line": 3,
+            "linechar": 14
+          }
+        }
+      ]
+    },
+    {
+      "Comment": [
+        {
+          "comment": " a multiline comment here\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam\n\ndolor metus, ultrices ut pretium eu, ultricies ut nisi. Nulla\n",
+          "is_multi_line": true,
+          "from": {
+            "line": 5,
+            "linechar": 0
+          },
+          "to": {
+            "line": 10,
+            "linechar": 2
+          }
+        }
+      ]
+    },
+    {
+      "Block": {
+        "comments": {
+          "after_unit": [
+            {
+              "comment": " comment after block",
+              "is_multi_line": false,
+              "from": {
+                "line": 15,
+                "linechar": 1
+              },
+              "to": {
+                "line": 15,
+                "linechar": 24
+              }
             },
+            {
+              "comment": " another comment",
+              "is_multi_line": false,
+              "from": {
+                "line": 16,
+                "linechar": 0
+              },
+              "to": {
+                "line": 16,
+                "linechar": 18
+              }
+            }
+          ],
+          "before_unit": [
+            {
+              "comment": " comment before block",
+              "is_multi_line": false,
+              "from": {
+                "line": 12,
+                "linechar": 0
+              },
+              "to": {
+                "line": 12,
+                "linechar": 23
+              }
+            }
+          ]
+        },
+        "statements": {
+          "statements": [
+            {
+              "Comment": [
+                {
+                  "comment": " comment inside block",
+                  "is_multi_line": false,
+                  "from": {
+                    "line": 14,
+                    "linechar": 0
+                  },
+                  "to": {
+                    "line": 14,
+                    "linechar": 23
+                  }
+                }
+              ]
+            }
+          ],
+          "from": {
+            "line": 13,
+            "linechar": 1
+          },
+          "to": {
+            "line": 15,
+            "linechar": 0
+          }
+        },
+        "from": {
+          "line": 13,
+          "linechar": 0
+        },
+        "to": {
+          "line": 17,
+          "linechar": 0
+        }
+      }
+    },
+    {
+      "Comment": [
+        {
+          "comment": " comment between",
+          "is_multi_line": false,
+          "from": {
+            "line": 18,
+            "linechar": 0
+          },
+          "to": {
+            "line": 18,
+            "linechar": 18
+          }
+        }
+      ]
+    },
+    {
+      "If": {
+        "comments": {
+          "before_unit": [
+            {
+              "comment": " comment before if statement",
+              "is_multi_line": false,
+              "from": {
+                "line": 20,
+                "linechar": 0
+              },
+              "to": {
+                "line": 20,
+                "linechar": 30
+              }
+            },
+            {
+              "comment": " a ",
+              "is_multi_line": true,
+              "from": {
+                "line": 21,
+                "linechar": 0
+              },
+              "to": {
+                "line": 21,
+                "linechar": 7
+              }
+            }
+          ],
+          "before_1": [
+            {
+              "comment": "c",
+              "is_multi_line": true,
+              "from": {
+                "line": 21,
+                "linechar": 24
+              },
+              "to": {
+                "line": 21,
+                "linechar": 30
+              }
+            }
+          ],
+          "before_0": [
+            {
+              "comment": " b ",
+              "is_multi_line": true,
+              "from": {
+                "line": 21,
+                "linechar": 9
+              },
+              "to": {
+                "line": 21,
+                "linechar": 17
+              }
+            }
+          ],
+          "after_unit": []
+        },
+        "condition": {
+          "BooleanLiteral": {
+            "value": true,
             "from": {
-              "line": 1,
-              "linechar": 8
+              "line": 21,
+              "linechar": 19
             },
             "to": {
-              "line": 1,
-              "linechar": 12
+              "line": 21,
+              "linechar": 23
             }
           }
         },
-        "parameters": [],
-        "statement": {
+        "if_true": {
           "Block": {
+            "comments": {
+              "before_unit": [],
+              "after_unit": [
+                {
+                  "comment": " comment after if statement",
+                  "is_multi_line": false,
+                  "from": {
+                    "line": 24,
+                    "linechar": 1
+                  },
+                  "to": {
+                    "line": 24,
+                    "linechar": 31
+                  }
+                },
+                {
+                  "comment": " another comment",
+                  "is_multi_line": false,
+                  "from": {
+                    "line": 25,
+                    "linechar": 0
+                  },
+                  "to": {
+                    "line": 25,
+                    "linechar": 18
+                  }
+                }
+              ]
+            },
             "statements": {
               "statements": [
                 {
-                  "Return": {
+                  "Expression": {
                     "expression": {
-                      "BinaryOperator": {
-                        "left": {
-                          "IntegerLiteral": {
-                            "value": 1,
+                      "FunctionCall": {
+                        "function": {
+                          "ScopeResolution": {
+                            "scope": null,
+                            "accessor": "print",
                             "from": {
-                              "line": 3,
-                              "linechar": 8
+                              "line": 23,
+                              "linechar": 0
                             },
                             "to": {
-                              "line": 3,
-                              "linechar": 29
+                              "line": 23,
+                              "linechar": 9
                             }
                           }
                         },
-                        "operator": "Plus",
-                        "right": {
-                          "BinaryOperator": {
-                            "left": {
-                              "IntegerLiteral": {
-                                "value": 2,
-                                "from": {
-                                  "line": 3,
-                                  "linechar": 46
-                                },
-                                "to": {
-                                  "line": 3,
-                                  "linechar": 48
-                                }
+                        "arguments": [
+                          {
+                            "StringLiteral": {
+                              "value": "true",
+                              "from": {
+                                "line": 23,
+                                "linechar": 10
+                              },
+                              "to": {
+                                "line": 23,
+                                "linechar": 16
                               }
-                            },
-                            "operator": "Plus",
-                            "right": {
-                              "IntegerLiteral": {
-                                "value": 3,
-                                "from": {
-                                  "line": 3,
-                                  "linechar": 65
-                                },
-                                "to": {
-                                  "line": 3,
-                                  "linechar": 67
-                                }
-                              }
-                            },
-                            "from": {
-                              "line": 3,
-                              "linechar": 46
-                            },
-                            "to": {
-                              "line": 3,
-                              "linechar": 67
                             }
                           }
-                        },
+                        ],
                         "from": {
-                          "line": 3,
-                          "linechar": 8
+                          "line": 23,
+                          "linechar": 0
                         },
                         "to": {
-                          "line": 3,
-                          "linechar": 67
+                          "line": 23,
+                          "linechar": 17
                         }
                       }
                     },
                     "from": {
-                      "line": 2,
+                      "line": 23,
                       "linechar": 0
                     },
                     "to": {
-                      "line": 3,
-                      "linechar": 67
+                      "line": 23,
+                      "linechar": 17
                     }
                   }
                 }
               ],
               "from": {
-                "line": 1,
-                "linechar": 16
+                "line": 21,
+                "linechar": 32
               },
               "to": {
-                "line": 4,
+                "line": 24,
                 "linechar": 0
               }
             },
             "from": {
-              "line": 1,
-              "linechar": 14
+              "line": 21,
+              "linechar": 30
             },
             "to": {
-              "line": 4,
-              "linechar": 1
+              "line": 26,
+              "linechar": 0
             }
           }
         },
-        "is_static": false,
+        "if_false": null,
         "from": {
-          "line": 0,
-          "linechar": 0
+          "line": 21,
+          "linechar": 7
         },
         "to": {
-          "line": 4,
-          "linechar": 1
+          "line": 26,
+          "linechar": 0
         }
       }
     },
     {
-      "Class": {
-        "name": {
-          "Identifier": {
-            "token": {
-              "Identifier": "Foo"
-            },
+      "Comment": [
+        {
+          "comment": " comment between",
+          "is_multi_line": false,
+          "from": {
+            "line": 27,
+            "linechar": 0
+          },
+          "to": {
+            "line": 27,
+            "linechar": 18
+          }
+        }
+      ]
+    },
+    {
+      "DoWhile": {
+        "condition": {
+          "BooleanLiteral": {
+            "value": true,
             "from": {
-              "line": 7,
-              "linechar": 6
+              "line": 33,
+              "linechar": 21
             },
             "to": {
-              "line": 7,
-              "linechar": 9
+              "line": 33,
+              "linechar": 25
             }
           }
         },
-        "extends": null,
-        "members": [
-          {
-            "ConstructorDeclaration": {
-              "name": null,
-              "parameters": [],
-              "statement": {
-                "Block": {
-                  "statements": {
-                    "statements": [
-                      {
-                        "Expression": {
-                          "expression": {
-                            "BinaryOperator": {
-                              "left": {
-                                "MemberAccess": {
-                                  "expression": {
-                                    "Identifier": {
-                                      "token": {
-                                        "Keyword": "This"
-                                      },
-                                      "from": {
-                                        "line": 10,
-                                        "linechar": 4
-                                      },
-                                      "to": {
-                                        "line": 11,
-                                        "linechar": 8
-                                      }
-                                    }
-                                  },
-                                  "member": "foo",
-                                  "from": {
-                                    "line": 10,
-                                    "linechar": 0
-                                  },
-                                  "to": {
-                                    "line": 11,
-                                    "linechar": 26
-                                  }
-                                }
-                              },
-                              "operator": "Assign",
-                              "right": {
-                                "IntegerLiteral": {
-                                  "value": 1,
-                                  "from": {
-                                    "line": 11,
-                                    "linechar": 43
-                                  },
-                                  "to": {
-                                    "line": 11,
-                                    "linechar": 45
-                                  }
-                                }
-                              },
-                              "from": {
-                                "line": 10,
-                                "linechar": 0
-                              },
-                              "to": {
-                                "line": 11,
-                                "linechar": 45
-                              }
-                            }
-                          },
-                          "from": {
-                            "line": 10,
-                            "linechar": 0
-                          },
-                          "to": {
-                            "line": 11,
-                            "linechar": 45
-                          }
-                        }
-                      }
-                    ],
-                    "from": {
-                      "line": 9,
-                      "linechar": 17
-                    },
-                    "to": {
-                      "line": 11,
-                      "linechar": 46
-                    }
-                  },
+        "statement": {
+          "Block": {
+            "comments": {
+              "before_unit": [],
+              "after_unit": [
+                {
+                  "comment": "c",
+                  "is_multi_line": true,
                   "from": {
-                    "line": 9,
-                    "linechar": 15
+                    "line": 33,
+                    "linechar": 1
                   },
                   "to": {
-                    "line": 12,
-                    "linechar": 3
+                    "line": 33,
+                    "linechar": 7
                   }
                 }
-              },
-              "is_static": false,
+              ]
+            },
+            "statements": {
+              "statements": [
+                {
+                  "Expression": {
+                    "expression": {
+                      "FunctionCall": {
+                        "function": {
+                          "ScopeResolution": {
+                            "scope": null,
+                            "accessor": "print",
+                            "from": {
+                              "line": 32,
+                              "linechar": 0
+                            },
+                            "to": {
+                              "line": 32,
+                              "linechar": 9
+                            }
+                          }
+                        },
+                        "arguments": [
+                          {
+                            "StringLiteral": {
+                              "value": "true",
+                              "from": {
+                                "line": 32,
+                                "linechar": 10
+                              },
+                              "to": {
+                                "line": 32,
+                                "linechar": 16
+                              }
+                            }
+                          }
+                        ],
+                        "from": {
+                          "line": 32,
+                          "linechar": 0
+                        },
+                        "to": {
+                          "line": 32,
+                          "linechar": 17
+                        }
+                      }
+                    },
+                    "from": {
+                      "line": 32,
+                      "linechar": 0
+                    },
+                    "to": {
+                      "line": 32,
+                      "linechar": 17
+                    }
+                  }
+                }
+              ],
               "from": {
-                "line": 8,
+                "line": 30,
+                "linechar": 19
+              },
+              "to": {
+                "line": 33,
+                "linechar": 0
+              }
+            },
+            "from": {
+              "line": 30,
+              "linechar": 17
+            },
+            "to": {
+              "line": 33,
+              "linechar": 7
+            }
+          }
+        },
+        "comments": {
+          "after_unit": [
+            {
+              "comment": "e",
+              "is_multi_line": true,
+              "from": {
+                "line": 33,
+                "linechar": 26
+              },
+              "to": {
+                "line": 33,
+                "linechar": 32
+              }
+            },
+            {
+              "comment": " comment after do-while statement",
+              "is_multi_line": false,
+              "from": {
+                "line": 33,
+                "linechar": 32
+              },
+              "to": {
+                "line": 33,
+                "linechar": 68
+              }
+            },
+            {
+              "comment": " another comment",
+              "is_multi_line": false,
+              "from": {
+                "line": 34,
                 "linechar": 0
               },
               "to": {
-                "line": 12,
-                "linechar": 3
+                "line": 34,
+                "linechar": 18
               }
             }
-          }
-        ],
+          ],
+          "before_2": [
+            {
+              "comment": "d",
+              "is_multi_line": true,
+              "from": {
+                "line": 33,
+                "linechar": 13
+              },
+              "to": {
+                "line": 33,
+                "linechar": 19
+              }
+            }
+          ],
+          "before_1": [],
+          "before_unit": [
+            {
+              "comment": " comment before do-while statement",
+              "is_multi_line": false,
+              "from": {
+                "line": 29,
+                "linechar": 0
+              },
+              "to": {
+                "line": 29,
+                "linechar": 36
+              }
+            },
+            {
+              "comment": " a ",
+              "is_multi_line": true,
+              "from": {
+                "line": 30,
+                "linechar": 0
+              },
+              "to": {
+                "line": 30,
+                "linechar": 7
+              }
+            }
+          ],
+          "before_3": [],
+          "before_4": [],
+          "before_0": [
+            {
+              "comment": " b ",
+              "is_multi_line": true,
+              "from": {
+                "line": 30,
+                "linechar": 9
+              },
+              "to": {
+                "line": 30,
+                "linechar": 17
+              }
+            }
+          ]
+        },
         "from": {
-          "line": 6,
-          "linechar": 0
+          "line": 30,
+          "linechar": 7
         },
         "to": {
-          "line": 13,
-          "linechar": 1
+          "line": 35,
+          "linechar": 0
         }
       }
+    },
+    {
+      "Comment": [
+        {
+          "comment": " comment between",
+          "is_multi_line": false,
+          "from": {
+            "line": 36,
+            "linechar": 0
+          },
+          "to": {
+            "line": 36,
+            "linechar": 18
+          }
+        }
+      ]
+    },
+    {
+      "While": {
+        "condition": {
+          "BooleanLiteral": {
+            "value": true,
+            "from": {
+              "line": 39,
+              "linechar": 22
+            },
+            "to": {
+              "line": 39,
+              "linechar": 26
+            }
+          }
+        },
+        "statement": {
+          "Block": {
+            "comments": {
+              "before_unit": [
+                {
+                  "comment": "c",
+                  "is_multi_line": true,
+                  "from": {
+                    "line": 39,
+                    "linechar": 27
+                  },
+                  "to": {
+                    "line": 39,
+                    "linechar": 33
+                  }
+                }
+              ],
+              "after_unit": [
+                {
+                  "comment": "d",
+                  "is_multi_line": true,
+                  "from": {
+                    "line": 42,
+                    "linechar": 1
+                  },
+                  "to": {
+                    "line": 42,
+                    "linechar": 7
+                  }
+                },
+                {
+                  "comment": " comment after while statement",
+                  "is_multi_line": false,
+                  "from": {
+                    "line": 42,
+                    "linechar": 7
+                  },
+                  "to": {
+                    "line": 42,
+                    "linechar": 40
+                  }
+                },
+                {
+                  "comment": " another comment",
+                  "is_multi_line": false,
+                  "from": {
+                    "line": 43,
+                    "linechar": 0
+                  },
+                  "to": {
+                    "line": 43,
+                    "linechar": 18
+                  }
+                }
+              ]
+            },
+            "statements": {
+              "statements": [
+                {
+                  "Expression": {
+                    "expression": {
+                      "FunctionCall": {
+                        "function": {
+                          "ScopeResolution": {
+                            "scope": null,
+                            "accessor": "print",
+                            "from": {
+                              "line": 41,
+                              "linechar": 0
+                            },
+                            "to": {
+                              "line": 41,
+                              "linechar": 9
+                            }
+                          }
+                        },
+                        "arguments": [
+                          {
+                            "StringLiteral": {
+                              "value": "true",
+                              "from": {
+                                "line": 41,
+                                "linechar": 10
+                              },
+                              "to": {
+                                "line": 41,
+                                "linechar": 16
+                              }
+                            }
+                          }
+                        ],
+                        "from": {
+                          "line": 41,
+                          "linechar": 0
+                        },
+                        "to": {
+                          "line": 41,
+                          "linechar": 17
+                        }
+                      }
+                    },
+                    "from": {
+                      "line": 41,
+                      "linechar": 0
+                    },
+                    "to": {
+                      "line": 41,
+                      "linechar": 17
+                    }
+                  }
+                }
+              ],
+              "from": {
+                "line": 39,
+                "linechar": 35
+              },
+              "to": {
+                "line": 42,
+                "linechar": 0
+              }
+            },
+            "from": {
+              "line": 39,
+              "linechar": 33
+            },
+            "to": {
+              "line": 44,
+              "linechar": 0
+            }
+          }
+        },
+        "from": {
+          "line": 39,
+          "linechar": 7
+        },
+        "to": {
+          "line": 44,
+          "linechar": 0
+        }
+      }
+    },
+    {
+      "Comment": [
+        {
+          "comment": " comment between",
+          "is_multi_line": false,
+          "from": {
+            "line": 45,
+            "linechar": 0
+          },
+          "to": {
+            "line": 45,
+            "linechar": 18
+          }
+        }
+      ]
     },
     {
       "Local": {
         "initializations": [
           {
-            "name": "foo",
+            "name": "x",
             "expression": {
               "IntegerLiteral": {
                 "value": 1,
                 "from": {
-                  "line": 16,
-                  "linechar": 11
+                  "line": 48,
+                  "linechar": 40
                 },
                 "to": {
-                  "line": 16,
-                  "linechar": 13
+                  "line": 48,
+                  "linechar": 42
                 }
               }
             },
+            "comments": {
+              "after_unit": [],
+              "before_1": [
+                {
+                  "comment": " d ",
+                  "is_multi_line": true,
+                  "from": {
+                    "line": 48,
+                    "linechar": 32
+                  },
+                  "to": {
+                    "line": 48,
+                    "linechar": 40
+                  }
+                }
+              ],
+              "before_2": [
+                {
+                  "comment": " e ",
+                  "is_multi_line": true,
+                  "from": {
+                    "line": 48,
+                    "linechar": 42
+                  },
+                  "to": {
+                    "line": 48,
+                    "linechar": 50
+                  }
+                },
+                {
+                  "comment": " f ",
+                  "is_multi_line": true,
+                  "from": {
+                    "line": 48,
+                    "linechar": 50
+                  },
+                  "to": {
+                    "line": 48,
+                    "linechar": 58
+                  }
+                }
+              ],
+              "before_unit": [
+                {
+                  "comment": " b ",
+                  "is_multi_line": true,
+                  "from": {
+                    "line": 48,
+                    "linechar": 12
+                  },
+                  "to": {
+                    "line": 48,
+                    "linechar": 20
+                  }
+                }
+              ],
+              "before_3": [
+                {
+                  "comment": " c ",
+                  "is_multi_line": true,
+                  "from": {
+                    "line": 48,
+                    "linechar": 22
+                  },
+                  "to": {
+                    "line": 48,
+                    "linechar": 30
+                  }
+                }
+              ]
+            },
             "from": {
-              "line": 16,
-              "linechar": 5
+              "line": 48,
+              "linechar": 12
             },
             "to": {
-              "line": 16,
-              "linechar": 13
+              "line": 48,
+              "linechar": 58
+            }
+          },
+          {
+            "name": "y",
+            "expression": {
+              "IntegerLiteral": {
+                "value": 2,
+                "from": {
+                  "line": 48,
+                  "linechar": 87
+                },
+                "to": {
+                  "line": 48,
+                  "linechar": 89
+                }
+              }
+            },
+            "comments": {
+              "after_unit": [],
+              "before_unit": [
+                {
+                  "comment": " g ",
+                  "is_multi_line": true,
+                  "from": {
+                    "line": 48,
+                    "linechar": 59
+                  },
+                  "to": {
+                    "line": 48,
+                    "linechar": 67
+                  }
+                }
+              ],
+              "before_1": [
+                {
+                  "comment": " i ",
+                  "is_multi_line": true,
+                  "from": {
+                    "line": 48,
+                    "linechar": 79
+                  },
+                  "to": {
+                    "line": 48,
+                    "linechar": 87
+                  }
+                }
+              ],
+              "before_2": [
+                {
+                  "comment": " j ",
+                  "is_multi_line": true,
+                  "from": {
+                    "line": 48,
+                    "linechar": 89
+                  },
+                  "to": {
+                    "line": 48,
+                    "linechar": 97
+                  }
+                },
+                {
+                  "comment": " k ",
+                  "is_multi_line": true,
+                  "from": {
+                    "line": 48,
+                    "linechar": 97
+                  },
+                  "to": {
+                    "line": 48,
+                    "linechar": 105
+                  }
+                }
+              ],
+              "before_3": [
+                {
+                  "comment": " h ",
+                  "is_multi_line": true,
+                  "from": {
+                    "line": 48,
+                    "linechar": 69
+                  },
+                  "to": {
+                    "line": 48,
+                    "linechar": 77
+                  }
+                }
+              ]
+            },
+            "from": {
+              "line": 48,
+              "linechar": 59
+            },
+            "to": {
+              "line": 48,
+              "linechar": 105
+            }
+          },
+          {
+            "name": "z",
+            "expression": null,
+            "comments": {
+              "before_unit": [],
+              "after_unit": [],
+              "before_3": [
+                {
+                  "comment": "l",
+                  "is_multi_line": true,
+                  "from": {
+                    "line": 48,
+                    "linechar": 108
+                  },
+                  "to": {
+                    "line": 48,
+                    "linechar": 114
+                  }
+                }
+              ]
+            },
+            "from": {
+              "line": 48,
+              "linechar": 106
+            },
+            "to": {
+              "line": 48,
+              "linechar": 114
             }
           }
         ],
+        "comments": {
+          "after_unit": [],
+          "before_unit": [
+            {
+              "comment": " comment before local statement",
+              "is_multi_line": false,
+              "from": {
+                "line": 47,
+                "linechar": 0
+              },
+              "to": {
+                "line": 47,
+                "linechar": 33
+              }
+            },
+            {
+              "comment": " a ",
+              "is_multi_line": true,
+              "from": {
+                "line": 48,
+                "linechar": 0
+              },
+              "to": {
+                "line": 48,
+                "linechar": 7
+              }
+            }
+          ]
+        },
         "from": {
-          "line": 15,
-          "linechar": 0
+          "line": 48,
+          "linechar": 7
         },
         "to": {
-          "line": 16,
-          "linechar": 13
+          "line": 48,
+          "linechar": 114
         }
       }
+    },
+    {
+      "Comment": [
+        {
+          "comment": " m ",
+          "is_multi_line": true,
+          "from": {
+            "line": 48,
+            "linechar": 115
+          },
+          "to": {
+            "line": 48,
+            "linechar": 123
+          }
+        }
+      ]
+    },
+    {
+      "Comment": [
+        {
+          "comment": " comment between",
+          "is_multi_line": false,
+          "from": {
+            "line": 50,
+            "linechar": 0
+          },
+          "to": {
+            "line": 50,
+            "linechar": 18
+          }
+        }
+      ]
+    },
+    {
+      "ForEach": {
+        "key": {
+          "Identifier": {
+            "token": {
+              "Identifier": "x"
+            },
+            "from": {
+              "line": 53,
+              "linechar": 32
+            },
+            "to": {
+              "line": 53,
+              "linechar": 33
+            }
+          }
+        },
+        "value": {
+          "Identifier": {
+            "token": {
+              "Identifier": "z"
+            },
+            "from": {
+              "line": 53,
+              "linechar": 45
+            },
+            "to": {
+              "line": 53,
+              "linechar": 46
+            }
+          }
+        },
+        "iterable": {
+          "Identifier": {
+            "token": {
+              "Identifier": "y"
+            },
+            "from": {
+              "line": 53,
+              "linechar": 66
+            },
+            "to": {
+              "line": 53,
+              "linechar": 67
+            }
+          }
+        },
+        "statement": {
+          "Block": {
+            "comments": {
+              "before_unit": [
+                {
+                  "comment": " g ",
+                  "is_multi_line": true,
+                  "from": {
+                    "line": 53,
+                    "linechar": 76
+                  },
+                  "to": {
+                    "line": 53,
+                    "linechar": 84
+                  }
+                }
+              ],
+              "after_unit": [
+                {
+                  "comment": "h",
+                  "is_multi_line": true,
+                  "from": {
+                    "line": 56,
+                    "linechar": 1
+                  },
+                  "to": {
+                    "line": 56,
+                    "linechar": 7
+                  }
+                },
+                {
+                  "comment": " comment after foreach statement",
+                  "is_multi_line": false,
+                  "from": {
+                    "line": 56,
+                    "linechar": 7
+                  },
+                  "to": {
+                    "line": 56,
+                    "linechar": 42
+                  }
+                }
+              ]
+            },
+            "statements": {
+              "statements": [
+                {
+                  "Expression": {
+                    "expression": {
+                      "FunctionCall": {
+                        "function": {
+                          "ScopeResolution": {
+                            "scope": null,
+                            "accessor": "print",
+                            "from": {
+                              "line": 55,
+                              "linechar": 0
+                            },
+                            "to": {
+                              "line": 55,
+                              "linechar": 9
+                            }
+                          }
+                        },
+                        "arguments": [
+                          {
+                            "StringLiteral": {
+                              "value": "true",
+                              "from": {
+                                "line": 55,
+                                "linechar": 10
+                              },
+                              "to": {
+                                "line": 55,
+                                "linechar": 16
+                              }
+                            }
+                          }
+                        ],
+                        "from": {
+                          "line": 55,
+                          "linechar": 0
+                        },
+                        "to": {
+                          "line": 55,
+                          "linechar": 17
+                        }
+                      }
+                    },
+                    "from": {
+                      "line": 55,
+                      "linechar": 0
+                    },
+                    "to": {
+                      "line": 55,
+                      "linechar": 17
+                    }
+                  }
+                }
+              ],
+              "from": {
+                "line": 53,
+                "linechar": 86
+              },
+              "to": {
+                "line": 56,
+                "linechar": 0
+              }
+            },
+            "from": {
+              "line": 53,
+              "linechar": 84
+            },
+            "to": {
+              "line": 57,
+              "linechar": 0
+            }
+          }
+        },
+        "from": {
+          "line": 53,
+          "linechar": 7
+        },
+        "to": {
+          "line": 57,
+          "linechar": 0
+        }
+      }
+    },
+    {
+      "Comment": [
+        {
+          "comment": " comment between",
+          "is_multi_line": false,
+          "from": {
+            "line": 58,
+            "linechar": 0
+          },
+          "to": {
+            "line": 58,
+            "linechar": 18
+          }
+        }
+      ]
+    },
+    {
+      "Switch": {
+        "expression": {
+          "Identifier": {
+            "token": {
+              "Identifier": "x"
+            },
+            "from": {
+              "line": 61,
+              "linechar": 31
+            },
+            "to": {
+              "line": 61,
+              "linechar": 32
+            }
+          }
+        },
+        "cases": [
+          {
+            "expression": {
+              "IntegerLiteral": {
+                "value": 1,
+                "from": {
+                  "line": 63,
+                  "linechar": 14
+                },
+                "to": {
+                  "line": 63,
+                  "linechar": 16
+                }
+              }
+            },
+            "statements": {
+              "statements": [
+                {
+                  "Expression": {
+                    "expression": {
+                      "FunctionCall": {
+                        "function": {
+                          "ScopeResolution": {
+                            "scope": null,
+                            "accessor": "print",
+                            "from": {
+                              "line": 65,
+                              "linechar": 0
+                            },
+                            "to": {
+                              "line": 65,
+                              "linechar": 11
+                            }
+                          }
+                        },
+                        "arguments": [
+                          {
+                            "StringLiteral": {
+                              "value": "true",
+                              "from": {
+                                "line": 65,
+                                "linechar": 12
+                              },
+                              "to": {
+                                "line": 65,
+                                "linechar": 18
+                              }
+                            }
+                          }
+                        ],
+                        "from": {
+                          "line": 65,
+                          "linechar": 0
+                        },
+                        "to": {
+                          "line": 65,
+                          "linechar": 19
+                        }
+                      }
+                    },
+                    "from": {
+                      "line": 65,
+                      "linechar": 0
+                    },
+                    "to": {
+                      "line": 65,
+                      "linechar": 19
+                    }
+                  }
+                },
+                {
+                  "Break": {
+                    "from": {
+                      "line": 66,
+                      "linechar": 0
+                    },
+                    "to": {
+                      "line": 66,
+                      "linechar": 9
+                    }
+                  }
+                },
+                {
+                  "Comment": [
+                    {
+                      "comment": " comment inside switch statement",
+                      "is_multi_line": false,
+                      "from": {
+                        "line": 67,
+                        "linechar": 0
+                      },
+                      "to": {
+                        "line": 67,
+                        "linechar": 36
+                      }
+                    }
+                  ]
+                }
+              ],
+              "from": {
+                "line": 63,
+                "linechar": 25
+              },
+              "to": {
+                "line": 68,
+                "linechar": 0
+              }
+            },
+            "comments": {
+              "before_1": [
+                {
+                  "comment": " g ",
+                  "is_multi_line": true,
+                  "from": {
+                    "line": 63,
+                    "linechar": 16
+                  },
+                  "to": {
+                    "line": 63,
+                    "linechar": 24
+                  }
+                }
+              ],
+              "before_unit": [
+                {
+                  "comment": " comment inside switch statement",
+                  "is_multi_line": false,
+                  "from": {
+                    "line": 62,
+                    "linechar": 0
+                  },
+                  "to": {
+                    "line": 62,
+                    "linechar": 36
+                  }
+                }
+              ],
+              "before_0": [
+                {
+                  "comment": " f ",
+                  "is_multi_line": true,
+                  "from": {
+                    "line": 63,
+                    "linechar": 6
+                  },
+                  "to": {
+                    "line": 63,
+                    "linechar": 14
+                  }
+                }
+              ]
+            },
+            "from": {
+              "line": 63,
+              "linechar": 0
+            },
+            "to": {
+              "line": 68,
+              "linechar": 0
+            }
+          },
+          {
+            "expression": {
+              "IntegerLiteral": {
+                "value": 2,
+                "from": {
+                  "line": 68,
+                  "linechar": 14
+                },
+                "to": {
+                  "line": 68,
+                  "linechar": 16
+                }
+              }
+            },
+            "statements": {
+              "statements": [
+                {
+                  "Expression": {
+                    "expression": {
+                      "FunctionCall": {
+                        "function": {
+                          "ScopeResolution": {
+                            "scope": null,
+                            "accessor": "print",
+                            "from": {
+                              "line": 70,
+                              "linechar": 0
+                            },
+                            "to": {
+                              "line": 70,
+                              "linechar": 11
+                            }
+                          }
+                        },
+                        "arguments": [
+                          {
+                            "StringLiteral": {
+                              "value": "false",
+                              "from": {
+                                "line": 70,
+                                "linechar": 12
+                              },
+                              "to": {
+                                "line": 70,
+                                "linechar": 19
+                              }
+                            }
+                          }
+                        ],
+                        "from": {
+                          "line": 70,
+                          "linechar": 0
+                        },
+                        "to": {
+                          "line": 70,
+                          "linechar": 20
+                        }
+                      }
+                    },
+                    "from": {
+                      "line": 70,
+                      "linechar": 0
+                    },
+                    "to": {
+                      "line": 70,
+                      "linechar": 20
+                    }
+                  }
+                },
+                {
+                  "Break": {
+                    "from": {
+                      "line": 71,
+                      "linechar": 0
+                    },
+                    "to": {
+                      "line": 71,
+                      "linechar": 9
+                    }
+                  }
+                },
+                {
+                  "Comment": [
+                    {
+                      "comment": " comment inside switch statement",
+                      "is_multi_line": false,
+                      "from": {
+                        "line": 72,
+                        "linechar": 0
+                      },
+                      "to": {
+                        "line": 72,
+                        "linechar": 36
+                      }
+                    }
+                  ]
+                }
+              ],
+              "from": {
+                "line": 68,
+                "linechar": 25
+              },
+              "to": {
+                "line": 73,
+                "linechar": 0
+              }
+            },
+            "comments": {
+              "before_0": [
+                {
+                  "comment": " h ",
+                  "is_multi_line": true,
+                  "from": {
+                    "line": 68,
+                    "linechar": 6
+                  },
+                  "to": {
+                    "line": 68,
+                    "linechar": 14
+                  }
+                }
+              ],
+              "before_unit": [],
+              "before_1": [
+                {
+                  "comment": " i ",
+                  "is_multi_line": true,
+                  "from": {
+                    "line": 68,
+                    "linechar": 16
+                  },
+                  "to": {
+                    "line": 68,
+                    "linechar": 24
+                  }
+                }
+              ]
+            },
+            "from": {
+              "line": 68,
+              "linechar": 0
+            },
+            "to": {
+              "line": 73,
+              "linechar": 0
+            }
+          }
+        ],
+        "default": {
+          "statements": [
+            {
+              "Expression": {
+                "expression": {
+                  "FunctionCall": {
+                    "function": {
+                      "ScopeResolution": {
+                        "scope": null,
+                        "accessor": "print",
+                        "from": {
+                          "line": 75,
+                          "linechar": 0
+                        },
+                        "to": {
+                          "line": 75,
+                          "linechar": 11
+                        }
+                      }
+                    },
+                    "arguments": [
+                      {
+                        "StringLiteral": {
+                          "value": "default",
+                          "from": {
+                            "line": 75,
+                            "linechar": 12
+                          },
+                          "to": {
+                            "line": 75,
+                            "linechar": 21
+                          }
+                        }
+                      }
+                    ],
+                    "from": {
+                      "line": 75,
+                      "linechar": 0
+                    },
+                    "to": {
+                      "line": 75,
+                      "linechar": 22
+                    }
+                  }
+                },
+                "from": {
+                  "line": 75,
+                  "linechar": 0
+                },
+                "to": {
+                  "line": 75,
+                  "linechar": 22
+                }
+              }
+            },
+            {
+              "Break": {
+                "from": {
+                  "line": 76,
+                  "linechar": 0
+                },
+                "to": {
+                  "line": 76,
+                  "linechar": 9
+                }
+              }
+            }
+          ],
+          "from": {
+            "line": 73,
+            "linechar": 18
+          },
+          "to": {
+            "line": 77,
+            "linechar": 0
+          }
+        },
+        "from": {
+          "line": 61,
+          "linechar": 7
+        },
+        "to": {
+          "line": 78,
+          "linechar": 0
+        }
+      }
+    },
+    {
+      "Comment": [
+        {
+          "comment": " comment between",
+          "is_multi_line": false,
+          "from": {
+            "line": 79,
+            "linechar": 0
+          },
+          "to": {
+            "line": 79,
+            "linechar": 18
+          }
+        }
+      ]
+    },
+    {
+      "Comment": [
+        {
+          "comment": " series",
+          "is_multi_line": false,
+          "from": {
+            "line": 81,
+            "linechar": 0
+          },
+          "to": {
+            "line": 81,
+            "linechar": 9
+          }
+        },
+        {
+          "comment": " of",
+          "is_multi_line": false,
+          "from": {
+            "line": 82,
+            "linechar": 0
+          },
+          "to": {
+            "line": 82,
+            "linechar": 5
+          }
+        },
+        {
+          "comment": " single",
+          "is_multi_line": false,
+          "from": {
+            "line": 83,
+            "linechar": 0
+          },
+          "to": {
+            "line": 83,
+            "linechar": 9
+          }
+        },
+        {
+          "comment": " line",
+          "is_multi_line": false,
+          "from": {
+            "line": 84,
+            "linechar": 0
+          },
+          "to": {
+            "line": 84,
+            "linechar": 7
+          }
+        },
+        {
+          "comment": " comments",
+          "is_multi_line": false,
+          "from": {
+            "line": 85,
+            "linechar": 0
+          },
+          "to": {
+            "line": 85,
+            "linechar": 11
+          }
+        }
+      ]
     }
   ],
   "from": {
@@ -309,7 +1753,7 @@
     "linechar": 0
   },
   "to": {
-    "line": 18,
+    "line": 86,
     "linechar": 0
   }
 }

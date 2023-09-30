@@ -21,8 +21,8 @@ pub enum IndentationType {
 }
 
 pub struct PrinterSettings {
-    indentation: IndentationType,
-    indentation_size: usize,
+    pub indentation: IndentationType,
+    pub indentation_size: usize,
 }
 
 pub struct Printer {
@@ -111,6 +111,14 @@ impl Printer {
             Statement::FunctionDeclaration(stat) => self.print_function_declaration(stat),
             Statement::Class(stat) => self.print_class_definition(stat),
             Statement::Enum(stat) => self.print_enum(stat),
+            Statement::Comment(stat) => {
+                for (i, comment) in stat.iter().enumerate() {
+                    self.print_comment(comment);
+                    if i < stat.len() - 1 {
+                        self.newline_and_indent();
+                    }
+                }
+            }
         }
     }
 
@@ -442,12 +450,12 @@ impl Printer {
     }
 
     fn print_function_declaration(&mut self, expr: &FunctionDeclaration) {
-        self.print_token(Token::Keyword(Keyword::Function));
-        self.print_space();
         if expr.is_static {
             self.print_token(Token::Keyword(Keyword::Static));
             self.print_space();
         }
+        self.print_token(Token::Keyword(Keyword::Function));
+        self.print_space();
         if let Some(name) = &expr.name {
             self.print_expression(name);
         }
@@ -499,12 +507,18 @@ impl Printer {
         self.print_token(Token::LeftBrace);
         self.indentation_level += 1;
         self.newline_and_indent();
+        let mut newline_after_last = false;
         for (i, member) in expr.members.iter().enumerate() {
             if i > 0 {
                 self.newline_and_indent();
             }
             match member {
                 ClassMemberDeclaration::FieldDeclaration(field) => {
+                    if newline_after_last {
+                        self.newline_and_indent();
+                    }
+                    newline_after_last = false;
+
                     if field.is_static {
                         self.print_token(Token::Keyword(Keyword::Static));
                         self.print_space();
@@ -517,9 +531,19 @@ impl Printer {
                     self.print_expression(&field.expression);
                 }
                 ClassMemberDeclaration::MethodDeclaration(method) => {
+                    if i > 0 {
+                        self.newline_and_indent();
+                    }
+                    newline_after_last = true;
+
                     self.print_function_declaration(method);
                 }
                 ClassMemberDeclaration::ConstructorDeclaration(constructor) => {
+                    if i > 0 {
+                        self.newline_and_indent();
+                    }
+                    newline_after_last = true;
+
                     self.print_token(Token::Keyword(Keyword::Constructor));
                     self.print_token(Token::LeftParenthesis);
                     for (i, param) in constructor.parameters.iter().enumerate() {
@@ -607,12 +631,18 @@ impl Printer {
 
     fn print_array(&mut self, expr: &ArrayExpression) {
         self.print_token(Token::LeftBracket);
+        self.indentation_level += 1;
         for (i, element) in expr.elements.iter().enumerate() {
             if i > 0 {
                 self.print_token(Token::Operator(Operator::Comma));
-                self.print_space();
             }
+
+            self.newline_and_indent();
             self.print_expression(element);
+        }
+        self.indentation_level -= 1;
+        if expr.elements.len() > 0 {
+            self.newline_and_indent();
         }
         self.print_token(Token::RightBracket);
     }
@@ -637,13 +667,22 @@ impl Printer {
 
     fn print_table(&mut self, expr: &TableExpression) {
         self.print_token(Token::LeftBrace);
+        self.indentation_level += 1;
+
+        let mut newline_after_last = false;
         for (i, elm) in expr.entries.iter().enumerate() {
             if i > 0 {
                 self.print_token(Token::Operator(Operator::Comma));
-                self.print_space();
             }
+            self.newline_and_indent();
+
             match elm {
                 crate::squirrel_ast::TableEntry::Field(f) => {
+                    if newline_after_last {
+                        self.newline_and_indent();
+                    }
+                    newline_after_last = false;
+
                     self.print_expression(&f.name);
                     self.print_space();
                     self.print_token(Token::Operator(Operator::Assign));
@@ -651,9 +690,19 @@ impl Printer {
                     self.print_expression(&f.expression);
                 }
                 crate::squirrel_ast::TableEntry::Function(f) => {
+                    if i > 0 {
+                        self.newline_and_indent();
+                    }
+                    newline_after_last = true;
+
                     self.print_function_declaration(&f.function);
                 }
                 crate::squirrel_ast::TableEntry::FieldWithExpressionKey(f) => {
+                    if i > 0 {
+                        self.newline_and_indent();
+                    }
+                    newline_after_last = true;
+
                     self.print_token(Token::LeftBracket);
                     self.print_expression(&f.key);
                     self.print_token(Token::RightBracket);
@@ -664,6 +713,10 @@ impl Printer {
                 }
             }
         }
+        self.indentation_level -= 1;
+        if !expr.entries.is_empty() {
+            self.newline_and_indent();
+        }
         self.print_token(Token::RightBrace);
     }
 
@@ -672,7 +725,13 @@ impl Printer {
     }
 
     fn print_float_literal(&mut self, expr: &FloatLiteralExpression) {
-        self.print_token(Token::Float(expr.value));
+        let num_str = if expr.value.fract() == 0.0 {
+            format!("{}.0", expr.value)
+        } else {
+            format!("{}", expr.value)
+        };
+
+        self.buffer.push_str(num_str.as_str());
     }
 
     fn print_multi_line_string_literal(&mut self, expr: &MutliLineStringLiteralExpression) {
@@ -705,6 +764,14 @@ impl Printer {
     fn print_unary_operator(&mut self, expr: &UnaryOperatorExpression) {
         self.print_token(Token::Operator(expr.operator.clone()));
         self.print_expression(&expr.expression);
+    }
+
+    fn print_comment(&mut self, stat: &crate::squirrel_ast::CommentStatement) {
+        if stat.is_multi_line {
+            self.buffer.push_str(&format!("/*{}*/", stat.comment));
+        } else {
+            self.buffer.push_str(&format!("//{}", stat.comment));
+        }
     }
 }
 

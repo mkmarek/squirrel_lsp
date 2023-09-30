@@ -1,580 +1,3576 @@
 [
   {
     "token": {
-      "Keyword": "Function"
+      "Comment": " Some comment here"
     },
     "from": {
       "line": 0,
       "linechar": 0
     },
     "to": {
+      "line": 0,
+      "linechar": 20
+    },
+    "index": 0
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 0,
+      "linechar": 20
+    },
+    "to": {
       "line": 1,
-      "linechar": 8
+      "linechar": 0
+    },
+    "index": 1
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 1,
+      "linechar": 0
+    },
+    "to": {
+      "line": 2,
+      "linechar": 0
     },
     "index": 1
   },
   {
     "token": {
-      "Identifier": "foo"
+      "Comment": " Some other comment here"
     },
     "from": {
-      "line": 1,
-      "linechar": 9
+      "line": 2,
+      "linechar": 0
     },
     "to": {
-      "line": 1,
-      "linechar": 12
+      "line": 2,
+      "linechar": 26
+    },
+    "index": 1
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 2,
+      "linechar": 26
+    },
+    "to": {
+      "line": 3,
+      "linechar": 0
     },
     "index": 2
   },
   {
-    "token": "LeftParenthesis",
+    "token": {
+      "MultiLineComment": " and here "
+    },
     "from": {
-      "line": 1,
-      "linechar": 12
+      "line": 3,
+      "linechar": 0
     },
     "to": {
-      "line": 1,
-      "linechar": 13
+      "line": 3,
+      "linechar": 14
+    },
+    "index": 2
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 3,
+      "linechar": 14
+    },
+    "to": {
+      "line": 4,
+      "linechar": 0
     },
     "index": 3
   },
   {
-    "token": "RightParenthesis",
+    "token": "Newline",
     "from": {
-      "line": 1,
-      "linechar": 13
+      "line": 4,
+      "linechar": 0
     },
     "to": {
-      "line": 1,
-      "linechar": 14
+      "line": 5,
+      "linechar": 0
+    },
+    "index": 3
+  },
+  {
+    "token": {
+      "MultiLineComment": " a multiline comment here\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam\n\ndolor metus, ultrices ut pretium eu, ultricies ut nisi. Nulla\n"
+    },
+    "from": {
+      "line": 5,
+      "linechar": 0
+    },
+    "to": {
+      "line": 10,
+      "linechar": 2
+    },
+    "index": 3
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 10,
+      "linechar": 2
+    },
+    "to": {
+      "line": 11,
+      "linechar": 0
     },
     "index": 4
   },
   {
-    "token": "LeftBrace",
+    "token": "Newline",
     "from": {
-      "line": 1,
-      "linechar": 15
+      "line": 11,
+      "linechar": 0
     },
     "to": {
-      "line": 1,
-      "linechar": 16
+      "line": 12,
+      "linechar": 0
+    },
+    "index": 4
+  },
+  {
+    "token": {
+      "Comment": " comment before block"
+    },
+    "from": {
+      "line": 12,
+      "linechar": 0
+    },
+    "to": {
+      "line": 12,
+      "linechar": 23
+    },
+    "index": 4
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 12,
+      "linechar": 23
+    },
+    "to": {
+      "line": 13,
+      "linechar": 0
+    },
+    "index": 5
+  },
+  {
+    "token": "LeftBrace",
+    "from": {
+      "line": 13,
+      "linechar": 0
+    },
+    "to": {
+      "line": 13,
+      "linechar": 1
     },
     "index": 5
   },
   {
     "token": "Newline",
     "from": {
-      "line": 1,
-      "linechar": 16
+      "line": 13,
+      "linechar": 1
     },
     "to": {
-      "line": 2,
+      "line": 14,
       "linechar": 0
     },
     "index": 6
   },
   {
     "token": {
-      "Keyword": "Return"
+      "Comment": " comment inside block"
     },
     "from": {
-      "line": 2,
-      "linechar": 2
-    },
-    "to": {
-      "line": 3,
-      "linechar": 8
-    },
-    "index": 7
-  },
-  {
-    "token": {
-      "Integer": 1
-    },
-    "from": {
-      "line": 3,
-      "linechar": 9
-    },
-    "to": {
-      "line": 3,
-      "linechar": 29
-    },
-    "index": 9
-  },
-  {
-    "token": {
-      "Operator": "Plus"
-    },
-    "from": {
-      "line": 3,
-      "linechar": 30
-    },
-    "to": {
-      "line": 3,
-      "linechar": 46
-    },
-    "index": 11
-  },
-  {
-    "token": {
-      "Integer": 2
-    },
-    "from": {
-      "line": 3,
-      "linechar": 47
-    },
-    "to": {
-      "line": 3,
-      "linechar": 48
-    },
-    "index": 12
-  },
-  {
-    "token": {
-      "Operator": "Plus"
-    },
-    "from": {
-      "line": 3,
-      "linechar": 49
-    },
-    "to": {
-      "line": 3,
-      "linechar": 65
-    },
-    "index": 14
-  },
-  {
-    "token": {
-      "Integer": 3
-    },
-    "from": {
-      "line": 3,
-      "linechar": 66
-    },
-    "to": {
-      "line": 3,
-      "linechar": 67
-    },
-    "index": 15
-  },
-  {
-    "token": "Semicolon",
-    "from": {
-      "line": 3,
-      "linechar": 68
-    },
-    "to": {
-      "line": 3,
-      "linechar": 83
-    },
-    "index": 17
-  },
-  {
-    "token": "Newline",
-    "from": {
-      "line": 3,
-      "linechar": 83
-    },
-    "to": {
-      "line": 4,
-      "linechar": 0
-    },
-    "index": 18
-  },
-  {
-    "token": "RightBrace",
-    "from": {
-      "line": 4,
-      "linechar": 0
-    },
-    "to": {
-      "line": 4,
-      "linechar": 1
-    },
-    "index": 18
-  },
-  {
-    "token": "Newline",
-    "from": {
-      "line": 4,
-      "linechar": 1
-    },
-    "to": {
-      "line": 5,
-      "linechar": 0
-    },
-    "index": 19
-  },
-  {
-    "token": "Newline",
-    "from": {
-      "line": 5,
-      "linechar": 0
-    },
-    "to": {
-      "line": 6,
-      "linechar": 0
-    },
-    "index": 19
-  },
-  {
-    "token": {
-      "Keyword": "Class"
-    },
-    "from": {
-      "line": 6,
-      "linechar": 0
-    },
-    "to": {
-      "line": 7,
-      "linechar": 5
-    },
-    "index": 20
-  },
-  {
-    "token": {
-      "Identifier": "Foo"
-    },
-    "from": {
-      "line": 7,
-      "linechar": 6
-    },
-    "to": {
-      "line": 7,
-      "linechar": 9
-    },
-    "index": 21
-  },
-  {
-    "token": "LeftBrace",
-    "from": {
-      "line": 7,
-      "linechar": 10
-    },
-    "to": {
-      "line": 7,
-      "linechar": 11
-    },
-    "index": 22
-  },
-  {
-    "token": "Newline",
-    "from": {
-      "line": 7,
-      "linechar": 11
-    },
-    "to": {
-      "line": 8,
-      "linechar": 0
-    },
-    "index": 23
-  },
-  {
-    "token": {
-      "Keyword": "Constructor"
-    },
-    "from": {
-      "line": 8,
-      "linechar": 2
-    },
-    "to": {
-      "line": 9,
-      "linechar": 13
-    },
-    "index": 24
-  },
-  {
-    "token": "LeftParenthesis",
-    "from": {
-      "line": 9,
-      "linechar": 13
-    },
-    "to": {
-      "line": 9,
-      "linechar": 14
-    },
-    "index": 25
-  },
-  {
-    "token": "RightParenthesis",
-    "from": {
-      "line": 9,
-      "linechar": 14
-    },
-    "to": {
-      "line": 9,
-      "linechar": 15
-    },
-    "index": 26
-  },
-  {
-    "token": "LeftBrace",
-    "from": {
-      "line": 9,
-      "linechar": 16
-    },
-    "to": {
-      "line": 9,
-      "linechar": 17
-    },
-    "index": 27
-  },
-  {
-    "token": "Newline",
-    "from": {
-      "line": 9,
-      "linechar": 17
-    },
-    "to": {
-      "line": 10,
-      "linechar": 0
-    },
-    "index": 28
-  },
-  {
-    "token": {
-      "Keyword": "This"
-    },
-    "from": {
-      "line": 10,
-      "linechar": 4
-    },
-    "to": {
-      "line": 11,
-      "linechar": 8
-    },
-    "index": 29
-  },
-  {
-    "token": "Dot",
-    "from": {
-      "line": 11,
-      "linechar": 8
-    },
-    "to": {
-      "line": 11,
-      "linechar": 23
-    },
-    "index": 31
-  },
-  {
-    "token": {
-      "Identifier": "foo"
-    },
-    "from": {
-      "line": 11,
-      "linechar": 23
-    },
-    "to": {
-      "line": 11,
-      "linechar": 26
-    },
-    "index": 32
-  },
-  {
-    "token": {
-      "Operator": "Assign"
-    },
-    "from": {
-      "line": 11,
-      "linechar": 27
-    },
-    "to": {
-      "line": 11,
-      "linechar": 43
-    },
-    "index": 34
-  },
-  {
-    "token": {
-      "Integer": 1
-    },
-    "from": {
-      "line": 11,
-      "linechar": 44
-    },
-    "to": {
-      "line": 11,
-      "linechar": 45
-    },
-    "index": 35
-  },
-  {
-    "token": "Semicolon",
-    "from": {
-      "line": 11,
-      "linechar": 45
-    },
-    "to": {
-      "line": 11,
-      "linechar": 46
-    },
-    "index": 36
-  },
-  {
-    "token": "RightBrace",
-    "from": {
-      "line": 11,
-      "linechar": 47
-    },
-    "to": {
-      "line": 12,
-      "linechar": 3
-    },
-    "index": 38
-  },
-  {
-    "token": "Newline",
-    "from": {
-      "line": 12,
-      "linechar": 3
-    },
-    "to": {
-      "line": 13,
-      "linechar": 0
-    },
-    "index": 39
-  },
-  {
-    "token": "RightBrace",
-    "from": {
-      "line": 13,
-      "linechar": 0
-    },
-    "to": {
-      "line": 13,
-      "linechar": 1
-    },
-    "index": 39
-  },
-  {
-    "token": "Newline",
-    "from": {
-      "line": 13,
-      "linechar": 1
-    },
-    "to": {
       "line": 14,
       "linechar": 0
     },
-    "index": 40
+    "to": {
+      "line": 14,
+      "linechar": 23
+    },
+    "index": 6
   },
   {
     "token": "Newline",
     "from": {
       "line": 14,
-      "linechar": 0
+      "linechar": 23
     },
     "to": {
       "line": 15,
       "linechar": 0
     },
+    "index": 7
+  },
+  {
+    "token": "RightBrace",
+    "from": {
+      "line": 15,
+      "linechar": 0
+    },
+    "to": {
+      "line": 15,
+      "linechar": 1
+    },
+    "index": 7
+  },
+  {
+    "token": {
+      "Comment": " comment after block"
+    },
+    "from": {
+      "line": 15,
+      "linechar": 2
+    },
+    "to": {
+      "line": 15,
+      "linechar": 24
+    },
+    "index": 8
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 15,
+      "linechar": 24
+    },
+    "to": {
+      "line": 16,
+      "linechar": 0
+    },
+    "index": 9
+  },
+  {
+    "token": {
+      "Comment": " another comment"
+    },
+    "from": {
+      "line": 16,
+      "linechar": 0
+    },
+    "to": {
+      "line": 16,
+      "linechar": 18
+    },
+    "index": 9
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 16,
+      "linechar": 18
+    },
+    "to": {
+      "line": 17,
+      "linechar": 0
+    },
+    "index": 10
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 17,
+      "linechar": 0
+    },
+    "to": {
+      "line": 18,
+      "linechar": 0
+    },
+    "index": 10
+  },
+  {
+    "token": {
+      "Comment": " comment between"
+    },
+    "from": {
+      "line": 18,
+      "linechar": 0
+    },
+    "to": {
+      "line": 18,
+      "linechar": 18
+    },
+    "index": 10
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 18,
+      "linechar": 18
+    },
+    "to": {
+      "line": 19,
+      "linechar": 0
+    },
+    "index": 11
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 19,
+      "linechar": 0
+    },
+    "to": {
+      "line": 20,
+      "linechar": 0
+    },
+    "index": 11
+  },
+  {
+    "token": {
+      "Comment": " comment before if statement"
+    },
+    "from": {
+      "line": 20,
+      "linechar": 0
+    },
+    "to": {
+      "line": 20,
+      "linechar": 30
+    },
+    "index": 11
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 20,
+      "linechar": 30
+    },
+    "to": {
+      "line": 21,
+      "linechar": 0
+    },
+    "index": 12
+  },
+  {
+    "token": {
+      "MultiLineComment": " a "
+    },
+    "from": {
+      "line": 21,
+      "linechar": 0
+    },
+    "to": {
+      "line": 21,
+      "linechar": 7
+    },
+    "index": 12
+  },
+  {
+    "token": {
+      "Keyword": "If"
+    },
+    "from": {
+      "line": 21,
+      "linechar": 7
+    },
+    "to": {
+      "line": 21,
+      "linechar": 9
+    },
+    "index": 13
+  },
+  {
+    "token": {
+      "MultiLineComment": " b "
+    },
+    "from": {
+      "line": 21,
+      "linechar": 10
+    },
+    "to": {
+      "line": 21,
+      "linechar": 17
+    },
+    "index": 14
+  },
+  {
+    "token": "LeftParenthesis",
+    "from": {
+      "line": 21,
+      "linechar": 18
+    },
+    "to": {
+      "line": 21,
+      "linechar": 19
+    },
+    "index": 15
+  },
+  {
+    "token": {
+      "Keyword": "True"
+    },
+    "from": {
+      "line": 21,
+      "linechar": 19
+    },
+    "to": {
+      "line": 21,
+      "linechar": 23
+    },
+    "index": 16
+  },
+  {
+    "token": "RightParenthesis",
+    "from": {
+      "line": 21,
+      "linechar": 23
+    },
+    "to": {
+      "line": 21,
+      "linechar": 24
+    },
+    "index": 17
+  },
+  {
+    "token": {
+      "MultiLineComment": "c"
+    },
+    "from": {
+      "line": 21,
+      "linechar": 25
+    },
+    "to": {
+      "line": 21,
+      "linechar": 30
+    },
+    "index": 18
+  },
+  {
+    "token": "LeftBrace",
+    "from": {
+      "line": 21,
+      "linechar": 31
+    },
+    "to": {
+      "line": 21,
+      "linechar": 32
+    },
+    "index": 19
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 21,
+      "linechar": 32
+    },
+    "to": {
+      "line": 22,
+      "linechar": 0
+    },
+    "index": 20
+  },
+  {
+    "token": {
+      "Comment": " comment inside if statement"
+    },
+    "from": {
+      "line": 22,
+      "linechar": 2
+    },
+    "to": {
+      "line": 22,
+      "linechar": 32
+    },
+    "index": 20
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 22,
+      "linechar": 32
+    },
+    "to": {
+      "line": 23,
+      "linechar": 0
+    },
+    "index": 21
+  },
+  {
+    "token": "DoubleColon",
+    "from": {
+      "line": 23,
+      "linechar": 2
+    },
+    "to": {
+      "line": 23,
+      "linechar": 4
+    },
+    "index": 21
+  },
+  {
+    "token": {
+      "Identifier": "print"
+    },
+    "from": {
+      "line": 23,
+      "linechar": 4
+    },
+    "to": {
+      "line": 23,
+      "linechar": 9
+    },
+    "index": 22
+  },
+  {
+    "token": "LeftParenthesis",
+    "from": {
+      "line": 23,
+      "linechar": 9
+    },
+    "to": {
+      "line": 23,
+      "linechar": 10
+    },
+    "index": 23
+  },
+  {
+    "token": {
+      "String": "true"
+    },
+    "from": {
+      "line": 23,
+      "linechar": 10
+    },
+    "to": {
+      "line": 23,
+      "linechar": 16
+    },
+    "index": 24
+  },
+  {
+    "token": "RightParenthesis",
+    "from": {
+      "line": 23,
+      "linechar": 16
+    },
+    "to": {
+      "line": 23,
+      "linechar": 17
+    },
+    "index": 25
+  },
+  {
+    "token": "Semicolon",
+    "from": {
+      "line": 23,
+      "linechar": 17
+    },
+    "to": {
+      "line": 23,
+      "linechar": 18
+    },
+    "index": 26
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 23,
+      "linechar": 18
+    },
+    "to": {
+      "line": 24,
+      "linechar": 0
+    },
+    "index": 27
+  },
+  {
+    "token": "RightBrace",
+    "from": {
+      "line": 24,
+      "linechar": 0
+    },
+    "to": {
+      "line": 24,
+      "linechar": 1
+    },
+    "index": 27
+  },
+  {
+    "token": {
+      "Comment": " comment after if statement"
+    },
+    "from": {
+      "line": 24,
+      "linechar": 2
+    },
+    "to": {
+      "line": 24,
+      "linechar": 31
+    },
+    "index": 28
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 24,
+      "linechar": 31
+    },
+    "to": {
+      "line": 25,
+      "linechar": 0
+    },
+    "index": 29
+  },
+  {
+    "token": {
+      "Comment": " another comment"
+    },
+    "from": {
+      "line": 25,
+      "linechar": 0
+    },
+    "to": {
+      "line": 25,
+      "linechar": 18
+    },
+    "index": 29
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 25,
+      "linechar": 18
+    },
+    "to": {
+      "line": 26,
+      "linechar": 0
+    },
+    "index": 30
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 26,
+      "linechar": 0
+    },
+    "to": {
+      "line": 27,
+      "linechar": 0
+    },
+    "index": 30
+  },
+  {
+    "token": {
+      "Comment": " comment between"
+    },
+    "from": {
+      "line": 27,
+      "linechar": 0
+    },
+    "to": {
+      "line": 27,
+      "linechar": 18
+    },
+    "index": 30
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 27,
+      "linechar": 18
+    },
+    "to": {
+      "line": 28,
+      "linechar": 0
+    },
+    "index": 31
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 28,
+      "linechar": 0
+    },
+    "to": {
+      "line": 29,
+      "linechar": 0
+    },
+    "index": 31
+  },
+  {
+    "token": {
+      "Comment": " comment before do-while statement"
+    },
+    "from": {
+      "line": 29,
+      "linechar": 0
+    },
+    "to": {
+      "line": 29,
+      "linechar": 36
+    },
+    "index": 31
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 29,
+      "linechar": 36
+    },
+    "to": {
+      "line": 30,
+      "linechar": 0
+    },
+    "index": 32
+  },
+  {
+    "token": {
+      "MultiLineComment": " a "
+    },
+    "from": {
+      "line": 30,
+      "linechar": 0
+    },
+    "to": {
+      "line": 30,
+      "linechar": 7
+    },
+    "index": 32
+  },
+  {
+    "token": {
+      "Keyword": "Do"
+    },
+    "from": {
+      "line": 30,
+      "linechar": 7
+    },
+    "to": {
+      "line": 30,
+      "linechar": 9
+    },
+    "index": 33
+  },
+  {
+    "token": {
+      "MultiLineComment": " b "
+    },
+    "from": {
+      "line": 30,
+      "linechar": 10
+    },
+    "to": {
+      "line": 30,
+      "linechar": 17
+    },
+    "index": 34
+  },
+  {
+    "token": "LeftBrace",
+    "from": {
+      "line": 30,
+      "linechar": 18
+    },
+    "to": {
+      "line": 30,
+      "linechar": 19
+    },
+    "index": 35
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 30,
+      "linechar": 19
+    },
+    "to": {
+      "line": 31,
+      "linechar": 0
+    },
+    "index": 36
+  },
+  {
+    "token": {
+      "Comment": " comment inside do-while statement"
+    },
+    "from": {
+      "line": 31,
+      "linechar": 2
+    },
+    "to": {
+      "line": 31,
+      "linechar": 38
+    },
+    "index": 36
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 31,
+      "linechar": 38
+    },
+    "to": {
+      "line": 32,
+      "linechar": 0
+    },
+    "index": 37
+  },
+  {
+    "token": "DoubleColon",
+    "from": {
+      "line": 32,
+      "linechar": 2
+    },
+    "to": {
+      "line": 32,
+      "linechar": 4
+    },
+    "index": 37
+  },
+  {
+    "token": {
+      "Identifier": "print"
+    },
+    "from": {
+      "line": 32,
+      "linechar": 4
+    },
+    "to": {
+      "line": 32,
+      "linechar": 9
+    },
+    "index": 38
+  },
+  {
+    "token": "LeftParenthesis",
+    "from": {
+      "line": 32,
+      "linechar": 9
+    },
+    "to": {
+      "line": 32,
+      "linechar": 10
+    },
+    "index": 39
+  },
+  {
+    "token": {
+      "String": "true"
+    },
+    "from": {
+      "line": 32,
+      "linechar": 10
+    },
+    "to": {
+      "line": 32,
+      "linechar": 16
+    },
     "index": 40
+  },
+  {
+    "token": "RightParenthesis",
+    "from": {
+      "line": 32,
+      "linechar": 16
+    },
+    "to": {
+      "line": 32,
+      "linechar": 17
+    },
+    "index": 41
+  },
+  {
+    "token": "Semicolon",
+    "from": {
+      "line": 32,
+      "linechar": 17
+    },
+    "to": {
+      "line": 32,
+      "linechar": 18
+    },
+    "index": 42
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 32,
+      "linechar": 18
+    },
+    "to": {
+      "line": 33,
+      "linechar": 0
+    },
+    "index": 43
+  },
+  {
+    "token": "RightBrace",
+    "from": {
+      "line": 33,
+      "linechar": 0
+    },
+    "to": {
+      "line": 33,
+      "linechar": 1
+    },
+    "index": 43
+  },
+  {
+    "token": {
+      "MultiLineComment": "c"
+    },
+    "from": {
+      "line": 33,
+      "linechar": 2
+    },
+    "to": {
+      "line": 33,
+      "linechar": 7
+    },
+    "index": 44
+  },
+  {
+    "token": {
+      "Keyword": "While"
+    },
+    "from": {
+      "line": 33,
+      "linechar": 8
+    },
+    "to": {
+      "line": 33,
+      "linechar": 13
+    },
+    "index": 45
+  },
+  {
+    "token": {
+      "MultiLineComment": "d"
+    },
+    "from": {
+      "line": 33,
+      "linechar": 14
+    },
+    "to": {
+      "line": 33,
+      "linechar": 19
+    },
+    "index": 46
+  },
+  {
+    "token": "LeftParenthesis",
+    "from": {
+      "line": 33,
+      "linechar": 20
+    },
+    "to": {
+      "line": 33,
+      "linechar": 21
+    },
+    "index": 47
+  },
+  {
+    "token": {
+      "Keyword": "True"
+    },
+    "from": {
+      "line": 33,
+      "linechar": 21
+    },
+    "to": {
+      "line": 33,
+      "linechar": 25
+    },
+    "index": 48
+  },
+  {
+    "token": "RightParenthesis",
+    "from": {
+      "line": 33,
+      "linechar": 25
+    },
+    "to": {
+      "line": 33,
+      "linechar": 26
+    },
+    "index": 49
+  },
+  {
+    "token": {
+      "MultiLineComment": "e"
+    },
+    "from": {
+      "line": 33,
+      "linechar": 27
+    },
+    "to": {
+      "line": 33,
+      "linechar": 32
+    },
+    "index": 50
+  },
+  {
+    "token": {
+      "Comment": " comment after do-while statement"
+    },
+    "from": {
+      "line": 33,
+      "linechar": 33
+    },
+    "to": {
+      "line": 33,
+      "linechar": 68
+    },
+    "index": 51
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 33,
+      "linechar": 68
+    },
+    "to": {
+      "line": 34,
+      "linechar": 0
+    },
+    "index": 52
+  },
+  {
+    "token": {
+      "Comment": " another comment"
+    },
+    "from": {
+      "line": 34,
+      "linechar": 0
+    },
+    "to": {
+      "line": 34,
+      "linechar": 18
+    },
+    "index": 52
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 34,
+      "linechar": 18
+    },
+    "to": {
+      "line": 35,
+      "linechar": 0
+    },
+    "index": 53
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 35,
+      "linechar": 0
+    },
+    "to": {
+      "line": 36,
+      "linechar": 0
+    },
+    "index": 53
+  },
+  {
+    "token": {
+      "Comment": " comment between"
+    },
+    "from": {
+      "line": 36,
+      "linechar": 0
+    },
+    "to": {
+      "line": 36,
+      "linechar": 18
+    },
+    "index": 53
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 36,
+      "linechar": 18
+    },
+    "to": {
+      "line": 37,
+      "linechar": 0
+    },
+    "index": 54
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 37,
+      "linechar": 0
+    },
+    "to": {
+      "line": 38,
+      "linechar": 0
+    },
+    "index": 54
+  },
+  {
+    "token": {
+      "Comment": " comment before while statement"
+    },
+    "from": {
+      "line": 38,
+      "linechar": 0
+    },
+    "to": {
+      "line": 38,
+      "linechar": 33
+    },
+    "index": 54
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 38,
+      "linechar": 33
+    },
+    "to": {
+      "line": 39,
+      "linechar": 0
+    },
+    "index": 55
+  },
+  {
+    "token": {
+      "MultiLineComment": " a "
+    },
+    "from": {
+      "line": 39,
+      "linechar": 0
+    },
+    "to": {
+      "line": 39,
+      "linechar": 7
+    },
+    "index": 55
+  },
+  {
+    "token": {
+      "Keyword": "While"
+    },
+    "from": {
+      "line": 39,
+      "linechar": 7
+    },
+    "to": {
+      "line": 39,
+      "linechar": 12
+    },
+    "index": 56
+  },
+  {
+    "token": {
+      "MultiLineComment": " b "
+    },
+    "from": {
+      "line": 39,
+      "linechar": 13
+    },
+    "to": {
+      "line": 39,
+      "linechar": 20
+    },
+    "index": 57
+  },
+  {
+    "token": "LeftParenthesis",
+    "from": {
+      "line": 39,
+      "linechar": 21
+    },
+    "to": {
+      "line": 39,
+      "linechar": 22
+    },
+    "index": 58
+  },
+  {
+    "token": {
+      "Keyword": "True"
+    },
+    "from": {
+      "line": 39,
+      "linechar": 22
+    },
+    "to": {
+      "line": 39,
+      "linechar": 26
+    },
+    "index": 59
+  },
+  {
+    "token": "RightParenthesis",
+    "from": {
+      "line": 39,
+      "linechar": 26
+    },
+    "to": {
+      "line": 39,
+      "linechar": 27
+    },
+    "index": 60
+  },
+  {
+    "token": {
+      "MultiLineComment": "c"
+    },
+    "from": {
+      "line": 39,
+      "linechar": 28
+    },
+    "to": {
+      "line": 39,
+      "linechar": 33
+    },
+    "index": 61
+  },
+  {
+    "token": "LeftBrace",
+    "from": {
+      "line": 39,
+      "linechar": 34
+    },
+    "to": {
+      "line": 39,
+      "linechar": 35
+    },
+    "index": 62
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 39,
+      "linechar": 35
+    },
+    "to": {
+      "line": 40,
+      "linechar": 0
+    },
+    "index": 63
+  },
+  {
+    "token": {
+      "Comment": " comment inside while statement"
+    },
+    "from": {
+      "line": 40,
+      "linechar": 2
+    },
+    "to": {
+      "line": 40,
+      "linechar": 35
+    },
+    "index": 63
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 40,
+      "linechar": 35
+    },
+    "to": {
+      "line": 41,
+      "linechar": 0
+    },
+    "index": 64
+  },
+  {
+    "token": "DoubleColon",
+    "from": {
+      "line": 41,
+      "linechar": 2
+    },
+    "to": {
+      "line": 41,
+      "linechar": 4
+    },
+    "index": 64
+  },
+  {
+    "token": {
+      "Identifier": "print"
+    },
+    "from": {
+      "line": 41,
+      "linechar": 4
+    },
+    "to": {
+      "line": 41,
+      "linechar": 9
+    },
+    "index": 65
+  },
+  {
+    "token": "LeftParenthesis",
+    "from": {
+      "line": 41,
+      "linechar": 9
+    },
+    "to": {
+      "line": 41,
+      "linechar": 10
+    },
+    "index": 66
+  },
+  {
+    "token": {
+      "String": "true"
+    },
+    "from": {
+      "line": 41,
+      "linechar": 10
+    },
+    "to": {
+      "line": 41,
+      "linechar": 16
+    },
+    "index": 67
+  },
+  {
+    "token": "RightParenthesis",
+    "from": {
+      "line": 41,
+      "linechar": 16
+    },
+    "to": {
+      "line": 41,
+      "linechar": 17
+    },
+    "index": 68
+  },
+  {
+    "token": "Semicolon",
+    "from": {
+      "line": 41,
+      "linechar": 17
+    },
+    "to": {
+      "line": 41,
+      "linechar": 18
+    },
+    "index": 69
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 41,
+      "linechar": 18
+    },
+    "to": {
+      "line": 42,
+      "linechar": 0
+    },
+    "index": 70
+  },
+  {
+    "token": "RightBrace",
+    "from": {
+      "line": 42,
+      "linechar": 0
+    },
+    "to": {
+      "line": 42,
+      "linechar": 1
+    },
+    "index": 70
+  },
+  {
+    "token": {
+      "MultiLineComment": "d"
+    },
+    "from": {
+      "line": 42,
+      "linechar": 2
+    },
+    "to": {
+      "line": 42,
+      "linechar": 7
+    },
+    "index": 71
+  },
+  {
+    "token": {
+      "Comment": " comment after while statement"
+    },
+    "from": {
+      "line": 42,
+      "linechar": 8
+    },
+    "to": {
+      "line": 42,
+      "linechar": 40
+    },
+    "index": 72
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 42,
+      "linechar": 40
+    },
+    "to": {
+      "line": 43,
+      "linechar": 0
+    },
+    "index": 73
+  },
+  {
+    "token": {
+      "Comment": " another comment"
+    },
+    "from": {
+      "line": 43,
+      "linechar": 0
+    },
+    "to": {
+      "line": 43,
+      "linechar": 18
+    },
+    "index": 73
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 43,
+      "linechar": 18
+    },
+    "to": {
+      "line": 44,
+      "linechar": 0
+    },
+    "index": 74
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 44,
+      "linechar": 0
+    },
+    "to": {
+      "line": 45,
+      "linechar": 0
+    },
+    "index": 74
+  },
+  {
+    "token": {
+      "Comment": " comment between"
+    },
+    "from": {
+      "line": 45,
+      "linechar": 0
+    },
+    "to": {
+      "line": 45,
+      "linechar": 18
+    },
+    "index": 74
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 45,
+      "linechar": 18
+    },
+    "to": {
+      "line": 46,
+      "linechar": 0
+    },
+    "index": 75
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 46,
+      "linechar": 0
+    },
+    "to": {
+      "line": 47,
+      "linechar": 0
+    },
+    "index": 75
+  },
+  {
+    "token": {
+      "Comment": " comment before local statement"
+    },
+    "from": {
+      "line": 47,
+      "linechar": 0
+    },
+    "to": {
+      "line": 47,
+      "linechar": 33
+    },
+    "index": 75
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 47,
+      "linechar": 33
+    },
+    "to": {
+      "line": 48,
+      "linechar": 0
+    },
+    "index": 76
+  },
+  {
+    "token": {
+      "MultiLineComment": " a "
+    },
+    "from": {
+      "line": 48,
+      "linechar": 0
+    },
+    "to": {
+      "line": 48,
+      "linechar": 7
+    },
+    "index": 76
   },
   {
     "token": {
       "Keyword": "Local"
     },
     "from": {
-      "line": 15,
-      "linechar": 0
+      "line": 48,
+      "linechar": 7
     },
     "to": {
-      "line": 16,
-      "linechar": 5
+      "line": 48,
+      "linechar": 12
     },
-    "index": 41
+    "index": 77
   },
   {
     "token": {
-      "Identifier": "foo"
+      "MultiLineComment": " b "
     },
     "from": {
-      "line": 16,
-      "linechar": 6
+      "line": 48,
+      "linechar": 13
     },
     "to": {
-      "line": 16,
-      "linechar": 9
+      "line": 48,
+      "linechar": 20
     },
-    "index": 42
+    "index": 78
+  },
+  {
+    "token": {
+      "Identifier": "x"
+    },
+    "from": {
+      "line": 48,
+      "linechar": 21
+    },
+    "to": {
+      "line": 48,
+      "linechar": 22
+    },
+    "index": 79
+  },
+  {
+    "token": {
+      "MultiLineComment": " c "
+    },
+    "from": {
+      "line": 48,
+      "linechar": 23
+    },
+    "to": {
+      "line": 48,
+      "linechar": 30
+    },
+    "index": 80
   },
   {
     "token": {
       "Operator": "Assign"
     },
     "from": {
-      "line": 16,
-      "linechar": 10
+      "line": 48,
+      "linechar": 31
     },
     "to": {
-      "line": 16,
-      "linechar": 11
+      "line": 48,
+      "linechar": 32
     },
-    "index": 43
+    "index": 81
+  },
+  {
+    "token": {
+      "MultiLineComment": " d "
+    },
+    "from": {
+      "line": 48,
+      "linechar": 33
+    },
+    "to": {
+      "line": 48,
+      "linechar": 40
+    },
+    "index": 82
   },
   {
     "token": {
       "Integer": 1
     },
     "from": {
-      "line": 16,
-      "linechar": 12
+      "line": 48,
+      "linechar": 41
     },
     "to": {
-      "line": 16,
-      "linechar": 13
+      "line": 48,
+      "linechar": 42
     },
-    "index": 44
+    "index": 83
+  },
+  {
+    "token": {
+      "MultiLineComment": " e "
+    },
+    "from": {
+      "line": 48,
+      "linechar": 43
+    },
+    "to": {
+      "line": 48,
+      "linechar": 50
+    },
+    "index": 84
+  },
+  {
+    "token": {
+      "MultiLineComment": " f "
+    },
+    "from": {
+      "line": 48,
+      "linechar": 51
+    },
+    "to": {
+      "line": 48,
+      "linechar": 58
+    },
+    "index": 85
+  },
+  {
+    "token": {
+      "Operator": "Comma"
+    },
+    "from": {
+      "line": 48,
+      "linechar": 58
+    },
+    "to": {
+      "line": 48,
+      "linechar": 59
+    },
+    "index": 86
+  },
+  {
+    "token": {
+      "MultiLineComment": " g "
+    },
+    "from": {
+      "line": 48,
+      "linechar": 60
+    },
+    "to": {
+      "line": 48,
+      "linechar": 67
+    },
+    "index": 87
+  },
+  {
+    "token": {
+      "Identifier": "y"
+    },
+    "from": {
+      "line": 48,
+      "linechar": 68
+    },
+    "to": {
+      "line": 48,
+      "linechar": 69
+    },
+    "index": 88
+  },
+  {
+    "token": {
+      "MultiLineComment": " h "
+    },
+    "from": {
+      "line": 48,
+      "linechar": 70
+    },
+    "to": {
+      "line": 48,
+      "linechar": 77
+    },
+    "index": 89
+  },
+  {
+    "token": {
+      "Operator": "Assign"
+    },
+    "from": {
+      "line": 48,
+      "linechar": 78
+    },
+    "to": {
+      "line": 48,
+      "linechar": 79
+    },
+    "index": 90
+  },
+  {
+    "token": {
+      "MultiLineComment": " i "
+    },
+    "from": {
+      "line": 48,
+      "linechar": 80
+    },
+    "to": {
+      "line": 48,
+      "linechar": 87
+    },
+    "index": 91
+  },
+  {
+    "token": {
+      "Integer": 2
+    },
+    "from": {
+      "line": 48,
+      "linechar": 88
+    },
+    "to": {
+      "line": 48,
+      "linechar": 89
+    },
+    "index": 92
+  },
+  {
+    "token": {
+      "MultiLineComment": " j "
+    },
+    "from": {
+      "line": 48,
+      "linechar": 90
+    },
+    "to": {
+      "line": 48,
+      "linechar": 97
+    },
+    "index": 93
+  },
+  {
+    "token": {
+      "MultiLineComment": " k "
+    },
+    "from": {
+      "line": 48,
+      "linechar": 98
+    },
+    "to": {
+      "line": 48,
+      "linechar": 105
+    },
+    "index": 94
+  },
+  {
+    "token": {
+      "Operator": "Comma"
+    },
+    "from": {
+      "line": 48,
+      "linechar": 105
+    },
+    "to": {
+      "line": 48,
+      "linechar": 106
+    },
+    "index": 95
+  },
+  {
+    "token": {
+      "Identifier": "z"
+    },
+    "from": {
+      "line": 48,
+      "linechar": 107
+    },
+    "to": {
+      "line": 48,
+      "linechar": 108
+    },
+    "index": 96
+  },
+  {
+    "token": {
+      "MultiLineComment": "l"
+    },
+    "from": {
+      "line": 48,
+      "linechar": 109
+    },
+    "to": {
+      "line": 48,
+      "linechar": 114
+    },
+    "index": 97
   },
   {
     "token": "Semicolon",
     "from": {
-      "line": 16,
-      "linechar": 13
+      "line": 48,
+      "linechar": 114
     },
     "to": {
-      "line": 16,
-      "linechar": 14
+      "line": 48,
+      "linechar": 115
     },
-    "index": 45
+    "index": 98
+  },
+  {
+    "token": {
+      "MultiLineComment": " m "
+    },
+    "from": {
+      "line": 48,
+      "linechar": 116
+    },
+    "to": {
+      "line": 48,
+      "linechar": 123
+    },
+    "index": 99
   },
   {
     "token": "Newline",
     "from": {
-      "line": 16,
+      "line": 48,
+      "linechar": 123
+    },
+    "to": {
+      "line": 49,
+      "linechar": 0
+    },
+    "index": 100
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 49,
+      "linechar": 0
+    },
+    "to": {
+      "line": 50,
+      "linechar": 0
+    },
+    "index": 100
+  },
+  {
+    "token": {
+      "Comment": " comment between"
+    },
+    "from": {
+      "line": 50,
+      "linechar": 0
+    },
+    "to": {
+      "line": 50,
+      "linechar": 18
+    },
+    "index": 100
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 50,
+      "linechar": 18
+    },
+    "to": {
+      "line": 51,
+      "linechar": 0
+    },
+    "index": 101
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 51,
+      "linechar": 0
+    },
+    "to": {
+      "line": 52,
+      "linechar": 0
+    },
+    "index": 101
+  },
+  {
+    "token": {
+      "Comment": " comment before foreach statement"
+    },
+    "from": {
+      "line": 52,
+      "linechar": 0
+    },
+    "to": {
+      "line": 52,
+      "linechar": 35
+    },
+    "index": 101
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 52,
+      "linechar": 35
+    },
+    "to": {
+      "line": 53,
+      "linechar": 0
+    },
+    "index": 102
+  },
+  {
+    "token": {
+      "MultiLineComment": " a "
+    },
+    "from": {
+      "line": 53,
+      "linechar": 0
+    },
+    "to": {
+      "line": 53,
+      "linechar": 7
+    },
+    "index": 102
+  },
+  {
+    "token": {
+      "Keyword": "Foreach"
+    },
+    "from": {
+      "line": 53,
+      "linechar": 7
+    },
+    "to": {
+      "line": 53,
+      "linechar": 14
+    },
+    "index": 103
+  },
+  {
+    "token": {
+      "MultiLineComment": " b "
+    },
+    "from": {
+      "line": 53,
       "linechar": 15
     },
     "to": {
-      "line": 18,
-      "linechar": 0
+      "line": 53,
+      "linechar": 22
     },
-    "index": 47
+    "index": 104
+  },
+  {
+    "token": "LeftParenthesis",
+    "from": {
+      "line": 53,
+      "linechar": 23
+    },
+    "to": {
+      "line": 53,
+      "linechar": 24
+    },
+    "index": 105
+  },
+  {
+    "token": {
+      "MultiLineComment": " c "
+    },
+    "from": {
+      "line": 53,
+      "linechar": 24
+    },
+    "to": {
+      "line": 53,
+      "linechar": 31
+    },
+    "index": 106
+  },
+  {
+    "token": {
+      "Identifier": "x"
+    },
+    "from": {
+      "line": 53,
+      "linechar": 32
+    },
+    "to": {
+      "line": 53,
+      "linechar": 33
+    },
+    "index": 107
+  },
+  {
+    "token": {
+      "MultiLineComment": "g"
+    },
+    "from": {
+      "line": 53,
+      "linechar": 34
+    },
+    "to": {
+      "line": 53,
+      "linechar": 39
+    },
+    "index": 108
+  },
+  {
+    "token": {
+      "Operator": "Comma"
+    },
+    "from": {
+      "line": 53,
+      "linechar": 39
+    },
+    "to": {
+      "line": 53,
+      "linechar": 40
+    },
+    "index": 109
+  },
+  {
+    "token": {
+      "MultiLineComment": "h"
+    },
+    "from": {
+      "line": 53,
+      "linechar": 40
+    },
+    "to": {
+      "line": 53,
+      "linechar": 45
+    },
+    "index": 110
+  },
+  {
+    "token": {
+      "Identifier": "z"
+    },
+    "from": {
+      "line": 53,
+      "linechar": 45
+    },
+    "to": {
+      "line": 53,
+      "linechar": 46
+    },
+    "index": 111
+  },
+  {
+    "token": {
+      "MultiLineComment": " d "
+    },
+    "from": {
+      "line": 53,
+      "linechar": 47
+    },
+    "to": {
+      "line": 53,
+      "linechar": 54
+    },
+    "index": 112
+  },
+  {
+    "token": {
+      "Operator": "In"
+    },
+    "from": {
+      "line": 53,
+      "linechar": 55
+    },
+    "to": {
+      "line": 53,
+      "linechar": 57
+    },
+    "index": 113
+  },
+  {
+    "token": {
+      "MultiLineComment": " e "
+    },
+    "from": {
+      "line": 53,
+      "linechar": 58
+    },
+    "to": {
+      "line": 53,
+      "linechar": 65
+    },
+    "index": 114
+  },
+  {
+    "token": {
+      "Identifier": "y"
+    },
+    "from": {
+      "line": 53,
+      "linechar": 66
+    },
+    "to": {
+      "line": 53,
+      "linechar": 67
+    },
+    "index": 115
+  },
+  {
+    "token": {
+      "MultiLineComment": " f "
+    },
+    "from": {
+      "line": 53,
+      "linechar": 68
+    },
+    "to": {
+      "line": 53,
+      "linechar": 75
+    },
+    "index": 116
+  },
+  {
+    "token": "RightParenthesis",
+    "from": {
+      "line": 53,
+      "linechar": 75
+    },
+    "to": {
+      "line": 53,
+      "linechar": 76
+    },
+    "index": 117
+  },
+  {
+    "token": {
+      "MultiLineComment": " g "
+    },
+    "from": {
+      "line": 53,
+      "linechar": 77
+    },
+    "to": {
+      "line": 53,
+      "linechar": 84
+    },
+    "index": 118
+  },
+  {
+    "token": "LeftBrace",
+    "from": {
+      "line": 53,
+      "linechar": 85
+    },
+    "to": {
+      "line": 53,
+      "linechar": 86
+    },
+    "index": 119
   },
   {
     "token": "Newline",
     "from": {
-      "line": 18,
-      "linechar": 0
+      "line": 53,
+      "linechar": 86
     },
     "to": {
-      "line": 24,
+      "line": 54,
       "linechar": 0
     },
-    "index": 48
+    "index": 120
+  },
+  {
+    "token": {
+      "Comment": " comment inside foreach statement"
+    },
+    "from": {
+      "line": 54,
+      "linechar": 2
+    },
+    "to": {
+      "line": 54,
+      "linechar": 37
+    },
+    "index": 120
   },
   {
     "token": "Newline",
     "from": {
-      "line": 24,
+      "line": 54,
+      "linechar": 37
+    },
+    "to": {
+      "line": 55,
+      "linechar": 0
+    },
+    "index": 121
+  },
+  {
+    "token": "DoubleColon",
+    "from": {
+      "line": 55,
+      "linechar": 2
+    },
+    "to": {
+      "line": 55,
+      "linechar": 4
+    },
+    "index": 121
+  },
+  {
+    "token": {
+      "Identifier": "print"
+    },
+    "from": {
+      "line": 55,
+      "linechar": 4
+    },
+    "to": {
+      "line": 55,
+      "linechar": 9
+    },
+    "index": 122
+  },
+  {
+    "token": "LeftParenthesis",
+    "from": {
+      "line": 55,
+      "linechar": 9
+    },
+    "to": {
+      "line": 55,
+      "linechar": 10
+    },
+    "index": 123
+  },
+  {
+    "token": {
+      "String": "true"
+    },
+    "from": {
+      "line": 55,
+      "linechar": 10
+    },
+    "to": {
+      "line": 55,
+      "linechar": 16
+    },
+    "index": 124
+  },
+  {
+    "token": "RightParenthesis",
+    "from": {
+      "line": 55,
+      "linechar": 16
+    },
+    "to": {
+      "line": 55,
+      "linechar": 17
+    },
+    "index": 125
+  },
+  {
+    "token": "Semicolon",
+    "from": {
+      "line": 55,
+      "linechar": 17
+    },
+    "to": {
+      "line": 55,
+      "linechar": 18
+    },
+    "index": 126
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 55,
+      "linechar": 18
+    },
+    "to": {
+      "line": 56,
+      "linechar": 0
+    },
+    "index": 127
+  },
+  {
+    "token": "RightBrace",
+    "from": {
+      "line": 56,
       "linechar": 0
     },
     "to": {
-      "line": 25,
+      "line": 56,
+      "linechar": 1
+    },
+    "index": 127
+  },
+  {
+    "token": {
+      "MultiLineComment": "h"
+    },
+    "from": {
+      "line": 56,
+      "linechar": 2
+    },
+    "to": {
+      "line": 56,
+      "linechar": 7
+    },
+    "index": 128
+  },
+  {
+    "token": {
+      "Comment": " comment after foreach statement"
+    },
+    "from": {
+      "line": 56,
+      "linechar": 8
+    },
+    "to": {
+      "line": 56,
+      "linechar": 42
+    },
+    "index": 129
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 56,
+      "linechar": 42
+    },
+    "to": {
+      "line": 57,
       "linechar": 0
     },
-    "index": 48
+    "index": 130
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 57,
+      "linechar": 0
+    },
+    "to": {
+      "line": 58,
+      "linechar": 0
+    },
+    "index": 130
+  },
+  {
+    "token": {
+      "Comment": " comment between"
+    },
+    "from": {
+      "line": 58,
+      "linechar": 0
+    },
+    "to": {
+      "line": 58,
+      "linechar": 18
+    },
+    "index": 130
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 58,
+      "linechar": 18
+    },
+    "to": {
+      "line": 59,
+      "linechar": 0
+    },
+    "index": 131
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 59,
+      "linechar": 0
+    },
+    "to": {
+      "line": 60,
+      "linechar": 0
+    },
+    "index": 131
+  },
+  {
+    "token": {
+      "Comment": " comment before switch statement"
+    },
+    "from": {
+      "line": 60,
+      "linechar": 0
+    },
+    "to": {
+      "line": 60,
+      "linechar": 34
+    },
+    "index": 131
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 60,
+      "linechar": 34
+    },
+    "to": {
+      "line": 61,
+      "linechar": 0
+    },
+    "index": 132
+  },
+  {
+    "token": {
+      "MultiLineComment": " a "
+    },
+    "from": {
+      "line": 61,
+      "linechar": 0
+    },
+    "to": {
+      "line": 61,
+      "linechar": 7
+    },
+    "index": 132
+  },
+  {
+    "token": {
+      "Keyword": "Switch"
+    },
+    "from": {
+      "line": 61,
+      "linechar": 7
+    },
+    "to": {
+      "line": 61,
+      "linechar": 13
+    },
+    "index": 133
+  },
+  {
+    "token": {
+      "MultiLineComment": " b "
+    },
+    "from": {
+      "line": 61,
+      "linechar": 14
+    },
+    "to": {
+      "line": 61,
+      "linechar": 21
+    },
+    "index": 134
+  },
+  {
+    "token": "LeftParenthesis",
+    "from": {
+      "line": 61,
+      "linechar": 22
+    },
+    "to": {
+      "line": 61,
+      "linechar": 23
+    },
+    "index": 135
+  },
+  {
+    "token": {
+      "MultiLineComment": " c "
+    },
+    "from": {
+      "line": 61,
+      "linechar": 23
+    },
+    "to": {
+      "line": 61,
+      "linechar": 30
+    },
+    "index": 136
+  },
+  {
+    "token": {
+      "Identifier": "x"
+    },
+    "from": {
+      "line": 61,
+      "linechar": 31
+    },
+    "to": {
+      "line": 61,
+      "linechar": 32
+    },
+    "index": 137
+  },
+  {
+    "token": {
+      "MultiLineComment": " d "
+    },
+    "from": {
+      "line": 61,
+      "linechar": 33
+    },
+    "to": {
+      "line": 61,
+      "linechar": 40
+    },
+    "index": 138
+  },
+  {
+    "token": "RightParenthesis",
+    "from": {
+      "line": 61,
+      "linechar": 40
+    },
+    "to": {
+      "line": 61,
+      "linechar": 41
+    },
+    "index": 139
+  },
+  {
+    "token": {
+      "MultiLineComment": " e "
+    },
+    "from": {
+      "line": 61,
+      "linechar": 42
+    },
+    "to": {
+      "line": 61,
+      "linechar": 49
+    },
+    "index": 140
+  },
+  {
+    "token": "LeftBrace",
+    "from": {
+      "line": 61,
+      "linechar": 50
+    },
+    "to": {
+      "line": 61,
+      "linechar": 51
+    },
+    "index": 141
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 61,
+      "linechar": 51
+    },
+    "to": {
+      "line": 62,
+      "linechar": 0
+    },
+    "index": 142
+  },
+  {
+    "token": {
+      "Comment": " comment inside switch statement"
+    },
+    "from": {
+      "line": 62,
+      "linechar": 2
+    },
+    "to": {
+      "line": 62,
+      "linechar": 36
+    },
+    "index": 142
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 62,
+      "linechar": 36
+    },
+    "to": {
+      "line": 63,
+      "linechar": 0
+    },
+    "index": 143
+  },
+  {
+    "token": {
+      "Keyword": "Case"
+    },
+    "from": {
+      "line": 63,
+      "linechar": 2
+    },
+    "to": {
+      "line": 63,
+      "linechar": 6
+    },
+    "index": 143
+  },
+  {
+    "token": {
+      "MultiLineComment": " f "
+    },
+    "from": {
+      "line": 63,
+      "linechar": 7
+    },
+    "to": {
+      "line": 63,
+      "linechar": 14
+    },
+    "index": 144
+  },
+  {
+    "token": {
+      "Integer": 1
+    },
+    "from": {
+      "line": 63,
+      "linechar": 15
+    },
+    "to": {
+      "line": 63,
+      "linechar": 16
+    },
+    "index": 145
+  },
+  {
+    "token": {
+      "MultiLineComment": " g "
+    },
+    "from": {
+      "line": 63,
+      "linechar": 17
+    },
+    "to": {
+      "line": 63,
+      "linechar": 24
+    },
+    "index": 146
+  },
+  {
+    "token": "Colon",
+    "from": {
+      "line": 63,
+      "linechar": 24
+    },
+    "to": {
+      "line": 63,
+      "linechar": 25
+    },
+    "index": 147
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 63,
+      "linechar": 25
+    },
+    "to": {
+      "line": 64,
+      "linechar": 0
+    },
+    "index": 148
+  },
+  {
+    "token": {
+      "Comment": " comment inside case statement"
+    },
+    "from": {
+      "line": 64,
+      "linechar": 4
+    },
+    "to": {
+      "line": 64,
+      "linechar": 36
+    },
+    "index": 148
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 64,
+      "linechar": 36
+    },
+    "to": {
+      "line": 65,
+      "linechar": 0
+    },
+    "index": 149
+  },
+  {
+    "token": "DoubleColon",
+    "from": {
+      "line": 65,
+      "linechar": 4
+    },
+    "to": {
+      "line": 65,
+      "linechar": 6
+    },
+    "index": 149
+  },
+  {
+    "token": {
+      "Identifier": "print"
+    },
+    "from": {
+      "line": 65,
+      "linechar": 6
+    },
+    "to": {
+      "line": 65,
+      "linechar": 11
+    },
+    "index": 150
+  },
+  {
+    "token": "LeftParenthesis",
+    "from": {
+      "line": 65,
+      "linechar": 11
+    },
+    "to": {
+      "line": 65,
+      "linechar": 12
+    },
+    "index": 151
+  },
+  {
+    "token": {
+      "String": "true"
+    },
+    "from": {
+      "line": 65,
+      "linechar": 12
+    },
+    "to": {
+      "line": 65,
+      "linechar": 18
+    },
+    "index": 152
+  },
+  {
+    "token": "RightParenthesis",
+    "from": {
+      "line": 65,
+      "linechar": 18
+    },
+    "to": {
+      "line": 65,
+      "linechar": 19
+    },
+    "index": 153
+  },
+  {
+    "token": "Semicolon",
+    "from": {
+      "line": 65,
+      "linechar": 19
+    },
+    "to": {
+      "line": 65,
+      "linechar": 20
+    },
+    "index": 154
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 65,
+      "linechar": 20
+    },
+    "to": {
+      "line": 66,
+      "linechar": 0
+    },
+    "index": 155
+  },
+  {
+    "token": {
+      "Keyword": "Break"
+    },
+    "from": {
+      "line": 66,
+      "linechar": 4
+    },
+    "to": {
+      "line": 66,
+      "linechar": 9
+    },
+    "index": 155
+  },
+  {
+    "token": "Semicolon",
+    "from": {
+      "line": 66,
+      "linechar": 9
+    },
+    "to": {
+      "line": 66,
+      "linechar": 10
+    },
+    "index": 156
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 66,
+      "linechar": 10
+    },
+    "to": {
+      "line": 67,
+      "linechar": 0
+    },
+    "index": 157
+  },
+  {
+    "token": {
+      "Comment": " comment inside switch statement"
+    },
+    "from": {
+      "line": 67,
+      "linechar": 2
+    },
+    "to": {
+      "line": 67,
+      "linechar": 36
+    },
+    "index": 157
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 67,
+      "linechar": 36
+    },
+    "to": {
+      "line": 68,
+      "linechar": 0
+    },
+    "index": 158
+  },
+  {
+    "token": {
+      "Keyword": "Case"
+    },
+    "from": {
+      "line": 68,
+      "linechar": 2
+    },
+    "to": {
+      "line": 68,
+      "linechar": 6
+    },
+    "index": 158
+  },
+  {
+    "token": {
+      "MultiLineComment": " h "
+    },
+    "from": {
+      "line": 68,
+      "linechar": 7
+    },
+    "to": {
+      "line": 68,
+      "linechar": 14
+    },
+    "index": 159
+  },
+  {
+    "token": {
+      "Integer": 2
+    },
+    "from": {
+      "line": 68,
+      "linechar": 15
+    },
+    "to": {
+      "line": 68,
+      "linechar": 16
+    },
+    "index": 160
+  },
+  {
+    "token": {
+      "MultiLineComment": " i "
+    },
+    "from": {
+      "line": 68,
+      "linechar": 17
+    },
+    "to": {
+      "line": 68,
+      "linechar": 24
+    },
+    "index": 161
+  },
+  {
+    "token": "Colon",
+    "from": {
+      "line": 68,
+      "linechar": 24
+    },
+    "to": {
+      "line": 68,
+      "linechar": 25
+    },
+    "index": 162
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 68,
+      "linechar": 25
+    },
+    "to": {
+      "line": 69,
+      "linechar": 0
+    },
+    "index": 163
+  },
+  {
+    "token": {
+      "Comment": " comment inside case statement"
+    },
+    "from": {
+      "line": 69,
+      "linechar": 4
+    },
+    "to": {
+      "line": 69,
+      "linechar": 36
+    },
+    "index": 163
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 69,
+      "linechar": 36
+    },
+    "to": {
+      "line": 70,
+      "linechar": 0
+    },
+    "index": 164
+  },
+  {
+    "token": "DoubleColon",
+    "from": {
+      "line": 70,
+      "linechar": 4
+    },
+    "to": {
+      "line": 70,
+      "linechar": 6
+    },
+    "index": 164
+  },
+  {
+    "token": {
+      "Identifier": "print"
+    },
+    "from": {
+      "line": 70,
+      "linechar": 6
+    },
+    "to": {
+      "line": 70,
+      "linechar": 11
+    },
+    "index": 165
+  },
+  {
+    "token": "LeftParenthesis",
+    "from": {
+      "line": 70,
+      "linechar": 11
+    },
+    "to": {
+      "line": 70,
+      "linechar": 12
+    },
+    "index": 166
+  },
+  {
+    "token": {
+      "String": "false"
+    },
+    "from": {
+      "line": 70,
+      "linechar": 12
+    },
+    "to": {
+      "line": 70,
+      "linechar": 19
+    },
+    "index": 167
+  },
+  {
+    "token": "RightParenthesis",
+    "from": {
+      "line": 70,
+      "linechar": 19
+    },
+    "to": {
+      "line": 70,
+      "linechar": 20
+    },
+    "index": 168
+  },
+  {
+    "token": "Semicolon",
+    "from": {
+      "line": 70,
+      "linechar": 20
+    },
+    "to": {
+      "line": 70,
+      "linechar": 21
+    },
+    "index": 169
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 70,
+      "linechar": 21
+    },
+    "to": {
+      "line": 71,
+      "linechar": 0
+    },
+    "index": 170
+  },
+  {
+    "token": {
+      "Keyword": "Break"
+    },
+    "from": {
+      "line": 71,
+      "linechar": 4
+    },
+    "to": {
+      "line": 71,
+      "linechar": 9
+    },
+    "index": 170
+  },
+  {
+    "token": "Semicolon",
+    "from": {
+      "line": 71,
+      "linechar": 9
+    },
+    "to": {
+      "line": 71,
+      "linechar": 10
+    },
+    "index": 171
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 71,
+      "linechar": 10
+    },
+    "to": {
+      "line": 72,
+      "linechar": 0
+    },
+    "index": 172
+  },
+  {
+    "token": {
+      "Comment": " comment inside switch statement"
+    },
+    "from": {
+      "line": 72,
+      "linechar": 2
+    },
+    "to": {
+      "line": 72,
+      "linechar": 36
+    },
+    "index": 172
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 72,
+      "linechar": 36
+    },
+    "to": {
+      "line": 73,
+      "linechar": 0
+    },
+    "index": 173
+  },
+  {
+    "token": {
+      "Keyword": "Default"
+    },
+    "from": {
+      "line": 73,
+      "linechar": 2
+    },
+    "to": {
+      "line": 73,
+      "linechar": 9
+    },
+    "index": 173
+  },
+  {
+    "token": {
+      "MultiLineComment": " j "
+    },
+    "from": {
+      "line": 73,
+      "linechar": 10
+    },
+    "to": {
+      "line": 73,
+      "linechar": 17
+    },
+    "index": 174
+  },
+  {
+    "token": "Colon",
+    "from": {
+      "line": 73,
+      "linechar": 17
+    },
+    "to": {
+      "line": 73,
+      "linechar": 18
+    },
+    "index": 175
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 73,
+      "linechar": 18
+    },
+    "to": {
+      "line": 74,
+      "linechar": 0
+    },
+    "index": 176
+  },
+  {
+    "token": {
+      "Comment": " comment inside default statement"
+    },
+    "from": {
+      "line": 74,
+      "linechar": 4
+    },
+    "to": {
+      "line": 74,
+      "linechar": 39
+    },
+    "index": 176
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 74,
+      "linechar": 39
+    },
+    "to": {
+      "line": 75,
+      "linechar": 0
+    },
+    "index": 177
+  },
+  {
+    "token": "DoubleColon",
+    "from": {
+      "line": 75,
+      "linechar": 4
+    },
+    "to": {
+      "line": 75,
+      "linechar": 6
+    },
+    "index": 177
+  },
+  {
+    "token": {
+      "Identifier": "print"
+    },
+    "from": {
+      "line": 75,
+      "linechar": 6
+    },
+    "to": {
+      "line": 75,
+      "linechar": 11
+    },
+    "index": 178
+  },
+  {
+    "token": "LeftParenthesis",
+    "from": {
+      "line": 75,
+      "linechar": 11
+    },
+    "to": {
+      "line": 75,
+      "linechar": 12
+    },
+    "index": 179
+  },
+  {
+    "token": {
+      "String": "default"
+    },
+    "from": {
+      "line": 75,
+      "linechar": 12
+    },
+    "to": {
+      "line": 75,
+      "linechar": 21
+    },
+    "index": 180
+  },
+  {
+    "token": "RightParenthesis",
+    "from": {
+      "line": 75,
+      "linechar": 21
+    },
+    "to": {
+      "line": 75,
+      "linechar": 22
+    },
+    "index": 181
+  },
+  {
+    "token": "Semicolon",
+    "from": {
+      "line": 75,
+      "linechar": 22
+    },
+    "to": {
+      "line": 75,
+      "linechar": 23
+    },
+    "index": 182
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 75,
+      "linechar": 23
+    },
+    "to": {
+      "line": 76,
+      "linechar": 0
+    },
+    "index": 183
+  },
+  {
+    "token": {
+      "Keyword": "Break"
+    },
+    "from": {
+      "line": 76,
+      "linechar": 4
+    },
+    "to": {
+      "line": 76,
+      "linechar": 9
+    },
+    "index": 183
+  },
+  {
+    "token": "Semicolon",
+    "from": {
+      "line": 76,
+      "linechar": 9
+    },
+    "to": {
+      "line": 76,
+      "linechar": 10
+    },
+    "index": 184
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 76,
+      "linechar": 10
+    },
+    "to": {
+      "line": 77,
+      "linechar": 0
+    },
+    "index": 185
+  },
+  {
+    "token": "RightBrace",
+    "from": {
+      "line": 77,
+      "linechar": 0
+    },
+    "to": {
+      "line": 77,
+      "linechar": 1
+    },
+    "index": 185
+  },
+  {
+    "token": {
+      "MultiLineComment": " k "
+    },
+    "from": {
+      "line": 77,
+      "linechar": 2
+    },
+    "to": {
+      "line": 77,
+      "linechar": 9
+    },
+    "index": 186
+  },
+  {
+    "token": {
+      "Comment": " comment after switch statement"
+    },
+    "from": {
+      "line": 77,
+      "linechar": 10
+    },
+    "to": {
+      "line": 77,
+      "linechar": 43
+    },
+    "index": 187
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 77,
+      "linechar": 43
+    },
+    "to": {
+      "line": 78,
+      "linechar": 0
+    },
+    "index": 188
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 78,
+      "linechar": 0
+    },
+    "to": {
+      "line": 79,
+      "linechar": 0
+    },
+    "index": 188
+  },
+  {
+    "token": {
+      "Comment": " comment between"
+    },
+    "from": {
+      "line": 79,
+      "linechar": 0
+    },
+    "to": {
+      "line": 79,
+      "linechar": 18
+    },
+    "index": 188
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 79,
+      "linechar": 18
+    },
+    "to": {
+      "line": 80,
+      "linechar": 0
+    },
+    "index": 189
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 80,
+      "linechar": 0
+    },
+    "to": {
+      "line": 81,
+      "linechar": 0
+    },
+    "index": 189
+  },
+  {
+    "token": {
+      "Comment": " series"
+    },
+    "from": {
+      "line": 81,
+      "linechar": 0
+    },
+    "to": {
+      "line": 81,
+      "linechar": 9
+    },
+    "index": 189
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 81,
+      "linechar": 9
+    },
+    "to": {
+      "line": 82,
+      "linechar": 0
+    },
+    "index": 190
+  },
+  {
+    "token": {
+      "Comment": " of"
+    },
+    "from": {
+      "line": 82,
+      "linechar": 0
+    },
+    "to": {
+      "line": 82,
+      "linechar": 5
+    },
+    "index": 190
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 82,
+      "linechar": 5
+    },
+    "to": {
+      "line": 83,
+      "linechar": 0
+    },
+    "index": 191
+  },
+  {
+    "token": {
+      "Comment": " single"
+    },
+    "from": {
+      "line": 83,
+      "linechar": 0
+    },
+    "to": {
+      "line": 83,
+      "linechar": 9
+    },
+    "index": 191
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 83,
+      "linechar": 9
+    },
+    "to": {
+      "line": 84,
+      "linechar": 0
+    },
+    "index": 192
+  },
+  {
+    "token": {
+      "Comment": " line"
+    },
+    "from": {
+      "line": 84,
+      "linechar": 0
+    },
+    "to": {
+      "line": 84,
+      "linechar": 7
+    },
+    "index": 192
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 84,
+      "linechar": 7
+    },
+    "to": {
+      "line": 85,
+      "linechar": 0
+    },
+    "index": 193
+  },
+  {
+    "token": {
+      "Comment": " comments"
+    },
+    "from": {
+      "line": 85,
+      "linechar": 0
+    },
+    "to": {
+      "line": 85,
+      "linechar": 11
+    },
+    "index": 193
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 85,
+      "linechar": 11
+    },
+    "to": {
+      "line": 86,
+      "linechar": 0
+    },
+    "index": 194
   }
 ]

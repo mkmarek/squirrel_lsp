@@ -1,6 +1,11 @@
+use std::collections::HashMap;
+
 use serde::{Deserialize, Serialize};
 
-use crate::squirrel_lexer::{Location, Operator, Token};
+use crate::{
+    squirrel_lexer::{Keyword, Location, Operator, Token},
+    squirrel_parser::Parser,
+};
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct Statements {
@@ -30,6 +35,7 @@ pub enum Statement {
     FunctionDeclaration(Box<FunctionDeclaration>),
     Class(Box<ClassDefinition>),
     Enum(Box<EnumStatement>),
+    Comment(Vec<CommentStatement>),
 }
 
 impl Statement {
@@ -56,6 +62,9 @@ impl Statement {
             }
             Statement::Class(class_definition) => class_definition.from.clone(),
             Statement::Enum(enum_statement) => enum_statement.from.clone(),
+            Statement::Comment(comment_statement) => {
+                comment_statement.first().unwrap().from.clone()
+            }
         }
     }
 
@@ -80,12 +89,60 @@ impl Statement {
             Statement::FunctionDeclaration(function_declaration) => function_declaration.to.clone(),
             Statement::Class(class_definition) => class_definition.to.clone(),
             Statement::Enum(enum_statement) => enum_statement.to.clone(),
+            Statement::Comment(comment_statement) => comment_statement.last().unwrap().to.clone(),
+        }
+    }
+}
+
+#[derive(Clone, Debug, PartialEq, Eq, Hash, Deserialize)]
+pub enum CommentLocation {
+    At(u8),
+    BeforeUnit,
+    AfterUnit,
+}
+
+impl Serialize for CommentLocation {
+    fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
+    where
+        S: serde::Serializer,
+    {
+        let str = match self {
+            CommentLocation::At(i) => format!("before_{}", i),
+            CommentLocation::BeforeUnit => "before_unit".to_string(),
+            CommentLocation::AfterUnit => "after_unit".to_string(),
+        };
+        serializer.serialize_str(str.as_str())
+    }
+}
+
+#[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
+pub struct CommentStatement {
+    pub comment: String,
+    pub is_multi_line: bool,
+    pub from: Location,
+    pub to: Location,
+}
+
+#[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
+pub struct Comments(pub HashMap<CommentLocation, Vec<CommentStatement>>);
+
+impl Comments {
+    pub fn new() -> Self {
+        Comments(HashMap::new())
+    }
+
+    pub fn add_comments(&mut self, location: CommentLocation, comments: Vec<CommentStatement>) {
+        if let Some(c) = self.0.get_mut(&location) {
+            c.extend(comments);
+        } else {
+            self.0.insert(location, comments);
         }
     }
 }
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct BlockStatement {
+    pub comments: Comments,
     pub statements: Statements,
     pub from: Location,
     pub to: Location,
@@ -93,11 +150,19 @@ pub struct BlockStatement {
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct IfStatement {
+    pub comments: Comments,
     pub condition: Expression,
     pub if_true: Statement,
     pub if_false: Option<Statement>,
     pub from: Location,
     pub to: Location,
+}
+
+impl IfStatement {
+    pub const BEFORE_CONDITION: u8 = 0;
+    pub const BEFORE_BODY: u8 = 1;
+    pub const BEFORE_ELSE: u8 = 2;
+    pub const BEFORE_ELSE_BODY: u8 = 3;
 }
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
@@ -108,12 +173,29 @@ pub struct WhileStatement {
     pub to: Location,
 }
 
+impl WhileStatement {
+    pub const BEFORE_BODY: u8 = 0;
+    pub const BEFORE_WHILE: u8 = 1;
+    pub const BEFORE_CONDITION: u8 = 2;
+    pub const BEFORE_INSIDE_CONDITION: u8 = 3;
+    pub const AFTER_INSIDE_CONDITION: u8 = 4;
+}
+
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct DoWhileStatement {
     pub condition: Expression,
     pub statement: Statement,
+    pub comments: Comments,
     pub from: Location,
     pub to: Location,
+}
+
+impl DoWhileStatement {
+    pub const BEFORE_BODY: u8 = 0;
+    pub const BEFORE_WHILE: u8 = 1;
+    pub const BEFORE_CONDITION: u8 = 2;
+    pub const BEFORE_INSIDE_CONDITION: u8 = 3;
+    pub const AFTER_INSIDE_CONDITION: u8 = 4;
 }
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
@@ -123,6 +205,16 @@ pub struct SwitchStatement {
     pub default: Option<Statements>,
     pub from: Location,
     pub to: Location,
+}
+
+impl SwitchStatement {
+    pub const AFTER_SWITCH: u8 = 0;
+    pub const BEFORE_EXPRESSION: u8 = 1;
+    pub const AFTER_EXPRESSION: u8 = 2;
+    pub const AFTER_RIGHT_PARENTHESIS: u8 = 3;
+    pub const BEFORE_BODY: u8 = 4;
+    pub const BEFORE_CASES: u8 = 5;
+    pub const BEFORE_DEFAULT: u8 = 6;
 }
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
@@ -143,6 +235,17 @@ pub struct ForEachStatement {
     pub statement: Statement,
     pub from: Location,
     pub to: Location,
+}
+
+impl ForEachStatement {
+    pub const AFTER_EXPRESSION: u8 = 0;
+    pub const BEFORE_EXPRESSION: u8 = 1;
+    pub const AFTER_SECOND_IDENTIFIER: u8 = 2;
+    pub const BEFORE_SECOND_IDENTIFIER: u8 = 3;
+    pub const AFTER_FIRST_IDENTIFIER: u8 = 4;
+    pub const BEFORE_FIRST_IDENTIFIER: u8 = 5;
+    pub const BEFORE_LEFT_PARENTHESIS: u8 = 6;
+    pub const BEFORE_FOREACH: u8 = 7;
 }
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
@@ -205,6 +308,7 @@ pub struct ConstStatement {
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct LocalStatement {
     pub initializations: Vec<Initialization>,
+    pub comments: Comments,
     pub from: Location,
     pub to: Location,
 }
@@ -315,16 +419,30 @@ pub struct ClassFieldDeclaration {
 pub struct Initialization {
     pub name: String,
     pub expression: Option<Expression>,
+    pub comments: Comments,
     pub from: Location,
     pub to: Location,
+}
+
+impl Initialization {
+    pub const BEFORE_NAME: u8 = 0;
+    pub const BEFORE_EXPRESSION: u8 = 1;
+    pub const AFTER_EXPRESSION: u8 = 2;
+    pub const AFTER_NAME: u8 = 3;
 }
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct Case {
     pub expression: Expression,
     pub statements: Statements,
+    pub comments: Comments,
     pub from: Location,
     pub to: Location,
+}
+
+impl Case {
+    pub const BEFORE_CASE_EXPRESSION: u8 = 0;
+    pub const AFTER_CASE_EXPRESSION: u8 = 1;
 }
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
@@ -793,9 +911,15 @@ pub fn function_expression(
     }))
 }
 
-pub fn block_statement(statements: Statements, from: Location, to: Location) -> Statement {
+pub fn block_statement(
+    statements: Statements,
+    comments: Comments,
+    from: Location,
+    to: Location,
+) -> Statement {
     Statement::Block(Box::new(BlockStatement {
         statements,
+        comments,
         from,
         to,
     }))
@@ -805,6 +929,7 @@ pub fn if_statement(
     condition: Expression,
     if_true: Statement,
     if_false: Option<Statement>,
+    comments: Comments,
     from: Location,
     to: Location,
 ) -> Statement {
@@ -812,6 +937,7 @@ pub fn if_statement(
         condition,
         if_true,
         if_false,
+        comments,
         from,
         to,
     }))
@@ -834,12 +960,14 @@ pub fn while_statement(
 pub fn do_while_statement(
     condition: Expression,
     body: Statement,
+    comments: Comments,
     from: Location,
     to: Location,
 ) -> Statement {
     Statement::DoWhile(Box::new(DoWhileStatement {
         condition,
         statement: body,
+        comments,
         from,
         to,
     }))
@@ -859,15 +987,6 @@ pub fn switch_statement(
         from,
         to,
     }))
-}
-
-pub fn switch_case(expression: Expression, body: Statements, from: Location, to: Location) -> Case {
-    Case {
-        expression,
-        statements: body,
-        from,
-        to,
-    }
 }
 
 pub fn for_statement(
@@ -978,11 +1097,13 @@ pub fn const_statement(
 
 pub fn local_statement(
     initializations: Vec<Initialization>,
+    comments: Comments,
     from: Location,
     to: Location,
 ) -> Statement {
     Statement::Local(Box::new(LocalStatement {
         initializations,
+        comments,
         from,
         to,
     }))
@@ -991,12 +1112,14 @@ pub fn local_statement(
 pub fn initialization(
     name: String,
     expression: Option<Expression>,
+    comments: Comments,
     from: Location,
     to: Location,
 ) -> Initialization {
     Initialization {
         name,
         expression,
+        comments,
         from,
         to,
     }

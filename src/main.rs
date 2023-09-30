@@ -1,4 +1,9 @@
+use std::collections::HashMap;
+
+use difference::{Changeset, Difference};
+use squirrel_printer::{IndentationType, Printer, PrinterSettings};
 use tokio::fs;
+use tokio::sync::Mutex;
 use tower_lsp::jsonrpc::Result;
 use tower_lsp::lsp_types::request::{GotoDeclarationParams, GotoDeclarationResponse};
 use tower_lsp::lsp_types::*;
@@ -13,11 +18,17 @@ mod squirrel_printer;
 
 #[derive(Debug)]
 struct Backend {
+    documents: Mutex<HashMap<Url, String>>,
     client: Client,
 }
 
 impl Backend {
     async fn on_change(&self, params: TextDocumentItem) {
+        {
+            let mut documents = self.documents.lock().await;
+            documents.insert(params.uri.clone(), params.text.clone());
+        }
+
         let mut parser = squirrel_parser::Parser::new(&params.text);
 
         let result = parser.parse();
@@ -201,7 +212,7 @@ impl LanguageServer for Backend {
                 }),
                 definition_provider: Some(OneOf::Left(true)),
                 declaration_provider: Some(DeclarationCapability::Simple(true)),
-                //document_formatting_provider: Some(OneOf::Left(true)),
+                document_formatting_provider: Some(OneOf::Left(true)),
                 //hover_provider: Some(HoverProviderCapability::Simple(true)),
                 ..ServerCapabilities::default()
             },
@@ -250,41 +261,120 @@ impl LanguageServer for Backend {
             .await;
     }
 
-    // async fn formatting(&self, params: DocumentFormattingParams) -> Result<Option<Vec<TextEdit>>> {
-    //     let path = params.text_document.uri.path().strip_prefix("/").ok_or(
-    //         tower_lsp::jsonrpc::Error::invalid_params("failed to strip prefix"),
-    //     )?;
+    async fn formatting(&self, params: DocumentFormattingParams) -> Result<Option<Vec<TextEdit>>> {
+        let contents = {
+            self.documents
+                .lock()
+                .await
+                .get(&params.text_document.uri)
+                .ok_or(tower_lsp::jsonrpc::Error::invalid_params(
+                    "failed to get document",
+                ))?
+                .clone()
+        };
 
-    //     let contents = fs::read_to_string(path).await.map_err(|_| {
-    //         tower_lsp::jsonrpc::Error::invalid_params("failed to read file contents")
-    //     })?;
+        let mut parser = squirrel_parser::Parser::new(&contents);
+        let ast = parser.parse().map_err(|_| {
+            tower_lsp::jsonrpc::Error::invalid_params("failed to parse squirrel file")
+        })?;
 
-    //     let edits = Vec::new();
+        let mut printer = Printer::new(
+            contents.len(),
+            PrinterSettings {
+                indentation: if params.options.insert_spaces {
+                    IndentationType::Spaces
+                } else {
+                    IndentationType::Tabs
+                },
+                indentation_size: params.options.tab_size as usize,
+            },
+        );
 
-    //     // edits.push(TextEdit {
-    //     //     range: Range {
-    //     //         start: Position {
-    //     //             line: 0,
-    //     //             character: 0,
-    //     //         },
-    //     //         end: Position {
-    //     //             line: 0,
-    //     //             character: 1,
-    //     //         },
-    //     //     },
-    //     //     new_text: "Hello world".to_string(),
-    //     // });
+        let mut printed = printer.print(&ast);
 
-    //     Ok(Some(edits))
-    // }
+        if let Some(insert_final_newline) = params.options.insert_final_newline {
+            if insert_final_newline && !printed.ends_with('\n') {
+                printed.push('\n');
+            }
+        }
 
-    //     async fn hover(&self, params: HoverParams) -> Result<Option<Hover>> {
-    //         let _ = params;
-    //         Ok(Some(Hover {
-    //             contents: HoverContents::Scalar(MarkedString::String("Hello world".to_string())),
-    //             range: None,
-    //         }))
-    //     }
+        if let Some(trim_final_newlines) = params.options.trim_final_newlines {
+            if trim_final_newlines {
+                while printed.ends_with('\n') {
+                    printed.pop();
+                }
+            }
+        }
+
+        let sanitized_contents = contents.replace("\r\n", "\n");
+        let changeset = Changeset::new(&sanitized_contents, &printed, "");
+
+        let mut edits = Vec::new();
+
+        let mut current_line_number = 0;
+        let mut current_character = 0;
+
+        for change in changeset.diffs {
+            self.client
+                .log_message(MessageType::ERROR, format!("{:?}", change))
+                .await;
+            match change {
+                Difference::Same(str) => {
+                    let line_count = str.matches('\n').count();
+                    current_line_number += line_count;
+                    current_character = if line_count > 0 {
+                        str.split("\n").last().unwrap_or("").len()
+                    } else {
+                        current_character + str.len()
+                    }
+                }
+                Difference::Rem(str) => {
+                    let text_end_line_number = current_line_number + str.matches('\n').count();
+                    let text_end_character = if text_end_line_number > current_line_number {
+                        str.split("\n").last().unwrap_or("").len()
+                    } else {
+                        current_character + str.len()
+                    };
+
+                    edits.push(TextEdit {
+                        range: Range::new(
+                            Position::new(current_line_number as u32, current_character as u32),
+                            Position::new(text_end_line_number as u32, text_end_character as u32),
+                        ),
+                        new_text: String::new(),
+                    });
+
+                    current_line_number = text_end_line_number;
+                    current_character = text_end_character;
+                }
+                Difference::Add(str) => {
+                    let line_number_start = current_line_number;
+                    let character_start = current_character;
+
+                    edits.push(TextEdit {
+                        range: Range::new(
+                            Position::new(line_number_start as u32, character_start as u32),
+                            Position::new(line_number_start as u32, character_start as u32),
+                        ),
+                        new_text: str,
+                    });
+                }
+            }
+        }
+
+        self.client
+            .log_message(MessageType::ERROR, format!("{:?}", edits))
+            .await;
+        Ok(Some(edits))
+    }
+
+    async fn hover(&self, params: HoverParams) -> Result<Option<Hover>> {
+        let _ = params;
+        Ok(Some(Hover {
+            contents: HoverContents::Scalar(MarkedString::String("Hello world".to_string())),
+            range: None,
+        }))
+    }
 
     async fn shutdown(&self) -> Result<()> {
         Ok(())
@@ -296,6 +386,9 @@ async fn main() {
     let stdin = tokio::io::stdin();
     let stdout = tokio::io::stdout();
 
-    let (service, socket) = LspService::new(|client| Backend { client });
+    let (service, socket) = LspService::new(|client| Backend {
+        client,
+        documents: Mutex::new(HashMap::new()),
+    });
     Server::new(stdin, stdout, socket).serve(service).await;
 }
