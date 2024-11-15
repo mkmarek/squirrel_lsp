@@ -2,7 +2,6 @@ use std::collections::HashMap;
 
 use difference::{Changeset, Difference};
 use squirrel_formatter::Formatter;
-use squirrel_printer::{IndentationType, Printer, PrinterSettings};
 use tokio::fs;
 use tokio::sync::Mutex;
 use tower_lsp::jsonrpc::Result;

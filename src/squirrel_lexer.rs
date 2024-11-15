@@ -259,7 +259,54 @@ pub enum Token {
     QuestionMark,
     Semicolon,
     DoubleColon,
+    Space,
+    Tab,
+    Indent(usize),
     EOF,
+    Dummy,
+}
+
+impl Token {
+    pub fn to_source_string(&self) -> String {
+        match self {
+            Token::Identifier(value) => value.clone(),
+            Token::Newline => "\n".to_string(),
+            Token::Comment(value) => format!("// {}", value.trim()),
+            Token::MultiLineComment(value) => format!("/* {} */", value.trim()),
+            Token::String(value) => format!("\"{}\"", value),
+            Token::MultiLineString(value) => format!("@\"{}\"", value),
+            Token::Integer(value) => value.to_string(),
+            Token::Float(value) => {
+                let whole = value.trunc();
+                let fractional = value.fract();
+
+                if fractional == 0.0 {
+                    whole.to_string() + ".0"
+                } else {
+                    value.to_string()
+                }
+            }
+            Token::Operator(value) => Into::<&str>::into(value).to_string(),
+            Token::Keyword(value) => Into::<&str>::into(value).to_string(),
+            Token::LeftBrace => "{".to_string(),
+            Token::RightBrace => "}".to_string(),
+            Token::LeftParenthesis => "(".to_string(),
+            Token::RightParenthesis => ")".to_string(),
+            Token::LeftBracket => "[".to_string(),
+            Token::RightBracket => "]".to_string(),
+            Token::Dot => ".".to_string(),
+            Token::Colon => ":".to_string(),
+            Token::QuestionMark => "?".to_string(),
+            Token::Semicolon => ";".to_string(),
+            Token::DoubleColon => "::".to_string(),
+            Token::EOF => "".to_string(),
+            Token::Space => " ".to_string(),
+            Token::Tab => "\t".to_string(),
+            //Token::Indent(spaces) => format!("<INDENT {}>", spaces),
+            Token::Indent(spaces) => " ".repeat(*spaces * 2),
+            Token::Dummy => "".to_string(),
+        }
+    }
 }
 
 impl Display for Token {
@@ -287,6 +334,10 @@ impl Display for Token {
             Token::Semicolon => write!(f, ";"),
             Token::DoubleColon => write!(f, "::"),
             Token::EOF => write!(f, "EOF"),
+            Token::Space => write!(f, " "),
+            Token::Tab => write!(f, "<TAB>"),
+            Token::Indent(spaces) => write!(f, "<INDENT>"),
+            Token::Dummy => write!(f, "<DUMMY>"),
         }
     }
 }

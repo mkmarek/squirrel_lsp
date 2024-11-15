@@ -5,8 +5,7 @@ enum Stuff {
 }
 
 enum Stuff {
-  first = 10
-  second = "string"
+  first = 10,
+  second = "string",
   third = 1.2
 }
-
