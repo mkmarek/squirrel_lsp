@@ -1066,7 +1066,7 @@ impl<'a> Lexer<'a> {
     }
 
     fn increment_position(&mut self, line_break: bool) {
-        if self.position < self.input.len() + 1
+        if self.position + 1 < self.input.len()
             && self.input[self.position] as char == '\r'
             && self.input[self.position + 1] as char == '\n'
         {
