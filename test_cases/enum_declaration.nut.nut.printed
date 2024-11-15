@@ -1,0 +1,11 @@
+enum Stuff {
+  first,
+  second,
+  third
+}
+
+enum Stuff {
+  first = 10,
+  second = "string",
+  third = 1.2
+}

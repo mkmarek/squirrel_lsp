@@ -42,28 +42,40 @@
     "index": 2
   },
   {
+    "token": "Newline",
+    "from": {
+      "line": 0,
+      "linechar": 12
+    },
+    "to": {
+      "line": 1,
+      "linechar": 0
+    },
+    "index": 3
+  },
+  {
     "token": {
       "Identifier": "a"
     },
     "from": {
-      "line": 0,
-      "linechar": 13
+      "line": 1,
+      "linechar": 0
     },
     "to": {
-      "line": 0,
-      "linechar": 14
+      "line": 1,
+      "linechar": 1
     },
     "index": 3
   },
   {
     "token": "Dot",
     "from": {
-      "line": 0,
-      "linechar": 14
+      "line": 1,
+      "linechar": 1
     },
     "to": {
-      "line": 0,
-      "linechar": 15
+      "line": 1,
+      "linechar": 2
     },
     "index": 4
   },
@@ -72,36 +84,36 @@
       "Identifier": "foo"
     },
     "from": {
-      "line": 0,
-      "linechar": 15
+      "line": 1,
+      "linechar": 2
     },
     "to": {
-      "line": 0,
-      "linechar": 18
+      "line": 1,
+      "linechar": 5
     },
     "index": 5
   },
   {
     "token": "LeftParenthesis",
     "from": {
-      "line": 0,
-      "linechar": 18
+      "line": 1,
+      "linechar": 5
     },
     "to": {
-      "line": 0,
-      "linechar": 19
+      "line": 1,
+      "linechar": 6
     },
     "index": 6
   },
   {
     "token": "RightParenthesis",
     "from": {
-      "line": 0,
-      "linechar": 19
+      "line": 1,
+      "linechar": 6
     },
     "to": {
-      "line": 0,
-      "linechar": 20
+      "line": 1,
+      "linechar": 7
     },
     "index": 7
   },
@@ -110,38 +122,50 @@
       "Operator": "Or"
     },
     "from": {
-      "line": 0,
-      "linechar": 21
+      "line": 1,
+      "linechar": 8
     },
     "to": {
-      "line": 0,
-      "linechar": 23
+      "line": 1,
+      "linechar": 10
     },
     "index": 8
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 1,
+      "linechar": 10
+    },
+    "to": {
+      "line": 2,
+      "linechar": 0
+    },
+    "index": 9
   },
   {
     "token": {
       "Identifier": "b"
     },
     "from": {
-      "line": 0,
-      "linechar": 24
+      "line": 2,
+      "linechar": 0
     },
     "to": {
-      "line": 0,
-      "linechar": 25
+      "line": 2,
+      "linechar": 1
     },
     "index": 9
   },
   {
     "token": "Dot",
     "from": {
-      "line": 0,
-      "linechar": 25
+      "line": 2,
+      "linechar": 1
     },
     "to": {
-      "line": 0,
-      "linechar": 26
+      "line": 2,
+      "linechar": 2
     },
     "index": 10
   },
@@ -150,36 +174,36 @@
       "Identifier": "test"
     },
     "from": {
-      "line": 0,
-      "linechar": 26
+      "line": 2,
+      "linechar": 2
     },
     "to": {
-      "line": 0,
-      "linechar": 30
+      "line": 2,
+      "linechar": 6
     },
     "index": 11
   },
   {
     "token": "LeftParenthesis",
     "from": {
-      "line": 0,
-      "linechar": 30
+      "line": 2,
+      "linechar": 6
     },
     "to": {
-      "line": 0,
-      "linechar": 31
+      "line": 2,
+      "linechar": 7
     },
     "index": 12
   },
   {
     "token": "RightParenthesis",
     "from": {
-      "line": 0,
-      "linechar": 31
+      "line": 2,
+      "linechar": 7
     },
     "to": {
-      "line": 0,
-      "linechar": 32
+      "line": 2,
+      "linechar": 8
     },
     "index": 13
   },
@@ -188,38 +212,50 @@
       "Operator": "And"
     },
     "from": {
-      "line": 0,
-      "linechar": 33
+      "line": 2,
+      "linechar": 9
     },
     "to": {
-      "line": 0,
-      "linechar": 35
+      "line": 2,
+      "linechar": 11
     },
     "index": 14
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 2,
+      "linechar": 11
+    },
+    "to": {
+      "line": 3,
+      "linechar": 0
+    },
+    "index": 15
   },
   {
     "token": {
       "Identifier": "x"
     },
     "from": {
-      "line": 0,
-      "linechar": 36
+      "line": 3,
+      "linechar": 0
     },
     "to": {
-      "line": 0,
-      "linechar": 37
+      "line": 3,
+      "linechar": 1
     },
     "index": 15
   },
   {
     "token": "Dot",
     "from": {
-      "line": 0,
-      "linechar": 37
+      "line": 3,
+      "linechar": 1
     },
     "to": {
-      "line": 0,
-      "linechar": 38
+      "line": 3,
+      "linechar": 2
     },
     "index": 16
   },
@@ -228,24 +264,24 @@
       "Identifier": "y"
     },
     "from": {
-      "line": 0,
-      "linechar": 38
+      "line": 3,
+      "linechar": 2
     },
     "to": {
-      "line": 0,
-      "linechar": 39
+      "line": 3,
+      "linechar": 3
     },
     "index": 17
   },
   {
     "token": "Dot",
     "from": {
-      "line": 0,
-      "linechar": 39
+      "line": 3,
+      "linechar": 3
     },
     "to": {
-      "line": 0,
-      "linechar": 40
+      "line": 3,
+      "linechar": 4
     },
     "index": 18
   },
@@ -254,35 +290,35 @@
       "Identifier": "z"
     },
     "from": {
-      "line": 0,
-      "linechar": 40
+      "line": 3,
+      "linechar": 4
     },
     "to": {
-      "line": 0,
-      "linechar": 41
+      "line": 3,
+      "linechar": 5
     },
     "index": 19
   },
   {
     "token": "Semicolon",
     "from": {
-      "line": 0,
-      "linechar": 41
+      "line": 3,
+      "linechar": 5
     },
     "to": {
-      "line": 0,
-      "linechar": 42
+      "line": 3,
+      "linechar": 6
     },
     "index": 20
   },
   {
     "token": "Newline",
     "from": {
-      "line": 0,
-      "linechar": 42
+      "line": 3,
+      "linechar": 6
     },
     "to": {
-      "line": 1,
+      "line": 4,
       "linechar": 0
     },
     "index": 21
@@ -290,11 +326,11 @@
   {
     "token": "Newline",
     "from": {
-      "line": 1,
+      "line": 4,
       "linechar": 0
     },
     "to": {
-      "line": 2,
+      "line": 5,
       "linechar": 0
     },
     "index": 21
@@ -304,11 +340,11 @@
       "Keyword": "Local"
     },
     "from": {
-      "line": 2,
+      "line": 5,
       "linechar": 0
     },
     "to": {
-      "line": 2,
+      "line": 5,
       "linechar": 5
     },
     "index": 21
@@ -318,11 +354,11 @@
       "Identifier": "test2"
     },
     "from": {
-      "line": 2,
+      "line": 5,
       "linechar": 6
     },
     "to": {
-      "line": 2,
+      "line": 5,
       "linechar": 11
     },
     "index": 22
@@ -332,11 +368,11 @@
       "Operator": "Assign"
     },
     "from": {
-      "line": 2,
+      "line": 5,
       "linechar": 12
     },
     "to": {
-      "line": 2,
+      "line": 5,
       "linechar": 13
     },
     "index": 23
@@ -346,11 +382,11 @@
       "Operator": "Increment"
     },
     "from": {
-      "line": 2,
+      "line": 5,
       "linechar": 14
     },
     "to": {
-      "line": 2,
+      "line": 5,
       "linechar": 16
     },
     "index": 24
@@ -360,12 +396,12 @@
       "Identifier": "a"
     },
     "from": {
-      "line": 2,
-      "linechar": 16
+      "line": 5,
+      "linechar": 17
     },
     "to": {
-      "line": 2,
-      "linechar": 17
+      "line": 5,
+      "linechar": 18
     },
     "index": 25
   },
@@ -374,12 +410,12 @@
       "Operator": "Increment"
     },
     "from": {
-      "line": 2,
-      "linechar": 17
+      "line": 5,
+      "linechar": 19
     },
     "to": {
-      "line": 2,
-      "linechar": 19
+      "line": 5,
+      "linechar": 21
     },
     "index": 26
   },
@@ -388,12 +424,12 @@
       "Operator": "Minus"
     },
     "from": {
-      "line": 2,
-      "linechar": 20
+      "line": 5,
+      "linechar": 22
     },
     "to": {
-      "line": 2,
-      "linechar": 21
+      "line": 5,
+      "linechar": 23
     },
     "index": 27
   },
@@ -402,12 +438,12 @@
       "Operator": "Decrement"
     },
     "from": {
-      "line": 2,
-      "linechar": 22
+      "line": 5,
+      "linechar": 24
     },
     "to": {
-      "line": 2,
-      "linechar": 24
+      "line": 5,
+      "linechar": 26
     },
     "index": 28
   },
@@ -416,12 +452,12 @@
       "Identifier": "b"
     },
     "from": {
-      "line": 2,
-      "linechar": 24
+      "line": 5,
+      "linechar": 27
     },
     "to": {
-      "line": 2,
-      "linechar": 25
+      "line": 5,
+      "linechar": 28
     },
     "index": 29
   },
@@ -430,12 +466,12 @@
       "Operator": "Decrement"
     },
     "from": {
-      "line": 2,
-      "linechar": 25
+      "line": 5,
+      "linechar": 29
     },
     "to": {
-      "line": 2,
-      "linechar": 27
+      "line": 5,
+      "linechar": 31
     },
     "index": 30
   },
@@ -444,12 +480,12 @@
       "Operator": "Multiply"
     },
     "from": {
-      "line": 2,
-      "linechar": 28
+      "line": 5,
+      "linechar": 32
     },
     "to": {
-      "line": 2,
-      "linechar": 29
+      "line": 5,
+      "linechar": 33
     },
     "index": 31
   },
@@ -458,35 +494,35 @@
       "Identifier": "c"
     },
     "from": {
-      "line": 2,
-      "linechar": 30
+      "line": 5,
+      "linechar": 34
     },
     "to": {
-      "line": 2,
-      "linechar": 31
+      "line": 5,
+      "linechar": 35
     },
     "index": 32
   },
   {
     "token": "Semicolon",
     "from": {
-      "line": 2,
-      "linechar": 31
+      "line": 5,
+      "linechar": 35
     },
     "to": {
-      "line": 2,
-      "linechar": 32
+      "line": 5,
+      "linechar": 36
     },
     "index": 33
   },
   {
     "token": "Newline",
     "from": {
-      "line": 2,
-      "linechar": 32
+      "line": 5,
+      "linechar": 36
     },
     "to": {
-      "line": 3,
+      "line": 6,
       "linechar": 0
     },
     "index": 34

@@ -51,8 +51,8 @@
                   "Identifier": "second"
                 },
                 "from": {
-                  "line": 1,
-                  "linechar": 9
+                  "line": 2,
+                  "linechar": 2
                 },
                 "to": {
                   "line": 2,
@@ -62,8 +62,8 @@
             },
             "value": null,
             "from": {
-              "line": 1,
-              "linechar": 8
+              "line": 2,
+              "linechar": 0
             },
             "to": {
               "line": 2,
@@ -77,8 +77,8 @@
                   "Identifier": "third"
                 },
                 "from": {
-                  "line": 2,
-                  "linechar": 10
+                  "line": 3,
+                  "linechar": 2
                 },
                 "to": {
                   "line": 3,
@@ -88,12 +88,12 @@
             },
             "value": null,
             "from": {
-              "line": 2,
-              "linechar": 9
+              "line": 3,
+              "linechar": 0
             },
             "to": {
-              "line": 3,
-              "linechar": 7
+              "line": 4,
+              "linechar": 0
             }
           }
         ],

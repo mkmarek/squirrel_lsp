@@ -1,16 +1,5 @@
-use crate::squirrel_ast::{
-    ArrayAccessExpression, ArrayExpression, BinaryOperatorExpression, BlockStatement,
-    BooleanLiteralExpression, BreakStatement, ClassDefinition, ClassMemberDeclaration,
-    CloneExpression, ConstStatement, ContinueStatement, DeleteExpression, DoWhileStatement,
-    EnumStatement, Expression, ExpressionStatement, FloatLiteralExpression, ForEachStatement,
-    ForStatement, FunctionCallExpression, FunctionDeclaration, GroupingExpression,
-    IdentifierExpression, IfStatement, IntegerLiteralExpression, LocalStatement,
-    MemberAccessExpression, MutliLineStringLiteralExpression, NullLiteralExpression,
-    PostfixUnaryOperatorExpression, ResumeExpression, ReturnStatement, ScopeResolutionExpression,
-    SpreadExpression, Statement, Statements, StringLiteralExpression, SwitchStatement, TableEntry,
-    TableExpression, TernaryOperatorExpression, ThrowStatement, TryCatchStatement,
-    UnaryOperatorExpression, WhileStatement, YieldStatement,
-};
+use crate::grammar::expressions::*;
+use crate::grammar::statements::*;
 
 #[derive(Debug, PartialEq)]
 pub enum AstVisitorResult {
@@ -163,11 +152,11 @@ pub trait AstVisitor {
         AstVisitorResult::Continue
     }
 
-    fn enter_function_declaration(&mut self, _statement: &FunctionDeclaration) -> AstVisitorResult {
+    fn enter_function_declaration(&mut self, _statement: &FunctionDefinition) -> AstVisitorResult {
         AstVisitorResult::Continue
     }
 
-    fn leave_function_declaration(&mut self, _statement: &FunctionDeclaration) -> AstVisitorResult {
+    fn leave_function_declaration(&mut self, _statement: &FunctionDefinition) -> AstVisitorResult {
         AstVisitorResult::Continue
     }
 
@@ -453,11 +442,11 @@ pub trait AstVisitor {
         AstVisitorResult::Continue
     }
 
-    fn enter_function_expression(&mut self, _expression: &FunctionDeclaration) -> AstVisitorResult {
+    fn enter_function_expression(&mut self, _expression: &FunctionDefinition) -> AstVisitorResult {
         AstVisitorResult::Continue
     }
 
-    fn leave_function_expression(&mut self, _expression: &FunctionDeclaration) -> AstVisitorResult {
+    fn leave_function_expression(&mut self, _expression: &FunctionDefinition) -> AstVisitorResult {
         AstVisitorResult::Continue
     }
 }
@@ -500,10 +489,9 @@ fn visit_statement<'a>(
         Statement::Expression(stat) => visit_expression_statement(stat, visitor),
         Statement::Const(stat) => visit_const_statement(stat, visitor),
         Statement::Local(stat) => visit_local_statement(stat, visitor),
-        Statement::FunctionDeclaration(stat) => visit_function_declaration(stat, visitor),
+        Statement::FunctionDefinition(stat) => visit_function_declaration(stat, visitor),
         Statement::Class(stat) => visit_class_definition(stat, visitor),
         Statement::Enum(stat) => visit_enum_statement(stat, visitor),
-        Statement::Comment(_) => return AstVisitorResult::Continue,
     }
 }
 
@@ -901,7 +889,7 @@ fn visit_local_statement<'a>(
 }
 
 fn visit_function_declaration<'a>(
-    declaration: &'a FunctionDeclaration,
+    declaration: &'a FunctionDefinition,
     visitor: &mut impl AstVisitor,
 ) -> AstVisitorResult {
     if visitor.enter_function_declaration(declaration) == AstVisitorResult::Break {
@@ -953,17 +941,17 @@ fn visit_class_definition<'a>(
 
     for member in &definition.members {
         match member {
-            ClassMemberDeclaration::MethodDeclaration(declaration) => {
+            ClassMemberDefinition::Method(declaration) => {
                 if visit_function_declaration(declaration, visitor) == AstVisitorResult::Break {
                     return AstVisitorResult::Break;
                 }
             }
-            ClassMemberDeclaration::ConstructorDeclaration(declaration) => {
+            ClassMemberDefinition::Constructor(declaration) => {
                 if visit_function_declaration(declaration, visitor) == AstVisitorResult::Break {
                     return AstVisitorResult::Break;
                 }
             }
-            ClassMemberDeclaration::FieldDeclaration(field) => {
+            ClassMemberDefinition::Field(field) => {
                 if visit_expression(&field.name, visitor) == AstVisitorResult::Break {
                     return AstVisitorResult::Break;
                 }
@@ -1509,7 +1497,7 @@ fn visit_ternary_operator_expression<'a>(
 mod test {
     use crate::{squirrel_lexer::Token, squirrel_parser::Parser};
 
-    use super::{visit, AstVisitor, AstVisitorResult};
+    use super::{visit, AstVisitor, AstVisitorResult, IdentifierExpression};
 
     struct IdentifierVisitor {
         identifiers: Vec<Token>,
@@ -1518,7 +1506,7 @@ mod test {
     impl AstVisitor for IdentifierVisitor {
         fn enter_identifier_expression(
             &mut self,
-            expression: &crate::squirrel_ast::IdentifierExpression,
+            expression: &IdentifierExpression,
         ) -> AstVisitorResult {
             self.identifiers.push(expression.token.clone());
 

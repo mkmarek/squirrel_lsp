@@ -1,6 +1,7 @@
 use std::collections::HashMap;
 
 use difference::{Changeset, Difference};
+use squirrel_formatter::Formatter;
 use squirrel_printer::{IndentationType, Printer, PrinterSettings};
 use tokio::fs;
 use tokio::sync::Mutex;
@@ -10,8 +11,9 @@ use tower_lsp::lsp_types::*;
 use tower_lsp::{Client, LanguageServer, LspService, Server};
 
 mod ast_visitor;
+mod grammar;
 mod scope_table;
-mod squirrel_ast;
+mod squirrel_formatter;
 mod squirrel_lexer;
 mod squirrel_parser;
 mod squirrel_printer;
@@ -273,41 +275,27 @@ impl LanguageServer for Backend {
                 .clone()
         };
 
-        let mut parser = squirrel_parser::Parser::new(&contents);
-        let ast = parser.parse().map_err(|_| {
-            tower_lsp::jsonrpc::Error::invalid_params("failed to parse squirrel file")
-        })?;
-
-        let mut printer = Printer::new(
-            contents.len(),
-            PrinterSettings {
-                indentation: if params.options.insert_spaces {
-                    IndentationType::Spaces
-                } else {
-                    IndentationType::Tabs
-                },
-                indentation_size: params.options.tab_size as usize,
-            },
-        );
-
-        let mut printed = printer.print(&ast);
+        let mut formatter = Formatter::new(&contents);
+        let mut formatted = formatter
+            .format()
+            .map_err(|_| tower_lsp::jsonrpc::Error::invalid_params("failed to format document"))?;
 
         if let Some(insert_final_newline) = params.options.insert_final_newline {
-            if insert_final_newline && !printed.ends_with('\n') {
-                printed.push('\n');
+            if insert_final_newline && !formatted.ends_with('\n') {
+                formatted.push('\n');
             }
         }
 
         if let Some(trim_final_newlines) = params.options.trim_final_newlines {
             if trim_final_newlines {
-                while printed.ends_with('\n') {
-                    printed.pop();
+                while formatted.ends_with('\n') {
+                    formatted.pop();
                 }
             }
         }
 
         let sanitized_contents = contents.replace("\r\n", "\n");
-        let changeset = Changeset::new(&sanitized_contents, &printed, "");
+        let changeset = Changeset::new(&sanitized_contents, &formatted, "");
 
         let mut edits = Vec::new();
 
@@ -323,7 +311,7 @@ impl LanguageServer for Backend {
                     let line_count = str.matches('\n').count();
                     current_line_number += line_count;
                     current_character = if line_count > 0 {
-                        str.split("\n").last().unwrap_or("").len()
+                        str.split('\n').last().unwrap_or("").len()
                     } else {
                         current_character + str.len()
                     }
@@ -331,7 +319,7 @@ impl LanguageServer for Backend {
                 Difference::Rem(str) => {
                     let text_end_line_number = current_line_number + str.matches('\n').count();
                     let text_end_character = if text_end_line_number > current_line_number {
-                        str.split("\n").last().unwrap_or("").len()
+                        str.split('\n').last().unwrap_or("").len()
                     } else {
                         current_character + str.len()
                     };

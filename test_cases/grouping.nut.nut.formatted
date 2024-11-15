@@ -1,1 +1,1 @@
-local stuff = (a + b) * c
+local stuff = (a + b) * c;

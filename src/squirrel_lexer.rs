@@ -4,11 +4,11 @@ use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Clone)]
 pub struct Lexer<'a> {
-    pub skip_comments: bool,
     pub input: &'a [u8],
     pub position: usize,
     pub location: Location,
     pub token_counter: usize,
+    pub skip_comments: bool,
 }
 
 #[derive(Debug, PartialEq, Clone, Serialize, Deserialize)]
@@ -194,9 +194,9 @@ pub enum Operator {
     In,
 }
 
-impl Into<&str> for &Operator {
-    fn into(self) -> &'static str {
-        match self {
+impl From<&Operator> for &str {
+    fn from(val: &Operator) -> Self {
+        match val {
             Operator::Not => "!",
             Operator::NotEqual => "!=",
             Operator::Or => "||",
@@ -320,7 +320,6 @@ pub struct LexerErrorWithLocation {
 impl<'a> Lexer<'a> {
     pub fn new(input: &'a str, skip_comments: bool) -> Self {
         Self {
-            skip_comments,
             input: input.as_bytes(),
             position: 0,
             location: Location {
@@ -328,6 +327,7 @@ impl<'a> Lexer<'a> {
                 linechar: 0,
             },
             token_counter: 0,
+            skip_comments,
         }
     }
 
@@ -348,14 +348,12 @@ impl<'a> Lexer<'a> {
         let mut lexer = self.clone();
 
         for t in tokens {
-            if t == lexer.next()?.token {
-                return Ok(true);
-            } else {
+            if t != lexer.next()?.token {
                 return Ok(false);
             }
         }
 
-        Ok(false)
+        Ok(true)
     }
 
     pub fn skip_whitespace(&mut self) {
@@ -396,9 +394,12 @@ impl<'a> Lexer<'a> {
 
         let start_location = self.location.clone();
 
+        let mut comments = Vec::new();
         if self.skip_comments {
-            while let Some(_) = self.comment() {
+            while let Some(comment) = self.comment() {
+                comments.push(comment);
                 self.token_counter += 1;
+
                 if let Some(token) = self.whitespace() {
                     let index = self.token_counter;
                     return Ok(TokenWithLocation::new(
@@ -409,11 +410,11 @@ impl<'a> Lexer<'a> {
                     ));
                 }
             }
-        } else if let Some(token) = self.comment() {
+        } else if let Some(comment) = self.comment() {
             let index = self.token_counter;
             self.token_counter += 1;
             return Ok(TokenWithLocation::new(
-                token,
+                comment,
                 start_location,
                 self.location.clone(),
                 index,
@@ -704,7 +705,6 @@ impl<'a> Lexer<'a> {
             }
             self.increment_position(false);
             self.increment_position(false);
-
             return Some(Token::MultiLineComment(string));
         }
 
@@ -994,12 +994,11 @@ impl<'a> Lexer<'a> {
             return None;
         }
 
-        if self.position < self.input.len() + 1 {
-            if self.input[self.position] as char == '\r'
-                && self.input[self.position + 1] as char == '\n'
-            {
-                return Some('\n');
-            }
+        if self.position < self.input.len() + 1
+            && self.input[self.position] as char == '\r'
+            && self.input[self.position + 1] as char == '\n'
+        {
+            return Some('\n');
         }
 
         Some(self.input[self.position] as char)
@@ -1297,13 +1296,16 @@ mod tests {
             lexer.next().unwrap().token,
             Token::Comment(" Hello world".to_string())
         );
+
         assert_eq!(lexer.next().unwrap().token, Token::Newline);
+
         assert_eq!(
             lexer.next().unwrap().token,
             Token::Comment(" Hello world".to_string())
         );
 
         assert_eq!(lexer.next().unwrap().token, Token::Newline);
+
         assert_eq!(
             lexer.next().unwrap().token,
             Token::Comment(" Hello world".to_string())

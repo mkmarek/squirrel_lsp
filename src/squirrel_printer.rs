@@ -1,18 +1,7 @@
 use crate::{
-    squirrel_ast::{
-        ArrayAccessExpression, ArrayExpression, BinaryOperatorExpression, BlockStatement,
-        BooleanLiteralExpression, BreakStatement, ClassDefinition, ClassMemberDeclaration,
-        CloneExpression, ConstStatement, ContinueStatement, DeleteExpression, DoWhileStatement,
-        EnumStatement, Expression, ExpressionStatement, FloatLiteralExpression, ForEachStatement,
-        ForStatement, FunctionCallExpression, FunctionDeclaration, GroupingExpression,
-        IdentifierExpression, IfStatement, IntegerLiteralExpression, LocalStatement,
-        MemberAccessExpression, MutliLineStringLiteralExpression, NullLiteralExpression,
-        PostfixUnaryOperatorExpression, ResumeExpression, ReturnStatement,
-        ScopeResolutionExpression, SpreadExpression, Statement, Statements,
-        StringLiteralExpression, SwitchStatement, TableExpression, TernaryOperatorExpression,
-        ThrowStatement, TryCatchStatement, UnaryOperatorExpression, WhileStatement, YieldStatement,
-    },
-    squirrel_lexer::{Keyword, Lexer, Operator, Token},
+    grammar::expressions::*,
+    grammar::statements::*,
+    squirrel_lexer::{Keyword, Operator, Token},
 };
 
 pub enum IndentationType {
@@ -108,17 +97,9 @@ impl Printer {
             Statement::Expression(stat) => self.print_expression_statement(stat),
             Statement::Const(stat) => self.print_const(stat),
             Statement::Local(stat) => self.print_local(stat),
-            Statement::FunctionDeclaration(stat) => self.print_function_declaration(stat),
+            Statement::FunctionDefinition(stat) => self.print_function_declaration(stat),
             Statement::Class(stat) => self.print_class_definition(stat),
             Statement::Enum(stat) => self.print_enum(stat),
-            Statement::Comment(stat) => {
-                for (i, comment) in stat.iter().enumerate() {
-                    self.print_comment(comment);
-                    if i < stat.len() - 1 {
-                        self.newline_and_indent();
-                    }
-                }
-            }
         }
     }
 
@@ -354,11 +335,11 @@ impl Printer {
         }
     }
 
-    fn print_break(&mut self, stat: &BreakStatement) {
+    fn print_break(&mut self, _stat: &BreakStatement) {
         self.print_token(Token::Keyword(Keyword::Break));
     }
 
-    fn print_continue(&mut self, stat: &ContinueStatement) {
+    fn print_continue(&mut self, _stat: &ContinueStatement) {
         self.print_token(Token::Keyword(Keyword::Continue));
     }
 
@@ -449,7 +430,7 @@ impl Printer {
         }
     }
 
-    fn print_function_declaration(&mut self, expr: &FunctionDeclaration) {
+    fn print_function_declaration(&mut self, expr: &FunctionDefinition) {
         if expr.is_static {
             self.print_token(Token::Keyword(Keyword::Static));
             self.print_space();
@@ -513,7 +494,7 @@ impl Printer {
                 self.newline_and_indent();
             }
             match member {
-                ClassMemberDeclaration::FieldDeclaration(field) => {
+                ClassMemberDefinition::Field(field) => {
                     if newline_after_last {
                         self.newline_and_indent();
                     }
@@ -530,7 +511,7 @@ impl Printer {
                     self.print_space();
                     self.print_expression(&field.expression);
                 }
-                ClassMemberDeclaration::MethodDeclaration(method) => {
+                ClassMemberDefinition::Method(method) => {
                     if i > 0 {
                         self.newline_and_indent();
                     }
@@ -538,7 +519,7 @@ impl Printer {
 
                     self.print_function_declaration(method);
                 }
-                ClassMemberDeclaration::ConstructorDeclaration(constructor) => {
+                ClassMemberDefinition::Constructor(constructor) => {
                     if i > 0 {
                         self.newline_and_indent();
                     }
@@ -606,7 +587,7 @@ impl Printer {
         }
     }
 
-    fn print_null_literal(&mut self, expr: &NullLiteralExpression) {
+    fn print_null_literal(&mut self, _expr: &NullLiteralExpression) {
         self.print_token(Token::Keyword(Keyword::Null));
     }
 
@@ -641,7 +622,7 @@ impl Printer {
             self.print_expression(element);
         }
         self.indentation_level -= 1;
-        if expr.elements.len() > 0 {
+        if !expr.elements.is_empty() {
             self.newline_and_indent();
         }
         self.print_token(Token::RightBracket);
@@ -677,7 +658,7 @@ impl Printer {
             self.newline_and_indent();
 
             match elm {
-                crate::squirrel_ast::TableEntry::Field(f) => {
+                TableEntry::Field(f) => {
                     if newline_after_last {
                         self.newline_and_indent();
                     }
@@ -689,7 +670,7 @@ impl Printer {
                     self.print_space();
                     self.print_expression(&f.expression);
                 }
-                crate::squirrel_ast::TableEntry::Function(f) => {
+                TableEntry::Function(f) => {
                     if i > 0 {
                         self.newline_and_indent();
                     }
@@ -697,7 +678,7 @@ impl Printer {
 
                     self.print_function_declaration(&f.function);
                 }
-                crate::squirrel_ast::TableEntry::FieldWithExpressionKey(f) => {
+                TableEntry::FieldWithExpressionKey(f) => {
                     if i > 0 {
                         self.newline_and_indent();
                     }
@@ -742,7 +723,7 @@ impl Printer {
         self.buffer.push_str(&format!("\"{}\"", expr.value));
     }
 
-    fn print_spread(&mut self, expr: &SpreadExpression) {
+    fn print_spread(&mut self, _expr: &SpreadExpression) {
         self.print_token(Token::Dot);
         self.print_token(Token::Dot);
         self.print_token(Token::Dot);
@@ -764,14 +745,6 @@ impl Printer {
     fn print_unary_operator(&mut self, expr: &UnaryOperatorExpression) {
         self.print_token(Token::Operator(expr.operator.clone()));
         self.print_expression(&expr.expression);
-    }
-
-    fn print_comment(&mut self, stat: &crate::squirrel_ast::CommentStatement) {
-        if stat.is_multi_line {
-            self.buffer.push_str(&format!("/*{}*/", stat.comment));
-        } else {
-            self.buffer.push_str(&format!("//{}", stat.comment));
-        }
     }
 }
 
@@ -894,7 +867,7 @@ local b = 2;
                 );
 
                 let printed = printer.print(&program.unwrap());
-                let printed_path = "./test_cases/".to_string() + file_name + ".nut.formatted";
+                let printed_path = "./test_cases/".to_string() + file_name + ".nut.printed";
 
                 fs::write(Path::new(&printed_path), printed).unwrap();
             }

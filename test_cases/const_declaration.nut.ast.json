@@ -136,13 +136,6 @@
                 }
               }
             },
-            "comments": {
-              "before_3": [],
-              "before_1": [],
-              "before_unit": [],
-              "after_unit": [],
-              "before_2": []
-            },
             "from": {
               "line": 3,
               "linechar": 5
@@ -153,10 +146,6 @@
             }
           }
         ],
-        "comments": {
-          "after_unit": [],
-          "before_unit": []
-        },
         "from": {
           "line": 3,
           "linechar": 0

@@ -45,13 +45,6 @@
                 }
               }
             },
-            "comments": {
-              "before_3": [],
-              "before_1": [],
-              "before_2": [],
-              "after_unit": [],
-              "before_unit": []
-            },
             "from": {
               "line": 0,
               "linechar": 5
@@ -62,10 +55,6 @@
             }
           }
         ],
-        "comments": {
-          "after_unit": [],
-          "before_unit": []
-        },
         "from": {
           "line": 0,
           "linechar": 0
@@ -108,13 +97,6 @@
                 }
               }
             },
-            "comments": {
-              "before_3": [],
-              "before_2": [],
-              "after_unit": [],
-              "before_1": [],
-              "before_unit": []
-            },
             "from": {
               "line": 1,
               "linechar": 5
@@ -125,10 +107,6 @@
             }
           }
         ],
-        "comments": {
-          "before_unit": [],
-          "after_unit": []
-        },
         "from": {
           "line": 1,
           "linechar": 0
@@ -198,13 +176,6 @@
                 }
               }
             },
-            "comments": {
-              "before_1": [],
-              "after_unit": [],
-              "before_3": [],
-              "before_2": [],
-              "before_unit": []
-            },
             "from": {
               "line": 5,
               "linechar": 5
@@ -215,10 +186,6 @@
             }
           }
         ],
-        "comments": {
-          "before_unit": [],
-          "after_unit": []
-        },
         "from": {
           "line": 5,
           "linechar": 0
@@ -353,13 +320,6 @@
                 }
               }
             },
-            "comments": {
-              "before_2": [],
-              "before_unit": [],
-              "before_3": [],
-              "before_1": [],
-              "after_unit": []
-            },
             "from": {
               "line": 7,
               "linechar": 5
@@ -370,10 +330,6 @@
             }
           }
         ],
-        "comments": {
-          "after_unit": [],
-          "before_unit": []
-        },
         "from": {
           "line": 7,
           "linechar": 0
@@ -484,13 +440,6 @@
                 }
               }
             },
-            "comments": {
-              "before_1": [],
-              "before_unit": [],
-              "after_unit": [],
-              "before_3": [],
-              "before_2": []
-            },
             "from": {
               "line": 9,
               "linechar": 5
@@ -501,10 +450,6 @@
             }
           }
         ],
-        "comments": {
-          "after_unit": [],
-          "before_unit": []
-        },
         "from": {
           "line": 9,
           "linechar": 0
@@ -587,13 +532,6 @@
                 }
               }
             },
-            "comments": {
-              "before_3": [],
-              "after_unit": [],
-              "before_2": [],
-              "before_unit": [],
-              "before_1": []
-            },
             "from": {
               "line": 11,
               "linechar": 5
@@ -604,10 +542,6 @@
             }
           }
         ],
-        "comments": {
-          "after_unit": [],
-          "before_unit": []
-        },
         "from": {
           "line": 11,
           "linechar": 0
@@ -836,13 +770,6 @@
                 }
               }
             },
-            "comments": {
-              "before_3": [],
-              "before_unit": [],
-              "before_2": [],
-              "before_1": [],
-              "after_unit": []
-            },
             "from": {
               "line": 13,
               "linechar": 5
@@ -853,10 +780,6 @@
             }
           }
         ],
-        "comments": {
-          "after_unit": [],
-          "before_unit": []
-        },
         "from": {
           "line": 13,
           "linechar": 0
@@ -993,13 +916,6 @@
                 }
               }
             },
-            "comments": {
-              "before_3": [],
-              "before_unit": [],
-              "before_2": [],
-              "after_unit": [],
-              "before_1": []
-            },
             "from": {
               "line": 15,
               "linechar": 5
@@ -1010,10 +926,6 @@
             }
           }
         ],
-        "comments": {
-          "before_unit": [],
-          "after_unit": []
-        },
         "from": {
           "line": 15,
           "linechar": 0
