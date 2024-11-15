@@ -1,7 +1,7 @@
 {
   "statements": [
     {
-      "FunctionDeclaration": {
+      "FunctionDefinition": {
         "name": {
           "Identifier": {
             "token": {
@@ -298,17 +298,30 @@
         "expression": {
           "FunctionCall": {
             "function": {
-              "Identifier": {
-                "token": {
-                  "Identifier": "invoke"
+              "MemberAccess": {
+                "expression": {
+                  "Identifier": {
+                    "token": {
+                      "Keyword": "This"
+                    },
+                    "from": {
+                      "line": 8,
+                      "linechar": 0
+                    },
+                    "to": {
+                      "line": 8,
+                      "linechar": 4
+                    }
+                  }
                 },
+                "member": "invoke",
                 "from": {
                   "line": 8,
                   "linechar": 0
                 },
                 "to": {
                   "line": 8,
-                  "linechar": 6
+                  "linechar": 11
                 }
               }
             },
@@ -324,21 +337,6 @@
                         },
                         "from": {
                           "line": 8,
-                          "linechar": 17
-                        },
-                        "to": {
-                          "line": 8,
-                          "linechar": 21
-                        }
-                      }
-                    },
-                    {
-                      "Identifier": {
-                        "token": {
-                          "Identifier": "arg2"
-                        },
-                        "from": {
-                          "line": 8,
                           "linechar": 22
                         },
                         "to": {
@@ -350,7 +348,7 @@
                     {
                       "Identifier": {
                         "token": {
-                          "Identifier": "arg3"
+                          "Identifier": "arg2"
                         },
                         "from": {
                           "line": 8,
@@ -359,6 +357,21 @@
                         "to": {
                           "line": 8,
                           "linechar": 31
+                        }
+                      }
+                    },
+                    {
+                      "Identifier": {
+                        "token": {
+                          "Identifier": "arg3"
+                        },
+                        "from": {
+                          "line": 8,
+                          "linechar": 32
+                        },
+                        "to": {
+                          "line": 8,
+                          "linechar": 36
                         }
                       }
                     }
@@ -501,7 +514,7 @@
                   "is_static": false,
                   "from": {
                     "line": 8,
-                    "linechar": 7
+                    "linechar": 12
                   },
                   "to": {
                     "line": 11,

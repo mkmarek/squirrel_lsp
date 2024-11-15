@@ -13,24 +13,24 @@
                       "value": 1,
                       "from": {
                         "line": 0,
-                        "linechar": 13
+                        "linechar": 12
                       },
                       "to": {
                         "line": 0,
-                        "linechar": 14
+                        "linechar": 13
                       }
                     }
                   },
                   {
-                    "IntegerLiteral": {
-                      "value": 2,
+                    "FloatLiteral": {
+                      "value": 2.0005,
                       "from": {
                         "line": 0,
-                        "linechar": 15
+                        "linechar": 14
                       },
                       "to": {
                         "line": 0,
-                        "linechar": 17
+                        "linechar": 21
                       }
                     }
                   },
@@ -39,11 +39,11 @@
                       "value": 3,
                       "from": {
                         "line": 0,
-                        "linechar": 18
+                        "linechar": 22
                       },
                       "to": {
                         "line": 0,
-                        "linechar": 20
+                        "linechar": 24
                       }
                     }
                   },
@@ -52,11 +52,11 @@
                       "value": 4,
                       "from": {
                         "line": 0,
-                        "linechar": 21
+                        "linechar": 25
                       },
                       "to": {
                         "line": 0,
-                        "linechar": 23
+                        "linechar": 27
                       }
                     }
                   },
@@ -65,11 +65,11 @@
                       "value": 5,
                       "from": {
                         "line": 0,
-                        "linechar": 24
+                        "linechar": 28
                       },
                       "to": {
                         "line": 0,
-                        "linechar": 26
+                        "linechar": 30
                       }
                     }
                   }
@@ -80,7 +80,7 @@
                 },
                 "to": {
                   "line": 0,
-                  "linechar": 27
+                  "linechar": 31
                 }
               }
             },
@@ -90,7 +90,7 @@
             },
             "to": {
               "line": 0,
-              "linechar": 27
+              "linechar": 31
             }
           }
         ],
@@ -100,7 +100,7 @@
         },
         "to": {
           "line": 0,
-          "linechar": 27
+          "linechar": 31
         }
       }
     },
@@ -142,7 +142,7 @@
                   },
                   "index": {
                     "IntegerLiteral": {
-                      "value": 0,
+                      "value": 1,
                       "from": {
                         "line": 2,
                         "linechar": 12
@@ -322,7 +322,7 @@
     "linechar": 0
   },
   "to": {
-    "line": 5,
+    "line": 6,
     "linechar": 0
   }
 }

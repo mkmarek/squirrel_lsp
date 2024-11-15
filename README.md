@@ -14,4 +14,4 @@ I use Squirrel in some personal projects and hate when it fails on me only becau
 - [ ] Hover Functionality
 - [x] Go to definition Functionality
 - [ ] Rename functionality
-- [ ] File formatting
+- [x] File formatting

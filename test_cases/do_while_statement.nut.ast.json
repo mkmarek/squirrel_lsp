@@ -10,11 +10,11 @@
                 "value": 0,
                 "from": {
                   "line": 0,
-                  "linechar": 8
+                  "linechar": 9
                 },
                 "to": {
                   "line": 0,
-                  "linechar": 9
+                  "linechar": 11
                 }
               }
             },
@@ -24,7 +24,7 @@
             },
             "to": {
               "line": 0,
-              "linechar": 9
+              "linechar": 11
             }
           }
         ],
@@ -34,7 +34,7 @@
         },
         "to": {
           "line": 0,
-          "linechar": 9
+          "linechar": 11
         }
       }
     },
@@ -48,12 +48,12 @@
                   "Identifier": "a"
                 },
                 "from": {
-                  "line": 5,
-                  "linechar": 8
+                  "line": 6,
+                  "linechar": 9
                 },
                 "to": {
-                  "line": 5,
-                  "linechar": 9
+                  "line": 6,
+                  "linechar": 10
                 }
               }
             },
@@ -62,22 +62,22 @@
               "IntegerLiteral": {
                 "value": 100,
                 "from": {
-                  "line": 5,
-                  "linechar": 10
+                  "line": 6,
+                  "linechar": 12
                 },
                 "to": {
-                  "line": 5,
-                  "linechar": 13
+                  "line": 6,
+                  "linechar": 16
                 }
               }
             },
             "from": {
-              "line": 5,
-              "linechar": 8
+              "line": 6,
+              "linechar": 9
             },
             "to": {
-              "line": 5,
-              "linechar": 13
+              "line": 6,
+              "linechar": 16
             }
           }
         },
@@ -95,11 +95,11 @@
                               "Identifier": "print"
                             },
                             "from": {
-                              "line": 3,
+                              "line": 4,
                               "linechar": 4
                             },
                             "to": {
-                              "line": 3,
+                              "line": 4,
                               "linechar": 9
                             }
                           }
@@ -113,11 +113,11 @@
                                     "Identifier": "a"
                                   },
                                   "from": {
-                                    "line": 3,
+                                    "line": 4,
                                     "linechar": 10
                                   },
                                   "to": {
-                                    "line": 3,
+                                    "line": 4,
                                     "linechar": 11
                                   }
                                 }
@@ -127,43 +127,43 @@
                                 "StringLiteral": {
                                   "value": "\\n",
                                   "from": {
-                                    "line": 3,
-                                    "linechar": 12
+                                    "line": 4,
+                                    "linechar": 13
                                   },
                                   "to": {
-                                    "line": 3,
-                                    "linechar": 16
+                                    "line": 4,
+                                    "linechar": 18
                                   }
                                 }
                               },
                               "from": {
-                                "line": 3,
+                                "line": 4,
                                 "linechar": 10
                               },
                               "to": {
-                                "line": 3,
-                                "linechar": 16
+                                "line": 4,
+                                "linechar": 18
                               }
                             }
                           }
                         ],
                         "from": {
-                          "line": 3,
+                          "line": 4,
                           "linechar": 0
                         },
                         "to": {
-                          "line": 3,
-                          "linechar": 17
+                          "line": 4,
+                          "linechar": 19
                         }
                       }
                     },
                     "from": {
-                      "line": 3,
+                      "line": 4,
                       "linechar": 0
                     },
                     "to": {
-                      "line": 3,
-                      "linechar": 17
+                      "line": 4,
+                      "linechar": 19
                     }
                   }
                 },
@@ -177,11 +177,11 @@
                               "Identifier": "a"
                             },
                             "from": {
-                              "line": 4,
+                              "line": 5,
                               "linechar": 4
                             },
                             "to": {
-                              "line": 4,
+                              "line": 5,
                               "linechar": 5
                             }
                           }
@@ -191,62 +191,62 @@
                           "IntegerLiteral": {
                             "value": 1,
                             "from": {
-                              "line": 4,
-                              "linechar": 7
+                              "line": 5,
+                              "linechar": 8
                             },
                             "to": {
-                              "line": 4,
-                              "linechar": 8
+                              "line": 5,
+                              "linechar": 10
                             }
                           }
                         },
                         "from": {
-                          "line": 4,
+                          "line": 5,
                           "linechar": 0
                         },
                         "to": {
-                          "line": 4,
-                          "linechar": 8
+                          "line": 5,
+                          "linechar": 10
                         }
                       }
                     },
                     "from": {
-                      "line": 4,
+                      "line": 5,
                       "linechar": 0
                     },
                     "to": {
-                      "line": 4,
-                      "linechar": 8
+                      "line": 5,
+                      "linechar": 10
                     }
                   }
                 }
               ],
               "from": {
-                "line": 2,
+                "line": 3,
                 "linechar": 1
               },
               "to": {
-                "line": 5,
+                "line": 6,
                 "linechar": 0
               }
             },
             "from": {
-              "line": 2,
+              "line": 3,
               "linechar": 0
             },
             "to": {
-              "line": 5,
+              "line": 6,
               "linechar": 1
             }
           }
         },
         "from": {
-          "line": 1,
+          "line": 2,
           "linechar": 0
         },
         "to": {
-          "line": 5,
-          "linechar": 14
+          "line": 6,
+          "linechar": 17
         }
       }
     }
@@ -256,7 +256,7 @@
     "linechar": 0
   },
   "to": {
-    "line": 6,
+    "line": 7,
     "linechar": 0
   }
 }

@@ -10,7 +10,8 @@
     "to": {
       "line": 0,
       "linechar": 5
-    }
+    },
+    "index": 0
   },
   {
     "token": {
@@ -23,7 +24,8 @@
     "to": {
       "line": 0,
       "linechar": 9
-    }
+    },
+    "index": 1
   },
   {
     "token": {
@@ -36,7 +38,8 @@
     "to": {
       "line": 0,
       "linechar": 11
-    }
+    },
+    "index": 2
   },
   {
     "token": {
@@ -49,7 +52,8 @@
     "to": {
       "line": 0,
       "linechar": 15
-    }
+    },
+    "index": 3
   },
   {
     "token": {
@@ -62,7 +66,8 @@
     "to": {
       "line": 0,
       "linechar": 16
-    }
+    },
+    "index": 4
   },
   {
     "token": {
@@ -75,7 +80,8 @@
     "to": {
       "line": 0,
       "linechar": 20
-    }
+    },
+    "index": 5
   },
   {
     "token": {
@@ -88,7 +94,8 @@
     "to": {
       "line": 0,
       "linechar": 21
-    }
+    },
+    "index": 6
   },
   {
     "token": {
@@ -101,7 +108,8 @@
     "to": {
       "line": 0,
       "linechar": 25
-    }
+    },
+    "index": 7
   },
   {
     "token": "Semicolon",
@@ -112,7 +120,8 @@
     "to": {
       "line": 0,
       "linechar": 26
-    }
+    },
+    "index": 8
   },
   {
     "token": "Newline",
@@ -123,6 +132,7 @@
     "to": {
       "line": 1,
       "linechar": 0
-    }
+    },
+    "index": 9
   }
 ]

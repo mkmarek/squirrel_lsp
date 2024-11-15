@@ -10,7 +10,8 @@
     "to": {
       "line": 0,
       "linechar": 5
-    }
+    },
+    "index": 0
   },
   {
     "token": {
@@ -23,7 +24,8 @@
     "to": {
       "line": 0,
       "linechar": 10
-    }
+    },
+    "index": 1
   },
   {
     "token": {
@@ -36,422 +38,493 @@
     "to": {
       "line": 0,
       "linechar": 12
-    }
+    },
+    "index": 2
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 0,
+      "linechar": 12
+    },
+    "to": {
+      "line": 1,
+      "linechar": 0
+    },
+    "index": 3
   },
   {
     "token": {
       "Identifier": "a"
     },
     "from": {
-      "line": 0,
-      "linechar": 13
+      "line": 1,
+      "linechar": 0
     },
     "to": {
-      "line": 0,
-      "linechar": 14
-    }
+      "line": 1,
+      "linechar": 1
+    },
+    "index": 3
   },
   {
     "token": "Dot",
     "from": {
-      "line": 0,
-      "linechar": 14
+      "line": 1,
+      "linechar": 1
     },
     "to": {
-      "line": 0,
-      "linechar": 15
-    }
+      "line": 1,
+      "linechar": 2
+    },
+    "index": 4
   },
   {
     "token": {
       "Identifier": "foo"
     },
     "from": {
-      "line": 0,
-      "linechar": 15
+      "line": 1,
+      "linechar": 2
     },
     "to": {
-      "line": 0,
-      "linechar": 18
-    }
+      "line": 1,
+      "linechar": 5
+    },
+    "index": 5
   },
   {
     "token": "LeftParenthesis",
     "from": {
-      "line": 0,
-      "linechar": 18
+      "line": 1,
+      "linechar": 5
     },
     "to": {
-      "line": 0,
-      "linechar": 19
-    }
+      "line": 1,
+      "linechar": 6
+    },
+    "index": 6
   },
   {
     "token": "RightParenthesis",
     "from": {
-      "line": 0,
-      "linechar": 19
+      "line": 1,
+      "linechar": 6
     },
     "to": {
-      "line": 0,
-      "linechar": 20
-    }
+      "line": 1,
+      "linechar": 7
+    },
+    "index": 7
   },
   {
     "token": {
       "Operator": "Or"
     },
     "from": {
-      "line": 0,
-      "linechar": 21
+      "line": 1,
+      "linechar": 8
     },
     "to": {
-      "line": 0,
-      "linechar": 23
-    }
+      "line": 1,
+      "linechar": 10
+    },
+    "index": 8
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 1,
+      "linechar": 10
+    },
+    "to": {
+      "line": 2,
+      "linechar": 0
+    },
+    "index": 9
   },
   {
     "token": {
       "Identifier": "b"
     },
     "from": {
-      "line": 0,
-      "linechar": 24
+      "line": 2,
+      "linechar": 0
     },
     "to": {
-      "line": 0,
-      "linechar": 25
-    }
+      "line": 2,
+      "linechar": 1
+    },
+    "index": 9
   },
   {
     "token": "Dot",
     "from": {
-      "line": 0,
-      "linechar": 25
+      "line": 2,
+      "linechar": 1
     },
     "to": {
-      "line": 0,
-      "linechar": 26
-    }
+      "line": 2,
+      "linechar": 2
+    },
+    "index": 10
   },
   {
     "token": {
       "Identifier": "test"
     },
     "from": {
-      "line": 0,
-      "linechar": 26
+      "line": 2,
+      "linechar": 2
     },
     "to": {
-      "line": 0,
-      "linechar": 30
-    }
+      "line": 2,
+      "linechar": 6
+    },
+    "index": 11
   },
   {
     "token": "LeftParenthesis",
-    "from": {
-      "line": 0,
-      "linechar": 30
-    },
-    "to": {
-      "line": 0,
-      "linechar": 31
-    }
-  },
-  {
-    "token": "RightParenthesis",
-    "from": {
-      "line": 0,
-      "linechar": 31
-    },
-    "to": {
-      "line": 0,
-      "linechar": 32
-    }
-  },
-  {
-    "token": {
-      "Operator": "And"
-    },
-    "from": {
-      "line": 0,
-      "linechar": 33
-    },
-    "to": {
-      "line": 0,
-      "linechar": 35
-    }
-  },
-  {
-    "token": {
-      "Identifier": "x"
-    },
-    "from": {
-      "line": 0,
-      "linechar": 36
-    },
-    "to": {
-      "line": 0,
-      "linechar": 37
-    }
-  },
-  {
-    "token": "Dot",
-    "from": {
-      "line": 0,
-      "linechar": 37
-    },
-    "to": {
-      "line": 0,
-      "linechar": 38
-    }
-  },
-  {
-    "token": {
-      "Identifier": "y"
-    },
-    "from": {
-      "line": 0,
-      "linechar": 38
-    },
-    "to": {
-      "line": 0,
-      "linechar": 39
-    }
-  },
-  {
-    "token": "Dot",
-    "from": {
-      "line": 0,
-      "linechar": 39
-    },
-    "to": {
-      "line": 0,
-      "linechar": 40
-    }
-  },
-  {
-    "token": {
-      "Identifier": "z"
-    },
-    "from": {
-      "line": 0,
-      "linechar": 40
-    },
-    "to": {
-      "line": 0,
-      "linechar": 41
-    }
-  },
-  {
-    "token": "Semicolon",
-    "from": {
-      "line": 0,
-      "linechar": 41
-    },
-    "to": {
-      "line": 0,
-      "linechar": 42
-    }
-  },
-  {
-    "token": "Newline",
-    "from": {
-      "line": 0,
-      "linechar": 42
-    },
-    "to": {
-      "line": 1,
-      "linechar": 0
-    }
-  },
-  {
-    "token": "Newline",
-    "from": {
-      "line": 1,
-      "linechar": 0
-    },
-    "to": {
-      "line": 2,
-      "linechar": 0
-    }
-  },
-  {
-    "token": {
-      "Keyword": "Local"
-    },
-    "from": {
-      "line": 2,
-      "linechar": 0
-    },
-    "to": {
-      "line": 2,
-      "linechar": 5
-    }
-  },
-  {
-    "token": {
-      "Identifier": "test2"
-    },
     "from": {
       "line": 2,
       "linechar": 6
     },
     "to": {
       "line": 2,
+      "linechar": 7
+    },
+    "index": 12
+  },
+  {
+    "token": "RightParenthesis",
+    "from": {
+      "line": 2,
+      "linechar": 7
+    },
+    "to": {
+      "line": 2,
+      "linechar": 8
+    },
+    "index": 13
+  },
+  {
+    "token": {
+      "Operator": "And"
+    },
+    "from": {
+      "line": 2,
+      "linechar": 9
+    },
+    "to": {
+      "line": 2,
       "linechar": 11
-    }
+    },
+    "index": 14
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 2,
+      "linechar": 11
+    },
+    "to": {
+      "line": 3,
+      "linechar": 0
+    },
+    "index": 15
+  },
+  {
+    "token": {
+      "Identifier": "x"
+    },
+    "from": {
+      "line": 3,
+      "linechar": 0
+    },
+    "to": {
+      "line": 3,
+      "linechar": 1
+    },
+    "index": 15
+  },
+  {
+    "token": "Dot",
+    "from": {
+      "line": 3,
+      "linechar": 1
+    },
+    "to": {
+      "line": 3,
+      "linechar": 2
+    },
+    "index": 16
+  },
+  {
+    "token": {
+      "Identifier": "y"
+    },
+    "from": {
+      "line": 3,
+      "linechar": 2
+    },
+    "to": {
+      "line": 3,
+      "linechar": 3
+    },
+    "index": 17
+  },
+  {
+    "token": "Dot",
+    "from": {
+      "line": 3,
+      "linechar": 3
+    },
+    "to": {
+      "line": 3,
+      "linechar": 4
+    },
+    "index": 18
+  },
+  {
+    "token": {
+      "Identifier": "z"
+    },
+    "from": {
+      "line": 3,
+      "linechar": 4
+    },
+    "to": {
+      "line": 3,
+      "linechar": 5
+    },
+    "index": 19
+  },
+  {
+    "token": "Semicolon",
+    "from": {
+      "line": 3,
+      "linechar": 5
+    },
+    "to": {
+      "line": 3,
+      "linechar": 6
+    },
+    "index": 20
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 3,
+      "linechar": 6
+    },
+    "to": {
+      "line": 4,
+      "linechar": 0
+    },
+    "index": 21
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 4,
+      "linechar": 0
+    },
+    "to": {
+      "line": 5,
+      "linechar": 0
+    },
+    "index": 21
+  },
+  {
+    "token": {
+      "Keyword": "Local"
+    },
+    "from": {
+      "line": 5,
+      "linechar": 0
+    },
+    "to": {
+      "line": 5,
+      "linechar": 5
+    },
+    "index": 21
+  },
+  {
+    "token": {
+      "Identifier": "test2"
+    },
+    "from": {
+      "line": 5,
+      "linechar": 6
+    },
+    "to": {
+      "line": 5,
+      "linechar": 11
+    },
+    "index": 22
   },
   {
     "token": {
       "Operator": "Assign"
     },
     "from": {
-      "line": 2,
+      "line": 5,
       "linechar": 12
     },
     "to": {
-      "line": 2,
+      "line": 5,
       "linechar": 13
-    }
+    },
+    "index": 23
   },
   {
     "token": {
       "Operator": "Increment"
     },
     "from": {
-      "line": 2,
+      "line": 5,
       "linechar": 14
     },
     "to": {
-      "line": 2,
+      "line": 5,
       "linechar": 16
-    }
+    },
+    "index": 24
   },
   {
     "token": {
       "Identifier": "a"
     },
     "from": {
-      "line": 2,
-      "linechar": 16
+      "line": 5,
+      "linechar": 17
     },
     "to": {
-      "line": 2,
-      "linechar": 17
-    }
+      "line": 5,
+      "linechar": 18
+    },
+    "index": 25
   },
   {
     "token": {
       "Operator": "Increment"
     },
     "from": {
-      "line": 2,
-      "linechar": 17
+      "line": 5,
+      "linechar": 19
     },
     "to": {
-      "line": 2,
-      "linechar": 19
-    }
+      "line": 5,
+      "linechar": 21
+    },
+    "index": 26
   },
   {
     "token": {
       "Operator": "Minus"
     },
     "from": {
-      "line": 2,
-      "linechar": 20
+      "line": 5,
+      "linechar": 22
     },
     "to": {
-      "line": 2,
-      "linechar": 21
-    }
+      "line": 5,
+      "linechar": 23
+    },
+    "index": 27
   },
   {
     "token": {
       "Operator": "Decrement"
     },
     "from": {
-      "line": 2,
-      "linechar": 22
+      "line": 5,
+      "linechar": 24
     },
     "to": {
-      "line": 2,
-      "linechar": 24
-    }
+      "line": 5,
+      "linechar": 26
+    },
+    "index": 28
   },
   {
     "token": {
       "Identifier": "b"
     },
     "from": {
-      "line": 2,
-      "linechar": 24
+      "line": 5,
+      "linechar": 27
     },
     "to": {
-      "line": 2,
-      "linechar": 25
-    }
+      "line": 5,
+      "linechar": 28
+    },
+    "index": 29
   },
   {
     "token": {
       "Operator": "Decrement"
     },
     "from": {
-      "line": 2,
-      "linechar": 25
+      "line": 5,
+      "linechar": 29
     },
     "to": {
-      "line": 2,
-      "linechar": 27
-    }
+      "line": 5,
+      "linechar": 31
+    },
+    "index": 30
   },
   {
     "token": {
       "Operator": "Multiply"
     },
     "from": {
-      "line": 2,
-      "linechar": 28
+      "line": 5,
+      "linechar": 32
     },
     "to": {
-      "line": 2,
-      "linechar": 29
-    }
+      "line": 5,
+      "linechar": 33
+    },
+    "index": 31
   },
   {
     "token": {
       "Identifier": "c"
     },
     "from": {
-      "line": 2,
-      "linechar": 30
+      "line": 5,
+      "linechar": 34
     },
     "to": {
-      "line": 2,
-      "linechar": 31
-    }
+      "line": 5,
+      "linechar": 35
+    },
+    "index": 32
   },
   {
     "token": "Semicolon",
     "from": {
-      "line": 2,
-      "linechar": 31
+      "line": 5,
+      "linechar": 35
     },
     "to": {
-      "line": 2,
-      "linechar": 32
-    }
+      "line": 5,
+      "linechar": 36
+    },
+    "index": 33
   },
   {
     "token": "Newline",
     "from": {
-      "line": 2,
-      "linechar": 32
+      "line": 5,
+      "linechar": 36
     },
     "to": {
-      "line": 3,
+      "line": 6,
       "linechar": 0
-    }
+    },
+    "index": 34
   }
 ]

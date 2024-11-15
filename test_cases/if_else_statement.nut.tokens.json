@@ -10,7 +10,8 @@
     "to": {
       "line": 0,
       "linechar": 2
-    }
+    },
+    "index": 0
   },
   {
     "token": "LeftParenthesis",
@@ -21,7 +22,8 @@
     "to": {
       "line": 0,
       "linechar": 4
-    }
+    },
+    "index": 1
   },
   {
     "token": {
@@ -34,7 +36,8 @@
     "to": {
       "line": 0,
       "linechar": 5
-    }
+    },
+    "index": 2
   },
   {
     "token": {
@@ -47,7 +50,8 @@
     "to": {
       "line": 0,
       "linechar": 8
-    }
+    },
+    "index": 3
   },
   {
     "token": {
@@ -60,7 +64,8 @@
     "to": {
       "line": 0,
       "linechar": 13
-    }
+    },
+    "index": 4
   },
   {
     "token": "RightParenthesis",
@@ -71,7 +76,8 @@
     "to": {
       "line": 0,
       "linechar": 14
-    }
+    },
+    "index": 5
   },
   {
     "token": "Newline",
@@ -82,7 +88,8 @@
     "to": {
       "line": 1,
       "linechar": 0
-    }
+    },
+    "index": 6
   },
   {
     "token": "DoubleColon",
@@ -93,7 +100,8 @@
     "to": {
       "line": 1,
       "linechar": 4
-    }
+    },
+    "index": 6
   },
   {
     "token": {
@@ -106,7 +114,8 @@
     "to": {
       "line": 1,
       "linechar": 9
-    }
+    },
+    "index": 7
   },
   {
     "token": "LeftParenthesis",
@@ -117,7 +126,8 @@
     "to": {
       "line": 1,
       "linechar": 10
-    }
+    },
+    "index": 8
   },
   {
     "token": {
@@ -130,7 +140,8 @@
     "to": {
       "line": 1,
       "linechar": 21
-    }
+    },
+    "index": 9
   },
   {
     "token": "RightParenthesis",
@@ -141,7 +152,8 @@
     "to": {
       "line": 1,
       "linechar": 22
-    }
+    },
+    "index": 10
   },
   {
     "token": "Semicolon",
@@ -152,7 +164,8 @@
     "to": {
       "line": 1,
       "linechar": 23
-    }
+    },
+    "index": 11
   },
   {
     "token": "Newline",
@@ -163,7 +176,8 @@
     "to": {
       "line": 2,
       "linechar": 0
-    }
+    },
+    "index": 12
   },
   {
     "token": {
@@ -176,7 +190,8 @@
     "to": {
       "line": 2,
       "linechar": 4
-    }
+    },
+    "index": 12
   },
   {
     "token": "Newline",
@@ -187,7 +202,8 @@
     "to": {
       "line": 3,
       "linechar": 0
-    }
+    },
+    "index": 13
   },
   {
     "token": "DoubleColon",
@@ -198,7 +214,8 @@
     "to": {
       "line": 3,
       "linechar": 4
-    }
+    },
+    "index": 13
   },
   {
     "token": {
@@ -211,7 +228,8 @@
     "to": {
       "line": 3,
       "linechar": 9
-    }
+    },
+    "index": 14
   },
   {
     "token": "LeftParenthesis",
@@ -222,7 +240,8 @@
     "to": {
       "line": 3,
       "linechar": 10
-    }
+    },
+    "index": 15
   },
   {
     "token": {
@@ -235,7 +254,8 @@
     "to": {
       "line": 3,
       "linechar": 22
-    }
+    },
+    "index": 16
   },
   {
     "token": "RightParenthesis",
@@ -246,7 +266,8 @@
     "to": {
       "line": 3,
       "linechar": 23
-    }
+    },
+    "index": 17
   },
   {
     "token": "Semicolon",
@@ -257,7 +278,8 @@
     "to": {
       "line": 3,
       "linechar": 24
-    }
+    },
+    "index": 18
   },
   {
     "token": "Newline",
@@ -268,7 +290,8 @@
     "to": {
       "line": 4,
       "linechar": 0
-    }
+    },
+    "index": 19
   },
   {
     "token": "Newline",
@@ -279,7 +302,8 @@
     "to": {
       "line": 5,
       "linechar": 0
-    }
+    },
+    "index": 19
   },
   {
     "token": {
@@ -292,7 +316,8 @@
     "to": {
       "line": 5,
       "linechar": 2
-    }
+    },
+    "index": 19
   },
   {
     "token": "LeftParenthesis",
@@ -303,7 +328,8 @@
     "to": {
       "line": 5,
       "linechar": 4
-    }
+    },
+    "index": 20
   },
   {
     "token": {
@@ -316,7 +342,8 @@
     "to": {
       "line": 5,
       "linechar": 5
-    }
+    },
+    "index": 21
   },
   {
     "token": {
@@ -329,7 +356,8 @@
     "to": {
       "line": 5,
       "linechar": 8
-    }
+    },
+    "index": 22
   },
   {
     "token": {
@@ -342,7 +370,8 @@
     "to": {
       "line": 5,
       "linechar": 14
-    }
+    },
+    "index": 23
   },
   {
     "token": "RightParenthesis",
@@ -353,7 +382,8 @@
     "to": {
       "line": 5,
       "linechar": 15
-    }
+    },
+    "index": 24
   },
   {
     "token": "LeftBrace",
@@ -364,7 +394,8 @@
     "to": {
       "line": 5,
       "linechar": 17
-    }
+    },
+    "index": 25
   },
   {
     "token": "Newline",
@@ -375,7 +406,8 @@
     "to": {
       "line": 6,
       "linechar": 0
-    }
+    },
+    "index": 26
   },
   {
     "token": "DoubleColon",
@@ -386,7 +418,8 @@
     "to": {
       "line": 6,
       "linechar": 4
-    }
+    },
+    "index": 26
   },
   {
     "token": {
@@ -399,7 +432,8 @@
     "to": {
       "line": 6,
       "linechar": 9
-    }
+    },
+    "index": 27
   },
   {
     "token": "LeftParenthesis",
@@ -410,7 +444,8 @@
     "to": {
       "line": 6,
       "linechar": 10
-    }
+    },
+    "index": 28
   },
   {
     "token": {
@@ -423,7 +458,8 @@
     "to": {
       "line": 6,
       "linechar": 22
-    }
+    },
+    "index": 29
   },
   {
     "token": "RightParenthesis",
@@ -434,7 +470,8 @@
     "to": {
       "line": 6,
       "linechar": 23
-    }
+    },
+    "index": 30
   },
   {
     "token": "Semicolon",
@@ -445,7 +482,8 @@
     "to": {
       "line": 6,
       "linechar": 24
-    }
+    },
+    "index": 31
   },
   {
     "token": "Newline",
@@ -456,7 +494,8 @@
     "to": {
       "line": 7,
       "linechar": 0
-    }
+    },
+    "index": 32
   },
   {
     "token": "RightBrace",
@@ -467,7 +506,8 @@
     "to": {
       "line": 7,
       "linechar": 1
-    }
+    },
+    "index": 32
   },
   {
     "token": {
@@ -480,7 +520,8 @@
     "to": {
       "line": 7,
       "linechar": 6
-    }
+    },
+    "index": 33
   },
   {
     "token": "LeftBrace",
@@ -491,7 +532,8 @@
     "to": {
       "line": 7,
       "linechar": 8
-    }
+    },
+    "index": 34
   },
   {
     "token": "Newline",
@@ -502,7 +544,8 @@
     "to": {
       "line": 8,
       "linechar": 0
-    }
+    },
+    "index": 35
   },
   {
     "token": "DoubleColon",
@@ -513,7 +556,8 @@
     "to": {
       "line": 8,
       "linechar": 4
-    }
+    },
+    "index": 35
   },
   {
     "token": {
@@ -526,7 +570,8 @@
     "to": {
       "line": 8,
       "linechar": 9
-    }
+    },
+    "index": 36
   },
   {
     "token": "LeftParenthesis",
@@ -537,7 +582,8 @@
     "to": {
       "line": 8,
       "linechar": 10
-    }
+    },
+    "index": 37
   },
   {
     "token": {
@@ -550,7 +596,8 @@
     "to": {
       "line": 8,
       "linechar": 21
-    }
+    },
+    "index": 38
   },
   {
     "token": "RightParenthesis",
@@ -561,7 +608,8 @@
     "to": {
       "line": 8,
       "linechar": 22
-    }
+    },
+    "index": 39
   },
   {
     "token": "Semicolon",
@@ -572,7 +620,8 @@
     "to": {
       "line": 8,
       "linechar": 23
-    }
+    },
+    "index": 40
   },
   {
     "token": "Newline",
@@ -583,7 +632,8 @@
     "to": {
       "line": 9,
       "linechar": 0
-    }
+    },
+    "index": 41
   },
   {
     "token": "RightBrace",
@@ -594,7 +644,8 @@
     "to": {
       "line": 9,
       "linechar": 1
-    }
+    },
+    "index": 41
   },
   {
     "token": "Newline",
@@ -605,7 +656,8 @@
     "to": {
       "line": 10,
       "linechar": 0
-    }
+    },
+    "index": 42
   },
   {
     "token": "Newline",
@@ -616,7 +668,8 @@
     "to": {
       "line": 11,
       "linechar": 0
-    }
+    },
+    "index": 42
   },
   {
     "token": {
@@ -629,7 +682,8 @@
     "to": {
       "line": 11,
       "linechar": 2
-    }
+    },
+    "index": 42
   },
   {
     "token": "LeftParenthesis",
@@ -640,7 +694,8 @@
     "to": {
       "line": 11,
       "linechar": 4
-    }
+    },
+    "index": 43
   },
   {
     "token": {
@@ -653,7 +708,8 @@
     "to": {
       "line": 11,
       "linechar": 5
-    }
+    },
+    "index": 44
   },
   {
     "token": {
@@ -666,7 +722,8 @@
     "to": {
       "line": 11,
       "linechar": 7
-    }
+    },
+    "index": 45
   },
   {
     "token": {
@@ -679,7 +736,8 @@
     "to": {
       "line": 11,
       "linechar": 10
-    }
+    },
+    "index": 46
   },
   {
     "token": {
@@ -692,7 +750,8 @@
     "to": {
       "line": 11,
       "linechar": 12
-    }
+    },
+    "index": 47
   },
   {
     "token": "RightParenthesis",
@@ -703,7 +762,8 @@
     "to": {
       "line": 11,
       "linechar": 13
-    }
+    },
+    "index": 48
   },
   {
     "token": "Newline",
@@ -714,7 +774,8 @@
     "to": {
       "line": 12,
       "linechar": 0
-    }
+    },
+    "index": 49
   },
   {
     "token": "DoubleColon",
@@ -725,7 +786,8 @@
     "to": {
       "line": 12,
       "linechar": 4
-    }
+    },
+    "index": 49
   },
   {
     "token": {
@@ -738,7 +800,8 @@
     "to": {
       "line": 12,
       "linechar": 9
-    }
+    },
+    "index": 50
   },
   {
     "token": "LeftParenthesis",
@@ -749,7 +812,8 @@
     "to": {
       "line": 12,
       "linechar": 10
-    }
+    },
+    "index": 51
   },
   {
     "token": {
@@ -762,7 +826,8 @@
     "to": {
       "line": 12,
       "linechar": 18
-    }
+    },
+    "index": 52
   },
   {
     "token": "RightParenthesis",
@@ -773,7 +838,8 @@
     "to": {
       "line": 12,
       "linechar": 19
-    }
+    },
+    "index": 53
   },
   {
     "token": "Semicolon",
@@ -784,7 +850,8 @@
     "to": {
       "line": 12,
       "linechar": 20
-    }
+    },
+    "index": 54
   },
   {
     "token": "Newline",
@@ -795,7 +862,8 @@
     "to": {
       "line": 13,
       "linechar": 0
-    }
+    },
+    "index": 55
   },
   {
     "token": {
@@ -808,7 +876,8 @@
     "to": {
       "line": 13,
       "linechar": 4
-    }
+    },
+    "index": 55
   },
   {
     "token": "Newline",
@@ -819,7 +888,8 @@
     "to": {
       "line": 14,
       "linechar": 0
-    }
+    },
+    "index": 56
   },
   {
     "token": "DoubleColon",
@@ -830,7 +900,8 @@
     "to": {
       "line": 14,
       "linechar": 4
-    }
+    },
+    "index": 56
   },
   {
     "token": {
@@ -843,7 +914,8 @@
     "to": {
       "line": 14,
       "linechar": 9
-    }
+    },
+    "index": 57
   },
   {
     "token": "LeftParenthesis",
@@ -854,7 +926,8 @@
     "to": {
       "line": 14,
       "linechar": 10
-    }
+    },
+    "index": 58
   },
   {
     "token": {
@@ -867,7 +940,8 @@
     "to": {
       "line": 14,
       "linechar": 22
-    }
+    },
+    "index": 59
   },
   {
     "token": "RightParenthesis",
@@ -878,7 +952,8 @@
     "to": {
       "line": 14,
       "linechar": 23
-    }
+    },
+    "index": 60
   },
   {
     "token": "Semicolon",
@@ -889,7 +964,8 @@
     "to": {
       "line": 14,
       "linechar": 24
-    }
+    },
+    "index": 61
   },
   {
     "token": "Newline",
@@ -900,6 +976,7 @@
     "to": {
       "line": 15,
       "linechar": 0
-    }
+    },
+    "index": 62
   }
 ]

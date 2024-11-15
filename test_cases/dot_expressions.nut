@@ -1,6 +1,7 @@
 local c = ::foo.bar.baz;
-
 local d = foo::bar.baz;
+
+
 
 local g = foo.bar().baz;
 

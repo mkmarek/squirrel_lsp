@@ -2,10 +2,8 @@ use tower_lsp::lsp_types::{Diagnostic, DiagnosticSeverity, Position, Range};
 
 use crate::{
     ast_visitor::{visit, AstVisitor, AstVisitorResult},
-    squirrel_ast::{
-        ClassDefinition, ClassMemberDeclaration, Expression, IdentifierExpression, Statement,
-        Statements, TableExpression,
-    },
+    grammar::expressions::*,
+    grammar::statements::*,
     squirrel_lexer::{Location, Operator},
 };
 
@@ -90,20 +88,42 @@ impl AstVisitor for ScopeTableVisitor<'_> {
         self.spawn_child_scope();
 
         for entry in &table.entries {
-            if let Some(Expression::Identifier(ident)) = &entry.id {
-                let scope = self.scope_stack.last().unwrap();
-                let sequence_number = self.scope_table.scopes[*scope].variables.len();
-                self.scope_table.scopes[*scope]
-                    .variables
-                    .push(VariableDeclaration {
-                        kind: VariableDeclarationKind::ClassMember,
-                        sequence_number,
-                        name: ident.token.to_string(),
-                        value: entry.value.clone(),
-                        scope: *scope,
-                        from: ident.from.clone(),
-                        to: ident.to.clone(),
-                    });
+            match entry {
+                TableEntry::Field(f) => {
+                    if let Expression::Identifier(ident) = &f.name {
+                        let scope = self.scope_stack.last().unwrap();
+                        let sequence_number = self.scope_table.scopes[*scope].variables.len();
+                        self.scope_table.scopes[*scope]
+                            .variables
+                            .push(VariableDeclaration {
+                                kind: VariableDeclarationKind::ClassMember,
+                                sequence_number,
+                                name: ident.token.to_string(),
+                                value: Some(f.expression.clone()),
+                                scope: *scope,
+                                from: ident.from.clone(),
+                                to: ident.to.clone(),
+                            });
+                    }
+                }
+                TableEntry::Function(f) => {
+                    if let Some(Expression::Identifier(ident)) = &f.function.name {
+                        let scope = self.scope_stack.last().unwrap();
+                        let sequence_number = self.scope_table.scopes[*scope].variables.len();
+                        self.scope_table.scopes[*scope]
+                            .variables
+                            .push(VariableDeclaration {
+                                kind: VariableDeclarationKind::ClassMember,
+                                sequence_number,
+                                name: ident.token.to_string(),
+                                value: None,
+                                scope: *scope,
+                                from: ident.from.clone(),
+                                to: ident.to.clone(),
+                            });
+                    }
+                }
+                TableEntry::FieldWithExpressionKey(_) => {}
             }
         }
 
@@ -175,7 +195,7 @@ impl AstVisitor for ScopeTableVisitor<'_> {
         let scope = self.scope_stack.last().unwrap();
         for member in &class.members {
             match member {
-                ClassMemberDeclaration::FieldDeclaration(field) => {
+                ClassMemberDefinition::Field(field) => {
                     if let Expression::Identifier(name) = &field.name {
                         let variable = VariableDeclaration {
                             kind: VariableDeclarationKind::ClassMember,
@@ -209,7 +229,7 @@ impl AstVisitor for ScopeTableVisitor<'_> {
 
     fn enter_function_declaration(
         &mut self,
-        function: &crate::squirrel_ast::FunctionDeclaration,
+        function: &FunctionDefinition,
     ) -> crate::ast_visitor::AstVisitorResult {
         let scope = self.scope_stack.last().unwrap();
 
@@ -267,16 +287,13 @@ impl AstVisitor for ScopeTableVisitor<'_> {
 
     fn leave_function_declaration(
         &mut self,
-        _function_definition: &crate::squirrel_ast::FunctionDeclaration,
+        _function_definition: &FunctionDefinition,
     ) -> crate::ast_visitor::AstVisitorResult {
         self.scope_stack.pop();
         AstVisitorResult::Continue
     }
 
-    fn enter_local_statement(
-        &mut self,
-        statement: &crate::squirrel_ast::LocalStatement,
-    ) -> AstVisitorResult {
+    fn enter_local_statement(&mut self, statement: &LocalStatement) -> AstVisitorResult {
         let scope = self.scope_stack.last().unwrap();
         let mut variables = Vec::new();
 
@@ -301,58 +318,37 @@ impl AstVisitor for ScopeTableVisitor<'_> {
         AstVisitorResult::Continue
     }
 
-    fn enter_block_statement(
-        &mut self,
-        _statement: &crate::squirrel_ast::BlockStatement,
-    ) -> AstVisitorResult {
+    fn enter_block_statement(&mut self, _statement: &BlockStatement) -> AstVisitorResult {
         self.spawn_child_scope();
         AstVisitorResult::Continue
     }
 
-    fn enter_if_statement(
-        &mut self,
-        _statement: &crate::squirrel_ast::IfStatement,
-    ) -> AstVisitorResult {
+    fn enter_if_statement(&mut self, _statement: &IfStatement) -> AstVisitorResult {
         self.spawn_child_scope();
         AstVisitorResult::Continue
     }
 
-    fn enter_while_statement(
-        &mut self,
-        _statement: &crate::squirrel_ast::WhileStatement,
-    ) -> AstVisitorResult {
+    fn enter_while_statement(&mut self, _statement: &WhileStatement) -> AstVisitorResult {
         self.spawn_child_scope();
         AstVisitorResult::Continue
     }
 
-    fn enter_do_while_statement(
-        &mut self,
-        _statement: &crate::squirrel_ast::DoWhileStatement,
-    ) -> AstVisitorResult {
+    fn enter_do_while_statement(&mut self, _statement: &DoWhileStatement) -> AstVisitorResult {
         self.spawn_child_scope();
         AstVisitorResult::Continue
     }
 
-    fn enter_switch_statement(
-        &mut self,
-        _statement: &crate::squirrel_ast::SwitchStatement,
-    ) -> AstVisitorResult {
+    fn enter_switch_statement(&mut self, _statement: &SwitchStatement) -> AstVisitorResult {
         self.spawn_child_scope();
         AstVisitorResult::Continue
     }
 
-    fn enter_for_statement(
-        &mut self,
-        _statement: &crate::squirrel_ast::ForStatement,
-    ) -> AstVisitorResult {
+    fn enter_for_statement(&mut self, _statement: &ForStatement) -> AstVisitorResult {
         self.spawn_child_scope();
         AstVisitorResult::Continue
     }
 
-    fn enter_for_each_statement(
-        &mut self,
-        statement: &crate::squirrel_ast::ForEachStatement,
-    ) -> AstVisitorResult {
+    fn enter_for_each_statement(&mut self, statement: &ForEachStatement) -> AstVisitorResult {
         self.spawn_child_scope();
 
         let scope = self.scope_stack.last().unwrap();
@@ -390,10 +386,7 @@ impl AstVisitor for ScopeTableVisitor<'_> {
         AstVisitorResult::Continue
     }
 
-    fn enter_const_statement(
-        &mut self,
-        statement: &crate::squirrel_ast::ConstStatement,
-    ) -> AstVisitorResult {
+    fn enter_const_statement(&mut self, statement: &ConstStatement) -> AstVisitorResult {
         let scope = self.scope_stack.last().unwrap();
 
         if let Expression::Identifier(name) = &statement.name {
@@ -412,74 +405,47 @@ impl AstVisitor for ScopeTableVisitor<'_> {
         AstVisitorResult::Continue
     }
 
-    fn enter_enum_statement(
-        &mut self,
-        _statement: &crate::squirrel_ast::EnumStatement,
-    ) -> AstVisitorResult {
+    fn enter_enum_statement(&mut self, _statement: &EnumStatement) -> AstVisitorResult {
         self.spawn_child_scope();
         AstVisitorResult::Continue
     }
 
-    fn leave_block_statement(
-        &mut self,
-        _statement: &crate::squirrel_ast::BlockStatement,
-    ) -> AstVisitorResult {
+    fn leave_block_statement(&mut self, _statement: &BlockStatement) -> AstVisitorResult {
         self.scope_stack.pop();
         AstVisitorResult::Continue
     }
 
-    fn leave_if_statement(
-        &mut self,
-        _statement: &crate::squirrel_ast::IfStatement,
-    ) -> AstVisitorResult {
+    fn leave_if_statement(&mut self, _statement: &IfStatement) -> AstVisitorResult {
         self.scope_stack.pop();
         AstVisitorResult::Continue
     }
 
-    fn leave_while_statement(
-        &mut self,
-        _statement: &crate::squirrel_ast::WhileStatement,
-    ) -> AstVisitorResult {
+    fn leave_while_statement(&mut self, _statement: &WhileStatement) -> AstVisitorResult {
         self.scope_stack.pop();
         AstVisitorResult::Continue
     }
 
-    fn leave_do_while_statement(
-        &mut self,
-        _statement: &crate::squirrel_ast::DoWhileStatement,
-    ) -> AstVisitorResult {
+    fn leave_do_while_statement(&mut self, _statement: &DoWhileStatement) -> AstVisitorResult {
         self.scope_stack.pop();
         AstVisitorResult::Continue
     }
 
-    fn leave_switch_statement(
-        &mut self,
-        _statement: &crate::squirrel_ast::SwitchStatement,
-    ) -> AstVisitorResult {
+    fn leave_switch_statement(&mut self, _statement: &SwitchStatement) -> AstVisitorResult {
         self.scope_stack.pop();
         AstVisitorResult::Continue
     }
 
-    fn leave_for_statement(
-        &mut self,
-        _statement: &crate::squirrel_ast::ForStatement,
-    ) -> AstVisitorResult {
+    fn leave_for_statement(&mut self, _statement: &ForStatement) -> AstVisitorResult {
         self.scope_stack.pop();
         AstVisitorResult::Continue
     }
 
-    fn leave_for_each_statement(
-        &mut self,
-        _statement: &crate::squirrel_ast::ForEachStatement,
-    ) -> AstVisitorResult {
+    fn leave_for_each_statement(&mut self, _statement: &ForEachStatement) -> AstVisitorResult {
         self.scope_stack.pop();
         AstVisitorResult::Continue
     }
 
-    fn leave_enum_statement(
-        &mut self,
-        _statement: &crate::squirrel_ast::EnumStatement,
-    ) -> AstVisitorResult {
+    fn leave_enum_statement(&mut self, _statement: &EnumStatement) -> AstVisitorResult {
         self.scope_stack.pop();
         AstVisitorResult::Continue
     }

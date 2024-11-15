@@ -1,0 +1,856 @@
+{
+  "statements": [
+    {
+      "Block": {
+        "statements": {
+          "statements": [],
+          "from": {
+            "line": 16,
+            "linechar": 1
+          },
+          "to": {
+            "line": 17,
+            "linechar": 0
+          }
+        },
+        "from": {
+          "line": 16,
+          "linechar": 0
+        },
+        "to": {
+          "line": 18,
+          "linechar": 1
+        }
+      }
+    },
+    {
+      "If": {
+        "condition": {
+          "BooleanLiteral": {
+            "value": true,
+            "from": {
+              "line": 24,
+              "linechar": 19
+            },
+            "to": {
+              "line": 24,
+              "linechar": 23
+            }
+          }
+        },
+        "if_true": {
+          "Block": {
+            "statements": {
+              "statements": [
+                {
+                  "Expression": {
+                    "expression": {
+                      "FunctionCall": {
+                        "function": {
+                          "ScopeResolution": {
+                            "scope": null,
+                            "accessor": "print",
+                            "from": {
+                              "line": 26,
+                              "linechar": 0
+                            },
+                            "to": {
+                              "line": 26,
+                              "linechar": 9
+                            }
+                          }
+                        },
+                        "arguments": [
+                          {
+                            "StringLiteral": {
+                              "value": "true",
+                              "from": {
+                                "line": 26,
+                                "linechar": 10
+                              },
+                              "to": {
+                                "line": 26,
+                                "linechar": 16
+                              }
+                            }
+                          }
+                        ],
+                        "from": {
+                          "line": 26,
+                          "linechar": 0
+                        },
+                        "to": {
+                          "line": 26,
+                          "linechar": 17
+                        }
+                      }
+                    },
+                    "from": {
+                      "line": 26,
+                      "linechar": 0
+                    },
+                    "to": {
+                      "line": 26,
+                      "linechar": 17
+                    }
+                  }
+                }
+              ],
+              "from": {
+                "line": 24,
+                "linechar": 32
+              },
+              "to": {
+                "line": 27,
+                "linechar": 0
+              }
+            },
+            "from": {
+              "line": 24,
+              "linechar": 24
+            },
+            "to": {
+              "line": 27,
+              "linechar": 1
+            }
+          }
+        },
+        "if_false": null,
+        "from": {
+          "line": 24,
+          "linechar": 0
+        },
+        "to": {
+          "line": 27,
+          "linechar": 1
+        }
+      }
+    },
+    {
+      "DoWhile": {
+        "condition": {
+          "BooleanLiteral": {
+            "value": true,
+            "from": {
+              "line": 36,
+              "linechar": 21
+            },
+            "to": {
+              "line": 36,
+              "linechar": 25
+            }
+          }
+        },
+        "statement": {
+          "Block": {
+            "statements": {
+              "statements": [
+                {
+                  "Expression": {
+                    "expression": {
+                      "FunctionCall": {
+                        "function": {
+                          "ScopeResolution": {
+                            "scope": null,
+                            "accessor": "print",
+                            "from": {
+                              "line": 35,
+                              "linechar": 0
+                            },
+                            "to": {
+                              "line": 35,
+                              "linechar": 9
+                            }
+                          }
+                        },
+                        "arguments": [
+                          {
+                            "StringLiteral": {
+                              "value": "true",
+                              "from": {
+                                "line": 35,
+                                "linechar": 10
+                              },
+                              "to": {
+                                "line": 35,
+                                "linechar": 16
+                              }
+                            }
+                          }
+                        ],
+                        "from": {
+                          "line": 35,
+                          "linechar": 0
+                        },
+                        "to": {
+                          "line": 35,
+                          "linechar": 17
+                        }
+                      }
+                    },
+                    "from": {
+                      "line": 35,
+                      "linechar": 0
+                    },
+                    "to": {
+                      "line": 35,
+                      "linechar": 17
+                    }
+                  }
+                }
+              ],
+              "from": {
+                "line": 33,
+                "linechar": 19
+              },
+              "to": {
+                "line": 36,
+                "linechar": 0
+              }
+            },
+            "from": {
+              "line": 33,
+              "linechar": 9
+            },
+            "to": {
+              "line": 36,
+              "linechar": 1
+            }
+          }
+        },
+        "from": {
+          "line": 33,
+          "linechar": 0
+        },
+        "to": {
+          "line": 36,
+          "linechar": 26
+        }
+      }
+    },
+    {
+      "While": {
+        "condition": {
+          "BooleanLiteral": {
+            "value": true,
+            "from": {
+              "line": 42,
+              "linechar": 22
+            },
+            "to": {
+              "line": 42,
+              "linechar": 26
+            }
+          }
+        },
+        "statement": {
+          "Block": {
+            "statements": {
+              "statements": [
+                {
+                  "Expression": {
+                    "expression": {
+                      "FunctionCall": {
+                        "function": {
+                          "ScopeResolution": {
+                            "scope": null,
+                            "accessor": "print",
+                            "from": {
+                              "line": 44,
+                              "linechar": 0
+                            },
+                            "to": {
+                              "line": 44,
+                              "linechar": 9
+                            }
+                          }
+                        },
+                        "arguments": [
+                          {
+                            "StringLiteral": {
+                              "value": "true",
+                              "from": {
+                                "line": 44,
+                                "linechar": 10
+                              },
+                              "to": {
+                                "line": 44,
+                                "linechar": 16
+                              }
+                            }
+                          }
+                        ],
+                        "from": {
+                          "line": 44,
+                          "linechar": 0
+                        },
+                        "to": {
+                          "line": 44,
+                          "linechar": 17
+                        }
+                      }
+                    },
+                    "from": {
+                      "line": 44,
+                      "linechar": 0
+                    },
+                    "to": {
+                      "line": 44,
+                      "linechar": 17
+                    }
+                  }
+                }
+              ],
+              "from": {
+                "line": 42,
+                "linechar": 35
+              },
+              "to": {
+                "line": 45,
+                "linechar": 0
+              }
+            },
+            "from": {
+              "line": 42,
+              "linechar": 27
+            },
+            "to": {
+              "line": 45,
+              "linechar": 1
+            }
+          }
+        },
+        "from": {
+          "line": 42,
+          "linechar": 0
+        },
+        "to": {
+          "line": 45,
+          "linechar": 1
+        }
+      }
+    },
+    {
+      "Local": {
+        "initializations": [
+          {
+            "name": "x",
+            "expression": {
+              "IntegerLiteral": {
+                "value": 1,
+                "from": {
+                  "line": 51,
+                  "linechar": 32
+                },
+                "to": {
+                  "line": 51,
+                  "linechar": 42
+                }
+              }
+            },
+            "from": {
+              "line": 51,
+              "linechar": 12
+            },
+            "to": {
+              "line": 51,
+              "linechar": 42
+            }
+          },
+          {
+            "name": "y",
+            "expression": {
+              "IntegerLiteral": {
+                "value": 2,
+                "from": {
+                  "line": 51,
+                  "linechar": 79
+                },
+                "to": {
+                  "line": 51,
+                  "linechar": 89
+                }
+              }
+            },
+            "from": {
+              "line": 51,
+              "linechar": 59
+            },
+            "to": {
+              "line": 51,
+              "linechar": 89
+            }
+          },
+          {
+            "name": "z",
+            "expression": null,
+            "from": {
+              "line": 51,
+              "linechar": 106
+            },
+            "to": {
+              "line": 51,
+              "linechar": 108
+            }
+          }
+        ],
+        "from": {
+          "line": 51,
+          "linechar": 0
+        },
+        "to": {
+          "line": 51,
+          "linechar": 108
+        }
+      }
+    },
+    {
+      "ForEach": {
+        "key": {
+          "Identifier": {
+            "token": {
+              "Identifier": "x"
+            },
+            "from": {
+              "line": 56,
+              "linechar": 24
+            },
+            "to": {
+              "line": 56,
+              "linechar": 33
+            }
+          }
+        },
+        "value": {
+          "Identifier": {
+            "token": {
+              "Identifier": "z"
+            },
+            "from": {
+              "line": 56,
+              "linechar": 40
+            },
+            "to": {
+              "line": 56,
+              "linechar": 46
+            }
+          }
+        },
+        "iterable": {
+          "Identifier": {
+            "token": {
+              "Identifier": "y"
+            },
+            "from": {
+              "line": 56,
+              "linechar": 58
+            },
+            "to": {
+              "line": 56,
+              "linechar": 67
+            }
+          }
+        },
+        "statement": {
+          "Block": {
+            "statements": {
+              "statements": [
+                {
+                  "Expression": {
+                    "expression": {
+                      "FunctionCall": {
+                        "function": {
+                          "ScopeResolution": {
+                            "scope": null,
+                            "accessor": "print",
+                            "from": {
+                              "line": 58,
+                              "linechar": 0
+                            },
+                            "to": {
+                              "line": 58,
+                              "linechar": 9
+                            }
+                          }
+                        },
+                        "arguments": [
+                          {
+                            "StringLiteral": {
+                              "value": "true",
+                              "from": {
+                                "line": 58,
+                                "linechar": 10
+                              },
+                              "to": {
+                                "line": 58,
+                                "linechar": 16
+                              }
+                            }
+                          }
+                        ],
+                        "from": {
+                          "line": 58,
+                          "linechar": 0
+                        },
+                        "to": {
+                          "line": 58,
+                          "linechar": 17
+                        }
+                      }
+                    },
+                    "from": {
+                      "line": 58,
+                      "linechar": 0
+                    },
+                    "to": {
+                      "line": 58,
+                      "linechar": 17
+                    }
+                  }
+                }
+              ],
+              "from": {
+                "line": 56,
+                "linechar": 86
+              },
+              "to": {
+                "line": 59,
+                "linechar": 0
+              }
+            },
+            "from": {
+              "line": 56,
+              "linechar": 76
+            },
+            "to": {
+              "line": 59,
+              "linechar": 1
+            }
+          }
+        },
+        "from": {
+          "line": 56,
+          "linechar": 0
+        },
+        "to": {
+          "line": 59,
+          "linechar": 1
+        }
+      }
+    },
+    {
+      "Switch": {
+        "expression": {
+          "Identifier": {
+            "token": {
+              "Identifier": "x"
+            },
+            "from": {
+              "line": 64,
+              "linechar": 23
+            },
+            "to": {
+              "line": 64,
+              "linechar": 32
+            }
+          }
+        },
+        "cases": [
+          {
+            "expression": {
+              "IntegerLiteral": {
+                "value": 1,
+                "from": {
+                  "line": 66,
+                  "linechar": 6
+                },
+                "to": {
+                  "line": 66,
+                  "linechar": 16
+                }
+              }
+            },
+            "statements": {
+              "statements": [
+                {
+                  "Expression": {
+                    "expression": {
+                      "FunctionCall": {
+                        "function": {
+                          "ScopeResolution": {
+                            "scope": null,
+                            "accessor": "print",
+                            "from": {
+                              "line": 68,
+                              "linechar": 0
+                            },
+                            "to": {
+                              "line": 68,
+                              "linechar": 11
+                            }
+                          }
+                        },
+                        "arguments": [
+                          {
+                            "StringLiteral": {
+                              "value": "true",
+                              "from": {
+                                "line": 68,
+                                "linechar": 12
+                              },
+                              "to": {
+                                "line": 68,
+                                "linechar": 18
+                              }
+                            }
+                          }
+                        ],
+                        "from": {
+                          "line": 68,
+                          "linechar": 0
+                        },
+                        "to": {
+                          "line": 68,
+                          "linechar": 19
+                        }
+                      }
+                    },
+                    "from": {
+                      "line": 68,
+                      "linechar": 0
+                    },
+                    "to": {
+                      "line": 68,
+                      "linechar": 19
+                    }
+                  }
+                },
+                {
+                  "Break": {
+                    "from": {
+                      "line": 69,
+                      "linechar": 0
+                    },
+                    "to": {
+                      "line": 69,
+                      "linechar": 9
+                    }
+                  }
+                }
+              ],
+              "from": {
+                "line": 66,
+                "linechar": 25
+              },
+              "to": {
+                "line": 70,
+                "linechar": 0
+              }
+            },
+            "from": {
+              "line": 66,
+              "linechar": 0
+            },
+            "to": {
+              "line": 70,
+              "linechar": 0
+            }
+          },
+          {
+            "expression": {
+              "IntegerLiteral": {
+                "value": 2,
+                "from": {
+                  "line": 71,
+                  "linechar": 6
+                },
+                "to": {
+                  "line": 71,
+                  "linechar": 16
+                }
+              }
+            },
+            "statements": {
+              "statements": [
+                {
+                  "Expression": {
+                    "expression": {
+                      "FunctionCall": {
+                        "function": {
+                          "ScopeResolution": {
+                            "scope": null,
+                            "accessor": "print",
+                            "from": {
+                              "line": 73,
+                              "linechar": 0
+                            },
+                            "to": {
+                              "line": 73,
+                              "linechar": 11
+                            }
+                          }
+                        },
+                        "arguments": [
+                          {
+                            "StringLiteral": {
+                              "value": "false",
+                              "from": {
+                                "line": 73,
+                                "linechar": 12
+                              },
+                              "to": {
+                                "line": 73,
+                                "linechar": 19
+                              }
+                            }
+                          }
+                        ],
+                        "from": {
+                          "line": 73,
+                          "linechar": 0
+                        },
+                        "to": {
+                          "line": 73,
+                          "linechar": 20
+                        }
+                      }
+                    },
+                    "from": {
+                      "line": 73,
+                      "linechar": 0
+                    },
+                    "to": {
+                      "line": 73,
+                      "linechar": 20
+                    }
+                  }
+                },
+                {
+                  "Break": {
+                    "from": {
+                      "line": 74,
+                      "linechar": 0
+                    },
+                    "to": {
+                      "line": 74,
+                      "linechar": 9
+                    }
+                  }
+                }
+              ],
+              "from": {
+                "line": 71,
+                "linechar": 25
+              },
+              "to": {
+                "line": 75,
+                "linechar": 0
+              }
+            },
+            "from": {
+              "line": 71,
+              "linechar": 0
+            },
+            "to": {
+              "line": 75,
+              "linechar": 0
+            }
+          }
+        ],
+        "default": {
+          "statements": [
+            {
+              "Expression": {
+                "expression": {
+                  "FunctionCall": {
+                    "function": {
+                      "ScopeResolution": {
+                        "scope": null,
+                        "accessor": "print",
+                        "from": {
+                          "line": 78,
+                          "linechar": 0
+                        },
+                        "to": {
+                          "line": 78,
+                          "linechar": 11
+                        }
+                      }
+                    },
+                    "arguments": [
+                      {
+                        "StringLiteral": {
+                          "value": "default",
+                          "from": {
+                            "line": 78,
+                            "linechar": 12
+                          },
+                          "to": {
+                            "line": 78,
+                            "linechar": 21
+                          }
+                        }
+                      }
+                    ],
+                    "from": {
+                      "line": 78,
+                      "linechar": 0
+                    },
+                    "to": {
+                      "line": 78,
+                      "linechar": 22
+                    }
+                  }
+                },
+                "from": {
+                  "line": 78,
+                  "linechar": 0
+                },
+                "to": {
+                  "line": 78,
+                  "linechar": 22
+                }
+              }
+            },
+            {
+              "Break": {
+                "from": {
+                  "line": 79,
+                  "linechar": 0
+                },
+                "to": {
+                  "line": 79,
+                  "linechar": 9
+                }
+              }
+            }
+          ],
+          "from": {
+            "line": 76,
+            "linechar": 18
+          },
+          "to": {
+            "line": 80,
+            "linechar": 0
+          }
+        },
+        "from": {
+          "line": 64,
+          "linechar": 0
+        },
+        "to": {
+          "line": 80,
+          "linechar": 1
+        }
+      }
+    }
+  ],
+  "from": {
+    "line": 16,
+    "linechar": 0
+  },
+  "to": {
+    "line": 82,
+    "linechar": 0
+  }
+}
