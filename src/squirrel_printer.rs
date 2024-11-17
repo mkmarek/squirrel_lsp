@@ -6,7 +6,8 @@ use crate::{
 
 pub enum PrintInstruction {
     EmitToken(Token),
-    SetIndentation(usize),
+    IncrementIndentation { id: usize },
+    DecrementIndentation { id: usize },
 }
 
 pub struct Printer {
@@ -65,11 +66,21 @@ impl Printer {
         )));
     }
 
-    fn change_indentation(&mut self, amount: isize) {
-        self.current_indentation = (self.current_indentation as isize + amount).max(0) as usize;
+    fn increment_indentation(&mut self) -> usize {
+        let id = self.buffer.len();
+        self.current_indentation = self.current_indentation + 1;
 
         self.buffer
-            .push(PrintInstruction::SetIndentation(self.current_indentation));
+            .push(PrintInstruction::IncrementIndentation { id });
+
+        id
+    }
+
+    fn decrement_indentation(&mut self, id: usize) {
+        self.current_indentation = self.current_indentation - 1;
+
+        self.buffer
+            .push(PrintInstruction::DecrementIndentation { id });
     }
 
     fn print_statements(&mut self, ast: &Statements) {
@@ -114,14 +125,14 @@ impl Printer {
 
     fn print_block(&mut self, stat: &BlockStatement) {
         self.print_token(Token::LeftBrace);
-        self.change_indentation(1);
+        let id = self.increment_indentation();
         if !stat.statements.statements.is_empty() {
             self.newline();
             self.print_statements(&stat.statements);
         } else {
             self.print_token(Token::Dummy);
         }
-        self.change_indentation(-1);
+        self.decrement_indentation(id);
         self.newline();
         self.print_token(Token::RightBrace);
     }
@@ -130,7 +141,9 @@ impl Printer {
         self.print_token(Token::Keyword(Keyword::If));
         self.print_space();
         self.print_token(Token::LeftParenthesis);
+        let id = self.increment_indentation();
         self.print_expression(&stat.condition);
+        self.decrement_indentation(id);
         self.print_token(Token::RightParenthesis);
         self.print_space();
         if let Statement::Block(block) = &stat.if_true {
@@ -139,10 +152,10 @@ impl Printer {
                 self.print_space();
             }
         } else {
-            self.change_indentation(1);
+            let id = self.increment_indentation();
             self.newline();
             self.print_statement(&stat.if_true);
-            self.change_indentation(-1);
+            self.decrement_indentation(id);
             if stat.if_false.is_some() {
                 self.newline();
             }
@@ -154,10 +167,10 @@ impl Printer {
             if let Statement::Block(block) = &else_block {
                 self.print_block(block);
             } else {
-                self.change_indentation(1);
+                let id = self.increment_indentation();
                 self.newline();
                 self.print_statement(else_block);
-                self.change_indentation(-1);
+                self.decrement_indentation(id);
             }
         }
     }
@@ -166,16 +179,18 @@ impl Printer {
         self.print_token(Token::Keyword(Keyword::While));
         self.print_space();
         self.print_token(Token::LeftParenthesis);
+        let id = self.increment_indentation();
         self.print_expression(&stat.condition);
+        self.decrement_indentation(id);
         self.print_token(Token::RightParenthesis);
         self.print_space();
         if let Statement::Block(block) = &stat.statement {
             self.print_block(block);
         } else {
-            self.change_indentation(1);
+            let id = self.increment_indentation();
             self.newline();
             self.print_statement(&stat.statement);
-            self.change_indentation(-1);
+            self.decrement_indentation(id);
         }
     }
 
@@ -185,17 +200,19 @@ impl Printer {
         if let Statement::Block(block) = &stat.statement {
             self.print_block(block);
         } else {
-            self.change_indentation(1);
+            let id = self.increment_indentation();
             self.newline();
             self.print_statement(&stat.statement);
-            self.change_indentation(-1);
+            self.decrement_indentation(id);
             self.newline();
         }
         self.print_space();
         self.print_token(Token::Keyword(Keyword::While));
         self.print_space();
         self.print_token(Token::LeftParenthesis);
+        let id = self.increment_indentation();
         self.print_expression(&stat.condition);
+        self.decrement_indentation(id);
         self.print_token(Token::RightParenthesis);
     }
 
@@ -203,21 +220,23 @@ impl Printer {
         self.print_token(Token::Keyword(Keyword::Switch));
         self.print_space();
         self.print_token(Token::LeftParenthesis);
+        let id = self.increment_indentation();
         self.print_expression(&stat.expression);
+        self.decrement_indentation(id);
         self.print_token(Token::RightParenthesis);
         self.print_space();
         self.print_token(Token::LeftBrace);
-        self.change_indentation(1);
+        let id = self.increment_indentation();
         self.newline();
         for (i, case) in stat.cases.iter().enumerate() {
             self.print_token(Token::Keyword(Keyword::Case));
             self.print_space();
             self.print_expression(&case.expression);
             self.print_token(Token::Colon);
-            self.change_indentation(1);
+            let id = self.increment_indentation();
             self.newline();
             self.print_statements(&case.statements);
-            self.change_indentation(-1);
+            self.decrement_indentation(id);
             if i < stat.cases.len() - 1 || stat.default.is_some() {
                 self.newline();
             }
@@ -225,12 +244,12 @@ impl Printer {
         if let Some(default) = &stat.default {
             self.print_token(Token::Keyword(Keyword::Default));
             self.print_token(Token::Colon);
-            self.change_indentation(1);
+            let id = self.increment_indentation();
             self.newline();
             self.print_statements(&default);
-            self.change_indentation(-1);
+            self.decrement_indentation(id);
         }
-        self.change_indentation(-1);
+        self.decrement_indentation(id);
         self.newline();
         self.print_token(Token::RightBrace);
     }
@@ -239,6 +258,9 @@ impl Printer {
         self.print_token(Token::Keyword(Keyword::For));
         self.print_space();
         self.print_token(Token::LeftParenthesis);
+
+        let id = self.increment_indentation();
+
         if let Some(initializer) = &stat.initialization {
             self.print_statement(initializer);
         }
@@ -252,15 +274,18 @@ impl Printer {
             self.print_space();
             self.print_expression(increment);
         }
+
+        self.decrement_indentation(id);
+
         self.print_token(Token::RightParenthesis);
         self.print_space();
         if let Statement::Block(block) = &stat.statement {
             self.print_block(block);
         } else {
-            self.change_indentation(1);
+            let id = self.increment_indentation();
             self.newline();
             self.print_statement(&stat.statement);
-            self.change_indentation(-1);
+            self.decrement_indentation(id);
         }
     }
 
@@ -268,6 +293,7 @@ impl Printer {
         self.print_token(Token::Keyword(Keyword::Foreach));
         self.print_space();
         self.print_token(Token::LeftParenthesis);
+        let id = self.increment_indentation();
         if let Some(key) = &stat.key {
             self.print_expression(key);
             self.print_token(Token::Operator(Operator::Comma));
@@ -278,15 +304,16 @@ impl Printer {
         self.print_token(Token::Operator(Operator::In));
         self.print_space();
         self.print_expression(&stat.iterable);
+        self.decrement_indentation(id);
         self.print_token(Token::RightParenthesis);
         self.print_space();
         if let Statement::Block(block) = &stat.statement {
             self.print_block(block);
         } else {
-            self.change_indentation(1);
+            let id = self.increment_indentation();
             self.newline();
             self.print_statement(&stat.statement);
-            self.change_indentation(-1);
+            self.decrement_indentation(id);
         }
     }
 
@@ -296,7 +323,7 @@ impl Printer {
         self.print_expression(&stat.name);
         self.print_space();
         self.print_token(Token::LeftBrace);
-        self.change_indentation(1);
+        let id = self.increment_indentation();
         self.newline();
         for (i, enumeration) in stat.enumerations.iter().enumerate() {
             self.print_expression(&enumeration.name);
@@ -312,7 +339,7 @@ impl Printer {
                 self.newline();
             }
         }
-        self.change_indentation(-1);
+        self.decrement_indentation(id);
         self.newline();
         self.print_token(Token::RightBrace);
     }
@@ -323,26 +350,28 @@ impl Printer {
         if let Statement::Block(block) = &stat.try_statement {
             self.print_block(block);
         } else {
-            self.change_indentation(1);
+            let id = self.increment_indentation();
             self.newline();
             self.print_statement(&stat.try_statement);
-            self.change_indentation(-1);
+            self.decrement_indentation(id);
             self.newline();
         }
         self.print_space();
         self.print_token(Token::Keyword(Keyword::Catch));
         self.print_space();
         self.print_token(Token::LeftParenthesis);
+        let id = self.increment_indentation();
         self.print_expression(&stat.catch_variable);
+        self.decrement_indentation(id);
         self.print_token(Token::RightParenthesis);
         self.print_space();
         if let Statement::Block(block) = &stat.catch_statement {
             self.print_block(block);
         } else {
-            self.change_indentation(1);
+            let id = self.increment_indentation();
             self.newline();
             self.print_statement(&stat.catch_statement);
-            self.change_indentation(-1);
+            self.decrement_indentation(id);
         }
     }
 
@@ -383,16 +412,19 @@ impl Printer {
     fn print_const(&mut self, stat: &ConstStatement) {
         self.print_token(Token::Keyword(Keyword::Const));
         self.print_space();
+        let id = self.increment_indentation();
         self.print_expression(&stat.name);
         self.print_space();
         self.print_token(Token::Operator(Operator::Assign));
         self.print_space();
         self.print_expression(&stat.expression);
+        self.decrement_indentation(id);
     }
 
     fn print_local(&mut self, stat: &LocalStatement) {
         self.print_token(Token::Keyword(Keyword::Local));
         self.print_space();
+        let id = self.increment_indentation();
         for (i, init) in stat.initializations.iter().enumerate() {
             if i > 0 {
                 self.print_token(Token::Operator(Operator::Comma));
@@ -406,6 +438,7 @@ impl Printer {
                 self.print_expression(expr);
             }
         }
+        self.decrement_indentation(id);
     }
 
     fn print_expression(&mut self, expression: &Expression) {
@@ -452,6 +485,7 @@ impl Printer {
             self.print_expression(name);
         }
         self.print_token(Token::LeftParenthesis);
+        let id = self.increment_indentation();
         for (i, param) in expr.parameters.iter().enumerate() {
             if i > 0 {
                 self.print_token(Token::Operator(Operator::Comma));
@@ -459,28 +493,40 @@ impl Printer {
             }
             self.print_expression(param);
         }
+        self.decrement_indentation(id);
         self.print_token(Token::RightParenthesis);
         self.print_space();
         if let Statement::Block(block) = &expr.statement {
             self.print_block(block);
         } else {
-            self.change_indentation(1);
+            let id = self.increment_indentation();
             self.newline();
             self.print_statement(&expr.statement);
-            self.change_indentation(-1);
+            self.decrement_indentation(id);
         }
     }
 
     fn print_ternary_operator(&mut self, expr: &TernaryOperatorExpression) {
         self.print_expression(&expr.condition);
+        let id = self.increment_indentation();
         self.print_space();
         self.print_token(Token::QuestionMark);
         self.print_space();
-        self.print_expression(&expr.if_true);
+        {
+            let id = self.increment_indentation();
+            self.print_expression(&expr.if_true);
+            self.decrement_indentation(id);
+        }
         self.print_space();
         self.print_token(Token::Colon);
         self.print_space();
-        self.print_expression(&expr.if_false);
+        {
+            let id = self.increment_indentation();
+            self.print_expression(&expr.if_false);
+            self.decrement_indentation(id);
+        }
+
+        self.decrement_indentation(id);
     }
 
     fn print_class_definition(&mut self, expr: &ClassDefinition) {
@@ -491,13 +537,15 @@ impl Printer {
         }
         self.print_space();
         if let Some(parent) = &expr.extends {
+            let id = self.increment_indentation();
             self.print_token(Token::Keyword(Keyword::Extends));
             self.print_space();
             self.print_expression(parent);
+            self.decrement_indentation(id);
             self.print_space();
         }
         self.print_token(Token::LeftBrace);
-        self.change_indentation(1);
+        let id = self.increment_indentation();
         self.newline();
         let mut newline_after_last = false;
         for (i, member) in expr.members.iter().enumerate() {
@@ -520,7 +568,9 @@ impl Printer {
                     self.print_space();
                     self.print_token(Token::Operator(Operator::Assign));
                     self.print_space();
+                    let id = self.increment_indentation();
                     self.print_expression(&field.expression);
+                    self.decrement_indentation(id);
                 }
                 ClassMemberDefinition::Method(method) => {
                     if i > 0 {
@@ -538,6 +588,7 @@ impl Printer {
 
                     self.print_token(Token::Keyword(Keyword::Constructor));
                     self.print_token(Token::LeftParenthesis);
+                    let id = self.increment_indentation();
                     for (i, param) in constructor.parameters.iter().enumerate() {
                         if i > 0 {
                             self.print_token(Token::Operator(Operator::Comma));
@@ -545,28 +596,31 @@ impl Printer {
                         }
                         self.print_expression(param);
                     }
+                    self.decrement_indentation(id);
                     self.print_token(Token::RightParenthesis);
                     self.print_space();
                     if let Statement::Block(block) = &constructor.statement {
                         self.print_block(block);
                     } else {
-                        self.change_indentation(1);
+                        let id = self.increment_indentation();
                         self.newline();
                         self.print_statement(&constructor.statement);
-                        self.change_indentation(-1);
+                        self.decrement_indentation(id);
                     }
                 }
             }
         }
-        self.change_indentation(-1);
+        self.decrement_indentation(id);
         self.newline();
         self.print_token(Token::RightBrace);
     }
 
     fn print_member_access(&mut self, expr: &MemberAccessExpression) {
         self.print_expression(&expr.expression);
+        let id = self.increment_indentation();
         self.print_token(Token::Dot);
         self.print_token(Token::Identifier(expr.member.to_string()));
+        self.decrement_indentation(id);
     }
 
     fn print_scope_resolution(&mut self, expr: &ScopeResolutionExpression) {
@@ -580,6 +634,7 @@ impl Printer {
     fn print_function_call(&mut self, expr: &FunctionCallExpression) {
         self.print_expression(&expr.function);
         self.print_token(Token::LeftParenthesis);
+        let id = self.increment_indentation();
         for (i, arg) in expr.arguments.iter().enumerate() {
             if i > 0 {
                 self.print_token(Token::Operator(Operator::Comma));
@@ -587,6 +642,7 @@ impl Printer {
             }
             self.print_expression(arg);
         }
+        self.decrement_indentation(id);
         self.print_token(Token::RightParenthesis);
     }
 
@@ -608,22 +664,26 @@ impl Printer {
 
     fn print_grouping(&mut self, expr: &GroupingExpression) {
         self.print_token(Token::LeftParenthesis);
+        let id = self.increment_indentation();
         if let Some(expr) = &expr.expression {
             self.print_expression(expr);
         }
+        self.decrement_indentation(id);
         self.print_token(Token::RightParenthesis);
     }
 
     fn print_array_access(&mut self, expr: &ArrayAccessExpression) {
         self.print_expression(&expr.array);
         self.print_token(Token::LeftBracket);
+        let id = self.increment_indentation();
         self.print_expression(&expr.index);
+        self.decrement_indentation(id);
         self.print_token(Token::RightBracket);
     }
 
     fn print_array(&mut self, expr: &ArrayExpression) {
         self.print_token(Token::LeftBracket);
-        self.change_indentation(1);
+        let id = self.increment_indentation();
         for (i, element) in expr.elements.iter().enumerate() {
             if i > 0 {
                 self.print_token(Token::Operator(Operator::Comma));
@@ -632,7 +692,7 @@ impl Printer {
             self.newline();
             self.print_expression(element);
         }
-        self.change_indentation(-1);
+        self.decrement_indentation(id);
         if !expr.elements.is_empty() {
             self.newline();
         }
@@ -642,24 +702,30 @@ impl Printer {
     fn print_delete(&mut self, expr: &DeleteExpression) {
         self.print_token(Token::Keyword(Keyword::Delete));
         self.print_space();
+        let id = self.increment_indentation();
         self.print_expression(&expr.expression);
+        self.decrement_indentation(id);
     }
 
     fn print_resume(&mut self, expr: &ResumeExpression) {
         self.print_token(Token::Keyword(Keyword::Resume));
         self.print_space();
+        let id = self.increment_indentation();
         self.print_expression(&expr.expression);
+        self.decrement_indentation(id);
     }
 
     fn print_clone(&mut self, expr: &CloneExpression) {
         self.print_token(Token::Keyword(Keyword::Clone));
         self.print_space();
+        let id = self.increment_indentation();
         self.print_expression(&expr.expression);
+        self.decrement_indentation(id);
     }
 
     fn print_table(&mut self, expr: &TableExpression) {
         self.print_token(Token::LeftBrace);
-        self.change_indentation(1);
+        let id = self.increment_indentation();
 
         let mut newline_after_last = false;
         for (i, elm) in expr.entries.iter().enumerate() {
@@ -705,7 +771,7 @@ impl Printer {
                 }
             }
         }
-        self.change_indentation(-1);
+        self.decrement_indentation(id);
         if !expr.entries.is_empty() {
             self.newline();
         }

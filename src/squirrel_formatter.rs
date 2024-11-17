@@ -7,14 +7,12 @@ use crate::{
 #[derive(Debug, Clone)]
 pub struct Formatter {
     input: String,
-    buffer: String,
 }
 
 impl Formatter {
     pub fn new(input: &str) -> Self {
         Self {
             input: input.to_string(),
-            buffer: String::with_capacity(input.len()),
         }
     }
 
@@ -50,26 +48,54 @@ impl Formatter {
         let mut formatted_token_iterator = formatted_tokens.into_iter().peekable();
         let mut original_token_iterator = original_comments.into_iter().peekable();
 
-        let mut current_indentation = 0;
         let mut newline_counter = 0;
+        let mut indentation_stack = Vec::new();
+        let mut applied_indentation_stack = Vec::new();
 
         loop {
             let formatted = formatted_token_iterator.peek();
             let original = original_token_iterator.peek();
 
             let formatted = {
-                if let Some(PrintInstruction::SetIndentation(indentation)) = formatted {
-                    current_indentation = *indentation;
+                if let Some(PrintInstruction::IncrementIndentation { id }) = formatted {
+                    indentation_stack.clone_from(&applied_indentation_stack);
+                    indentation_stack.push(*id);
+                    formatted_token_iterator.next();
+                    continue;
+                }
+
+                if let Some(PrintInstruction::DecrementIndentation { id }) = formatted {
+                    if indentation_stack.last() == Some(id) {
+                        indentation_stack.pop();
+                    }
+
+                    if applied_indentation_stack.last() == Some(id) {
+                        applied_indentation_stack.pop();
+                    }
+
                     formatted_token_iterator.next();
                     continue;
                 }
 
                 formatted.map(|token| match token {
                     PrintInstruction::EmitToken(token) => token,
-                    PrintInstruction::SetIndentation(_) => {
+                    PrintInstruction::DecrementIndentation { .. } => {
                         unreachable!("SetIndentation should be handled above")
                     }
+                    PrintInstruction::IncrementIndentation { .. } => {
+                        unreachable!("IncrementIndentation should be handled above")
+                    }
                 })
+            };
+
+            let mut newline_indent = || {
+                if let Some(id) = indentation_stack.last().cloned() {
+                    if applied_indentation_stack.last() != Some(&id) {
+                        applied_indentation_stack.push(id);
+                    }
+                }
+                result_tokens.push(Token::Newline);
+                result_tokens.push(Token::Indent(applied_indentation_stack.len()));
             };
 
             println!("Formatted {:?} Original {:?}", formatted, original);
@@ -79,8 +105,7 @@ impl Formatter {
                     if *formatted == *original {
                         if *formatted == Token::Newline {
                             if newline_counter < 2 {
-                                result_tokens.push(Token::Newline);
-                                result_tokens.push(Token::Indent(current_indentation));
+                                newline_indent();
                             }
                             newline_counter += 1;
                         } else {
@@ -140,8 +165,7 @@ impl Formatter {
                             // Formatter may decide to remove commas in favour of newlines
                             (Token::Newline, Token::Operator(Operator::Comma)) => {
                                 if newline_counter < 2 {
-                                    result_tokens.push(Token::Newline);
-                                    result_tokens.push(Token::Indent(current_indentation));
+                                    newline_indent();
                                 }
                                 newline_counter += 1;
 
@@ -169,8 +193,7 @@ impl Formatter {
                             }
                             (Token::Newline, Token::Newline) => {
                                 if newline_counter < 2 {
-                                    result_tokens.push(Token::Newline);
-                                    result_tokens.push(Token::Indent(current_indentation));
+                                    newline_indent();
                                 }
                                 newline_counter += 1;
 
@@ -182,8 +205,7 @@ impl Formatter {
                             }
                             (Token::Newline, _) => {
                                 if newline_counter < 2 {
-                                    result_tokens.push(Token::Newline);
-                                    result_tokens.push(Token::Indent(current_indentation));
+                                    newline_indent();
                                 }
                                 newline_counter += 1;
 
@@ -192,8 +214,7 @@ impl Formatter {
                             }
                             (Token::Dummy, Token::Newline) => {
                                 if newline_counter < 2 {
-                                    result_tokens.push(Token::Newline);
-                                    result_tokens.push(Token::Indent(current_indentation));
+                                    newline_indent();
                                 }
                                 newline_counter += 1;
 
@@ -209,8 +230,7 @@ impl Formatter {
                             }
                             (_, Token::Newline) => {
                                 if newline_counter < 2 {
-                                    result_tokens.push(Token::Newline);
-                                    result_tokens.push(Token::Indent(current_indentation));
+                                    newline_indent();
                                 }
                                 newline_counter += 1;
 
@@ -230,8 +250,7 @@ impl Formatter {
                     }
                     if token == &Token::Newline {
                         if newline_counter < 2 {
-                            result_tokens.push(Token::Newline);
-                            result_tokens.push(Token::Indent(current_indentation));
+                            newline_indent();
                         }
                         newline_counter += 1;
                     } else {
@@ -246,8 +265,7 @@ impl Formatter {
                     }
                     if token == &Token::Newline {
                         if newline_counter < 2 {
-                            result_tokens.push(Token::Newline);
-                            result_tokens.push(Token::Indent(current_indentation));
+                            newline_indent();
                         }
                         newline_counter += 1;
                     } else {
