@@ -578,45 +578,43 @@ impl<'a> Parser<'a> {
         let from = self.lexer.current_location();
         self.expect_token(Token::Keyword(Keyword::Class))?;
 
-        let (class_name, extends) = if skip_name {
-            (None, None)
+        let class_name = if skip_name {
+            None
         } else {
             let class_name = self.parse_expression(true)?;
 
             if class_name.is_none() {
                 return Err(ParserErrorWithLocation {
                     error: ParserError::ExpectedExpression,
-                    details: format!("Expected expression after 'class'"),
+                    details: "Expected expression after 'class'".to_string(),
                     from,
                     to: self.lexer.current_location(),
                 });
             }
 
-            let class_name = class_name.unwrap();
+            class_name
+        };
 
-            let mut extends = None;
+        let mut extends = None;
 
-            self.skip_newlines()?;
-            let next_token = self.peek_token()?;
+        self.skip_newlines()?;
+        let next_token = self.peek_token()?;
 
-            if next_token.token == Token::Keyword(Keyword::Extends) {
-                self.next_token()?;
-                let extends_expr = self.parse_expression(true)?;
+        if next_token.token == Token::Keyword(Keyword::Extends) {
+            self.next_token()?;
+            let extends_expr = self.parse_expression(true)?;
 
-                if extends_expr.is_none() {
-                    return Err(ParserErrorWithLocation {
-                        error: ParserError::ExpectedExpression,
-                        details: format!("Expected expression after 'extends'"),
-                        from,
-                        to: self.lexer.current_location(),
-                    });
-                }
-
-                extends = extends_expr;
+            if extends_expr.is_none() {
+                return Err(ParserErrorWithLocation {
+                    error: ParserError::ExpectedExpression,
+                    details: "Expected expression after 'extends'".to_string(),
+                    from,
+                    to: self.lexer.current_location(),
+                });
             }
 
-            (Some(class_name), extends)
-        };
+            extends = extends_expr;
+        }
 
         self.skip_newlines()?;
         self.expect_token(Token::LeftBrace)?;
