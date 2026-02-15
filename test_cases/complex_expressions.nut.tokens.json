@@ -526,5 +526,127 @@
       "linechar": 0
     },
     "index": 34
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 6,
+      "linechar": 0
+    },
+    "to": {
+      "line": 7,
+      "linechar": 0
+    },
+    "index": 34
+  },
+  {
+    "token": {
+      "Keyword": "Local"
+    },
+    "from": {
+      "line": 7,
+      "linechar": 0
+    },
+    "to": {
+      "line": 7,
+      "linechar": 5
+    },
+    "index": 34
+  },
+  {
+    "token": {
+      "Identifier": "test3"
+    },
+    "from": {
+      "line": 7,
+      "linechar": 6
+    },
+    "to": {
+      "line": 7,
+      "linechar": 11
+    },
+    "index": 35
+  },
+  {
+    "token": {
+      "Operator": "Assign"
+    },
+    "from": {
+      "line": 7,
+      "linechar": 12
+    },
+    "to": {
+      "line": 7,
+      "linechar": 13
+    },
+    "index": 36
+  },
+  {
+    "token": {
+      "Operator": "Typeof"
+    },
+    "from": {
+      "line": 7,
+      "linechar": 14
+    },
+    "to": {
+      "line": 7,
+      "linechar": 20
+    },
+    "index": 37
+  },
+  {
+    "token": {
+      "Identifier": "x"
+    },
+    "from": {
+      "line": 7,
+      "linechar": 21
+    },
+    "to": {
+      "line": 7,
+      "linechar": 22
+    },
+    "index": 38
+  },
+  {
+    "token": {
+      "Operator": "Plus"
+    },
+    "from": {
+      "line": 7,
+      "linechar": 23
+    },
+    "to": {
+      "line": 7,
+      "linechar": 24
+    },
+    "index": 39
+  },
+  {
+    "token": {
+      "String": "fdsfsd"
+    },
+    "from": {
+      "line": 7,
+      "linechar": 25
+    },
+    "to": {
+      "line": 7,
+      "linechar": 33
+    },
+    "index": 40
+  },
+  {
+    "token": "Newline",
+    "from": {
+      "line": 7,
+      "linechar": 33
+    },
+    "to": {
+      "line": 8,
+      "linechar": 0
+    },
+    "index": 41
   }
 ]

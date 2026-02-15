@@ -166,6 +166,8 @@ impl Printer {
 
             if let Statement::Block(block) = &else_block {
                 self.print_block(block);
+            } else if let Statement::If(block) = &else_block {
+                self.print_if(block);
             } else {
                 let id = self.increment_indentation();
                 self.newline();
@@ -807,6 +809,12 @@ impl Printer {
 
     fn print_unary_operator(&mut self, expr: &UnaryOperatorExpression) {
         self.print_token(Token::Operator(expr.operator.clone()));
+
+        match expr.operator {
+            Operator::InstanceOf | Operator::Typeof | Operator::In => self.print_space(),
+            _ => {}
+        }
+
         self.print_expression(&expr.expression);
     }
 }

@@ -4,3 +4,5 @@ b.test() &&
 x.y.z;
 
 local test2 = ++ a ++ - -- b -- * c;
+
+local test3 = typeof x + "fdsfsd"

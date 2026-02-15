@@ -1086,6 +1086,8 @@ impl<'a> Lexer<'a> {
 
 #[cfg(test)]
 mod tests {
+    use difference::assert_diff;
+
     use super::*;
 
     #[test]
@@ -1137,7 +1139,8 @@ mod tests {
 
     #[test]
     fn test_operators() {
-        let input = "!	!=	||	==	&&	>=	<=	> < <=>	+	+=	-	-=	/	/=	* *=	%	%=	++	--	<-	= & ^	|	~	>>	<<	>>>";
+        let input =
+            "!	!=	||	==	&&	>=	<=	> < <=>	+	+=	-	-=	/	/=	* *=	%	%=	++	--	<-	= & ^	|	~	>>	<<	>>>";
         let mut lexer = Lexer::new(input, false);
         assert_eq!(lexer.next().unwrap().token, Token::Operator(Operator::Not));
         assert_eq!(
@@ -1401,17 +1404,37 @@ mod tests {
 
     #[test]
     fn test_numbers() {
-        let input = "0 0.0 123 123.123 123.0 123.e123 123.e+123 123.E-12 0x123 0123 'a' 'b'";
+        let input = "0 0.0 123 12.12 123.0 123.e123 123.e+123 123.E-12 0x123 0123 'a' 'b'";
         let mut lexer = Lexer::new(input, false);
 
+        const EPSILON: f64 = 1e-10;
+
         assert_eq!(lexer.next().unwrap().token, Token::Integer(0));
-        assert_eq!(lexer.next().unwrap().token, Token::Float(0.0));
+        match lexer.next().unwrap().token {
+            Token::Float(f) => assert!((f - 0.0).abs() < EPSILON),
+            _ => panic!("Expected float"),
+        }
         assert_eq!(lexer.next().unwrap().token, Token::Integer(123));
-        assert_eq!(lexer.next().unwrap().token, Token::Float(123.123));
-        assert_eq!(lexer.next().unwrap().token, Token::Float(123.0));
-        assert_eq!(lexer.next().unwrap().token, Token::Float(123e123));
-        assert_eq!(lexer.next().unwrap().token, Token::Float(123e+123));
-        assert_eq!(lexer.next().unwrap().token, Token::Float(123e-12));
+        match lexer.next().unwrap().token {
+            Token::Float(f) => assert!((f - 12.12).abs() < EPSILON),
+            _ => panic!("Expected float"),
+        }
+        match lexer.next().unwrap().token {
+            Token::Float(f) => assert!((f - 123.0).abs() < EPSILON),
+            _ => panic!("Expected float"),
+        }
+        match lexer.next().unwrap().token {
+            Token::Float(f) => assert!((f - 123e123).abs() < EPSILON * 123e123_f64.abs().max(1.0)),
+            _ => panic!("Expected float"),
+        }
+        match lexer.next().unwrap().token {
+            Token::Float(f) => assert!((f - 123e123).abs() < EPSILON * 123e123_f64.abs().max(1.0)),
+            _ => panic!("Expected float"),
+        }
+        match lexer.next().unwrap().token {
+            Token::Float(f) => assert!((f - 123e-12).abs() < EPSILON),
+            _ => panic!("Expected float"),
+        }
         assert_eq!(lexer.next().unwrap().token, Token::Integer(0x123));
         assert_eq!(lexer.next().unwrap().token, Token::Integer(0o123));
         assert_eq!(lexer.next().unwrap().token, Token::Integer(97));

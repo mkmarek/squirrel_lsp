@@ -321,6 +321,85 @@
           "linechar": 35
         }
       }
+    },
+    {
+      "Local": {
+        "initializations": [
+          {
+            "name": "test3",
+            "expression": {
+              "BinaryOperator": {
+                "left": {
+                  "UnaryOperator": {
+                    "operator": "Typeof",
+                    "expression": {
+                      "Identifier": {
+                        "token": {
+                          "Identifier": "x"
+                        },
+                        "from": {
+                          "line": 7,
+                          "linechar": 21
+                        },
+                        "to": {
+                          "line": 7,
+                          "linechar": 22
+                        }
+                      }
+                    },
+                    "from": {
+                      "line": 7,
+                      "linechar": 13
+                    },
+                    "to": {
+                      "line": 7,
+                      "linechar": 22
+                    }
+                  }
+                },
+                "operator": "Plus",
+                "right": {
+                  "StringLiteral": {
+                    "value": "fdsfsd",
+                    "from": {
+                      "line": 7,
+                      "linechar": 24
+                    },
+                    "to": {
+                      "line": 7,
+                      "linechar": 33
+                    }
+                  }
+                },
+                "from": {
+                  "line": 7,
+                  "linechar": 13
+                },
+                "to": {
+                  "line": 7,
+                  "linechar": 33
+                }
+              }
+            },
+            "from": {
+              "line": 7,
+              "linechar": 5
+            },
+            "to": {
+              "line": 7,
+              "linechar": 33
+            }
+          }
+        ],
+        "from": {
+          "line": 7,
+          "linechar": 0
+        },
+        "to": {
+          "line": 7,
+          "linechar": 33
+        }
+      }
     }
   ],
   "from": {
@@ -328,7 +407,7 @@
     "linechar": 0
   },
   "to": {
-    "line": 6,
+    "line": 8,
     "linechar": 0
   }
 }

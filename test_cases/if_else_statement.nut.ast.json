@@ -537,6 +537,787 @@
           "linechar": 23
         }
       }
+    },
+    {
+      "If": {
+        "condition": {
+          "BinaryOperator": {
+            "left": {
+              "Identifier": {
+                "token": {
+                  "Identifier": "side"
+                },
+                "from": {
+                  "line": 16,
+                  "linechar": 4
+                },
+                "to": {
+                  "line": 16,
+                  "linechar": 8
+                }
+              }
+            },
+            "operator": "Equal",
+            "right": {
+              "StringLiteral": {
+                "value": "left",
+                "from": {
+                  "line": 16,
+                  "linechar": 11
+                },
+                "to": {
+                  "line": 16,
+                  "linechar": 18
+                }
+              }
+            },
+            "from": {
+              "line": 16,
+              "linechar": 4
+            },
+            "to": {
+              "line": 16,
+              "linechar": 18
+            }
+          }
+        },
+        "if_true": {
+          "Block": {
+            "statements": {
+              "statements": [
+                {
+                  "Expression": {
+                    "expression": {
+                      "FunctionCall": {
+                        "function": {
+                          "ScopeResolution": {
+                            "scope": null,
+                            "accessor": "print",
+                            "from": {
+                              "line": 17,
+                              "linechar": 0
+                            },
+                            "to": {
+                              "line": 17,
+                              "linechar": 9
+                            }
+                          }
+                        },
+                        "arguments": [
+                          {
+                            "StringLiteral": {
+                              "value": "left",
+                              "from": {
+                                "line": 17,
+                                "linechar": 10
+                              },
+                              "to": {
+                                "line": 17,
+                                "linechar": 16
+                              }
+                            }
+                          }
+                        ],
+                        "from": {
+                          "line": 17,
+                          "linechar": 0
+                        },
+                        "to": {
+                          "line": 17,
+                          "linechar": 17
+                        }
+                      }
+                    },
+                    "from": {
+                      "line": 17,
+                      "linechar": 0
+                    },
+                    "to": {
+                      "line": 17,
+                      "linechar": 17
+                    }
+                  }
+                }
+              ],
+              "from": {
+                "line": 16,
+                "linechar": 21
+              },
+              "to": {
+                "line": 18,
+                "linechar": 0
+              }
+            },
+            "from": {
+              "line": 16,
+              "linechar": 19
+            },
+            "to": {
+              "line": 18,
+              "linechar": 1
+            }
+          }
+        },
+        "if_false": {
+          "If": {
+            "condition": {
+              "BinaryOperator": {
+                "left": {
+                  "Identifier": {
+                    "token": {
+                      "Identifier": "side"
+                    },
+                    "from": {
+                      "line": 18,
+                      "linechar": 11
+                    },
+                    "to": {
+                      "line": 18,
+                      "linechar": 15
+                    }
+                  }
+                },
+                "operator": "Equal",
+                "right": {
+                  "StringLiteral": {
+                    "value": "right",
+                    "from": {
+                      "line": 18,
+                      "linechar": 18
+                    },
+                    "to": {
+                      "line": 18,
+                      "linechar": 26
+                    }
+                  }
+                },
+                "from": {
+                  "line": 18,
+                  "linechar": 11
+                },
+                "to": {
+                  "line": 18,
+                  "linechar": 26
+                }
+              }
+            },
+            "if_true": {
+              "Block": {
+                "statements": {
+                  "statements": [
+                    {
+                      "Expression": {
+                        "expression": {
+                          "FunctionCall": {
+                            "function": {
+                              "ScopeResolution": {
+                                "scope": null,
+                                "accessor": "print",
+                                "from": {
+                                  "line": 19,
+                                  "linechar": 0
+                                },
+                                "to": {
+                                  "line": 19,
+                                  "linechar": 9
+                                }
+                              }
+                            },
+                            "arguments": [
+                              {
+                                "StringLiteral": {
+                                  "value": "right",
+                                  "from": {
+                                    "line": 19,
+                                    "linechar": 10
+                                  },
+                                  "to": {
+                                    "line": 19,
+                                    "linechar": 17
+                                  }
+                                }
+                              }
+                            ],
+                            "from": {
+                              "line": 19,
+                              "linechar": 0
+                            },
+                            "to": {
+                              "line": 19,
+                              "linechar": 18
+                            }
+                          }
+                        },
+                        "from": {
+                          "line": 19,
+                          "linechar": 0
+                        },
+                        "to": {
+                          "line": 19,
+                          "linechar": 18
+                        }
+                      }
+                    }
+                  ],
+                  "from": {
+                    "line": 18,
+                    "linechar": 29
+                  },
+                  "to": {
+                    "line": 20,
+                    "linechar": 0
+                  }
+                },
+                "from": {
+                  "line": 18,
+                  "linechar": 27
+                },
+                "to": {
+                  "line": 20,
+                  "linechar": 1
+                }
+              }
+            },
+            "if_false": {
+              "If": {
+                "condition": {
+                  "BinaryOperator": {
+                    "left": {
+                      "Identifier": {
+                        "token": {
+                          "Identifier": "side"
+                        },
+                        "from": {
+                          "line": 20,
+                          "linechar": 11
+                        },
+                        "to": {
+                          "line": 20,
+                          "linechar": 15
+                        }
+                      }
+                    },
+                    "operator": "Equal",
+                    "right": {
+                      "StringLiteral": {
+                        "value": "bottom",
+                        "from": {
+                          "line": 20,
+                          "linechar": 18
+                        },
+                        "to": {
+                          "line": 20,
+                          "linechar": 27
+                        }
+                      }
+                    },
+                    "from": {
+                      "line": 20,
+                      "linechar": 11
+                    },
+                    "to": {
+                      "line": 20,
+                      "linechar": 27
+                    }
+                  }
+                },
+                "if_true": {
+                  "Block": {
+                    "statements": {
+                      "statements": [
+                        {
+                          "Expression": {
+                            "expression": {
+                              "FunctionCall": {
+                                "function": {
+                                  "ScopeResolution": {
+                                    "scope": null,
+                                    "accessor": "print",
+                                    "from": {
+                                      "line": 21,
+                                      "linechar": 0
+                                    },
+                                    "to": {
+                                      "line": 21,
+                                      "linechar": 9
+                                    }
+                                  }
+                                },
+                                "arguments": [
+                                  {
+                                    "StringLiteral": {
+                                      "value": "bottom",
+                                      "from": {
+                                        "line": 21,
+                                        "linechar": 10
+                                      },
+                                      "to": {
+                                        "line": 21,
+                                        "linechar": 18
+                                      }
+                                    }
+                                  }
+                                ],
+                                "from": {
+                                  "line": 21,
+                                  "linechar": 0
+                                },
+                                "to": {
+                                  "line": 21,
+                                  "linechar": 19
+                                }
+                              }
+                            },
+                            "from": {
+                              "line": 21,
+                              "linechar": 0
+                            },
+                            "to": {
+                              "line": 21,
+                              "linechar": 19
+                            }
+                          }
+                        }
+                      ],
+                      "from": {
+                        "line": 20,
+                        "linechar": 30
+                      },
+                      "to": {
+                        "line": 22,
+                        "linechar": 0
+                      }
+                    },
+                    "from": {
+                      "line": 20,
+                      "linechar": 28
+                    },
+                    "to": {
+                      "line": 22,
+                      "linechar": 1
+                    }
+                  }
+                },
+                "if_false": {
+                  "If": {
+                    "condition": {
+                      "BinaryOperator": {
+                        "left": {
+                          "Identifier": {
+                            "token": {
+                              "Identifier": "side"
+                            },
+                            "from": {
+                              "line": 22,
+                              "linechar": 11
+                            },
+                            "to": {
+                              "line": 22,
+                              "linechar": 15
+                            }
+                          }
+                        },
+                        "operator": "Equal",
+                        "right": {
+                          "StringLiteral": {
+                            "value": "top",
+                            "from": {
+                              "line": 22,
+                              "linechar": 18
+                            },
+                            "to": {
+                              "line": 22,
+                              "linechar": 24
+                            }
+                          }
+                        },
+                        "from": {
+                          "line": 22,
+                          "linechar": 11
+                        },
+                        "to": {
+                          "line": 22,
+                          "linechar": 24
+                        }
+                      }
+                    },
+                    "if_true": {
+                      "Block": {
+                        "statements": {
+                          "statements": [
+                            {
+                              "Expression": {
+                                "expression": {
+                                  "FunctionCall": {
+                                    "function": {
+                                      "ScopeResolution": {
+                                        "scope": null,
+                                        "accessor": "print",
+                                        "from": {
+                                          "line": 23,
+                                          "linechar": 0
+                                        },
+                                        "to": {
+                                          "line": 23,
+                                          "linechar": 9
+                                        }
+                                      }
+                                    },
+                                    "arguments": [
+                                      {
+                                        "StringLiteral": {
+                                          "value": "top",
+                                          "from": {
+                                            "line": 23,
+                                            "linechar": 10
+                                          },
+                                          "to": {
+                                            "line": 23,
+                                            "linechar": 15
+                                          }
+                                        }
+                                      }
+                                    ],
+                                    "from": {
+                                      "line": 23,
+                                      "linechar": 0
+                                    },
+                                    "to": {
+                                      "line": 23,
+                                      "linechar": 16
+                                    }
+                                  }
+                                },
+                                "from": {
+                                  "line": 23,
+                                  "linechar": 0
+                                },
+                                "to": {
+                                  "line": 23,
+                                  "linechar": 16
+                                }
+                              }
+                            }
+                          ],
+                          "from": {
+                            "line": 22,
+                            "linechar": 27
+                          },
+                          "to": {
+                            "line": 24,
+                            "linechar": 0
+                          }
+                        },
+                        "from": {
+                          "line": 22,
+                          "linechar": 25
+                        },
+                        "to": {
+                          "line": 24,
+                          "linechar": 1
+                        }
+                      }
+                    },
+                    "if_false": {
+                      "If": {
+                        "condition": {
+                          "BinaryOperator": {
+                            "left": {
+                              "Identifier": {
+                                "token": {
+                                  "Identifier": "side"
+                                },
+                                "from": {
+                                  "line": 24,
+                                  "linechar": 11
+                                },
+                                "to": {
+                                  "line": 24,
+                                  "linechar": 15
+                                }
+                              }
+                            },
+                            "operator": "Equal",
+                            "right": {
+                              "StringLiteral": {
+                                "value": "front",
+                                "from": {
+                                  "line": 24,
+                                  "linechar": 18
+                                },
+                                "to": {
+                                  "line": 24,
+                                  "linechar": 26
+                                }
+                              }
+                            },
+                            "from": {
+                              "line": 24,
+                              "linechar": 11
+                            },
+                            "to": {
+                              "line": 24,
+                              "linechar": 26
+                            }
+                          }
+                        },
+                        "if_true": {
+                          "Block": {
+                            "statements": {
+                              "statements": [
+                                {
+                                  "Expression": {
+                                    "expression": {
+                                      "FunctionCall": {
+                                        "function": {
+                                          "ScopeResolution": {
+                                            "scope": null,
+                                            "accessor": "print",
+                                            "from": {
+                                              "line": 25,
+                                              "linechar": 0
+                                            },
+                                            "to": {
+                                              "line": 25,
+                                              "linechar": 9
+                                            }
+                                          }
+                                        },
+                                        "arguments": [
+                                          {
+                                            "StringLiteral": {
+                                              "value": "front",
+                                              "from": {
+                                                "line": 25,
+                                                "linechar": 10
+                                              },
+                                              "to": {
+                                                "line": 25,
+                                                "linechar": 17
+                                              }
+                                            }
+                                          }
+                                        ],
+                                        "from": {
+                                          "line": 25,
+                                          "linechar": 0
+                                        },
+                                        "to": {
+                                          "line": 25,
+                                          "linechar": 18
+                                        }
+                                      }
+                                    },
+                                    "from": {
+                                      "line": 25,
+                                      "linechar": 0
+                                    },
+                                    "to": {
+                                      "line": 25,
+                                      "linechar": 18
+                                    }
+                                  }
+                                }
+                              ],
+                              "from": {
+                                "line": 24,
+                                "linechar": 29
+                              },
+                              "to": {
+                                "line": 26,
+                                "linechar": 0
+                              }
+                            },
+                            "from": {
+                              "line": 24,
+                              "linechar": 27
+                            },
+                            "to": {
+                              "line": 26,
+                              "linechar": 1
+                            }
+                          }
+                        },
+                        "if_false": {
+                          "If": {
+                            "condition": {
+                              "BinaryOperator": {
+                                "left": {
+                                  "Identifier": {
+                                    "token": {
+                                      "Identifier": "side"
+                                    },
+                                    "from": {
+                                      "line": 26,
+                                      "linechar": 11
+                                    },
+                                    "to": {
+                                      "line": 26,
+                                      "linechar": 15
+                                    }
+                                  }
+                                },
+                                "operator": "Equal",
+                                "right": {
+                                  "StringLiteral": {
+                                    "value": "back",
+                                    "from": {
+                                      "line": 26,
+                                      "linechar": 18
+                                    },
+                                    "to": {
+                                      "line": 26,
+                                      "linechar": 25
+                                    }
+                                  }
+                                },
+                                "from": {
+                                  "line": 26,
+                                  "linechar": 11
+                                },
+                                "to": {
+                                  "line": 26,
+                                  "linechar": 25
+                                }
+                              }
+                            },
+                            "if_true": {
+                              "Block": {
+                                "statements": {
+                                  "statements": [
+                                    {
+                                      "Expression": {
+                                        "expression": {
+                                          "FunctionCall": {
+                                            "function": {
+                                              "ScopeResolution": {
+                                                "scope": null,
+                                                "accessor": "print",
+                                                "from": {
+                                                  "line": 27,
+                                                  "linechar": 0
+                                                },
+                                                "to": {
+                                                  "line": 27,
+                                                  "linechar": 9
+                                                }
+                                              }
+                                            },
+                                            "arguments": [
+                                              {
+                                                "StringLiteral": {
+                                                  "value": "back",
+                                                  "from": {
+                                                    "line": 27,
+                                                    "linechar": 10
+                                                  },
+                                                  "to": {
+                                                    "line": 27,
+                                                    "linechar": 16
+                                                  }
+                                                }
+                                              }
+                                            ],
+                                            "from": {
+                                              "line": 27,
+                                              "linechar": 0
+                                            },
+                                            "to": {
+                                              "line": 27,
+                                              "linechar": 17
+                                            }
+                                          }
+                                        },
+                                        "from": {
+                                          "line": 27,
+                                          "linechar": 0
+                                        },
+                                        "to": {
+                                          "line": 27,
+                                          "linechar": 17
+                                        }
+                                      }
+                                    }
+                                  ],
+                                  "from": {
+                                    "line": 26,
+                                    "linechar": 28
+                                  },
+                                  "to": {
+                                    "line": 28,
+                                    "linechar": 0
+                                  }
+                                },
+                                "from": {
+                                  "line": 26,
+                                  "linechar": 26
+                                },
+                                "to": {
+                                  "line": 28,
+                                  "linechar": 1
+                                }
+                              }
+                            },
+                            "if_false": null,
+                            "from": {
+                              "line": 26,
+                              "linechar": 6
+                            },
+                            "to": {
+                              "line": 28,
+                              "linechar": 1
+                            }
+                          }
+                        },
+                        "from": {
+                          "line": 24,
+                          "linechar": 6
+                        },
+                        "to": {
+                          "line": 28,
+                          "linechar": 1
+                        }
+                      }
+                    },
+                    "from": {
+                      "line": 22,
+                      "linechar": 6
+                    },
+                    "to": {
+                      "line": 28,
+                      "linechar": 1
+                    }
+                  }
+                },
+                "from": {
+                  "line": 20,
+                  "linechar": 6
+                },
+                "to": {
+                  "line": 28,
+                  "linechar": 1
+                }
+              }
+            },
+            "from": {
+              "line": 18,
+              "linechar": 6
+            },
+            "to": {
+              "line": 28,
+              "linechar": 1
+            }
+          }
+        },
+        "from": {
+          "line": 16,
+          "linechar": 0
+        },
+        "to": {
+          "line": 28,
+          "linechar": 1
+        }
+      }
     }
   ],
   "from": {
@@ -544,7 +1325,7 @@
     "linechar": 0
   },
   "to": {
-    "line": 15,
+    "line": 29,
     "linechar": 0
   }
 }
