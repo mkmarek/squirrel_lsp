@@ -15,6 +15,7 @@ pub struct Lexer<'a> {
 pub struct Location {
     pub line: usize,
     pub linechar: usize,
+    pub index: usize,
 }
 
 #[derive(Debug, PartialEq, Clone, Serialize, Deserialize)]
@@ -376,6 +377,7 @@ impl<'a> Lexer<'a> {
             location: Location {
                 line: 0,
                 linechar: 0,
+                index: 0,
             },
             token_counter: 0,
             skip_comments,
@@ -1071,8 +1073,10 @@ impl<'a> Lexer<'a> {
             && self.input[self.position + 1] as char == '\n'
         {
             self.position += 2;
+            self.location.index += 2;
         } else {
             self.position += 1;
+            self.location.index += 1;
         }
 
         if line_break {
@@ -1275,11 +1279,13 @@ mod tests {
                 error: LexerError::UnterminatedString,
                 from: Location {
                     line: 0,
-                    linechar: 0
+                    linechar: 0,
+                    index: 0
                 },
                 to: Location {
                     line: 0,
-                    linechar: 6
+                    linechar: 6,
+                    index: 6
                 }
             }
         );

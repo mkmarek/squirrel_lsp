@@ -17,6 +17,43 @@ impl Formatter {
     }
 
     pub fn format(&mut self) -> Result<String, ParserErrorWithLocation> {
+        let mut original_non_formatted_sections = {
+            let mut lexer_with_comments = Lexer::new(&self.input, false);
+            let mut sections = Vec::new();
+
+            let mut index_start = None;
+
+            loop {
+                let token = lexer_with_comments.next();
+
+                if let Ok(TokenWithLocation {
+                    token: Token::EOF, ..
+                }) = token
+                {
+                    break;
+                }
+
+                if let Ok(token) = token {
+                    if let Token::Comment(c) | Token::MultiLineComment(c) = token.token {
+                        if c.trim() == "<sqlsp:ignore_formatting>" {
+                            if index_start.is_none() {
+                                index_start = Some(token.from.index);
+                            }
+                        } else if c.trim() == "</sqlsp:ignore_formatting>" {
+                            if let Some(start) = index_start {
+                                sections.push(self.input[start..token.to.index].to_string());
+                                index_start = None;
+                            }
+                        }
+                    }
+                } else {
+                    break;
+                }
+            }
+
+            sections
+        };
+
         let original_comments = {
             let mut lexer_with_comments = Lexer::new(&self.input, false);
             let mut tokens = Vec::new();
@@ -97,8 +134,6 @@ impl Formatter {
                 result_tokens.push(Token::Newline);
                 result_tokens.push(Token::Indent(applied_indentation_stack.len()));
             };
-
-            println!("Formatted {:?} Original {:?}", formatted, original);
 
             match (formatted, original) {
                 (Some(formatted), Some(original)) => {
@@ -303,8 +338,22 @@ impl Formatter {
 
         let mut result = String::with_capacity(self.input.len());
 
+        let mut ignore_formatting = false;
         for token in result_tokens {
-            result.push_str(&token.to_source_string());
+            if let Token::Comment(c) | Token::MultiLineComment(c) = &token {
+                if c.trim() == "<sqlsp:ignore_formatting>" {
+                    ignore_formatting = true;
+                    continue;
+                } else if c.trim() == "</sqlsp:ignore_formatting>" {
+                    result.push_str(original_non_formatted_sections.remove(0).as_str());
+                    ignore_formatting = false;
+                    continue;
+                }
+            }
+
+            if !ignore_formatting {
+                result.push_str(&token.to_source_string());
+            }
         }
 
         Ok(result)

@@ -11,11 +11,13 @@
                 },
                 "from": {
                   "line": 0,
-                  "linechar": 4
+                  "linechar": 4,
+                  "index": 4
                 },
                 "to": {
                   "line": 0,
-                  "linechar": 5
+                  "linechar": 5,
+                  "index": 5
                 }
               }
             },
@@ -25,21 +27,25 @@
                 "value": true,
                 "from": {
                   "line": 0,
-                  "linechar": 8
+                  "linechar": 8,
+                  "index": 8
                 },
                 "to": {
                   "line": 0,
-                  "linechar": 13
+                  "linechar": 13,
+                  "index": 13
                 }
               }
             },
             "from": {
               "line": 0,
-              "linechar": 4
+              "linechar": 4,
+              "index": 4
             },
             "to": {
               "line": 0,
-              "linechar": 13
+              "linechar": 13,
+              "index": 13
             }
           }
         },
@@ -53,11 +59,13 @@
                     "accessor": "print",
                     "from": {
                       "line": 1,
-                      "linechar": 0
+                      "linechar": 0,
+                      "index": 15
                     },
                     "to": {
                       "line": 1,
-                      "linechar": 9
+                      "linechar": 9,
+                      "index": 24
                     }
                   }
                 },
@@ -67,32 +75,38 @@
                       "value": "a is true",
                       "from": {
                         "line": 1,
-                        "linechar": 10
+                        "linechar": 10,
+                        "index": 25
                       },
                       "to": {
                         "line": 1,
-                        "linechar": 21
+                        "linechar": 21,
+                        "index": 36
                       }
                     }
                   }
                 ],
                 "from": {
                   "line": 1,
-                  "linechar": 0
+                  "linechar": 0,
+                  "index": 15
                 },
                 "to": {
                   "line": 1,
-                  "linechar": 22
+                  "linechar": 22,
+                  "index": 37
                 }
               }
             },
             "from": {
               "line": 1,
-              "linechar": 0
+              "linechar": 0,
+              "index": 15
             },
             "to": {
               "line": 1,
-              "linechar": 22
+              "linechar": 22,
+              "index": 37
             }
           }
         },
@@ -106,11 +120,13 @@
                     "accessor": "print",
                     "from": {
                       "line": 3,
-                      "linechar": 0
+                      "linechar": 0,
+                      "index": 44
                     },
                     "to": {
                       "line": 3,
-                      "linechar": 9
+                      "linechar": 9,
+                      "index": 53
                     }
                   }
                 },
@@ -120,42 +136,50 @@
                       "value": "a is false",
                       "from": {
                         "line": 3,
-                        "linechar": 10
+                        "linechar": 10,
+                        "index": 54
                       },
                       "to": {
                         "line": 3,
-                        "linechar": 22
+                        "linechar": 22,
+                        "index": 66
                       }
                     }
                   }
                 ],
                 "from": {
                   "line": 3,
-                  "linechar": 0
+                  "linechar": 0,
+                  "index": 44
                 },
                 "to": {
                   "line": 3,
-                  "linechar": 23
+                  "linechar": 23,
+                  "index": 67
                 }
               }
             },
             "from": {
               "line": 3,
-              "linechar": 0
+              "linechar": 0,
+              "index": 44
             },
             "to": {
               "line": 3,
-              "linechar": 23
+              "linechar": 23,
+              "index": 67
             }
           }
         },
         "from": {
           "line": 0,
-          "linechar": 0
+          "linechar": 0,
+          "index": 0
         },
         "to": {
           "line": 3,
-          "linechar": 23
+          "linechar": 23,
+          "index": 67
         }
       }
     },
@@ -170,11 +194,13 @@
                 },
                 "from": {
                   "line": 5,
-                  "linechar": 4
+                  "linechar": 4,
+                  "index": 74
                 },
                 "to": {
                   "line": 5,
-                  "linechar": 5
+                  "linechar": 5,
+                  "index": 75
                 }
               }
             },
@@ -184,21 +210,25 @@
                 "value": false,
                 "from": {
                   "line": 5,
-                  "linechar": 8
+                  "linechar": 8,
+                  "index": 78
                 },
                 "to": {
                   "line": 5,
-                  "linechar": 14
+                  "linechar": 14,
+                  "index": 84
                 }
               }
             },
             "from": {
               "line": 5,
-              "linechar": 4
+              "linechar": 4,
+              "index": 74
             },
             "to": {
               "line": 5,
-              "linechar": 14
+              "linechar": 14,
+              "index": 84
             }
           }
         },
@@ -216,11 +246,13 @@
                             "accessor": "print",
                             "from": {
                               "line": 6,
-                              "linechar": 0
+                              "linechar": 0,
+                              "index": 88
                             },
                             "to": {
                               "line": 6,
-                              "linechar": 9
+                              "linechar": 9,
+                              "index": 97
                             }
                           }
                         },
@@ -230,52 +262,62 @@
                               "value": "a is false",
                               "from": {
                                 "line": 6,
-                                "linechar": 10
+                                "linechar": 10,
+                                "index": 98
                               },
                               "to": {
                                 "line": 6,
-                                "linechar": 22
+                                "linechar": 22,
+                                "index": 110
                               }
                             }
                           }
                         ],
                         "from": {
                           "line": 6,
-                          "linechar": 0
+                          "linechar": 0,
+                          "index": 88
                         },
                         "to": {
                           "line": 6,
-                          "linechar": 23
+                          "linechar": 23,
+                          "index": 111
                         }
                       }
                     },
                     "from": {
                       "line": 6,
-                      "linechar": 0
+                      "linechar": 0,
+                      "index": 88
                     },
                     "to": {
                       "line": 6,
-                      "linechar": 23
+                      "linechar": 23,
+                      "index": 111
                     }
                   }
                 }
               ],
               "from": {
                 "line": 5,
-                "linechar": 17
+                "linechar": 17,
+                "index": 87
               },
               "to": {
                 "line": 7,
-                "linechar": 0
+                "linechar": 0,
+                "index": 113
               }
             },
             "from": {
               "line": 5,
-              "linechar": 15
+              "linechar": 15,
+              "index": 85
             },
             "to": {
               "line": 7,
-              "linechar": 1
+              "linechar": 1,
+              "index": 114
             }
           }
         },
@@ -293,11 +335,13 @@
                             "accessor": "print",
                             "from": {
                               "line": 8,
-                              "linechar": 0
+                              "linechar": 0,
+                              "index": 122
                             },
                             "to": {
                               "line": 8,
-                              "linechar": 9
+                              "linechar": 9,
+                              "index": 131
                             }
                           }
                         },
@@ -307,62 +351,74 @@
                               "value": "a is true",
                               "from": {
                                 "line": 8,
-                                "linechar": 10
+                                "linechar": 10,
+                                "index": 132
                               },
                               "to": {
                                 "line": 8,
-                                "linechar": 21
+                                "linechar": 21,
+                                "index": 143
                               }
                             }
                           }
                         ],
                         "from": {
                           "line": 8,
-                          "linechar": 0
+                          "linechar": 0,
+                          "index": 122
                         },
                         "to": {
                           "line": 8,
-                          "linechar": 22
+                          "linechar": 22,
+                          "index": 144
                         }
                       }
                     },
                     "from": {
                       "line": 8,
-                      "linechar": 0
+                      "linechar": 0,
+                      "index": 122
                     },
                     "to": {
                       "line": 8,
-                      "linechar": 22
+                      "linechar": 22,
+                      "index": 144
                     }
                   }
                 }
               ],
               "from": {
                 "line": 7,
-                "linechar": 8
+                "linechar": 8,
+                "index": 121
               },
               "to": {
                 "line": 9,
-                "linechar": 0
+                "linechar": 0,
+                "index": 146
               }
             },
             "from": {
               "line": 7,
-              "linechar": 6
+              "linechar": 6,
+              "index": 119
             },
             "to": {
               "line": 9,
-              "linechar": 1
+              "linechar": 1,
+              "index": 147
             }
           }
         },
         "from": {
           "line": 5,
-          "linechar": 0
+          "linechar": 0,
+          "index": 70
         },
         "to": {
           "line": 9,
-          "linechar": 1
+          "linechar": 1,
+          "index": 147
         }
       }
     },
@@ -380,21 +436,25 @@
                     },
                     "from": {
                       "line": 11,
-                      "linechar": 4
+                      "linechar": 4,
+                      "index": 153
                     },
                     "to": {
                       "line": 11,
-                      "linechar": 5
+                      "linechar": 5,
+                      "index": 154
                     }
                   }
                 },
                 "from": {
                   "line": 11,
-                  "linechar": 5
+                  "linechar": 5,
+                  "index": 154
                 },
                 "to": {
                   "line": 11,
-                  "linechar": 7
+                  "linechar": 7,
+                  "index": 156
                 }
               }
             },
@@ -404,21 +464,25 @@
                 "value": 0,
                 "from": {
                   "line": 11,
-                  "linechar": 10
+                  "linechar": 10,
+                  "index": 159
                 },
                 "to": {
                   "line": 11,
-                  "linechar": 12
+                  "linechar": 12,
+                  "index": 161
                 }
               }
             },
             "from": {
               "line": 11,
-              "linechar": 4
+              "linechar": 4,
+              "index": 153
             },
             "to": {
               "line": 11,
-              "linechar": 12
+              "linechar": 12,
+              "index": 161
             }
           }
         },
@@ -432,11 +496,13 @@
                     "accessor": "print",
                     "from": {
                       "line": 12,
-                      "linechar": 0
+                      "linechar": 0,
+                      "index": 163
                     },
                     "to": {
                       "line": 12,
-                      "linechar": 9
+                      "linechar": 9,
+                      "index": 172
                     }
                   }
                 },
@@ -446,32 +512,38 @@
                       "value": "c is 0",
                       "from": {
                         "line": 12,
-                        "linechar": 10
+                        "linechar": 10,
+                        "index": 173
                       },
                       "to": {
                         "line": 12,
-                        "linechar": 18
+                        "linechar": 18,
+                        "index": 181
                       }
                     }
                   }
                 ],
                 "from": {
                   "line": 12,
-                  "linechar": 0
+                  "linechar": 0,
+                  "index": 163
                 },
                 "to": {
                   "line": 12,
-                  "linechar": 19
+                  "linechar": 19,
+                  "index": 182
                 }
               }
             },
             "from": {
               "line": 12,
-              "linechar": 0
+              "linechar": 0,
+              "index": 163
             },
             "to": {
               "line": 12,
-              "linechar": 19
+              "linechar": 19,
+              "index": 182
             }
           }
         },
@@ -485,11 +557,13 @@
                     "accessor": "print",
                     "from": {
                       "line": 14,
-                      "linechar": 0
+                      "linechar": 0,
+                      "index": 189
                     },
                     "to": {
                       "line": 14,
-                      "linechar": 9
+                      "linechar": 9,
+                      "index": 198
                     }
                   }
                 },
@@ -499,42 +573,50 @@
                       "value": "c is not 0",
                       "from": {
                         "line": 14,
-                        "linechar": 10
+                        "linechar": 10,
+                        "index": 199
                       },
                       "to": {
                         "line": 14,
-                        "linechar": 22
+                        "linechar": 22,
+                        "index": 211
                       }
                     }
                   }
                 ],
                 "from": {
                   "line": 14,
-                  "linechar": 0
+                  "linechar": 0,
+                  "index": 189
                 },
                 "to": {
                   "line": 14,
-                  "linechar": 23
+                  "linechar": 23,
+                  "index": 212
                 }
               }
             },
             "from": {
               "line": 14,
-              "linechar": 0
+              "linechar": 0,
+              "index": 189
             },
             "to": {
               "line": 14,
-              "linechar": 23
+              "linechar": 23,
+              "index": 212
             }
           }
         },
         "from": {
           "line": 11,
-          "linechar": 0
+          "linechar": 0,
+          "index": 149
         },
         "to": {
           "line": 14,
-          "linechar": 23
+          "linechar": 23,
+          "index": 212
         }
       }
     },
@@ -549,11 +631,13 @@
                 },
                 "from": {
                   "line": 16,
-                  "linechar": 4
+                  "linechar": 4,
+                  "index": 219
                 },
                 "to": {
                   "line": 16,
-                  "linechar": 8
+                  "linechar": 8,
+                  "index": 223
                 }
               }
             },
@@ -563,21 +647,25 @@
                 "value": "left",
                 "from": {
                   "line": 16,
-                  "linechar": 11
+                  "linechar": 11,
+                  "index": 226
                 },
                 "to": {
                   "line": 16,
-                  "linechar": 18
+                  "linechar": 18,
+                  "index": 233
                 }
               }
             },
             "from": {
               "line": 16,
-              "linechar": 4
+              "linechar": 4,
+              "index": 219
             },
             "to": {
               "line": 16,
-              "linechar": 18
+              "linechar": 18,
+              "index": 233
             }
           }
         },
@@ -595,11 +683,13 @@
                             "accessor": "print",
                             "from": {
                               "line": 17,
-                              "linechar": 0
+                              "linechar": 0,
+                              "index": 237
                             },
                             "to": {
                               "line": 17,
-                              "linechar": 9
+                              "linechar": 9,
+                              "index": 246
                             }
                           }
                         },
@@ -609,52 +699,62 @@
                               "value": "left",
                               "from": {
                                 "line": 17,
-                                "linechar": 10
+                                "linechar": 10,
+                                "index": 247
                               },
                               "to": {
                                 "line": 17,
-                                "linechar": 16
+                                "linechar": 16,
+                                "index": 253
                               }
                             }
                           }
                         ],
                         "from": {
                           "line": 17,
-                          "linechar": 0
+                          "linechar": 0,
+                          "index": 237
                         },
                         "to": {
                           "line": 17,
-                          "linechar": 17
+                          "linechar": 17,
+                          "index": 254
                         }
                       }
                     },
                     "from": {
                       "line": 17,
-                      "linechar": 0
+                      "linechar": 0,
+                      "index": 237
                     },
                     "to": {
                       "line": 17,
-                      "linechar": 17
+                      "linechar": 17,
+                      "index": 254
                     }
                   }
                 }
               ],
               "from": {
                 "line": 16,
-                "linechar": 21
+                "linechar": 21,
+                "index": 236
               },
               "to": {
                 "line": 18,
-                "linechar": 0
+                "linechar": 0,
+                "index": 255
               }
             },
             "from": {
               "line": 16,
-              "linechar": 19
+              "linechar": 19,
+              "index": 234
             },
             "to": {
               "line": 18,
-              "linechar": 1
+              "linechar": 1,
+              "index": 256
             }
           }
         },
@@ -669,11 +769,13 @@
                     },
                     "from": {
                       "line": 18,
-                      "linechar": 11
+                      "linechar": 11,
+                      "index": 266
                     },
                     "to": {
                       "line": 18,
-                      "linechar": 15
+                      "linechar": 15,
+                      "index": 270
                     }
                   }
                 },
@@ -683,21 +785,25 @@
                     "value": "right",
                     "from": {
                       "line": 18,
-                      "linechar": 18
+                      "linechar": 18,
+                      "index": 273
                     },
                     "to": {
                       "line": 18,
-                      "linechar": 26
+                      "linechar": 26,
+                      "index": 281
                     }
                   }
                 },
                 "from": {
                   "line": 18,
-                  "linechar": 11
+                  "linechar": 11,
+                  "index": 266
                 },
                 "to": {
                   "line": 18,
-                  "linechar": 26
+                  "linechar": 26,
+                  "index": 281
                 }
               }
             },
@@ -715,11 +821,13 @@
                                 "accessor": "print",
                                 "from": {
                                   "line": 19,
-                                  "linechar": 0
+                                  "linechar": 0,
+                                  "index": 285
                                 },
                                 "to": {
                                   "line": 19,
-                                  "linechar": 9
+                                  "linechar": 9,
+                                  "index": 294
                                 }
                               }
                             },
@@ -729,52 +837,62 @@
                                   "value": "right",
                                   "from": {
                                     "line": 19,
-                                    "linechar": 10
+                                    "linechar": 10,
+                                    "index": 295
                                   },
                                   "to": {
                                     "line": 19,
-                                    "linechar": 17
+                                    "linechar": 17,
+                                    "index": 302
                                   }
                                 }
                               }
                             ],
                             "from": {
                               "line": 19,
-                              "linechar": 0
+                              "linechar": 0,
+                              "index": 285
                             },
                             "to": {
                               "line": 19,
-                              "linechar": 18
+                              "linechar": 18,
+                              "index": 303
                             }
                           }
                         },
                         "from": {
                           "line": 19,
-                          "linechar": 0
+                          "linechar": 0,
+                          "index": 285
                         },
                         "to": {
                           "line": 19,
-                          "linechar": 18
+                          "linechar": 18,
+                          "index": 303
                         }
                       }
                     }
                   ],
                   "from": {
                     "line": 18,
-                    "linechar": 29
+                    "linechar": 29,
+                    "index": 284
                   },
                   "to": {
                     "line": 20,
-                    "linechar": 0
+                    "linechar": 0,
+                    "index": 304
                   }
                 },
                 "from": {
                   "line": 18,
-                  "linechar": 27
+                  "linechar": 27,
+                  "index": 282
                 },
                 "to": {
                   "line": 20,
-                  "linechar": 1
+                  "linechar": 1,
+                  "index": 305
                 }
               }
             },
@@ -789,11 +907,13 @@
                         },
                         "from": {
                           "line": 20,
-                          "linechar": 11
+                          "linechar": 11,
+                          "index": 315
                         },
                         "to": {
                           "line": 20,
-                          "linechar": 15
+                          "linechar": 15,
+                          "index": 319
                         }
                       }
                     },
@@ -803,21 +923,25 @@
                         "value": "bottom",
                         "from": {
                           "line": 20,
-                          "linechar": 18
+                          "linechar": 18,
+                          "index": 322
                         },
                         "to": {
                           "line": 20,
-                          "linechar": 27
+                          "linechar": 27,
+                          "index": 331
                         }
                       }
                     },
                     "from": {
                       "line": 20,
-                      "linechar": 11
+                      "linechar": 11,
+                      "index": 315
                     },
                     "to": {
                       "line": 20,
-                      "linechar": 27
+                      "linechar": 27,
+                      "index": 331
                     }
                   }
                 },
@@ -835,11 +959,13 @@
                                     "accessor": "print",
                                     "from": {
                                       "line": 21,
-                                      "linechar": 0
+                                      "linechar": 0,
+                                      "index": 335
                                     },
                                     "to": {
                                       "line": 21,
-                                      "linechar": 9
+                                      "linechar": 9,
+                                      "index": 344
                                     }
                                   }
                                 },
@@ -849,52 +975,62 @@
                                       "value": "bottom",
                                       "from": {
                                         "line": 21,
-                                        "linechar": 10
+                                        "linechar": 10,
+                                        "index": 345
                                       },
                                       "to": {
                                         "line": 21,
-                                        "linechar": 18
+                                        "linechar": 18,
+                                        "index": 353
                                       }
                                     }
                                   }
                                 ],
                                 "from": {
                                   "line": 21,
-                                  "linechar": 0
+                                  "linechar": 0,
+                                  "index": 335
                                 },
                                 "to": {
                                   "line": 21,
-                                  "linechar": 19
+                                  "linechar": 19,
+                                  "index": 354
                                 }
                               }
                             },
                             "from": {
                               "line": 21,
-                              "linechar": 0
+                              "linechar": 0,
+                              "index": 335
                             },
                             "to": {
                               "line": 21,
-                              "linechar": 19
+                              "linechar": 19,
+                              "index": 354
                             }
                           }
                         }
                       ],
                       "from": {
                         "line": 20,
-                        "linechar": 30
+                        "linechar": 30,
+                        "index": 334
                       },
                       "to": {
                         "line": 22,
-                        "linechar": 0
+                        "linechar": 0,
+                        "index": 355
                       }
                     },
                     "from": {
                       "line": 20,
-                      "linechar": 28
+                      "linechar": 28,
+                      "index": 332
                     },
                     "to": {
                       "line": 22,
-                      "linechar": 1
+                      "linechar": 1,
+                      "index": 356
                     }
                   }
                 },
@@ -909,11 +1045,13 @@
                             },
                             "from": {
                               "line": 22,
-                              "linechar": 11
+                              "linechar": 11,
+                              "index": 366
                             },
                             "to": {
                               "line": 22,
-                              "linechar": 15
+                              "linechar": 15,
+                              "index": 370
                             }
                           }
                         },
@@ -923,21 +1061,25 @@
                             "value": "top",
                             "from": {
                               "line": 22,
-                              "linechar": 18
+                              "linechar": 18,
+                              "index": 373
                             },
                             "to": {
                               "line": 22,
-                              "linechar": 24
+                              "linechar": 24,
+                              "index": 379
                             }
                           }
                         },
                         "from": {
                           "line": 22,
-                          "linechar": 11
+                          "linechar": 11,
+                          "index": 366
                         },
                         "to": {
                           "line": 22,
-                          "linechar": 24
+                          "linechar": 24,
+                          "index": 379
                         }
                       }
                     },
@@ -955,11 +1097,13 @@
                                         "accessor": "print",
                                         "from": {
                                           "line": 23,
-                                          "linechar": 0
+                                          "linechar": 0,
+                                          "index": 383
                                         },
                                         "to": {
                                           "line": 23,
-                                          "linechar": 9
+                                          "linechar": 9,
+                                          "index": 392
                                         }
                                       }
                                     },
@@ -969,52 +1113,62 @@
                                           "value": "top",
                                           "from": {
                                             "line": 23,
-                                            "linechar": 10
+                                            "linechar": 10,
+                                            "index": 393
                                           },
                                           "to": {
                                             "line": 23,
-                                            "linechar": 15
+                                            "linechar": 15,
+                                            "index": 398
                                           }
                                         }
                                       }
                                     ],
                                     "from": {
                                       "line": 23,
-                                      "linechar": 0
+                                      "linechar": 0,
+                                      "index": 383
                                     },
                                     "to": {
                                       "line": 23,
-                                      "linechar": 16
+                                      "linechar": 16,
+                                      "index": 399
                                     }
                                   }
                                 },
                                 "from": {
                                   "line": 23,
-                                  "linechar": 0
+                                  "linechar": 0,
+                                  "index": 383
                                 },
                                 "to": {
                                   "line": 23,
-                                  "linechar": 16
+                                  "linechar": 16,
+                                  "index": 399
                                 }
                               }
                             }
                           ],
                           "from": {
                             "line": 22,
-                            "linechar": 27
+                            "linechar": 27,
+                            "index": 382
                           },
                           "to": {
                             "line": 24,
-                            "linechar": 0
+                            "linechar": 0,
+                            "index": 400
                           }
                         },
                         "from": {
                           "line": 22,
-                          "linechar": 25
+                          "linechar": 25,
+                          "index": 380
                         },
                         "to": {
                           "line": 24,
-                          "linechar": 1
+                          "linechar": 1,
+                          "index": 401
                         }
                       }
                     },
@@ -1029,11 +1183,13 @@
                                 },
                                 "from": {
                                   "line": 24,
-                                  "linechar": 11
+                                  "linechar": 11,
+                                  "index": 411
                                 },
                                 "to": {
                                   "line": 24,
-                                  "linechar": 15
+                                  "linechar": 15,
+                                  "index": 415
                                 }
                               }
                             },
@@ -1043,21 +1199,25 @@
                                 "value": "front",
                                 "from": {
                                   "line": 24,
-                                  "linechar": 18
+                                  "linechar": 18,
+                                  "index": 418
                                 },
                                 "to": {
                                   "line": 24,
-                                  "linechar": 26
+                                  "linechar": 26,
+                                  "index": 426
                                 }
                               }
                             },
                             "from": {
                               "line": 24,
-                              "linechar": 11
+                              "linechar": 11,
+                              "index": 411
                             },
                             "to": {
                               "line": 24,
-                              "linechar": 26
+                              "linechar": 26,
+                              "index": 426
                             }
                           }
                         },
@@ -1075,11 +1235,13 @@
                                             "accessor": "print",
                                             "from": {
                                               "line": 25,
-                                              "linechar": 0
+                                              "linechar": 0,
+                                              "index": 430
                                             },
                                             "to": {
                                               "line": 25,
-                                              "linechar": 9
+                                              "linechar": 9,
+                                              "index": 439
                                             }
                                           }
                                         },
@@ -1089,52 +1251,62 @@
                                               "value": "front",
                                               "from": {
                                                 "line": 25,
-                                                "linechar": 10
+                                                "linechar": 10,
+                                                "index": 440
                                               },
                                               "to": {
                                                 "line": 25,
-                                                "linechar": 17
+                                                "linechar": 17,
+                                                "index": 447
                                               }
                                             }
                                           }
                                         ],
                                         "from": {
                                           "line": 25,
-                                          "linechar": 0
+                                          "linechar": 0,
+                                          "index": 430
                                         },
                                         "to": {
                                           "line": 25,
-                                          "linechar": 18
+                                          "linechar": 18,
+                                          "index": 448
                                         }
                                       }
                                     },
                                     "from": {
                                       "line": 25,
-                                      "linechar": 0
+                                      "linechar": 0,
+                                      "index": 430
                                     },
                                     "to": {
                                       "line": 25,
-                                      "linechar": 18
+                                      "linechar": 18,
+                                      "index": 448
                                     }
                                   }
                                 }
                               ],
                               "from": {
                                 "line": 24,
-                                "linechar": 29
+                                "linechar": 29,
+                                "index": 429
                               },
                               "to": {
                                 "line": 26,
-                                "linechar": 0
+                                "linechar": 0,
+                                "index": 449
                               }
                             },
                             "from": {
                               "line": 24,
-                              "linechar": 27
+                              "linechar": 27,
+                              "index": 427
                             },
                             "to": {
                               "line": 26,
-                              "linechar": 1
+                              "linechar": 1,
+                              "index": 450
                             }
                           }
                         },
@@ -1149,11 +1321,13 @@
                                     },
                                     "from": {
                                       "line": 26,
-                                      "linechar": 11
+                                      "linechar": 11,
+                                      "index": 460
                                     },
                                     "to": {
                                       "line": 26,
-                                      "linechar": 15
+                                      "linechar": 15,
+                                      "index": 464
                                     }
                                   }
                                 },
@@ -1163,21 +1337,25 @@
                                     "value": "back",
                                     "from": {
                                       "line": 26,
-                                      "linechar": 18
+                                      "linechar": 18,
+                                      "index": 467
                                     },
                                     "to": {
                                       "line": 26,
-                                      "linechar": 25
+                                      "linechar": 25,
+                                      "index": 474
                                     }
                                   }
                                 },
                                 "from": {
                                   "line": 26,
-                                  "linechar": 11
+                                  "linechar": 11,
+                                  "index": 460
                                 },
                                 "to": {
                                   "line": 26,
-                                  "linechar": 25
+                                  "linechar": 25,
+                                  "index": 474
                                 }
                               }
                             },
@@ -1195,11 +1373,13 @@
                                                 "accessor": "print",
                                                 "from": {
                                                   "line": 27,
-                                                  "linechar": 0
+                                                  "linechar": 0,
+                                                  "index": 478
                                                 },
                                                 "to": {
                                                   "line": 27,
-                                                  "linechar": 9
+                                                  "linechar": 9,
+                                                  "index": 487
                                                 }
                                               }
                                             },
@@ -1209,123 +1389,147 @@
                                                   "value": "back",
                                                   "from": {
                                                     "line": 27,
-                                                    "linechar": 10
+                                                    "linechar": 10,
+                                                    "index": 488
                                                   },
                                                   "to": {
                                                     "line": 27,
-                                                    "linechar": 16
+                                                    "linechar": 16,
+                                                    "index": 494
                                                   }
                                                 }
                                               }
                                             ],
                                             "from": {
                                               "line": 27,
-                                              "linechar": 0
+                                              "linechar": 0,
+                                              "index": 478
                                             },
                                             "to": {
                                               "line": 27,
-                                              "linechar": 17
+                                              "linechar": 17,
+                                              "index": 495
                                             }
                                           }
                                         },
                                         "from": {
                                           "line": 27,
-                                          "linechar": 0
+                                          "linechar": 0,
+                                          "index": 478
                                         },
                                         "to": {
                                           "line": 27,
-                                          "linechar": 17
+                                          "linechar": 17,
+                                          "index": 495
                                         }
                                       }
                                     }
                                   ],
                                   "from": {
                                     "line": 26,
-                                    "linechar": 28
+                                    "linechar": 28,
+                                    "index": 477
                                   },
                                   "to": {
                                     "line": 28,
-                                    "linechar": 0
+                                    "linechar": 0,
+                                    "index": 496
                                   }
                                 },
                                 "from": {
                                   "line": 26,
-                                  "linechar": 26
+                                  "linechar": 26,
+                                  "index": 475
                                 },
                                 "to": {
                                   "line": 28,
-                                  "linechar": 1
+                                  "linechar": 1,
+                                  "index": 497
                                 }
                               }
                             },
                             "if_false": null,
                             "from": {
                               "line": 26,
-                              "linechar": 6
+                              "linechar": 6,
+                              "index": 455
                             },
                             "to": {
                               "line": 28,
-                              "linechar": 1
+                              "linechar": 1,
+                              "index": 497
                             }
                           }
                         },
                         "from": {
                           "line": 24,
-                          "linechar": 6
+                          "linechar": 6,
+                          "index": 406
                         },
                         "to": {
                           "line": 28,
-                          "linechar": 1
+                          "linechar": 1,
+                          "index": 497
                         }
                       }
                     },
                     "from": {
                       "line": 22,
-                      "linechar": 6
+                      "linechar": 6,
+                      "index": 361
                     },
                     "to": {
                       "line": 28,
-                      "linechar": 1
+                      "linechar": 1,
+                      "index": 497
                     }
                   }
                 },
                 "from": {
                   "line": 20,
-                  "linechar": 6
+                  "linechar": 6,
+                  "index": 310
                 },
                 "to": {
                   "line": 28,
-                  "linechar": 1
+                  "linechar": 1,
+                  "index": 497
                 }
               }
             },
             "from": {
               "line": 18,
-              "linechar": 6
+              "linechar": 6,
+              "index": 261
             },
             "to": {
               "line": 28,
-              "linechar": 1
+              "linechar": 1,
+              "index": 497
             }
           }
         },
         "from": {
           "line": 16,
-          "linechar": 0
+          "linechar": 0,
+          "index": 215
         },
         "to": {
           "line": 28,
-          "linechar": 1
+          "linechar": 1,
+          "index": 497
         }
       }
     }
   ],
   "from": {
     "line": 0,
-    "linechar": 0
+    "linechar": 0,
+    "index": 0
   },
   "to": {
     "line": 29,
-    "linechar": 0
+    "linechar": 0,
+    "index": 498
   }
 }

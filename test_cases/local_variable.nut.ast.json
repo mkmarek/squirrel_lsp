@@ -10,31 +10,37 @@
                 "value": "bar",
                 "from": {
                   "line": 0,
-                  "linechar": 11
+                  "linechar": 11,
+                  "index": 11
                 },
                 "to": {
                   "line": 0,
-                  "linechar": 17
+                  "linechar": 17,
+                  "index": 17
                 }
               }
             },
             "from": {
               "line": 0,
-              "linechar": 5
+              "linechar": 5,
+              "index": 5
             },
             "to": {
               "line": 0,
-              "linechar": 17
+              "linechar": 17,
+              "index": 17
             }
           }
         ],
         "from": {
           "line": 0,
-          "linechar": 0
+          "linechar": 0,
+          "index": 0
         },
         "to": {
           "line": 0,
-          "linechar": 17
+          "linechar": 17,
+          "index": 17
         }
       }
     },
@@ -52,11 +58,13 @@
                     },
                     "from": {
                       "line": 2,
-                      "linechar": 12
+                      "linechar": 12,
+                      "index": 32
                     },
                     "to": {
                       "line": 2,
-                      "linechar": 18
+                      "linechar": 18,
+                      "index": 38
                     }
                   }
                 },
@@ -66,52 +74,62 @@
                       "value": "m()",
                       "from": {
                         "line": 2,
-                        "linechar": 19
+                        "linechar": 19,
+                        "index": 39
                       },
                       "to": {
                         "line": 2,
-                        "linechar": 25
+                        "linechar": 25,
+                        "index": 45
                       }
                     }
                   }
                 ],
                 "from": {
                   "line": 2,
-                  "linechar": 11
+                  "linechar": 11,
+                  "index": 31
                 },
                 "to": {
                   "line": 2,
-                  "linechar": 26
+                  "linechar": 26,
+                  "index": 46
                 }
               }
             },
             "from": {
               "line": 2,
-              "linechar": 5
+              "linechar": 5,
+              "index": 25
             },
             "to": {
               "line": 2,
-              "linechar": 26
+              "linechar": 26,
+              "index": 46
             }
           }
         ],
         "from": {
           "line": 2,
-          "linechar": 0
+          "linechar": 0,
+          "index": 20
         },
         "to": {
           "line": 2,
-          "linechar": 26
+          "linechar": 26,
+          "index": 46
         }
       }
     }
   ],
   "from": {
     "line": 0,
-    "linechar": 0
+    "linechar": 0,
+    "index": 0
   },
   "to": {
     "line": 3,
-    "linechar": 0
+    "linechar": 0,
+    "index": 48
   }
 }

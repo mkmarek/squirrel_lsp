@@ -3,11 +3,13 @@
     "token": "LeftBrace",
     "from": {
       "line": 0,
-      "linechar": 0
+      "linechar": 0,
+      "index": 0
     },
     "to": {
       "line": 0,
-      "linechar": 1
+      "linechar": 1,
+      "index": 1
     },
     "index": 0
   },
@@ -15,11 +17,13 @@
     "token": "Newline",
     "from": {
       "line": 0,
-      "linechar": 1
+      "linechar": 1,
+      "index": 1
     },
     "to": {
       "line": 1,
-      "linechar": 0
+      "linechar": 0,
+      "index": 2
     },
     "index": 1
   },
@@ -27,11 +31,13 @@
     "token": "Newline",
     "from": {
       "line": 1,
-      "linechar": 0
+      "linechar": 0,
+      "index": 2
     },
     "to": {
       "line": 2,
-      "linechar": 0
+      "linechar": 0,
+      "index": 3
     },
     "index": 1
   },
@@ -39,11 +45,13 @@
     "token": "RightBrace",
     "from": {
       "line": 2,
-      "linechar": 0
+      "linechar": 0,
+      "index": 3
     },
     "to": {
       "line": 2,
-      "linechar": 1
+      "linechar": 1,
+      "index": 4
     },
     "index": 1
   },
@@ -51,11 +59,13 @@
     "token": "Newline",
     "from": {
       "line": 2,
-      "linechar": 1
+      "linechar": 1,
+      "index": 4
     },
     "to": {
       "line": 3,
-      "linechar": 0
+      "linechar": 0,
+      "index": 5
     },
     "index": 2
   },
@@ -63,11 +73,13 @@
     "token": "Newline",
     "from": {
       "line": 3,
-      "linechar": 0
+      "linechar": 0,
+      "index": 5
     },
     "to": {
       "line": 4,
-      "linechar": 0
+      "linechar": 0,
+      "index": 6
     },
     "index": 2
   },
@@ -75,11 +87,13 @@
     "token": "Newline",
     "from": {
       "line": 4,
-      "linechar": 0
+      "linechar": 0,
+      "index": 6
     },
     "to": {
       "line": 5,
-      "linechar": 0
+      "linechar": 0,
+      "index": 7
     },
     "index": 2
   },
@@ -89,11 +103,13 @@
     },
     "from": {
       "line": 5,
-      "linechar": 0
+      "linechar": 0,
+      "index": 7
     },
     "to": {
       "line": 5,
-      "linechar": 5
+      "linechar": 5,
+      "index": 12
     },
     "index": 2
   },
@@ -103,11 +119,13 @@
     },
     "from": {
       "line": 5,
-      "linechar": 6
+      "linechar": 6,
+      "index": 13
     },
     "to": {
       "line": 5,
-      "linechar": 9
+      "linechar": 9,
+      "index": 16
     },
     "index": 3
   },
@@ -115,11 +133,13 @@
     "token": "LeftBrace",
     "from": {
       "line": 5,
-      "linechar": 10
+      "linechar": 10,
+      "index": 17
     },
     "to": {
       "line": 5,
-      "linechar": 11
+      "linechar": 11,
+      "index": 18
     },
     "index": 4
   },
@@ -127,11 +147,13 @@
     "token": "Newline",
     "from": {
       "line": 5,
-      "linechar": 11
+      "linechar": 11,
+      "index": 18
     },
     "to": {
       "line": 6,
-      "linechar": 0
+      "linechar": 0,
+      "index": 20
     },
     "index": 5
   },
@@ -141,11 +163,13 @@
     },
     "from": {
       "line": 6,
-      "linechar": 2
+      "linechar": 2,
+      "index": 22
     },
     "to": {
       "line": 6,
-      "linechar": 13
+      "linechar": 13,
+      "index": 33
     },
     "index": 5
   },
@@ -153,11 +177,13 @@
     "token": "LeftParenthesis",
     "from": {
       "line": 6,
-      "linechar": 13
+      "linechar": 13,
+      "index": 33
     },
     "to": {
       "line": 6,
-      "linechar": 14
+      "linechar": 14,
+      "index": 34
     },
     "index": 6
   },
@@ -167,11 +193,13 @@
     },
     "from": {
       "line": 6,
-      "linechar": 14
+      "linechar": 14,
+      "index": 34
     },
     "to": {
       "line": 6,
-      "linechar": 16
+      "linechar": 16,
+      "index": 36
     },
     "index": 7
   },
@@ -181,11 +209,13 @@
     },
     "from": {
       "line": 6,
-      "linechar": 16
+      "linechar": 16,
+      "index": 36
     },
     "to": {
       "line": 6,
-      "linechar": 17
+      "linechar": 17,
+      "index": 37
     },
     "index": 8
   },
@@ -195,11 +225,13 @@
     },
     "from": {
       "line": 6,
-      "linechar": 18
+      "linechar": 18,
+      "index": 38
     },
     "to": {
       "line": 6,
-      "linechar": 20
+      "linechar": 20,
+      "index": 40
     },
     "index": 9
   },
@@ -207,11 +239,13 @@
     "token": "RightParenthesis",
     "from": {
       "line": 6,
-      "linechar": 20
+      "linechar": 20,
+      "index": 40
     },
     "to": {
       "line": 6,
-      "linechar": 21
+      "linechar": 21,
+      "index": 41
     },
     "index": 10
   },
@@ -219,11 +253,13 @@
     "token": "LeftBrace",
     "from": {
       "line": 6,
-      "linechar": 22
+      "linechar": 22,
+      "index": 42
     },
     "to": {
       "line": 6,
-      "linechar": 23
+      "linechar": 23,
+      "index": 43
     },
     "index": 11
   },
@@ -231,11 +267,13 @@
     "token": "Newline",
     "from": {
       "line": 6,
-      "linechar": 23
+      "linechar": 23,
+      "index": 43
     },
     "to": {
       "line": 7,
-      "linechar": 0
+      "linechar": 0,
+      "index": 44
     },
     "index": 12
   },
@@ -245,11 +283,13 @@
     },
     "from": {
       "line": 7,
-      "linechar": 4
+      "linechar": 4,
+      "index": 48
     },
     "to": {
       "line": 7,
-      "linechar": 8
+      "linechar": 8,
+      "index": 52
     },
     "index": 12
   },
@@ -257,11 +297,13 @@
     "token": "Dot",
     "from": {
       "line": 7,
-      "linechar": 8
+      "linechar": 8,
+      "index": 52
     },
     "to": {
       "line": 7,
-      "linechar": 9
+      "linechar": 9,
+      "index": 53
     },
     "index": 13
   },
@@ -271,11 +313,13 @@
     },
     "from": {
       "line": 7,
-      "linechar": 9
+      "linechar": 9,
+      "index": 53
     },
     "to": {
       "line": 7,
-      "linechar": 11
+      "linechar": 11,
+      "index": 55
     },
     "index": 14
   },
@@ -285,11 +329,13 @@
     },
     "from": {
       "line": 7,
-      "linechar": 12
+      "linechar": 12,
+      "index": 56
     },
     "to": {
       "line": 7,
-      "linechar": 13
+      "linechar": 13,
+      "index": 57
     },
     "index": 15
   },
@@ -299,11 +345,13 @@
     },
     "from": {
       "line": 7,
-      "linechar": 14
+      "linechar": 14,
+      "index": 58
     },
     "to": {
       "line": 7,
-      "linechar": 16
+      "linechar": 16,
+      "index": 60
     },
     "index": 16
   },
@@ -311,11 +359,13 @@
     "token": "Semicolon",
     "from": {
       "line": 7,
-      "linechar": 16
+      "linechar": 16,
+      "index": 60
     },
     "to": {
       "line": 7,
-      "linechar": 17
+      "linechar": 17,
+      "index": 61
     },
     "index": 17
   },
@@ -323,11 +373,13 @@
     "token": "Newline",
     "from": {
       "line": 7,
-      "linechar": 17
+      "linechar": 17,
+      "index": 61
     },
     "to": {
       "line": 8,
-      "linechar": 0
+      "linechar": 0,
+      "index": 62
     },
     "index": 18
   },
@@ -337,11 +389,13 @@
     },
     "from": {
       "line": 8,
-      "linechar": 4
+      "linechar": 4,
+      "index": 66
     },
     "to": {
       "line": 8,
-      "linechar": 8
+      "linechar": 8,
+      "index": 70
     },
     "index": 18
   },
@@ -349,11 +403,13 @@
     "token": "Dot",
     "from": {
       "line": 8,
-      "linechar": 8
+      "linechar": 8,
+      "index": 70
     },
     "to": {
       "line": 8,
-      "linechar": 9
+      "linechar": 9,
+      "index": 71
     },
     "index": 19
   },
@@ -363,11 +419,13 @@
     },
     "from": {
       "line": 8,
-      "linechar": 9
+      "linechar": 9,
+      "index": 71
     },
     "to": {
       "line": 8,
-      "linechar": 11
+      "linechar": 11,
+      "index": 73
     },
     "index": 20
   },
@@ -377,11 +435,13 @@
     },
     "from": {
       "line": 8,
-      "linechar": 12
+      "linechar": 12,
+      "index": 74
     },
     "to": {
       "line": 8,
-      "linechar": 13
+      "linechar": 13,
+      "index": 75
     },
     "index": 21
   },
@@ -391,11 +451,13 @@
     },
     "from": {
       "line": 8,
-      "linechar": 14
+      "linechar": 14,
+      "index": 76
     },
     "to": {
       "line": 8,
-      "linechar": 16
+      "linechar": 16,
+      "index": 78
     },
     "index": 22
   },
@@ -403,11 +465,13 @@
     "token": "Semicolon",
     "from": {
       "line": 8,
-      "linechar": 16
+      "linechar": 16,
+      "index": 78
     },
     "to": {
       "line": 8,
-      "linechar": 17
+      "linechar": 17,
+      "index": 79
     },
     "index": 23
   },
@@ -415,11 +479,13 @@
     "token": "Newline",
     "from": {
       "line": 8,
-      "linechar": 17
+      "linechar": 17,
+      "index": 79
     },
     "to": {
       "line": 9,
-      "linechar": 0
+      "linechar": 0,
+      "index": 80
     },
     "index": 24
   },
@@ -427,11 +493,13 @@
     "token": "RightBrace",
     "from": {
       "line": 9,
-      "linechar": 2
+      "linechar": 2,
+      "index": 82
     },
     "to": {
       "line": 9,
-      "linechar": 3
+      "linechar": 3,
+      "index": 83
     },
     "index": 24
   },
@@ -439,11 +507,13 @@
     "token": "Newline",
     "from": {
       "line": 9,
-      "linechar": 3
+      "linechar": 3,
+      "index": 83
     },
     "to": {
       "line": 10,
-      "linechar": 0
+      "linechar": 0,
+      "index": 84
     },
     "index": 25
   },
@@ -453,11 +523,13 @@
     },
     "from": {
       "line": 10,
-      "linechar": 2
+      "linechar": 2,
+      "index": 86
     },
     "to": {
       "line": 10,
-      "linechar": 4
+      "linechar": 4,
+      "index": 88
     },
     "index": 25
   },
@@ -467,11 +539,13 @@
     },
     "from": {
       "line": 10,
-      "linechar": 5
+      "linechar": 5,
+      "index": 89
     },
     "to": {
       "line": 10,
-      "linechar": 6
+      "linechar": 6,
+      "index": 90
     },
     "index": 26
   },
@@ -481,11 +555,13 @@
     },
     "from": {
       "line": 10,
-      "linechar": 7
+      "linechar": 7,
+      "index": 91
     },
     "to": {
       "line": 10,
-      "linechar": 8
+      "linechar": 8,
+      "index": 92
     },
     "index": 27
   },
@@ -493,11 +569,13 @@
     "token": "Semicolon",
     "from": {
       "line": 10,
-      "linechar": 8
+      "linechar": 8,
+      "index": 92
     },
     "to": {
       "line": 10,
-      "linechar": 9
+      "linechar": 9,
+      "index": 93
     },
     "index": 28
   },
@@ -505,11 +583,13 @@
     "token": "Newline",
     "from": {
       "line": 10,
-      "linechar": 9
+      "linechar": 9,
+      "index": 93
     },
     "to": {
       "line": 11,
-      "linechar": 0
+      "linechar": 0,
+      "index": 94
     },
     "index": 29
   },
@@ -519,11 +599,13 @@
     },
     "from": {
       "line": 11,
-      "linechar": 2
+      "linechar": 2,
+      "index": 96
     },
     "to": {
       "line": 11,
-      "linechar": 4
+      "linechar": 4,
+      "index": 98
     },
     "index": 29
   },
@@ -533,11 +615,13 @@
     },
     "from": {
       "line": 11,
-      "linechar": 5
+      "linechar": 5,
+      "index": 99
     },
     "to": {
       "line": 11,
-      "linechar": 6
+      "linechar": 6,
+      "index": 100
     },
     "index": 30
   },
@@ -547,11 +631,13 @@
     },
     "from": {
       "line": 11,
-      "linechar": 7
+      "linechar": 7,
+      "index": 101
     },
     "to": {
       "line": 11,
-      "linechar": 8
+      "linechar": 8,
+      "index": 102
     },
     "index": 31
   },
@@ -559,11 +645,13 @@
     "token": "Semicolon",
     "from": {
       "line": 11,
-      "linechar": 8
+      "linechar": 8,
+      "index": 102
     },
     "to": {
       "line": 11,
-      "linechar": 9
+      "linechar": 9,
+      "index": 103
     },
     "index": 32
   },
@@ -571,11 +659,13 @@
     "token": "Newline",
     "from": {
       "line": 11,
-      "linechar": 9
+      "linechar": 9,
+      "index": 103
     },
     "to": {
       "line": 12,
-      "linechar": 0
+      "linechar": 0,
+      "index": 104
     },
     "index": 33
   },
@@ -583,11 +673,13 @@
     "token": "RightBrace",
     "from": {
       "line": 12,
-      "linechar": 0
+      "linechar": 0,
+      "index": 104
     },
     "to": {
       "line": 12,
-      "linechar": 1
+      "linechar": 1,
+      "index": 105
     },
     "index": 33
   },
@@ -595,11 +687,13 @@
     "token": "Newline",
     "from": {
       "line": 12,
-      "linechar": 1
+      "linechar": 1,
+      "index": 105
     },
     "to": {
       "line": 13,
-      "linechar": 0
+      "linechar": 0,
+      "index": 106
     },
     "index": 34
   },
@@ -609,11 +703,13 @@
     },
     "from": {
       "line": 13,
-      "linechar": 0
+      "linechar": 0,
+      "index": 106
     },
     "to": {
       "line": 13,
-      "linechar": 5
+      "linechar": 5,
+      "index": 111
     },
     "index": 34
   },
@@ -623,11 +719,13 @@
     },
     "from": {
       "line": 13,
-      "linechar": 6
+      "linechar": 6,
+      "index": 112
     },
     "to": {
       "line": 13,
-      "linechar": 9
+      "linechar": 9,
+      "index": 115
     },
     "index": 35
   },
@@ -637,11 +735,13 @@
     },
     "from": {
       "line": 13,
-      "linechar": 10
+      "linechar": 10,
+      "index": 116
     },
     "to": {
       "line": 13,
-      "linechar": 17
+      "linechar": 17,
+      "index": 123
     },
     "index": 36
   },
@@ -651,11 +751,13 @@
     },
     "from": {
       "line": 13,
-      "linechar": 18
+      "linechar": 18,
+      "index": 124
     },
     "to": {
       "line": 13,
-      "linechar": 21
+      "linechar": 21,
+      "index": 127
     },
     "index": 37
   },
@@ -663,11 +765,13 @@
     "token": "LeftBrace",
     "from": {
       "line": 13,
-      "linechar": 22
+      "linechar": 22,
+      "index": 128
     },
     "to": {
       "line": 13,
-      "linechar": 23
+      "linechar": 23,
+      "index": 129
     },
     "index": 38
   },
@@ -675,11 +779,13 @@
     "token": "Newline",
     "from": {
       "line": 13,
-      "linechar": 23
+      "linechar": 23,
+      "index": 129
     },
     "to": {
       "line": 14,
-      "linechar": 0
+      "linechar": 0,
+      "index": 131
     },
     "index": 39
   },
@@ -689,11 +795,13 @@
     },
     "from": {
       "line": 14,
-      "linechar": 2
+      "linechar": 2,
+      "index": 133
     },
     "to": {
       "line": 14,
-      "linechar": 13
+      "linechar": 13,
+      "index": 144
     },
     "index": 39
   },
@@ -701,11 +809,13 @@
     "token": "LeftParenthesis",
     "from": {
       "line": 14,
-      "linechar": 13
+      "linechar": 13,
+      "index": 144
     },
     "to": {
       "line": 14,
-      "linechar": 14
+      "linechar": 14,
+      "index": 145
     },
     "index": 40
   },
@@ -713,11 +823,13 @@
     "token": "RightParenthesis",
     "from": {
       "line": 14,
-      "linechar": 14
+      "linechar": 14,
+      "index": 145
     },
     "to": {
       "line": 14,
-      "linechar": 15
+      "linechar": 15,
+      "index": 146
     },
     "index": 41
   },
@@ -725,11 +837,13 @@
     "token": "LeftBrace",
     "from": {
       "line": 14,
-      "linechar": 16
+      "linechar": 16,
+      "index": 147
     },
     "to": {
       "line": 14,
-      "linechar": 17
+      "linechar": 17,
+      "index": 148
     },
     "index": 42
   },
@@ -737,11 +851,13 @@
     "token": "Newline",
     "from": {
       "line": 14,
-      "linechar": 17
+      "linechar": 17,
+      "index": 148
     },
     "to": {
       "line": 15,
-      "linechar": 0
+      "linechar": 0,
+      "index": 149
     },
     "index": 43
   },
@@ -751,11 +867,13 @@
     },
     "from": {
       "line": 15,
-      "linechar": 4
+      "linechar": 4,
+      "index": 153
     },
     "to": {
       "line": 15,
-      "linechar": 8
+      "linechar": 8,
+      "index": 157
     },
     "index": 43
   },
@@ -763,11 +881,13 @@
     "token": "Dot",
     "from": {
       "line": 15,
-      "linechar": 8
+      "linechar": 8,
+      "index": 157
     },
     "to": {
       "line": 15,
-      "linechar": 9
+      "linechar": 9,
+      "index": 158
     },
     "index": 44
   },
@@ -777,11 +897,13 @@
     },
     "from": {
       "line": 15,
-      "linechar": 9
+      "linechar": 9,
+      "index": 158
     },
     "to": {
       "line": 15,
-      "linechar": 20
+      "linechar": 20,
+      "index": 169
     },
     "index": 45
   },
@@ -789,11 +911,13 @@
     "token": "LeftParenthesis",
     "from": {
       "line": 15,
-      "linechar": 20
+      "linechar": 20,
+      "index": 169
     },
     "to": {
       "line": 15,
-      "linechar": 21
+      "linechar": 21,
+      "index": 170
     },
     "index": 46
   },
@@ -803,11 +927,13 @@
     },
     "from": {
       "line": 15,
-      "linechar": 21
+      "linechar": 21,
+      "index": 170
     },
     "to": {
       "line": 15,
-      "linechar": 22
+      "linechar": 22,
+      "index": 171
     },
     "index": 47
   },
@@ -817,11 +943,13 @@
     },
     "from": {
       "line": 15,
-      "linechar": 22
+      "linechar": 22,
+      "index": 171
     },
     "to": {
       "line": 15,
-      "linechar": 23
+      "linechar": 23,
+      "index": 172
     },
     "index": 48
   },
@@ -831,11 +959,13 @@
     },
     "from": {
       "line": 15,
-      "linechar": 24
+      "linechar": 24,
+      "index": 173
     },
     "to": {
       "line": 15,
-      "linechar": 25
+      "linechar": 25,
+      "index": 174
     },
     "index": 49
   },
@@ -843,11 +973,13 @@
     "token": "RightParenthesis",
     "from": {
       "line": 15,
-      "linechar": 25
+      "linechar": 25,
+      "index": 174
     },
     "to": {
       "line": 15,
-      "linechar": 26
+      "linechar": 26,
+      "index": 175
     },
     "index": 50
   },
@@ -855,11 +987,13 @@
     "token": "Semicolon",
     "from": {
       "line": 15,
-      "linechar": 26
+      "linechar": 26,
+      "index": 175
     },
     "to": {
       "line": 15,
-      "linechar": 27
+      "linechar": 27,
+      "index": 176
     },
     "index": 51
   },
@@ -867,11 +1001,13 @@
     "token": "Newline",
     "from": {
       "line": 15,
-      "linechar": 27
+      "linechar": 27,
+      "index": 176
     },
     "to": {
       "line": 16,
-      "linechar": 0
+      "linechar": 0,
+      "index": 177
     },
     "index": 52
   },
@@ -879,11 +1015,13 @@
     "token": "RightBrace",
     "from": {
       "line": 16,
-      "linechar": 2
+      "linechar": 2,
+      "index": 179
     },
     "to": {
       "line": 16,
-      "linechar": 3
+      "linechar": 3,
+      "index": 180
     },
     "index": 52
   },
@@ -891,11 +1029,13 @@
     "token": "Newline",
     "from": {
       "line": 16,
-      "linechar": 3
+      "linechar": 3,
+      "index": 180
     },
     "to": {
       "line": 17,
-      "linechar": 0
+      "linechar": 0,
+      "index": 181
     },
     "index": 53
   },
@@ -905,11 +1045,13 @@
     },
     "from": {
       "line": 17,
-      "linechar": 2
+      "linechar": 2,
+      "index": 183
     },
     "to": {
       "line": 17,
-      "linechar": 10
+      "linechar": 10,
+      "index": 191
     },
     "index": 53
   },
@@ -919,11 +1061,13 @@
     },
     "from": {
       "line": 17,
-      "linechar": 11
+      "linechar": 11,
+      "index": 192
     },
     "to": {
       "line": 17,
-      "linechar": 14
+      "linechar": 14,
+      "index": 195
     },
     "index": 54
   },
@@ -931,11 +1075,13 @@
     "token": "LeftParenthesis",
     "from": {
       "line": 17,
-      "linechar": 14
+      "linechar": 14,
+      "index": 195
     },
     "to": {
       "line": 17,
-      "linechar": 15
+      "linechar": 15,
+      "index": 196
     },
     "index": 55
   },
@@ -943,11 +1089,13 @@
     "token": "RightParenthesis",
     "from": {
       "line": 17,
-      "linechar": 15
+      "linechar": 15,
+      "index": 196
     },
     "to": {
       "line": 17,
-      "linechar": 16
+      "linechar": 16,
+      "index": 197
     },
     "index": 56
   },
@@ -955,11 +1103,13 @@
     "token": "LeftBrace",
     "from": {
       "line": 17,
-      "linechar": 17
+      "linechar": 17,
+      "index": 198
     },
     "to": {
       "line": 17,
-      "linechar": 18
+      "linechar": 18,
+      "index": 199
     },
     "index": 57
   },
@@ -967,11 +1117,13 @@
     "token": "Newline",
     "from": {
       "line": 17,
-      "linechar": 18
+      "linechar": 18,
+      "index": 199
     },
     "to": {
       "line": 18,
-      "linechar": 0
+      "linechar": 0,
+      "index": 200
     },
     "index": 58
   },
@@ -981,11 +1133,13 @@
     },
     "from": {
       "line": 18,
-      "linechar": 4
+      "linechar": 4,
+      "index": 204
     },
     "to": {
       "line": 18,
-      "linechar": 10
+      "linechar": 10,
+      "index": 210
     },
     "index": 58
   },
@@ -995,11 +1149,13 @@
     },
     "from": {
       "line": 18,
-      "linechar": 11
+      "linechar": 11,
+      "index": 211
     },
     "to": {
       "line": 18,
-      "linechar": 15
+      "linechar": 15,
+      "index": 215
     },
     "index": 59
   },
@@ -1007,11 +1163,13 @@
     "token": "Dot",
     "from": {
       "line": 18,
-      "linechar": 15
+      "linechar": 15,
+      "index": 215
     },
     "to": {
       "line": 18,
-      "linechar": 16
+      "linechar": 16,
+      "index": 216
     },
     "index": 60
   },
@@ -1021,11 +1179,13 @@
     },
     "from": {
       "line": 18,
-      "linechar": 16
+      "linechar": 16,
+      "index": 216
     },
     "to": {
       "line": 18,
-      "linechar": 18
+      "linechar": 18,
+      "index": 218
     },
     "index": 61
   },
@@ -1035,11 +1195,13 @@
     },
     "from": {
       "line": 18,
-      "linechar": 19
+      "linechar": 19,
+      "index": 219
     },
     "to": {
       "line": 18,
-      "linechar": 20
+      "linechar": 20,
+      "index": 220
     },
     "index": 62
   },
@@ -1049,11 +1211,13 @@
     },
     "from": {
       "line": 18,
-      "linechar": 21
+      "linechar": 21,
+      "index": 221
     },
     "to": {
       "line": 18,
-      "linechar": 25
+      "linechar": 25,
+      "index": 225
     },
     "index": 63
   },
@@ -1061,11 +1225,13 @@
     "token": "Dot",
     "from": {
       "line": 18,
-      "linechar": 25
+      "linechar": 25,
+      "index": 225
     },
     "to": {
       "line": 18,
-      "linechar": 26
+      "linechar": 26,
+      "index": 226
     },
     "index": 64
   },
@@ -1075,11 +1241,13 @@
     },
     "from": {
       "line": 18,
-      "linechar": 26
+      "linechar": 26,
+      "index": 226
     },
     "to": {
       "line": 18,
-      "linechar": 28
+      "linechar": 28,
+      "index": 228
     },
     "index": 65
   },
@@ -1087,11 +1255,13 @@
     "token": "Semicolon",
     "from": {
       "line": 18,
-      "linechar": 28
+      "linechar": 28,
+      "index": 228
     },
     "to": {
       "line": 18,
-      "linechar": 29
+      "linechar": 29,
+      "index": 229
     },
     "index": 66
   },
@@ -1099,11 +1269,13 @@
     "token": "Newline",
     "from": {
       "line": 18,
-      "linechar": 29
+      "linechar": 29,
+      "index": 229
     },
     "to": {
       "line": 19,
-      "linechar": 0
+      "linechar": 0,
+      "index": 230
     },
     "index": 67
   },
@@ -1111,11 +1283,13 @@
     "token": "RightBrace",
     "from": {
       "line": 19,
-      "linechar": 2
+      "linechar": 2,
+      "index": 232
     },
     "to": {
       "line": 19,
-      "linechar": 3
+      "linechar": 3,
+      "index": 233
     },
     "index": 67
   },
@@ -1123,11 +1297,13 @@
     "token": "Newline",
     "from": {
       "line": 19,
-      "linechar": 3
+      "linechar": 3,
+      "index": 233
     },
     "to": {
       "line": 20,
-      "linechar": 0
+      "linechar": 0,
+      "index": 234
     },
     "index": 68
   },
@@ -1137,11 +1313,13 @@
     },
     "from": {
       "line": 20,
-      "linechar": 2
+      "linechar": 2,
+      "index": 236
     },
     "to": {
       "line": 20,
-      "linechar": 10
+      "linechar": 10,
+      "index": 244
     },
     "index": 68
   },
@@ -1151,11 +1329,13 @@
     },
     "from": {
       "line": 20,
-      "linechar": 11
+      "linechar": 11,
+      "index": 245
     },
     "to": {
       "line": 20,
-      "linechar": 14
+      "linechar": 14,
+      "index": 248
     },
     "index": 69
   },
@@ -1163,11 +1343,13 @@
     "token": "LeftParenthesis",
     "from": {
       "line": 20,
-      "linechar": 14
+      "linechar": 14,
+      "index": 248
     },
     "to": {
       "line": 20,
-      "linechar": 15
+      "linechar": 15,
+      "index": 249
     },
     "index": 70
   },
@@ -1175,11 +1357,13 @@
     "token": "RightParenthesis",
     "from": {
       "line": 20,
-      "linechar": 15
+      "linechar": 15,
+      "index": 249
     },
     "to": {
       "line": 20,
-      "linechar": 16
+      "linechar": 16,
+      "index": 250
     },
     "index": 71
   },
@@ -1187,11 +1371,13 @@
     "token": "LeftBrace",
     "from": {
       "line": 20,
-      "linechar": 17
+      "linechar": 17,
+      "index": 251
     },
     "to": {
       "line": 20,
-      "linechar": 18
+      "linechar": 18,
+      "index": 252
     },
     "index": 72
   },
@@ -1199,11 +1385,13 @@
     "token": "Newline",
     "from": {
       "line": 20,
-      "linechar": 18
+      "linechar": 18,
+      "index": 252
     },
     "to": {
       "line": 21,
-      "linechar": 0
+      "linechar": 0,
+      "index": 253
     },
     "index": 73
   },
@@ -1213,11 +1401,13 @@
     },
     "from": {
       "line": 21,
-      "linechar": 4
+      "linechar": 4,
+      "index": 257
     },
     "to": {
       "line": 21,
-      "linechar": 10
+      "linechar": 10,
+      "index": 263
     },
     "index": 73
   },
@@ -1227,11 +1417,13 @@
     },
     "from": {
       "line": 21,
-      "linechar": 11
+      "linechar": 11,
+      "index": 264
     },
     "to": {
       "line": 21,
-      "linechar": 15
+      "linechar": 15,
+      "index": 268
     },
     "index": 74
   },
@@ -1239,11 +1431,13 @@
     "token": "Dot",
     "from": {
       "line": 21,
-      "linechar": 15
+      "linechar": 15,
+      "index": 268
     },
     "to": {
       "line": 21,
-      "linechar": 16
+      "linechar": 16,
+      "index": 269
     },
     "index": 75
   },
@@ -1253,11 +1447,13 @@
     },
     "from": {
       "line": 21,
-      "linechar": 16
+      "linechar": 16,
+      "index": 269
     },
     "to": {
       "line": 21,
-      "linechar": 18
+      "linechar": 18,
+      "index": 271
     },
     "index": 76
   },
@@ -1267,11 +1463,13 @@
     },
     "from": {
       "line": 21,
-      "linechar": 19
+      "linechar": 19,
+      "index": 272
     },
     "to": {
       "line": 21,
-      "linechar": 20
+      "linechar": 20,
+      "index": 273
     },
     "index": 77
   },
@@ -1281,11 +1479,13 @@
     },
     "from": {
       "line": 21,
-      "linechar": 21
+      "linechar": 21,
+      "index": 274
     },
     "to": {
       "line": 21,
-      "linechar": 25
+      "linechar": 25,
+      "index": 278
     },
     "index": 78
   },
@@ -1293,11 +1493,13 @@
     "token": "Dot",
     "from": {
       "line": 21,
-      "linechar": 25
+      "linechar": 25,
+      "index": 278
     },
     "to": {
       "line": 21,
-      "linechar": 26
+      "linechar": 26,
+      "index": 279
     },
     "index": 79
   },
@@ -1307,11 +1509,13 @@
     },
     "from": {
       "line": 21,
-      "linechar": 26
+      "linechar": 26,
+      "index": 279
     },
     "to": {
       "line": 21,
-      "linechar": 28
+      "linechar": 28,
+      "index": 281
     },
     "index": 80
   },
@@ -1319,11 +1523,13 @@
     "token": "Semicolon",
     "from": {
       "line": 21,
-      "linechar": 28
+      "linechar": 28,
+      "index": 281
     },
     "to": {
       "line": 21,
-      "linechar": 29
+      "linechar": 29,
+      "index": 282
     },
     "index": 81
   },
@@ -1331,11 +1537,13 @@
     "token": "Newline",
     "from": {
       "line": 21,
-      "linechar": 29
+      "linechar": 29,
+      "index": 282
     },
     "to": {
       "line": 22,
-      "linechar": 0
+      "linechar": 0,
+      "index": 283
     },
     "index": 82
   },
@@ -1343,11 +1551,13 @@
     "token": "RightBrace",
     "from": {
       "line": 22,
-      "linechar": 2
+      "linechar": 2,
+      "index": 285
     },
     "to": {
       "line": 22,
-      "linechar": 3
+      "linechar": 3,
+      "index": 286
     },
     "index": 82
   },
@@ -1355,11 +1565,13 @@
     "token": "Newline",
     "from": {
       "line": 22,
-      "linechar": 3
+      "linechar": 3,
+      "index": 286
     },
     "to": {
       "line": 23,
-      "linechar": 0
+      "linechar": 0,
+      "index": 287
     },
     "index": 83
   },
@@ -1367,11 +1579,13 @@
     "token": "RightBrace",
     "from": {
       "line": 23,
-      "linechar": 0
+      "linechar": 0,
+      "index": 287
     },
     "to": {
       "line": 23,
-      "linechar": 1
+      "linechar": 1,
+      "index": 288
     },
     "index": 83
   },
@@ -1379,11 +1593,13 @@
     "token": "Newline",
     "from": {
       "line": 23,
-      "linechar": 1
+      "linechar": 1,
+      "index": 288
     },
     "to": {
       "line": 24,
-      "linechar": 0
+      "linechar": 0,
+      "index": 289
     },
     "index": 84
   }

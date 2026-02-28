@@ -5,11 +5,13 @@
     },
     "from": {
       "line": 0,
-      "linechar": 0
+      "linechar": 0,
+      "index": 0
     },
     "to": {
       "line": 0,
-      "linechar": 5
+      "linechar": 5,
+      "index": 5
     },
     "index": 0
   },
@@ -19,11 +21,13 @@
     },
     "from": {
       "line": 0,
-      "linechar": 6
+      "linechar": 6,
+      "index": 6
     },
     "to": {
       "line": 0,
-      "linechar": 9
+      "linechar": 9,
+      "index": 9
     },
     "index": 1
   },
@@ -33,11 +37,13 @@
     },
     "from": {
       "line": 0,
-      "linechar": 10
+      "linechar": 10,
+      "index": 10
     },
     "to": {
       "line": 0,
-      "linechar": 11
+      "linechar": 11,
+      "index": 11
     },
     "index": 2
   },
@@ -47,11 +53,13 @@
     },
     "from": {
       "line": 0,
-      "linechar": 12
+      "linechar": 12,
+      "index": 12
     },
     "to": {
       "line": 0,
-      "linechar": 17
+      "linechar": 17,
+      "index": 17
     },
     "index": 3
   },
@@ -59,11 +67,13 @@
     "token": "Semicolon",
     "from": {
       "line": 0,
-      "linechar": 17
+      "linechar": 17,
+      "index": 17
     },
     "to": {
       "line": 0,
-      "linechar": 18
+      "linechar": 18,
+      "index": 18
     },
     "index": 4
   },
@@ -71,11 +81,13 @@
     "token": "Newline",
     "from": {
       "line": 0,
-      "linechar": 18
+      "linechar": 18,
+      "index": 18
     },
     "to": {
       "line": 1,
-      "linechar": 0
+      "linechar": 0,
+      "index": 19
     },
     "index": 5
   },
@@ -83,11 +95,13 @@
     "token": "Newline",
     "from": {
       "line": 1,
-      "linechar": 0
+      "linechar": 0,
+      "index": 19
     },
     "to": {
       "line": 2,
-      "linechar": 0
+      "linechar": 0,
+      "index": 20
     },
     "index": 5
   },
@@ -95,11 +109,13 @@
     "token": "Newline",
     "from": {
       "line": 2,
-      "linechar": 0
+      "linechar": 0,
+      "index": 20
     },
     "to": {
       "line": 3,
-      "linechar": 0
+      "linechar": 0,
+      "index": 21
     },
     "index": 5
   },
@@ -109,11 +125,13 @@
     },
     "from": {
       "line": 3,
-      "linechar": 0
+      "linechar": 0,
+      "index": 21
     },
     "to": {
       "line": 3,
-      "linechar": 5
+      "linechar": 5,
+      "index": 26
     },
     "index": 5
   },
@@ -123,11 +141,13 @@
     },
     "from": {
       "line": 3,
-      "linechar": 6
+      "linechar": 6,
+      "index": 27
     },
     "to": {
       "line": 3,
-      "linechar": 7
+      "linechar": 7,
+      "index": 28
     },
     "index": 6
   },
@@ -137,11 +157,13 @@
     },
     "from": {
       "line": 3,
-      "linechar": 8
+      "linechar": 8,
+      "index": 29
     },
     "to": {
       "line": 3,
-      "linechar": 9
+      "linechar": 9,
+      "index": 30
     },
     "index": 7
   },
@@ -151,11 +173,13 @@
     },
     "from": {
       "line": 3,
-      "linechar": 10
+      "linechar": 10,
+      "index": 31
     },
     "to": {
       "line": 3,
-      "linechar": 11
+      "linechar": 11,
+      "index": 32
     },
     "index": 8
   },
@@ -165,11 +189,13 @@
     },
     "from": {
       "line": 3,
-      "linechar": 12
+      "linechar": 12,
+      "index": 33
     },
     "to": {
       "line": 3,
-      "linechar": 13
+      "linechar": 13,
+      "index": 34
     },
     "index": 9
   },
@@ -179,11 +205,13 @@
     },
     "from": {
       "line": 3,
-      "linechar": 14
+      "linechar": 14,
+      "index": 35
     },
     "to": {
       "line": 3,
-      "linechar": 15
+      "linechar": 15,
+      "index": 36
     },
     "index": 10
   },
@@ -193,11 +221,13 @@
     },
     "from": {
       "line": 3,
-      "linechar": 16
+      "linechar": 16,
+      "index": 37
     },
     "to": {
       "line": 3,
-      "linechar": 17
+      "linechar": 17,
+      "index": 38
     },
     "index": 11
   },
@@ -207,11 +237,13 @@
     },
     "from": {
       "line": 3,
-      "linechar": 18
+      "linechar": 18,
+      "index": 39
     },
     "to": {
       "line": 3,
-      "linechar": 19
+      "linechar": 19,
+      "index": 40
     },
     "index": 12
   },
@@ -221,11 +253,13 @@
     },
     "from": {
       "line": 3,
-      "linechar": 20
+      "linechar": 20,
+      "index": 41
     },
     "to": {
       "line": 3,
-      "linechar": 21
+      "linechar": 21,
+      "index": 42
     },
     "index": 13
   },
@@ -235,11 +269,13 @@
     },
     "from": {
       "line": 3,
-      "linechar": 22
+      "linechar": 22,
+      "index": 43
     },
     "to": {
       "line": 3,
-      "linechar": 23
+      "linechar": 23,
+      "index": 44
     },
     "index": 14
   },
@@ -247,11 +283,13 @@
     "token": "Semicolon",
     "from": {
       "line": 3,
-      "linechar": 23
+      "linechar": 23,
+      "index": 44
     },
     "to": {
       "line": 3,
-      "linechar": 24
+      "linechar": 24,
+      "index": 45
     },
     "index": 15
   },
@@ -259,11 +297,13 @@
     "token": "Newline",
     "from": {
       "line": 3,
-      "linechar": 24
+      "linechar": 24,
+      "index": 45
     },
     "to": {
       "line": 4,
-      "linechar": 0
+      "linechar": 0,
+      "index": 46
     },
     "index": 16
   }
