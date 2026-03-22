@@ -272,6 +272,10 @@ impl Formatter {
                                 println!("Original next");
                                 original_token_iterator.next();
                             }
+                            // Commas, might be removed from the formatted output
+                            (_, Token::Operator(Operator::Comma)) => {
+                                original_token_iterator.next();
+                            }
                             _ => panic!(
                                 "Formatted token {:?} does not match original token {:?}",
                                 formatted, original
